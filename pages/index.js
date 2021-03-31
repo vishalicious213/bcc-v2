@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Nav from '../components/nav'
+import Footer from '../components/footer'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -18,9 +19,7 @@ export default function Home() {
         </h1>
       </main>
 
-      <footer className={styles.footer}>
-        FOOTER
-      </footer>
+      <Footer />
     </div>
   )
 }

@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Nav from '../components/nav'
+import Footer from '../components/footer'
 import styles from '../styles/Home.module.css'
 
-export default function About() {
+export default function Donate() {
   return (
     <div className={styles.container}>
       <Head>
@@ -18,9 +19,7 @@ export default function About() {
         </h1>
       </main>
 
-      <footer className={styles.footer}>
-        FOOTER
-      </footer>
+      <Footer />
     </div>
   )
 }
