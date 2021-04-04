@@ -42,6 +42,12 @@ export default function Home() {
         <div className='button-container'>
           <button className='button'>GIVE NOW</button>
         </div>
+
+        <div className="video">
+            <div className="videoContainer">
+                <iframe src="https://www.youtube.com/embed/3NSI1KX-5kk"></iframe>
+            </div>
+        </div>
       </main>
 
       <Footer />

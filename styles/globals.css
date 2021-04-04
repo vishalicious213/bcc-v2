@@ -44,6 +44,8 @@ a {
   margin-bottom: 0;
 }
 
+/* BUTTONS */
+
 .button-container {
   display: flex;
   justify-content: center;
@@ -68,4 +70,32 @@ a {
     color: white;
     background-color: deeppink;
     border: 2px solid white;
+}
+
+/* VIDEO ON INDEX.JS */
+
+.video {
+  background-color: #292c2f;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.videoContainer {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    border: 3px solid gainsboro;
 }
