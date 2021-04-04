@@ -24,6 +24,10 @@ export default function Home() {
           <button className='button'>DONATE</button>
         </div>
 
+        <section className='carousel'>
+          CAROUSEL PLACEHOLDER
+        </section>
+
         <section className='pink-container'>
           <h2 className='h2'>Our Mission</h2>
           <p className='no-space-above'>The Breast Cancer Comfort Foundation aims to offer encouragement, support and laughter to individuals whose lives have been forever changed by curative or preventative breast cancer treatment. We do this by delivering unique “Comfort Baskets” and “Chemo Comfort Bags” containing thoughtfully chosen gifts and personal care items.</p>
