@@ -27,6 +27,15 @@ a {
   letter-spacing: .025rem;
 }
 
+.grey-container {
+  width: 100%;
+  color: white;
+  background-color: #292c2f;
+  padding: 2.5rem 5rem 2.5rem;
+  font-size: 1.05rem;
+  letter-spacing: .025rem;
+}
+
 .no-space-above {
   margin-top: 0;
 }
