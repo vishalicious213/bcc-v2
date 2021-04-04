@@ -20,6 +20,10 @@ export default function Home() {
           <p>Nearly five years ago, Breast Cancer Comfort was founded by survivor Debi Cavolo. Like many other women, Debi felt there was an absence of community and conversation about breast cancer. Women diagnosed with breast cancer face issues that significantly impact their quality and length of life. With this in mind, BCC has since set out to address the unique needs of women through the distribution of comfort baskets. Assembled with empathy, a dash of hope, and a few sprinkles of inspiration, these baskets strive to promote the spiritual, emotional, and mental healing of breast cancer patients. BCC has partnered with numerous hospitals and rehab centers on Long Island for the delivery of baskets to patients, at no cost to the recipient . We highly encourage requests for baskets. After all, BCC strives to offer women the sense of comradeship and understanding.</p>
         </article>
 
+        <div className='button-container'>
+          <button className='button'>DONATE</button>
+        </div>
+
         <section className='pink-container'>
           <h2 className='h2'>Our Mission</h2>
           <p className='no-space-above'>The Breast Cancer Comfort Foundation aims to offer encouragement, support and laughter to individuals whose lives have been forever changed by curative or preventative breast cancer treatment. We do this by delivering unique “Comfort Baskets” and “Chemo Comfort Bags” containing thoughtfully chosen gifts and personal care items.</p>
@@ -34,6 +38,10 @@ export default function Home() {
           <h2 className='h2'>Pay It Forward</h2>
           <p className='no-space-above'>If you would like to contribute to this or any of our many other future projects, please consider making a donation. Any amount is greatly appreciated and it all goes directly to funding “Comfort Baskets” and “Chemo Comfort Bags”.</p>
         </section>
+
+        <div className='button-container'>
+          <button className='button'>GIVE NOW</button>
+        </div>
       </main>
 
       <Footer />
