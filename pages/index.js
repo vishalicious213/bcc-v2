@@ -28,19 +28,34 @@ export default function Home() {
           CAROUSEL PLACEHOLDER
         </section>
 
-        <section className='pink-container'>
-          <h2 className='h2'>Our Mission</h2>
-          <p className='no-space-above'>The Breast Cancer Comfort Foundation aims to offer encouragement, support and laughter to individuals whose lives have been forever changed by curative or preventative breast cancer treatment. We do this by delivering unique “Comfort Baskets” and “Chemo Comfort Bags” containing thoughtfully chosen gifts and personal care items.</p>
+        <section className='pink-container gift-container'>
+          <div className='gift-img-container'>
+              <img className='gift-img' src='gift.png' alt='wrapped gift' />
+          </div>
+          <div className='gift-text-container'>
+              <h2 className='h2'>Our Mission</h2>
+              <p className='no-space-above'>The Breast Cancer Comfort Foundation aims to offer encouragement, support and laughter to individuals whose lives have been forever changed by curative or preventative breast cancer treatment. We do this by delivering unique “Comfort Baskets” and “Chemo Comfort Bags” containing thoughtfully chosen gifts and personal care items.</p>
+          </div>
         </section>
 
-        <section className='grey-container'>
-          <h2 className='h2'>Our Project</h2>
-          <p className='no-space-above'>Our current project, “Comfort Baskets”, was created to aid those who have recently undergone breast cancer surgery, at no cost to the recipient.  We have included treatments such as chemotherapy and created “Chemo Comfort Bags”. These “Comfort Baskets and Bags“ are central to our cause, as they give individuals reassurance in knowing they are not alone. We want to inspire and help them to realize the power of their inner strength.</p>
+        <section className='grey-container gift-container'>
+          <div className='gift-img-container'>
+              <img className='gift-img' src='gift.png' alt='wrapped gift' />
+          </div>
+          <div className='gift-text-container'>
+              <h2 className='h2'>Our Project</h2>
+              <p className='no-space-above'>Our current project, “Comfort Baskets”, was created to aid those who have recently undergone breast cancer surgery, at no cost to the recipient.  We have included treatments such as chemotherapy and created “Chemo Comfort Bags”. These “Comfort Baskets and Bags“ are central to our cause, as they give individuals reassurance in knowing they are not alone. We want to inspire and help them to realize the power of their inner strength.</p>
+          </div>
         </section>
 
-        <section className='pink-container'>
-          <h2 className='h2'>Pay It Forward</h2>
-          <p className='no-space-above'>If you would like to contribute to this or any of our many other future projects, please consider making a donation. Any amount is greatly appreciated and it all goes directly to funding “Comfort Baskets” and “Chemo Comfort Bags”.</p>
+        <section className='pink-container gift-container'>
+          <div className='gift-img-container'>
+              <img className='gift-img' src='gift.png' alt='wrapped gift' />
+          </div>
+          <div className='gift-text-container'>
+              <h2 className='h2'>Pay It Forward</h2>
+              <p className='no-space-above'>If you would like to contribute to this or any of our many other future projects, please consider making a donation. Any amount is greatly appreciated and it all goes directly to funding “Comfort Baskets” and “Chemo Comfort Bags”.</p>
+          </div>
         </section>
 
         <div className='button-container'>
