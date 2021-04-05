@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Nav from '../components/nav'
 import Footer from '../components/footer'
+import Carousel from '../components/carousel'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
         </div>
 
         <section className='carousel'>
-          CAROUSEL PLACEHOLDER
+          <Carousel />
         </section>
 
         <section className='pink-container gift-container'>
