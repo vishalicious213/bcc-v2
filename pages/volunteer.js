@@ -14,9 +14,9 @@ export default function Volunteer() {
       <Nav />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          VOLUNTEER
-        </h1>
+          <div className='img-container'>
+            <img src='/volunteer/volunteer.jpg' alt='' />
+          </div>
       </main>
 
       <Footer />
