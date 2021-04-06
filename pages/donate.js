@@ -14,9 +14,9 @@ export default function Donate() {
       <Nav />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          DONATE
-        </h1>
+          <div className='img-container'>
+            <img src='/donate/better-together.jpg' alt='' />
+          </div>
       </main>
 
       <Footer />
