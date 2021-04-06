@@ -14,12 +14,24 @@ export default function About() {
       <Nav />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          ABOUT US
-        </h1>
+          <div className='img-container'>
+            <img src='/about/collage-01.jpg' alt='BCC collage of events' />
+          </div>
       </main>
 
       <Footer />
+
+      <style jsx>
+        {`
+        .img-container {
+          margin: 0;
+        }
+
+        .img-container img {
+          width: 100%;
+        }
+        `}
+      </style>
     </div>
   )
 }
