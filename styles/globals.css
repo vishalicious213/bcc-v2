@@ -52,10 +52,10 @@ a {
 
 .gift-img-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 5rem;
   /* max-width: 5rem; */
-  padding: 0 .75rem;
+  padding: 3.5rem .75rem 0 .75rem;
 }
 
 .gift-img {
