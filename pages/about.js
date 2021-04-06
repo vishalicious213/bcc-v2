@@ -32,22 +32,6 @@ export default function About() {
       </main>
 
       <Footer />
-
-      <style jsx>
-        {`
-        .img-container {
-          background-color: #292c2f;
-        }
-
-        .img-container img {
-          width: 100%;
-        }
-
-        .h2 {
-          margin-bottom: .5rem;
-        }
-        `}
-      </style>
     </div>
   )
 }

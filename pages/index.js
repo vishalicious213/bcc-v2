@@ -71,14 +71,6 @@ export default function Home() {
       </main>
 
       <Footer />
-
-      <style jsx>
-        {`
-          .h2 {
-            margin-bottom: .5rem;
-          }
-        `}
-      </style>
     </div>
   )
 }
