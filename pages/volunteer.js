@@ -17,6 +17,17 @@ export default function Volunteer() {
           <div className='img-container'>
             <img src='/volunteer/volunteer.jpg' alt='' />
           </div>
+
+          <section className='pink-container gift-container'>
+            <div className='gift-img-container'>
+                <img className='gift-img' src='gift.png' alt='wrapped gift' />
+            </div>
+            <div className='gift-text-container'>
+                <h2 className='h2'>Make a difference!</h2>
+                <p className='no-space-above'>What would we do without our volunteers? BCC is so grateful to have the input of such amazing people. They create, design, produce ideas, fund-raise, plan events, laugh, cry, dance, deliver, and most of all they keep coming back to do more!</p>
+                <p>If you’d like to volunteer with Breast Cancer Comfort <b>apply here:</b></p>
+            </div>
+          </section>
       </main>
 
       <Footer />
