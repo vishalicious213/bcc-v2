@@ -6,9 +6,9 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 export default function Carousel() {
     return (
         <CarouselProvider
-            naturalSlideWidth={449}
-            naturalSlideHeight={449}
-            isIntrinsicHeight
+            naturalSlideWidth={125}
+            naturalSlideHeight={125}
+            // isIntrinsicHeight
             totalSlides={12}
             visibleSlides={1}
             isPlaying
