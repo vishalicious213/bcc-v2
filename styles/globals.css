@@ -18,6 +18,8 @@ a {
   box-sizing: border-box;
 }
 
+/* MAIN TEXT & IMAGE CONTAINERS */
+
 .pink-container {
   width: 100%;
   color: white;
@@ -42,6 +44,18 @@ a {
 
 .no-space-below {
   margin-bottom: 0;
+}
+
+.img-container {
+  background-color: #292c2f;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+.h2 {
+  margin-bottom: .5rem;
 }
 
 /* GIFT IMAGES */
