@@ -10,19 +10,22 @@ export default function Footer() {
 
             <div className='footer-text'>
                 <p className='no-space-below'>36C West Green Village, Hicksville, NY 11801</p>
-                <p className='no-space-above min-space-below'>(516) 490-4255   |   info@breastcancercomfort.org</p>
+                <p className='no-space-above min-space-below'>(516) 490-4255   |   <a href='mailto:info@breastcancercomfort.org'>info@breastcancercomfort.org</a></p>
                 <p className='no-space-below'>Ⓒ 2021 Breast Cancer Comfort Foundation</p>
                 <p className='no-space-above'>All rights reserved</p>
             </div>
 
             <div className='footer-social'>
-                <a href="https://twitter.com/BreastComfort">
+                <a target='_blank' rel='noopener' className='icon' href="https://www.linkedin.com/company/breast-cancer-comfort-foundation-inc/">
+                    <img src='/li.png' alt='LinkedIn' />
+                </a>
+                <a target='_blank' rel='noopener' className='icon' href="https://twitter.com/BreastComfort">
                     <img src='/twitter.jpg' alt='Twitter' />
                 </a>
-                <a href="https://www.facebook.com/breastcancercomfort/">
+                <a target='_blank' rel='noopener' className='icon' href="https://www.facebook.com/breastcancercomfort/">
                     <img src='/fb.png' alt='Facebook' />
                 </a>
-                <a href="https://www.instagram.com/breastcancercomfort/">
+                <a target='_blank' rel='noopener' className='icon' href="https://www.instagram.com/breastcancercomfort/">
                     <img src='/ig.png' alt='Instagram' />
                 </a>
             </div>
@@ -39,7 +42,7 @@ export default function Footer() {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding-bottom: 1rem;
+                padding: .5rem 0;
               }
 
               .footer-text {
@@ -64,13 +67,15 @@ export default function Footer() {
 
               .footer img {
                 width: 2.5rem;
-                margin: 0 .5rem;
+                // margin: 0 .5rem;
               }
 
               .footer a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                color: #ff99cc;
+              }
+
+              .icon {
+                margin: 0 .5rem;
               }
             `}
         </style>
