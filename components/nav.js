@@ -3,6 +3,10 @@ import Link from 'next/link'
 export default function Nav() {
     return (
         <div id='menu-container'>
+            <div id='logo-container'>
+                <img src='/logo.png' alt='logo' />
+            </div>
+
             <nav id='menu'>
                 <Link href='/'><a>Home</a></Link>
                 <Link href='/boobtique'><a>Boobtique</a></Link>
@@ -15,15 +19,24 @@ export default function Nav() {
             <style jsx>
             {`
                 #menu-container {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: .5rem;
                     background: #292c2f;
                 }
 
+                #logo-container {
+                    width: 25%;
+                }
+
+                #logo-container img {
+                    width: 100%;
+                }
+
                 #menu {
-                // width: 50%;
-                display: flex;
-                justify-content: flex-end;
-                margin: 1rem auto;
-                color: gainsboro;
+                    display: flex;
+                    align-items: center;
+                    color: gainsboro;
                 }
 
                 a {
