@@ -28,6 +28,22 @@ export default function Volunteer() {
                 <p>If you’d like to volunteer with Breast Cancer Comfort <b>apply here:</b></p>
             </div>
           </section>
+
+          <section className='grey-container gift-container'>
+            <div className='gift-img-container-top'>
+                <img className='gift-img' src='gift.png' alt='wrapped gift' />
+            </div>
+            <div className='gift-text-container'>
+            <h2 className='h2'>Become a part of the team!</h2>
+            <p>We are looking for volunteers to:</p>
+                <ul>
+                    <li className='li'>Deliver baskets</li>
+                    <li className='li'>Attend our meetings</li>
+                    <li className='li'>Join us at fundraising events</li>
+                    <li className='li'>Be excited, be inspired and Have Fun!</li>
+                </ul>
+            </div>
+          </section>
       </main>
 
       <Footer />
