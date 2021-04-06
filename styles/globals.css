@@ -68,8 +68,14 @@ a {
   display: flex;
   align-items: flex-start;
   width: 5rem;
-  /* max-width: 5rem; */
   padding: 3.5rem .75rem 0 .75rem;
+}
+
+.gift-img-container-top {
+  display: flex;
+  align-items: flex-start;
+  width: 5rem;
+  padding: 1.25rem .75rem 0 .75rem;
 }
 
 .gift-img {

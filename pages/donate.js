@@ -30,7 +30,7 @@ export default function Donate() {
           </section>
 
           <section className='grey-container gift-container'>
-            <div className='gift-img-container'>
+            <div className='gift-img-container-top'>
                 <img className='gift-img' src='gift.png' alt='wrapped gift' />
             </div>
             <div className='gift-text-container'>
@@ -48,7 +48,7 @@ export default function Donate() {
           </section>
 
           <section className='pink-container gift-container'>
-            <div className='gift-img-container'>
+            <div className='gift-img-container-top'>
                 <img className='gift-img' src='gift.png' alt='wrapped gift' />
             </div>
             <div className='gift-text-container'>
