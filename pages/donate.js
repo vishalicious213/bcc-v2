@@ -46,6 +46,18 @@ export default function Donate() {
                 <p>The heart is a gift of love from my sister and I, we shop together and pick out the fabrics and sometimes I even go to her house and help assemble the hearts to sew but it is all <b>Susan Weber</b> that sews each one.</p>
             </div>
           </section>
+
+          <section className='pink-container gift-container'>
+            <div className='gift-img-container'>
+                <img className='gift-img' src='gift.png' alt='wrapped gift' />
+            </div>
+            <div className='gift-text-container'>
+                <p>For a small donation you win our heart, but the patients that receive these comfort baskets will feel the support from all of us.</p>
+                <p>Your donation is tax deductible. The Breast Cancer Comfort Foundation Inc. is a registered 501(c)(3) organization.</p>
+                <p>With a donation of $500 or more you are eligible to be added to our supporters listing on our website!</p>
+                <p>Corporate donations and opportunities are welcome!</p>
+            </div>
+          </section>
       </main>
 
       <Footer />
