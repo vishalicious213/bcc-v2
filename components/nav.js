@@ -15,7 +15,13 @@ export default function Nav() {
                 <Link href='/'><a>Home</a></Link>
                 <Link href='/about'><a>About Us</a></Link>
                 <Link href='/boobtique'><a>Boobtique</a></Link>
-                <Link href='/donate'><a>Donate</a></Link>
+                <div className='hover-item'>
+                    <Link href='/donate'><a className='a'>Donate</a></Link>
+                    <div className='dropdown'>
+                        <Link href='/'><a className='a center-link'>In Memory Of</a></Link>
+                        <Link href='/'><a className='a center-link'>Supporters</a></Link>
+                    </div>
+                </div>
                 <Link href='/volunteer'><a>Volunteer</a></Link>
                 <Link href='/news'><a>News</a></Link>
             </nav>
@@ -44,7 +50,7 @@ export default function Nav() {
                 }
 
                 a {
-                    // outline: 1px solid red;
+                    outline: 1px solid red;
                     font-size: .9rem;
                     width: 5.5rem;
                     padding: .5rem;
@@ -54,6 +60,33 @@ export default function Nav() {
                 a:hover {
                     color: black;
                     background: gainsboro;
+                }
+
+                .hover-item {
+                    outline: 1px solid orange;
+                    width: 5.5rem;
+                    position: relative;
+                    display: inline-block;
+                    text-align: center;
+                }
+
+                .a {
+                    display: block;
+                    width: 100%;
+                }
+
+                .dropdown {
+                    // display: none;
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    width: 7rem;
+                    // z-index: 1;
+                }
+
+                .center-link {
+                    transform: translateX(-.75rem);
+                    background: #292c2f;
                 }
             `}
             </style>
