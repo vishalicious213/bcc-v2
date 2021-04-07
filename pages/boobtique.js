@@ -29,6 +29,10 @@ export default function Boobtique() {
             </div>
           </section>
 
+          <div className='button-container'>
+            <button className='button'>VISIT OUR STORE</button>
+          </div>
+
           <section className='grey-container gift-container'>
             <div className='gift-img-container-top'>
                 <img className='gift-img' src='gift.png' alt='wrapped gift' />
