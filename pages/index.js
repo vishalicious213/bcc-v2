@@ -26,7 +26,8 @@ export default function Home() {
         </div>
 
         <section className='carousel'>
-          <Carousel />
+          {/* <Carousel /> */}
+          <h1 className={styles.title}>CAROUSEL PLACEHOLDER</h1>
         </section>
 
         <section className='pink-container gift-container'>
