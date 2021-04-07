@@ -10,7 +10,7 @@ export default function Footer() {
 
             <div className='footer-text'>
                 <p className='no-space-below'>36C West Green Village, Hicksville, NY 11801</p>
-                <p className='no-space-above min-space-below'>(516) 490-4255   |   <a href='mailto:info@breastcancercomfort.org'>info@breastcancercomfort.org</a></p>
+                <p className='no-space-above min-space-below'>(516) 490-4255   |   <a className='email' href='mailto:info@breastcancercomfort.org'>info@breastcancercomfort.org</a></p>
                 <p className='no-space-below'>Ⓒ 2021 Breast Cancer Comfort Foundation</p>
                 <p className='no-space-above'>All rights reserved</p>
             </div>
@@ -42,6 +42,10 @@ export default function Footer() {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
+            }
+
+            .email:hover {
+                text-decoration: underline;
             }
 
             .min-space-below {
