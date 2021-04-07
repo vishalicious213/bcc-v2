@@ -39,6 +39,16 @@ export default function Boobtique() {
             <p>Each basket is specially-created with items hand-selected to provide comfort to individuals undergoing breast cancer treatment. These items can include a journal, pen, unflavored lip balm, tissues, mints, hand sanitizer, pocket calendar, stuffed animal, thank you cards, and handmade heart with hot/cold pack. The style of the contents may vary.</p>
             </div>
           </section>
+
+          <section className='pink-container gift-container'>
+            <div className='gift-img-container'>
+                <img className='gift-img' src='gift.png' alt='wrapped gift' />
+            </div>
+            <div className='gift-text-container'>
+                <h2 className='h2'>Chemotherapy</h2>
+                <p className='no-space-above'><b>Chemo Comfort Bags</b> can include a puzzle or coloring book, pen, unflavored lip balm, tissues, mints,  pocket calendar, thank you cards, and blanket. </p>
+            </div>
+          </section>
       </main>
 
       <Footer />
