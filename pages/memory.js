@@ -44,7 +44,7 @@ export default function Memory() {
                 color: white;
                 background-color: #b01e65;
                 margin: 0;
-                padding: .5rem 0 .5rem 5rem;
+                padding: .5rem 0 .5rem 2.5rem;
                 display: flex;
             }
 
@@ -52,13 +52,13 @@ export default function Memory() {
                 color: white;
                 background-color: #292c2f;
                 margin: 0;
-                padding: .5rem 0 .5rem 5rem;
+                padding: .5rem 0 .5rem 2.5rem;
                 display: flex;
             }
 
             .memorial-list img {
                 width: 1.5rem;
-                margin: 0 2rem;
+                margin: 0 2rem 0 0;
             }
             `}
         </style>

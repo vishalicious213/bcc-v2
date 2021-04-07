@@ -24,8 +24,8 @@ a {
   width: 100%;
   color: white;
   background-color: #b01e65;
-  padding: 1rem 5rem;
-  font-size: 1.05rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
   letter-spacing: .025rem;
 }
 
@@ -33,8 +33,8 @@ a {
   width: 100%;
   color: white;
   background-color: #292c2f;
-  padding: 1rem 5rem;
-  font-size: 1.05rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
   letter-spacing: .025rem;
 }
 
@@ -87,7 +87,7 @@ a {
 }
 
 .gift-text-container {
-  width: 90%;
+  width: 100%;
 }
 
 /* BUTTONS */
@@ -174,5 +174,19 @@ iframe {
     align-items: flex-start;
     width: 5rem;
     padding: 1.25rem .75rem 0 .75rem;
+  }
+
+  .gift-text-container {
+    width: 90%;
+  }
+
+  .pink-container {
+    padding: 1rem 5rem;
+    font-size: 1.05rem;
+  }
+  
+  .grey-container {
+    padding: 1rem 5rem;
+    font-size: 1.05rem;
   }
 }
