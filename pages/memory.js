@@ -24,13 +24,11 @@ export default function Memory() {
             </section>
 
             <section>
-                <ul>
-                    <li>Walter Voight, FDNY</li>
-                    <li>Dave Goldman</li>
-                    <li>Michelle Weissman</li>
-                    <li>Ariel Bronfman</li>
-                    <li>Gilbert Bogis</li>
-                </ul>
+                    <h2 className='grey mem-h2'>Walter Voight, FDNY</h2>
+                    <h2 className='pink mem-h2'>Dave Goldman</h2>
+                    <h2 className='grey mem-h2'>Michelle Weissman</h2>
+                    <h2 className='pink mem-h2'>Ariel Bronfman</h2>
+                    <h2 className='grey mem-h2'>Gilbert Bogis</h2>
             </section>
         </main>
 
@@ -40,6 +38,20 @@ export default function Memory() {
             {`
             .mem-h2 {
                 font-weight: 500;
+            }
+
+            .pink {
+                color: white;
+                background-color: #b01e65;
+                margin: 0;
+                padding: .5rem 0 .5rem 5rem;
+            }
+
+            .grey {
+                color: white;
+                background-color: #292c2f;
+                margin: 0;
+                padding: .5rem 0 .5rem 5rem;
             }
             `}
         </style>
