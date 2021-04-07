@@ -19,8 +19,8 @@ export default function Support() {
             </div>
 
             <section className='pink-container'>
-                <h2 className='no-space-below mem-h2'>Make a gift in honor of a special person while helping others. Their name will be honored below on our memorial wall.</h2>
-                <p>To make a gift in honor of someone special click the donate button below and in the message section enter the name of that special person and a message if you would like to add one.</p>
+                <h2 className='no-space-below'>Thank you to our supporters!</h2>
+                <p>We are lucky to have you as donors and appreciate you for investing in our organization. Because of you, we can continue our mission to deliver Comfort Baskets and Chemo Comfort Bags to those who have recently undergone breast cancer surgery and remind them that they are not alone or unloved.</p>
             </section>
 
             <section className='memorial-list'>
