@@ -13,7 +13,7 @@ export default function Nav() {
                 <Link href='/about'><a>About Us</a></Link>
                 <Link href='/donate'><a>Donate</a></Link>
                 <Link href='/volunteer'><a>Volunteer</a></Link>
-                <Link href='/'><a>News</a></Link>
+                <Link href='/news'><a>News</a></Link>
             </nav>
 
             <style jsx>
