@@ -22,7 +22,13 @@ export default function Nav() {
                         <Link href='/'><a className='a center-link'>Supporters</a></Link>
                     </div>
                 </div>
-                <Link href='/volunteer'><a>Volunteer &#9662;</a></Link>
+                <div className='hover-menu'>
+                    <Link href='/volunteer'><a className='a'>Volunteer &#9662;</a></Link>
+                    <div className='dropdown'>
+                        <Link href='/'><a className='a center-link'>Share Your Story</a></Link>
+                    </div>
+                </div>
+                
                 <Link href='/news'><a>News</a></Link>
             </nav>
 
@@ -63,7 +69,7 @@ export default function Nav() {
                 }
 
                 .hover-menu {
-                    width: 5.5rem;
+                    width: 6rem;
                     position: relative;
                     display: inline-block;
                     text-align: center;
@@ -77,7 +83,7 @@ export default function Nav() {
                 .dropdown {
                     display: none;
                     position: absolute;
-                    width: 7rem;
+                    width: 8rem;
                     z-index: 1;
                 }
 
