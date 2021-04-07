@@ -53,6 +53,10 @@ export default function Boobtique() {
                 <p className='no-space-above'><b>Chemo Comfort Bags</b> can include a puzzle or coloring book, pen, unflavored lip balm, tissues, mints,  pocket calendar, thank you cards, and blanket. </p>
             </div>
           </section>
+
+          <div className='img-container-2'>
+            <img src='/boobtique/boobtique-2.jpg' alt='' />
+          </div>
       </main>
 
       <Footer />
