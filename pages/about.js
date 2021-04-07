@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>About US | Breast Cancer Comfort Foundation</title>
+        <title>About Us | Breast Cancer Comfort Foundation</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
