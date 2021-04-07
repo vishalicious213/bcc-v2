@@ -1,6 +1,10 @@
 import Link from 'next/link'
 
 export default function Nav() {
+    function dropdown(menu) {
+        document.getElementById(menu).classList.toggle('show')
+    }
+
     return (
         <div id='menu-container'>
             <div id='logo-container'>
@@ -9,8 +13,8 @@ export default function Nav() {
 
             <nav id='menu'>
                 <Link href='/'><a>Home</a></Link>
-                <Link href='/boobtique'><a>Boobtique</a></Link>
                 <Link href='/about'><a>About Us</a></Link>
+                <Link href='/boobtique'><a>Boobtique</a></Link>
                 <Link href='/donate'><a>Donate</a></Link>
                 <Link href='/volunteer'><a>Volunteer</a></Link>
                 <Link href='/news'><a>News</a></Link>
