@@ -14,7 +14,9 @@ export default function Share() {
         <Nav />
 
         <main className={styles.main}>
-            <h1 className={styles.title}>SHARE YOUR STORY</h1>
+            <div className='img-container'>
+                <img src='/volunteer/share-your-story.png' alt='' />
+            </div>
         </main>
         <Footer />
     </div>
