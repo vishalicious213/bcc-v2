@@ -23,12 +23,12 @@ export default function Support() {
                 <p>We are lucky to have you as donors and appreciate you for investing in our organization. Because of you, we can continue our mission to deliver Comfort Baskets and Chemo Comfort Bags to those who have recently undergone breast cancer surgery and remind them that they are not alone or unloved.</p>
             </section>
 
-            <section className='memorial-list'>
-                    <h2 className='grey mem-h2'><img src='/gift.png' />Walter Voight, FDNY</h2>
-                    <h2 className='pink mem-h2'><img src='/gift.png' />Dave Goldman</h2>
-                    <h2 className='grey mem-h2'><img src='/gift.png' />Michelle Weissman</h2>
-                    <h2 className='pink mem-h2'><img src='/gift.png' />Ariel Bronfman</h2>
-                    <h2 className='grey mem-h2'><img src='/gift.png' />Gilbert Bogis</h2>
+            <section className='supporter-list'>
+                    <h2 className='grey mem-h2'><img src='/gift.png' />Karen Kostroff, M.D., FACS</h2>
+                    <h2 className='pink mem-h2'><img src='/gift.png' />Beth C. Tortolani Foundation</h2>
+                    <h2 className='grey mem-h2'><img src='/gift.png' />New York Breast Cancer Reconstruction Associates</h2>
+                    <h2 className='pink mem-h2'><img src='/gift.png' />AAA Northeast</h2>
+                    <h2 className='grey mem-h2'><img src='/gift.png' />We Care Fund of the Nassau County Bar Association</h2>
             </section>
         </main>
 
@@ -56,13 +56,12 @@ export default function Support() {
                 display: flex;
             }
 
-            .memorial-list img {
+            .supporter-list img {
                 width: 1.5rem;
                 margin: 0 2rem;
             }
             `}
         </style>
-        <Footer />
     </div>
   )
 }
