@@ -23,12 +23,12 @@ export default function Memory() {
                 <p>To make a gift in honor of someone special click the donate button below and in the message section enter the name of that special person and a message if you would like to add one.</p>
             </section>
 
-            <section>
-                    <h2 className='grey mem-h2'>Walter Voight, FDNY</h2>
-                    <h2 className='pink mem-h2'>Dave Goldman</h2>
-                    <h2 className='grey mem-h2'>Michelle Weissman</h2>
-                    <h2 className='pink mem-h2'>Ariel Bronfman</h2>
-                    <h2 className='grey mem-h2'>Gilbert Bogis</h2>
+            <section className='memorial-list'>
+                    <h2 className='grey mem-h2'><img src='/gift.png' />Walter Voight, FDNY</h2>
+                    <h2 className='pink mem-h2'><img src='/gift.png' />Dave Goldman</h2>
+                    <h2 className='grey mem-h2'><img src='/gift.png' />Michelle Weissman</h2>
+                    <h2 className='pink mem-h2'><img src='/gift.png' />Ariel Bronfman</h2>
+                    <h2 className='grey mem-h2'><img src='/gift.png' />Gilbert Bogis</h2>
             </section>
         </main>
 
@@ -45,6 +45,7 @@ export default function Memory() {
                 background-color: #b01e65;
                 margin: 0;
                 padding: .5rem 0 .5rem 5rem;
+                display: flex;
             }
 
             .grey {
@@ -52,6 +53,12 @@ export default function Memory() {
                 background-color: #292c2f;
                 margin: 0;
                 padding: .5rem 0 .5rem 5rem;
+                display: flex;
+            }
+
+            .memorial-list img {
+                width: 1.5rem;
+                margin: 0 2rem;
             }
             `}
         </style>
