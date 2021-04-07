@@ -15,14 +15,14 @@ export default function Nav() {
                 <Link href='/'><a>Home</a></Link>
                 <Link href='/about'><a>About Us</a></Link>
                 <Link href='/boobtique'><a>Boobtique</a></Link>
-                <div className='hover-item'>
-                    <Link href='/donate'><a className='a'>Donate</a></Link>
+                <div className='hover-menu'>
+                    <Link href='/donate'><a className='a'>Donate &#9662;</a></Link>
                     <div className='dropdown'>
                         <Link href='/'><a className='a center-link'>In Memory Of</a></Link>
                         <Link href='/'><a className='a center-link'>Supporters</a></Link>
                     </div>
                 </div>
-                <Link href='/volunteer'><a>Volunteer</a></Link>
+                <Link href='/volunteer'><a>Volunteer &#9662;</a></Link>
                 <Link href='/news'><a>News</a></Link>
             </nav>
 
@@ -50,11 +50,11 @@ export default function Nav() {
                 }
 
                 a {
-                    outline: 1px solid red;
                     font-size: .9rem;
-                    width: 5.5rem;
+                    width: 6rem;
                     padding: .5rem;
                     text-align: center;
+                    border: 1px solid #292c2f;
                 }
 
                 a:hover {
@@ -62,8 +62,7 @@ export default function Nav() {
                     background: gainsboro;
                 }
 
-                .hover-item {
-                    outline: 1px solid orange;
+                .hover-menu {
                     width: 5.5rem;
                     position: relative;
                     display: inline-block;
@@ -76,17 +75,19 @@ export default function Nav() {
                 }
 
                 .dropdown {
-                    // display: none;
-                    display: flex;
-                    flex-direction: column;
+                    display: none;
                     position: absolute;
                     width: 7rem;
-                    // z-index: 1;
+                    z-index: 1;
                 }
 
                 .center-link {
                     transform: translateX(-.75rem);
                     background: #292c2f;
+                }
+
+                .hover-menu:hover .dropdown {
+                    display: block;
                 }
             `}
             </style>
