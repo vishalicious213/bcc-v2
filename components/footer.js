@@ -16,25 +16,16 @@ export default function Footer() {
             </div>
 
             <div className='footer-social'>
-                <a target='_blank' rel='noopener' className='icon' href="https://www.linkedin.com/company/breast-cancer-comfort-foundation-inc/">
-                    <img src='/li.png' alt='LinkedIn' />
-                </a>
-                <a target='_blank' rel='noopener' className='icon' href="https://twitter.com/BreastComfort">
-                    <img src='/twitter.jpg' alt='Twitter' />
-                </a>
-                <a target='_blank' rel='noopener' className='icon' href="https://www.facebook.com/breastcancercomfort/">
-                    <img src='/fb.png' alt='Facebook' />
-                </a>
-                <a target='_blank' rel='noopener' className='icon' href="https://www.instagram.com/breastcancercomfort/">
-                    <img src='/ig.png' alt='Instagram' />
-                </a>
+                <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/company/breast-cancer-comfort-foundation-inc/"></a>
+                <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a>
+                <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a>
+                <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a>
             </div>
         </footer>
 
         <style jsx>
             {`
             .footer {
-                // outline: 1px solid red;
                 color: gainsboro;
                 background: black;
                 font-size: .75rem;
@@ -43,40 +34,87 @@ export default function Footer() {
                 justify-content: center;
                 align-items: center;
                 padding: .5rem 0;
-              }
+            }
 
-              .footer-text {
-                //   outline: 1px solid orange;
-                  width: 33%;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  text-align: center;
-              }
+            .footer-text {
+                width: 33%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
 
-              .min-space-below {
-                  margin-bottom: 0;
-              }
+            .min-space-below {
+                margin-bottom: 0;
+            }
 
-              .footer-social {
-                //   outline: 1px solid orange;
-                  width: 33%;
-                  display: flex;
-                  justify-content: center;
-              }
+            .footer-social {
+                width: 33%;
+                display: flex;
+                justify-content: center;
+            }
 
-              .footer img {
+            .footer img {
                 width: 2.5rem;
-                // margin: 0 .5rem;
-              }
+            }
 
-              .footer a {
+            .footer a {
                 color: #ff99cc;
-              }
+            }
 
-              .icon {
+            .icon {
                 margin: 0 .5rem;
-              }
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            .fb {
+                background: url('/fb.png') no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+
+            .fb:hover {
+                background: url('/fb2.png') no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+
+            .li {
+                background: url('/li.png') no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+
+            .li:hover {
+                background: url('/li2.png') no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+
+            .tw {
+                background: url('/twitter.jpg') no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+
+            .tw:hover {
+                background: url('/twitter2.jpg') no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+
+            .ig {
+                background: url('/ig.png') no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+
+            .ig:hover {
+                background: url('/ig2.png') no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
             `}
         </style>
         </>
