@@ -18,14 +18,14 @@ export default function Nav() {
                 <div className='hover-menu'>
                     <Link href='/donate'><a className='a'>Donate &#9662;</a></Link>
                     <div className='dropdown'>
-                        <Link href='/'><a className='a center-link'>In Memory Of</a></Link>
-                        <Link href='/'><a className='a center-link'>Supporters</a></Link>
+                        <Link href='/memory'><a className='a center-link'>In Memory Of</a></Link>
+                        <Link href='/supporters'><a className='a center-link'>Supporters</a></Link>
                     </div>
                 </div>
                 <div className='hover-menu'>
                     <Link href='/volunteer'><a className='a'>Volunteer &#9662;</a></Link>
                     <div className='dropdown'>
-                        <Link href='/'><a className='a center-link'>Share Your Story</a></Link>
+                        <Link href='/share'><a className='a center-link'>Share Your Story</a></Link>
                     </div>
                 </div>
                 
