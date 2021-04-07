@@ -18,7 +18,7 @@ export default function Share() {
                 <img src='/volunteer/share-your-story.png' alt='' />
             </div>
 
-            <section className='grey-container gift-container'>
+            <section className='grey-container'>
                 <div className='gift-text-container'>
                     <p>Do you want to help others fighting their battle with breast cancer?</p>
                     <p>You can do this by sharing your story. Sometimes hearing the story of someone who has been through breast cancer can help brighten up a persons day and give them encouragement and support though the process. You can share much needed advice and tips from first hand experience. You story will be shared on our website to provide support for all our readers. You can share who you are or you can share anonymously.</p>
