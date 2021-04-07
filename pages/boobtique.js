@@ -14,9 +14,9 @@ export default function Boobtique() {
       <Nav />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          BOOBTIQUE
-        </h1>
+          <div className='img-container'>
+            <img src='/boobtique/boobtique.jpg' alt='' />
+          </div>
       </main>
 
       <Footer />
