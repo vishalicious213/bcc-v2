@@ -54,6 +54,16 @@ a {
   width: 100%;
 }
 
+.img-container-2 {
+  background-color: #f5d3e4;
+  display: flex;
+  justify-content: center;
+}
+
+.img-container-2 img {
+  width: 50%;
+}
+
 .h2 {
   margin-bottom: .5rem;
 }
