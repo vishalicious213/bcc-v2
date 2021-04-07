@@ -14,7 +14,9 @@ export default function Memory() {
         <Nav />
 
         <main className={styles.main}>
-            <h1 className={styles.title}>IN MEMORY OF</h1>
+            <div className='img-container'>
+                <img src='/donate/in-memoriam.jpg' alt='' />
+            </div>
         </main>
         <Footer />
     </div>
