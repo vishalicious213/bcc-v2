@@ -2,11 +2,11 @@ import Link from 'next/link'
 
 export default function Nav() {
     function myFunction() {
-        var x = document.getElementById('burger')
-        if (x.style.display === 'block') {
-            x.style.display = 'none';
+        var burgerMenu = document.getElementById('burger-container')
+        if (burgerMenu.style.display === 'block') {
+            burgerMenu.style.display = 'none';
         } else {
-            x.style.display = 'block'
+            burgerMenu.style.display = 'block'
         }
     }
 
@@ -38,16 +38,18 @@ export default function Nav() {
             </nav>
 
             {/* Hamburger menu for < 768 */}
-            <nav id='burger'>
-                <a href='/'>Home</a>
-                <a href='/about'>About Us</a>
-                <a href='/boobtique'>Boobtique</a>
-                <a href='/donate'>Donate</a>
-                <a href='/volunteer'>Volunteer</a>
-                <a href='/news'>News</a>
-            </nav>
+            <div id='burger-container'>
+                <nav id='burger'>
+                    <a href='/'>Home</a>
+                    <a href='/about'>About Us</a>
+                    <a href='/boobtique'>Boobtique</a>
+                    <a href='/donate'>Donate</a>
+                    <a href='/volunteer'>Volunteer</a>
+                    <a href='/news'>News</a>
+                </nav>
+            </div>
 
-            <a href='javascript:void(0)' onClick={myFunction}>=</a>
+            <button onClick={myFunction}>☰</button>
 
             <style jsx>
             {`
@@ -66,11 +68,29 @@ export default function Nav() {
                     width: 100%;
                 }
 
+                button {
+                    font-size: 2rem;
+                    color: gainsboro;
+                    background: #292c2f;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                button:focus {
+                    outline: none;
+                }
+
+                #burger-container {
+                    display: none;
+                }
+
                 #burger {
+                    outline: 1px solid red;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     color: gainsboro;
+                    position: absolute;
                 }
 
                 #menu {
