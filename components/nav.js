@@ -122,7 +122,7 @@ export default function Nav() {
                 /* 768 PX */
 
                 @media only screen and (min-width: 768px) {
-                    button, #burger-container {
+                    button, #burger {
                         display: none;
                     }
 
