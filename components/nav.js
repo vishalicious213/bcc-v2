@@ -41,11 +41,14 @@ export default function Nav() {
             <div id='burger-container'>
                 <nav id='burger'>
                     <a href='/'>Home</a>
-                    <a href='/about'>About Us</a>
-                    <a href='/boobtique'>Boobtique</a>
-                    <a href='/donate'>Donate</a>
-                    <a href='/volunteer'>Volunteer</a>
-                    <a href='/news'>News</a>
+                    <a className='redline' href='/about'>About Us</a>
+                    <a className='redline' href='/boobtique'>Boobtique</a>
+                    <a className='redline' href='/donate'>Donate</a>
+                    <a href='/memory'>In Memory Of</a>
+                    <a href='/supporters'>Supporters</a>
+                    <a className='redline' href='/volunteer'>Volunteer</a>
+                    <a href='/share'>Share Your Story</a>
+                    <a className='redline' href='/news'>News</a>
                 </nav>
             </div>
 
@@ -106,6 +109,10 @@ export default function Nav() {
                 #burger a:hover {
                     color: black;
                     background: gainsboro;
+                }
+
+                .redline {
+                    border-top: 1px solid #b01e65;
                 }
 
                 #menu {
