@@ -69,7 +69,7 @@ export default function Nav() {
                 }
 
                 button {
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                     color: gainsboro;
                     background: #292c2f;
                     border: none;
@@ -85,12 +85,27 @@ export default function Nav() {
                 }
 
                 #burger {
-                    outline: 1px solid red;
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
                     color: gainsboro;
+                    background: #292c2f;
                     position: absolute;
+                    right: 0;
+                    top: 3.75rem;
+                    z-index: 1;
+                    width: 100%;
+                    padding-bottom: 1rem;
+                }
+
+                #burger a {
+                    padding: .75rem 0;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                #burger a:hover {
+                    color: black;
+                    background: gainsboro;
                 }
 
                 #menu {
@@ -100,6 +115,10 @@ export default function Nav() {
                 /* 768 PX */
 
                 @media only screen and (min-width: 768px) {
+                    button, #burger-container {
+                        display: none;
+                    }
+
                     #menu {
                         display: flex;
                         align-items: center;
