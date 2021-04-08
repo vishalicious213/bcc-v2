@@ -117,6 +117,10 @@ a {
     border: 2px solid white;
 }
 
+.button:focus {
+    outline: none;
+}
+
 /* VIDEO ON INDEX.JS */
 
 .video {

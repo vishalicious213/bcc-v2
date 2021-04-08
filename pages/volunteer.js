@@ -30,7 +30,9 @@ export default function Volunteer() {
           </section>
 
           <div className='button-container'>
-            <button className='button'>VOLUNTEER</button>
+            <a className='fb icon' target='_blank' rel='noopener' href="https://www.signupgenius.com/go/5080d4eadad2ea5fe3-volunteer">
+              <button className='button'>VOLUNTEER</button>
+            </a>
           </div>
 
           <section className='grey-container gift-container'>
