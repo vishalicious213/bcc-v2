@@ -91,7 +91,7 @@ export default function Nav() {
                     background: #292c2f;
                     position: absolute;
                     right: 0;
-                    top: 3.75rem;
+                    top: calc(3rem + .5vw);
                     z-index: 1;
                     width: 100%;
                     padding-bottom: 1rem;
