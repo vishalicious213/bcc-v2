@@ -22,7 +22,9 @@ export default function Home() {
         </article>
 
         <div className='button-container'>
-          <button className='button'>DONATE</button>
+          <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
+            <button className='button'>DONATE</button>
+          </a>
         </div>
 
         <section className='carousel'>
@@ -61,7 +63,9 @@ export default function Home() {
         </section>
 
         <div className='button-container'>
-          <button className='button'>GIVE NOW</button>
+          <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
+            <button className='button'>GIVE NOW</button>
+          </a>
         </div>
 
         <div className="video">

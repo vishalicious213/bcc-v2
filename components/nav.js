@@ -13,7 +13,9 @@ export default function Nav() {
     return (
         <div id='menu-container'>
             <div id='logo-container'>
-                <img src='/logo.png' alt='logo' />
+                <Link href='/'>
+                    <img src='/logo.png' alt='logo' />
+                </Link>
             </div>
 
             {/* Navbar for 768+ */}
@@ -41,11 +43,14 @@ export default function Nav() {
             <div id='burger-container'>
                 <nav id='burger'>
                     <a href='/'>Home</a>
-                    <a href='/about'>About Us</a>
-                    <a href='/boobtique'>Boobtique</a>
-                    <a href='/donate'>Donate</a>
-                    <a href='/volunteer'>Volunteer</a>
-                    <a href='/news'>News</a>
+                    <a className='redline' href='/about'>About Us</a>
+                    <a className='redline' href='/boobtique'>Boobtique</a>
+                    <a className='redline' href='/donate'>Donate</a>
+                    <a href='/memory'>In Memory Of</a>
+                    <a href='/supporters'>Supporters</a>
+                    <a className='redline' href='/volunteer'>Volunteer</a>
+                    <a href='/share'>Share Your Story</a>
+                    <a className='redline' href='/news'>News</a>
                 </nav>
             </div>
 
@@ -62,6 +67,7 @@ export default function Nav() {
 
                 #logo-container {
                     width: 25%;
+                    cursor: pointer;
                 }
 
                 #logo-container img {
@@ -108,6 +114,10 @@ export default function Nav() {
                     background: gainsboro;
                 }
 
+                .redline {
+                    border-top: 1px solid #b01e65;
+                }
+
                 #menu {
                     display: none;
                 }
@@ -115,7 +125,7 @@ export default function Nav() {
                 /* 768 PX */
 
                 @media only screen and (min-width: 768px) {
-                    button, #burger-container {
+                    button, #burger {
                         display: none;
                     }
 
