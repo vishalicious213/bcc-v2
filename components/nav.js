@@ -1,8 +1,13 @@
 import Link from 'next/link'
 
 export default function Nav() {
-    function dropdown(menu) {
-        document.getElementById(menu).classList.toggle('show')
+    function myFunction() {
+        var x = document.getElementById('burger')
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block'
+        }
     }
 
     return (
@@ -41,6 +46,8 @@ export default function Nav() {
                 <a href='/volunteer'>Volunteer</a>
                 <a href='/news'>News</a>
             </nav>
+
+            <a href='javascript:void(0)' onClick={myFunction}>=</a>
 
             <style jsx>
             {`
