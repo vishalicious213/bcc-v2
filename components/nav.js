@@ -13,7 +13,9 @@ export default function Nav() {
     return (
         <div id='menu-container'>
             <div id='logo-container'>
-                <img src='/logo.png' alt='logo' />
+                <Link href='/'>
+                    <img src='/logo.png' alt='logo' />
+                </Link>
             </div>
 
             {/* Navbar for 768+ */}
@@ -65,6 +67,7 @@ export default function Nav() {
 
                 #logo-container {
                     width: 25%;
+                    cursor: pointer;
                 }
 
                 #logo-container img {
