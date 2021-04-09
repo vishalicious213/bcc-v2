@@ -1,8 +1,16 @@
 import Head from 'next/head'
 import Nav from '../components/nav'
 import Footer from '../components/footer'
-import Carousel from '../components/carousel'
+import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
+
+// using dynamic import to load carousel in the client, not server, to avoid "window is not defined"
+const ShowCarousel = dynamic(
+  () => {
+    return import('../components/carousel')
+  },
+  { ssr: false }
+)
 
 export default function Home() {
   return (
@@ -33,8 +41,7 @@ export default function Home() {
         </div>
 
         <section className='carousel'>
-          {/* <Carousel /> */}
-          <h1 className={styles.title}>CAROUSEL PLACEHOLDER</h1>
+          <ShowCarousel />
         </section>
 
         <section className='pink-container gift-container'>
