@@ -45,10 +45,10 @@ export default function Nav() {
                     <a href='/'>Home</a>
                     <a className='redline' href='/about'>About Us</a>
                     <a className='redline' href='/boobtique'>Boobtique</a>
-                    <a className='redline' href='/donate'>Donate</a>
+                    <a className='redline' href='/donate'>Donate &#9662;</a>
                     <a href='/memory'>In Memory Of</a>
                     <a href='/supporters'>Supporters</a>
-                    <a className='redline' href='/volunteer'>Volunteer</a>
+                    <a className='redline' href='/volunteer'>Volunteer &#9662;</a>
                     <a href='/share'>Share Your Story</a>
                     <a className='redline' href='/news'>News</a>
                 </nav>
