@@ -73,9 +73,17 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="video">
-            <div className="videoContainer">
+        <div className='video'>
+            <div className='vid-img'>
+              <img src='/index/3-stack-1.jpg' alt='' />
+            </div>
+
+            <div className='videoContainer'>
                 <iframe src="https://www.youtube.com/embed/3NSI1KX-5kk"></iframe>
+            </div>
+
+            <div className='vid-img'>
+              <img src='/index/3-stack-1.jpg' alt='' />
             </div>
         </div>
       </main>
