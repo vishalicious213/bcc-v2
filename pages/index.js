@@ -100,10 +100,10 @@ export default function Home() {
         }
 
         .carousel {
-          outline: 2px solid yellow;
+          // outline: 2px solid yellow;
           width: 100%;
           background-color: #292c2f;
-          padding: 2rem 0;
+          padding: 1rem 0 2rem 0;
           // height: 22rem;
           position: relative;
         }
