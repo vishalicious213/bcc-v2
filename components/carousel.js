@@ -11,11 +11,9 @@ export default function Carousel() {
         slidesToShow: 3.5,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 4000,
-        // autoplaySpeed: 2000,
+        speed: 5000,
+        autoplaySpeed: 0,
         cssEase: "linear",
-        // centerPadding: '100px'
-        className: 'sliderr',
         responsive: [
             {
               breakpoint: 1024,
@@ -62,60 +60,49 @@ export default function Carousel() {
 
             <Slider {...settings}>
                 <div>
-                    <img src='/carousel-images/carousel-01.jpg' alt='' />
+                    <img src='/carousel-images/carousel-01.jpg' alt='BCC event' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-02.jpg' alt='' />
+                    <img src='/carousel-images/carousel-02.jpg' alt='BCC basket' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-03.jpg' alt='' />
+                    <img src='/carousel-images/carousel-03.jpg' alt='BCC event' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-04.jpg' alt='' />
+                    <img src='/carousel-images/carousel-04.jpg' alt='Crafting materials' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-05.jpg' alt='' />
+                    <img src='/carousel-images/carousel-05.jpg' alt='BCC event' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-06.jpg' alt='' />
+                    <img src='/carousel-images/carousel-06.jpg' alt='BCC event' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-07.jpg' alt='' />
+                    <img src='/carousel-images/carousel-07.jpg' alt='Crafting materials' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-08.jpg' alt='' />
+                    <img src='/carousel-images/carousel-08.jpg' alt='Salt & pepper' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-09.jpg' alt='' />
+                    <img src='/carousel-images/carousel-09.jpg' alt='BCC baskets' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-10.jpg' alt='' />
+                    <img src='/carousel-images/carousel-10.jpg' alt='BCC event' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-11.jpg' alt='' />
+                    <img src='/carousel-images/carousel-11.jpg' alt='BCC basket' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-12.jpg' alt='' />
+                    <img src='/carousel-images/carousel-12.jpg' alt='BCC event' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-13.jpg' alt='' />
+                    <img src='/carousel-images/carousel-13.jpg' alt='BCC basket' />
                 </div>
             </Slider>
 
             <style jsx>
                 {`
-                h3 {
-                    color: white;
-                }
-
-                .sliderr {
-                    border: 1px solid red;
-                    background: white;
-                    width: 50%;
-                }
-
                 img {
-                    // outline: 1px solid yellow;
                     width: 100%;
                 }
                 `}
