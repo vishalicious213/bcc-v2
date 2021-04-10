@@ -1,16 +1,17 @@
 import Head from 'next/head'
 import Nav from '../components/nav'
 import Footer from '../components/footer'
-import dynamic from 'next/dynamic'
+import Carousel from '../components/carousel'
+// import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
 
 // using dynamic import to load carousel in the client, not server, to avoid "window is not defined"
-const ShowCarousel = dynamic(
-  () => {
-    return import('../components/carousel')
-  },
-  { ssr: false }
-)
+// const ShowCarousel = dynamic(
+//   () => {
+//     return import('../components/carousel')
+//   },
+//   { ssr: false }
+// )
 
 export default function Home() {
   return (
@@ -41,7 +42,8 @@ export default function Home() {
         </div>
 
         <section className='carousel'>
-          <ShowCarousel />
+          <Carousel />
+          {/* <ShowCarousel /> */}
         </section>
 
         <section className='pink-container gift-container'>
@@ -98,14 +100,12 @@ export default function Home() {
         }
 
         .carousel {
+          outline: 2px solid yellow;
           width: 100%;
-          color: white;
           background-color: #292c2f;
-          padding: 2.5rem 5rem 2.5rem;
-          font-size: 1.05rem;
-          letter-spacing: .025rem;
-          text-align: center;
-          /* height: 10rem; */
+          padding: 2rem 0;
+          // height: 22rem;
+          position: relative;
         }
 
         .media-container {
