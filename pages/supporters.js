@@ -8,7 +8,9 @@ export default function Support() {
     <div className={styles.container}>
         <Head>
             <title>Supporters | Breast Cancer Comfort Foundation</title>
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/cropped-BCCF-basket-logo-white-5001-32x32.png" sizes="32x32" />
+            <link rel="icon" href="/cropped-BCCF-basket-logo-white-5001-192x192.png" sizes="192x192" />
+            <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
         </Head>
 
         <Nav />
