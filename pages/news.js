@@ -5,7 +5,8 @@ import styles from '../styles/Home.module.css'
 
 const posts = [
   {id: '001', date: 'Jan 17, 2021', url: '', title: 'How We Started and What We Do', author: 'Alaha Nasari', excerpt: 'Nearly five years ago, Breast Cancer Comfort was founded by survivor Deborah Cavolo. Like many other women, Debi felt there was an absence of community and conversation about breast cancer. Women diagnosed with breast cancer face issues that significantly impact their...'},
-  // {date: '', url: '', title: '', author: '', excerpt: ''},
+  {id: '002', date: 'Apr 6, 2020', url: '', title: 'A Recipe for Successful Coping', author: 'Alaha Nasari', excerpt: 'Schools have closed, the economy is in decline, and health-care professionals are struggling to deal with the shortage of medical supplies. For anyone reading the news, these facts are just a grim reminder of the unfortunate situation our world is currently in. The...'},
+  // {id: '', date: '', url: '', title: '', author: '', excerpt: ''},
 ]
 
 export default function News() {
@@ -25,8 +26,8 @@ export default function News() {
 
             {posts.map(post =>
               <div key={post.id} className='post'>
-                <h2>{post.title}</h2>
-                <p>by {post.author} | {post.date}</p>
+                <h2 className='no-space-below'><a href={post.url}>{post.title}</a></h2>
+                <p className='no-space-above'>by {post.author} | {post.date}</p>
                 <p>{post.excerpt}</p>
 
               </div>
@@ -37,7 +38,17 @@ export default function News() {
         <style jsx>
           {`
           .post {
+            width: 80%;
+            margin: 3rem auto;
             color: white;
+          }
+
+          h2 {
+            font-weight: 500;
+          }
+
+          p {
+            color: gainsboro;
           }
           `}
         </style>
