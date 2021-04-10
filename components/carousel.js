@@ -1,32 +1,125 @@
 import React from 'react'
-import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
-// import styles from '../styles/Home.module.css'
+import Head from 'next/head'
+import Slider from 'react-slick'
 
 export default function Carousel() {
+    const settings = {
+        arrows: false,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3.5,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 4000,
+        // autoplaySpeed: 2000,
+        cssEase: "linear",
+        // centerPadding: '100px'
+        className: 'sliderr',
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    };
+
     return (
-        <CarouselProvider
-            naturalSlideWidth={125}
-            naturalSlideHeight={125}
-            // isIntrinsicHeight
-            totalSlides={12}
-            visibleSlides={1}
-            isPlaying
-        >
-            <Slider>
-                <Slide index={0}><img src='/carousel-images/carousel-01.jpg' /></Slide>
-                <Slide index={1}><img src='/carousel-images/carousel-02.jpg' /></Slide>
-                <Slide index={2}><img src='/carousel-images/carousel-03.jpg' /></Slide>
-                <Slide index={3}><img src='/carousel-images/carousel-04.jpg' /></Slide>
-                <Slide index={4}><img src='/carousel-images/carousel-05.jpg' /></Slide>
-                <Slide index={5}><img src='/carousel-images/carousel-06.jpg' /></Slide>
-                <Slide index={6}><img src='/carousel-images/carousel-07.jpg' /></Slide>
-                <Slide index={7}><img src='/carousel-images/carousel-08.jpg' /></Slide>
-                <Slide index={8}><img src='/carousel-images/carousel-09.jpg' /></Slide>
-                <Slide index={9}><img src='/carousel-images/carousel-10.jpg' /></Slide>
-                <Slide index={10}><img src='/carousel-images/carousel-11.jpg' /></Slide>
-                <Slide index={11}><img src='/carousel-images/carousel-12.jpg' /></Slide>
+        <div className='body'>
+            <Head>
+                <link
+                    rel="stylesheet"
+                    type="text/css"
+                    charset="UTF-8"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+                />
+                <link
+                    rel="stylesheet"
+                    type="text/css"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+                />
+            </Head>
+
+            <Slider {...settings}>
+                <div>
+                    <img src='/carousel-images/carousel-01.jpg' alt='' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-02.jpg' alt='' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-03.jpg' alt='' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-04.jpg' alt='' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-05.jpg' alt='' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-06.jpg' alt='' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-07.jpg' alt='' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-08.jpg' alt='' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-09.jpg' alt='' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-10.jpg' alt='' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-11.jpg' alt='' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-12.jpg' alt='' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-13.jpg' alt='' />
+                </div>
             </Slider>
-        </CarouselProvider>
+
+            <style jsx>
+                {`
+                h3 {
+                    color: white;
+                }
+
+                .sliderr {
+                    border: 1px solid red;
+                    background: white;
+                    width: 50%;
+                }
+
+                img {
+                    // outline: 1px solid yellow;
+                    width: 100%;
+                }
+                `}
+            </style>
+        </div>
     )
 }

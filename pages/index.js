@@ -2,7 +2,16 @@ import Head from 'next/head'
 import Nav from '../components/nav'
 import Footer from '../components/footer'
 import Carousel from '../components/carousel'
+// import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
+
+// using dynamic import to load carousel in the client, not server, to avoid "window is not defined"
+// const ShowCarousel = dynamic(
+//   () => {
+//     return import('../components/carousel')
+//   },
+//   { ssr: false }
+// )
 
 export default function Home() {
   return (
@@ -15,10 +24,15 @@ export default function Home() {
       <Nav />
 
       <main className={styles.main}>
-        <article className='pink-container'>
-          <p className='no-space-below'><b>Breast Cancer Comfort Foundation</b></p>
-          <p className='no-space-above'><b>January 17, 2021</b></p>
-          <p>Nearly five years ago, Breast Cancer Comfort was founded by survivor Debi Cavolo. Like many other women, Debi felt there was an absence of community and conversation about breast cancer. Women diagnosed with breast cancer face issues that significantly impact their quality and length of life. With this in mind, BCC has since set out to address the unique needs of women through the distribution of comfort baskets. Assembled with empathy, a dash of hope, and a few sprinkles of inspiration, these baskets strive to promote the spiritual, emotional, and mental healing of breast cancer patients. BCC has partnered with numerous hospitals and rehab centers on Long Island for the delivery of baskets to patients, at no cost to the recipient . We highly encourage requests for baskets. After all, BCC strives to offer women the sense of comradeship and understanding.</p>
+        <article className='pink-container message'>
+          <div id='ribbon'>
+            <img src='/breast-cancer-ribbon.png' />
+          </div>
+          <div id='message-text'>
+            <p className='no-space-below'><b>Breast Cancer Comfort Foundation</b></p>
+            <p className='no-space-above'><b>January 17, 2021</b></p>
+            <p>Nearly five years ago, Breast Cancer Comfort was founded by survivor Debi Cavolo. Like many other women, Debi felt there was an absence of community and conversation about breast cancer. Women diagnosed with breast cancer face issues that significantly impact their quality and length of life. With this in mind, BCC has since set out to address the unique needs of women through the distribution of comfort baskets. Assembled with empathy, a dash of hope, and a few sprinkles of inspiration, these baskets strive to promote the spiritual, emotional, and mental healing of breast cancer patients. BCC has partnered with numerous hospitals and rehab centers on Long Island for the delivery of baskets to patients, at no cost to the recipient . We highly encourage requests for baskets. After all, BCC strives to offer women the sense of comradeship and understanding.</p>
+          </div>
         </article>
 
         <div className='button-container'>
@@ -28,8 +42,8 @@ export default function Home() {
         </div>
 
         <section className='carousel'>
-          {/* <Carousel /> */}
-          <h1 className={styles.title}>CAROUSEL PLACEHOLDER</h1>
+          <Carousel />
+          {/* <ShowCarousel /> */}
         </section>
 
         <section className='pink-container gift-container'>
@@ -68,14 +82,115 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="video">
-            <div className="videoContainer">
-                <iframe src="https://www.youtube.com/embed/3NSI1KX-5kk"></iframe>
-            </div>
+        <div className='media-container'>
+          <div className='video'>
+              <div className='videoContainer'>
+                  <iframe src="https://www.youtube.com/embed/3NSI1KX-5kk"></iframe>
+              </div>
+          </div>
         </div>
       </main>
 
       <Footer />
+
+      <style jsx>
+        {`
+        #ribbon {
+          display: none;
+        }
+
+        .carousel {
+          // outline: 2px solid yellow;
+          width: 100%;
+          background-color: #292c2f;
+          padding: 1rem 0 2rem 0;
+          // height: 22rem;
+          position: relative;
+        }
+
+        .media-container {
+          display: flex;
+          justify-content: center;
+          background-color: #292c2f;
+        }
+
+        .video {
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+          width: 75%;
+        }
+        
+        .videoContainer {
+            position: relative;
+            padding-top: 56.25%;
+            width: 100%;
+        }
+        
+        iframe {
+            position: absolute;
+            top: 0;
+            border-radius: 1rem;
+            border: 3px solid gainsboro;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media only screen and (min-width: 768px) {
+          .message {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+          }
+  
+          #message-text {
+            width: 75%;
+          }
+  
+          #ribbon {
+            display: block;
+            padding-top: 1rem;
+            width: 20%;
+          }
+  
+          #ribbon img {
+            width: 100%;
+          }
+
+          // .vid-img {
+          //   outline: 1px solid red;
+          //   width: 22.5%;
+          //   margin: 1rem;
+          //   display: flex;
+          //   flex-direction: column;
+          //   justify-content: space-between;
+          // }
+
+          // .vid-img img {
+          //   width: 100%;
+          // }
+
+          // .side-pic {
+          //   outline: 1px solid orange;
+          //   width: 100%;
+          //   height: 30%;
+          //   border-radius: 50%;
+          //   background: url('/index/baskets.jpg') no-repeat;
+          //   background-position: center;
+          //   background-size: contain;
+          // }
+        }
+
+        @media only screen and (min-width: 1024px) {
+          .message {
+            align-items: center;
+          }
+
+          #ribbon {
+            padding-top: 0;
+          }
+        }
+        `}
+      </style>
     </div>
   )
 }
