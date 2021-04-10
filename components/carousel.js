@@ -97,6 +97,9 @@ export default function Carousel() {
                 <div>
                     <img src='/carousel-images/carousel-12.jpg' alt='' />
                 </div>
+                <div>
+                    <img src='/carousel-images/carousel-13.jpg' alt='' />
+                </div>
             </Slider>
 
             <style jsx>
