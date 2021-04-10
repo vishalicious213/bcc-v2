@@ -31,7 +31,7 @@ export default function News() {
             {posts.map(post =>
               <div key={post.id} className='post'>
                 <h2 className='no-space-below'><a href={post.url}>{post.title}</a></h2>
-                <p className='no-space-above'>by {post.author} | {post.date}</p>
+                <p className='no-space-above'>by <span>{post.author}</span> | {post.date}</p>
                 <p>{post.excerpt}</p>
 
               </div>
@@ -49,10 +49,19 @@ export default function News() {
 
           h2 {
             font-weight: 500;
+            color: #ff99cc;
+          }
+
+          h2:hover {
+            text-decoration: underline;
           }
 
           p {
             color: gainsboro;
+          }
+
+          span {
+            color: #b83574;
           }
           `}
         </style>
