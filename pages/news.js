@@ -4,7 +4,7 @@ import Footer from '../components/footer'
 import styles from '../styles/Home.module.css'
 
 const posts = [
-  {id: '006', date: 'Jan 17, 2021', url: '', title: 'How We Started and What We Do', author: 'Alaha Nasari', excerpt: 'Nearly five years ago, Breast Cancer Comfort was founded by survivor Deborah Cavolo. Like many other women, Debi felt there was an absence of community and conversation about breast cancer. Women diagnosed with breast cancer face issues that significantly impact their...'},
+  {id: '006', date: 'Jan 17, 2021', url: '/news/2021-01-17', title: 'How We Started and What We Do', author: 'Alaha Nasari', excerpt: 'Nearly five years ago, Breast Cancer Comfort was founded by survivor Deborah Cavolo. Like many other women, Debi felt there was an absence of community and conversation about breast cancer. Women diagnosed with breast cancer face issues that significantly impact their...'},
   {id: '005', date: 'May 25, 2020', url: '', title: 'The Road to Recovery', author: 'Alaha Nasari', excerpt: 'Ever since the declaration of a national emergency in March, daily life in the United States has been changing rapidly with the spread of the coronavirus. States have mandated strict guidelines including orders to stay home and the cancellation of activities and large...'},
   {id: '004', date: 'Apr 6, 2020', url: '', title: 'A Recipe for Successful Coping', author: 'Alaha Nasari', excerpt: 'Schools have closed, the economy is in decline, and health-care professionals are struggling to deal with the shortage of medical supplies. For anyone reading the news, these facts are just a grim reminder of the unfortunate situation our world is currently in. The...'},
   {id: '003', date: 'Dec 31, 2019', url: '', title: "It's Not Too Late To Donate!!!", author: 'Debi Cavolo', excerpt: 'It is never too late to give and now would be a great time! Help us to continue our work with women and men undergoing treatment for breast cancer. With your donation we will provide someone with a “comfort basket, bag or chemo comfort” and can even put...'},
@@ -17,7 +17,7 @@ export default function News() {
   return (
     <div className={styles.container}>
         <Head>
-            <title>Breast Cancer Comfort Foundation</title>
+            <title>News | Breast Cancer Comfort Foundation</title>
             <link rel="icon" href="/cropped-BCCF-basket-logo-white-5001-32x32.png" sizes="32x32" />
             <link rel="icon" href="/cropped-BCCF-basket-logo-white-5001-192x192.png" sizes="192x192" />
             <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
