@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Nav from '../components/nav'
-import Footer from '../components/footer'
 import styles from '../styles/Home.module.css'
 
 export default function Memory() {
@@ -12,8 +10,6 @@ export default function Memory() {
             <link rel="icon" href="/cropped-BCCF-basket-logo-white-5001-192x192.png" sizes="192x192" />
             <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
         </Head>
-
-        <Nav />
 
         <main className={styles.main}>
             <div className='img-container'>
@@ -33,8 +29,6 @@ export default function Memory() {
                     <h2 className='grey mem-h2'><img src='/gift.png' />Gilbert Bogis</h2>
             </section>
         </main>
-
-        <Footer />
 
         <style jsx>
             {`
