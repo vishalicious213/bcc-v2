@@ -9,6 +9,7 @@ export default function Boobtique() {
         <link rel="icon" href="/cropped-BCCF-basket-logo-white-5001-32x32.png" sizes="32x32" />
         <link rel="icon" href="/cropped-BCCF-basket-logo-white-5001-192x192.png" sizes="192x192" />
         <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
+        <script src="http://sdks.shopifycdn.com/buy-button/2.1.7/buybutton.js"></script>
       </Head>
 
       <main className={styles.main}>
@@ -51,10 +52,11 @@ export default function Boobtique() {
                 <p className='no-space-above'><b>Chemo Comfort Bags</b> can include a puzzle or coloring book, pen, unflavored lip balm, tissues, mints,  pocket calendar, thank you cards, and blanket. </p>
             </div>
           </section>
+          
 
-          <div className='img-container-2'>
+          {/* <div className='img-container-2'>
             <img src='/boobtique/boobtique-2.jpg' alt='' />
-          </div>
+          </div> */}
       </main>
     </div>
   )
