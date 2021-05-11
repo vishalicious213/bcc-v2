@@ -6,6 +6,7 @@ export default function Shopify() {
     axios.get('https://breast-cancer-comfort-foundation.myshopify.com/admin/api/2021-04/storefront_access_tokens.json', {
         headers: {
             'Access-Control-Allow-Origin': 'http://localhost:3000',
+            'Content-Type': 'application/graphql'
         },
     })
     .then(response => {
