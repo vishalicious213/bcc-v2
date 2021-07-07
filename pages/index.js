@@ -22,7 +22,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <article className='pink-container message'>
+        {/* <article className='pink-container message'>
           <div id='ribbon'>
             <img src='/breast-cancer-ribbon.png' />
           </div>
@@ -37,7 +37,7 @@ export default function Home() {
           <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
             <button className='button'>DONATE</button>
           </a>
-        </div>
+        </div> */}
 
         <section className='carousel'>
           <Carousel />

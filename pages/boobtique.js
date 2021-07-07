@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Shopify from '../components/shopify'
+// import Shopify from '../components/shopify'
 import styles from '../styles/Home.module.css'
 
 export default function Boobtique() {
@@ -54,7 +54,7 @@ export default function Boobtique() {
             </div>
           </section>
           
-          <Shopify />
+          {/* <Shopify /> */}
           
           {/* <div className='img-container-2'>
             <img src='/boobtique/boobtique-2.jpg' alt='' />
