@@ -6,7 +6,7 @@ export default function Boobtique() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Boobtique | Breast Cancer Comfort Foundation</title>
+        <title>Shop | Breast Cancer Comfort Foundation</title>
         <link rel="icon" href="/cropped-BCCF-basket-logo-white-5001-32x32.png" sizes="32x32" />
         <link rel="icon" href="/cropped-BCCF-basket-logo-white-5001-192x192.png" sizes="192x192" />
         <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
@@ -23,7 +23,7 @@ export default function Boobtique() {
                 <img className='gift-img' src='gift.png' alt='wrapped gift' />
             </div>
             <div className='gift-text-container'>
-                <h2 className='h2'>Welcome to our Boobtique!</h2>
+                <h2 className='h2'>Welcome to our Shop!</h2>
                 <p className='no-space-above'>We are getting ready to open our doors to the public. If you know someone who is undergoing treatment for breast cancer and you don’t know what to give, then let us help you.</p>
                 <p>Handmade hearts, comfort bags, and custom gift baskets will be available soon. Select any one of our specialty items and we will ship to you, or anyone you choose, within 48 hours.</p>
             </div>
