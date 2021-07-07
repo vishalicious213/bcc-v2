@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Nav from '../components/nav'
-import Footer from '../components/footer'
 import styles from '../styles/Home.module.css'
 
 const posts = [
@@ -23,8 +21,6 @@ export default function News() {
             <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
         </Head>
 
-        <Nav />
-
         <main className={styles.main}>
             <h1 className={styles.title}>NEWS</h1>
 
@@ -37,7 +33,6 @@ export default function News() {
               </div>
             )}
         </main>
-        <Footer />
 
         <style jsx>
           {`

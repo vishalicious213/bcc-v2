@@ -22,7 +22,7 @@ export default function Nav() {
             <nav id='menu'>
                 <Link href='/'><a>Home</a></Link>
                 <Link href='/about'><a>About Us</a></Link>
-                <Link href='/boobtique'><a>Boobtique</a></Link>
+                <Link href='/boobtique'><a>Shop</a></Link>
                 <div className='hover-menu'>
                     <Link href='/donate'><a className='a'>Donate &#9662;</a></Link>
                     <div className='dropdown'>
@@ -44,7 +44,7 @@ export default function Nav() {
                 <nav id='burger'>
                     <a href='/'>Home</a>
                     <a className='redline' href='/about'>About Us</a>
-                    <a className='redline' href='/boobtique'>Boobtique</a>
+                    <a className='redline' href='/boobtique'>Shop</a>
                     <a className='redline' href='/donate'>Donate &#9662;</a>
                     <a href='/memory'>In Memory Of</a>
                     <a href='/supporters'>Supporters</a>

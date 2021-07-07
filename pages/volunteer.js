@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Nav from '../components/nav'
-import Footer from '../components/footer'
 import styles from '../styles/Home.module.css'
 
 export default function Volunteer() {
@@ -12,8 +10,6 @@ export default function Volunteer() {
         <link rel="icon" href="/cropped-BCCF-basket-logo-white-5001-192x192.png" sizes="192x192" />
         <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
       </Head>
-
-      <Nav />
 
       <main className={styles.main}>
           <div className='img-container'>
@@ -53,8 +49,6 @@ export default function Volunteer() {
             </div>
           </section>
       </main>
-
-      <Footer />
     </div>
   )
 }

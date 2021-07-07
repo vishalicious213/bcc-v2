@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Nav from '../components/nav'
-import Footer from '../components/footer'
 import Carousel from '../components/carousel'
 // import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
@@ -23,10 +21,8 @@ export default function Home() {
         <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
       </Head>
 
-      <Nav />
-
       <main className={styles.main}>
-        <article className='pink-container message'>
+        {/* <article className='pink-container message'>
           <div id='ribbon'>
             <img src='/breast-cancer-ribbon.png' />
           </div>
@@ -41,7 +37,7 @@ export default function Home() {
           <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
             <button className='button'>DONATE</button>
           </a>
-        </div>
+        </div> */}
 
         <section className='carousel'>
           <Carousel />
@@ -75,14 +71,19 @@ export default function Home() {
           <div className='gift-text-container'>
               <h2 className='h2'>Pay It Forward</h2>
               <p className='no-space-above'>If you would like to contribute to this or any of our many other future projects, please consider making a donation. Any amount is greatly appreciated and it all goes directly to funding “Comfort Baskets” and “Chemo Comfort Bags”.</p>
+              <p>There are two ways to donate to Breast Cancer Comfort: through <b>Network For Good</b> and through <b>Venmo</b>. Pick either one!</p>
           </div>
         </section>
 
         <div className='button-container'>
-          <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
-            <button className='button'>GIVE NOW</button>
-          </a>
-        </div>
+            <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
+              <button className='button button-1'>NETWORK FOR GOOD</button>
+            </a>
+
+            <a className='fb icon' target='_blank' rel='noopener' href="https://venmo.com/u/breastcancercomfort">
+              <button className='button'>VENMO</button>
+            </a>
+          </div>
 
         <div className='media-container'>
           <div className='video'>
@@ -92,8 +93,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      <Footer />
 
       <style jsx>
         {`
@@ -108,6 +107,15 @@ export default function Home() {
           padding: 1rem 0 2rem 0;
           // height: 22rem;
           position: relative;
+        }
+
+        .button {
+          width: 9rem;
+          height: 4rem;
+        }
+
+        .button-1 {
+          margin-right: 1rem;
         }
 
         .media-container {

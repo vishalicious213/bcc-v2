@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Nav from '../components/nav'
-import Footer from '../components/footer'
 import styles from '../styles/Home.module.css'
 
 export default function Share() {
@@ -13,8 +11,6 @@ export default function Share() {
             <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
         </Head>
 
-        <Nav />
-
         <main className={styles.main}>
             <div className='img-container'>
                 <img src='/volunteer/share-your-story.png' alt='' />
@@ -26,8 +22,6 @@ export default function Share() {
                 <p>If you would like to share your story email us at <a className='email'>info@breastcancercomfort.org</a>.</p>
             </section>
         </main>
-        
-        <Footer />
 
         <style jsx>
             {`

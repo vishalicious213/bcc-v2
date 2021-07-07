@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Nav from '../components/nav'
-import Footer from '../components/footer'
 import styles from '../styles/Home.module.css'
 
 export default function Donate() {
@@ -12,8 +10,6 @@ export default function Donate() {
         <link rel="icon" href="/cropped-BCCF-basket-logo-white-5001-192x192.png" sizes="192x192" />
         <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
       </Head>
-
-      <Nav />
 
       <main className={styles.main}>
           <div className='img-container'>
@@ -28,12 +24,17 @@ export default function Donate() {
                 <h2 className='h2'>What happens when someone donates money to the Breast Cancer Comfort Foundation?</h2>
                 <p className='no-space-above'>Amazing things happen! Each donation contributes to a basket or bag to be given to a patient, but in order to make the baskets we need office space and supplies.</p>
                 <p>A typical day for us at the office may begin with me cleaning out my car to make room for all of the baskets we want to deliver (sometimes a hundred in one day). We have probably been to the office for several days and have put together, filled, and created the final look. My sister is our creative mind and she has to have every basket look the same and show the same quality. This sometimes takes the longest, but is most-appreciated by patients.</p>
+                <p>There are two ways to donate to Breast Cancer Comfort: through <b>Network For Good</b> and through <b>Venmo</b>. Pick either one!</p>
             </div>
           </section>
 
           <div className='button-container'>
             <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
-              <button className='button'>GIVE NOW</button>
+              <button className='button button-1'>NETWORK FOR GOOD</button>
+            </a>
+
+            <a className='fb icon' target='_blank' rel='noopener' href="https://venmo.com/u/breastcancercomfort">
+              <button className='button'>VENMO</button>
             </a>
           </div>
 
@@ -68,12 +69,19 @@ export default function Donate() {
           </section>
       </main>
 
-      <Footer />
-
       <style jsx>
         {`
         .li {
           margin-bottom: .25rem;
+        }
+
+        .button {
+          width: 9rem;
+          height: 4rem;
+        }
+
+        .button-1 {
+          margin-right: 1rem;
         }
         `}
       </style>
