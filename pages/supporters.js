@@ -32,6 +32,10 @@ export default function Support() {
 
         <style jsx>
             {`
+            main {
+                margin-bottom: 1rem;
+            }
+
             .mem-h2 {
                 font-weight: 500;
             }
