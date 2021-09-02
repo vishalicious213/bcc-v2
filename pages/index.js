@@ -29,22 +29,27 @@ export default function Home() {
           <div id='message-text'>
             <p className='no-space-below'><b>Breast Cancer Comfort Foundation</b></p>
             <p className='no-space-above'><b>September 1, 2021</b></p>
-            <p>On October 17th, 2021, the Breast Cancer Comfort Foundation (BCCF) will be joining the American Cancer Society in Making Strides Against Breast Cancer. The event will take place at Jones Beach Field 5 from 7:00 A.M. to 11:00 A.M. Due to the coronavirus pandemic, the foundation had been unable to hold in-person fundraising events. Now, after almost 1 1⁄2 years of raising money and spreading awareness online, the BCCF is making a comeback. We are thrilled to be joined by survivors, supporters, and, most importantly, fighters.</p>
+            <p>On October 17th, 2021, the Breast Cancer Comfort Foundation (BCCF) will be joining the <a className='link' target="_blank" rel="noopener" href='https://www.cancer.org/'>American Cancer Society</a> in <a className='link' target="_blank" rel="noopener" href='https://secure.acsevents.org/site/SPageServer?pagename=strides_msabc'>Making Strides Against Breast Cancer</a>. The event will take place at Jones Beach Field 5 from 7:00 A.M. to 11:00 A.M. Due to the coronavirus pandemic, the foundation had been unable to hold in-person fundraising events. Now, after almost 1 1⁄2 years of raising money and spreading awareness online, the BCCF is making a comeback. We are thrilled to be joined by survivors, supporters, and, most importantly, fighters.</p>
             <p>Making Strides Long Island is more than just a walk; it is a movement to assist breast cancer research and programs, supporting patients, education, and prevention. Together, as a team, we hope to raise breast cancer awareness to help reduce the stigma around the disease and have more of the world join us in overcoming cancer! The Breast Cancer Comfort Foundation strives to offer care, aid, and motivation to patients undergoing curative or preventative treatment. By supporting the American Cancer Society’s Making Strides movement, we aim to provide more help to survivors and friends.</p>
             <p>The Breast Cancer Comfort Foundation was established in 2015 by survivor Deborah Cavolo. She strove to offer wholehearted support to women undergoing breast cancer treatment by crafting care packages. Her personal, hand-made comfort baskets have successfully offered confidence and hope to those experiencing or recovering from their difficult journey.</p>
             <p>Accompanying Deborah Cavolo, we are grateful to have Ann Guarascio. She has been involved with the Breast Cancer Comfort Foundation since 2018 in a volunteer capacity, when she began to serve the bookkeeping and accounting needs of the organization. She brings twenty-plus years of experience in the non-profit sector, with a background in both financial and development roles.</p>
             <p>As a team, we invite you to join forces with the American Cancer Society – the nation’s nonprofit leader in the breast cancer fight. Join the Making Strides movement to help save lives and fund the future of breast cancer research and programs. Making Strides will be adhering to CDC, state, and local guidelines and regulations regarding COVID-19. As these change on a day-to-day basis, Making Strides will update us on requirements.</p>
+            <p><b>Please support our team and Making Strides Against Breast Cancer by clicking on the button below!</b></p>
           </div>
         </article>
 
         <div className='button-container'>
-            <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
+            <a className='fb icon' target='_blank' rel='noopener' href="https://secure.acsevents.org/site/TR;jsessionid=00000000.app308b?team_id=2584056&pg=team&fr_id=100837&s_locale=en_US&et=RfVj63xp_4HduwOAiiN2dRYOcroWZKS2iWgM-NWs1lgU3YwxBH0MgQ&s_tafId=2386672&NONCE_TOKEN=E79B0F8788AB45920E08D1D89C183754">
+              <button className='button'>Making Strides</button>
+            </a>
+
+            {/* <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
               <button className='button button-1'>NETWORK FOR GOOD</button>
             </a>
 
             <a className='fb icon' target='_blank' rel='noopener' href="https://venmo.com/u/breastcancercomfort">
               <button className='button'>VENMO</button>
-            </a>
+            </a> */}
         </div>
 
         <section className='carousel'>
@@ -106,6 +111,11 @@ export default function Home() {
         {`
         #ribbon {
           display: none;
+        }
+
+        .link {
+          text-decoration: underline;
+          font-weight: bold;
         }
 
         .carousel {
