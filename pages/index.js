@@ -34,7 +34,7 @@ export default function Home() {
             <p>The Breast Cancer Comfort Foundation was established in 2015 by survivor Deborah Cavolo. She strove to offer wholehearted support to women undergoing breast cancer treatment by crafting care packages. Her personal, hand-made comfort baskets have successfully offered confidence and hope to those experiencing or recovering from their difficult journey.</p>
             <p>Accompanying Deborah Cavolo, we are grateful to have Ann Guarascio. She has been involved with the Breast Cancer Comfort Foundation since 2018 in a volunteer capacity, when she began to serve the bookkeeping and accounting needs of the organization. She brings twenty-plus years of experience in the non-profit sector, with a background in both financial and development roles.</p>
             <p>As a team, we invite you to join forces with the American Cancer Society – the nation’s nonprofit leader in the breast cancer fight. Join the Making Strides movement to help save lives and fund the future of breast cancer research and programs. Making Strides will be adhering to CDC, state, and local guidelines and regulations regarding COVID-19. As these change on a day-to-day basis, Making Strides will update us on requirements.</p>
-            <p>Please support our team and Making Strides Against Breast Cancer by clicking on the button below!</p>
+            <p><b>Please support our team and Making Strides Against Breast Cancer by clicking on the button below!</b></p>
           </div>
         </article>
 
