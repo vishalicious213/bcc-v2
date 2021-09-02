@@ -13,7 +13,7 @@ export default function Post() {
             <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
         </Head>
 
-        <Nav />
+        {/* <Nav /> */}
 
         <main className={styles.main}>
             <div className='post'>
