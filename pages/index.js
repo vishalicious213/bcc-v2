@@ -115,6 +115,7 @@ export default function Home() {
 
         .link {
           text-decoration: underline;
+          font-weight: bold;
         }
 
         .carousel {
