@@ -22,7 +22,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        {/* <article className='pink-container message'>
+        <article className='pink-container message'>
           <div id='ribbon'>
             <img src='/breast-cancer-ribbon.png' />
           </div>
@@ -34,10 +34,14 @@ export default function Home() {
         </article>
 
         <div className='button-container'>
-          <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
-            <button className='button'>DONATE</button>
-          </a>
-        </div> */}
+            <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
+              <button className='button button-1'>NETWORK FOR GOOD</button>
+            </a>
+
+            <a className='fb icon' target='_blank' rel='noopener' href="https://venmo.com/u/breastcancercomfort">
+              <button className='button'>VENMO</button>
+            </a>
+        </div>
 
         <section className='carousel'>
           <Carousel />
@@ -83,7 +87,7 @@ export default function Home() {
             <a className='fb icon' target='_blank' rel='noopener' href="https://venmo.com/u/breastcancercomfort">
               <button className='button'>VENMO</button>
             </a>
-          </div>
+        </div>
 
         <div className='media-container'>
           <div className='video'>
