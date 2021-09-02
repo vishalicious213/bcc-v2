@@ -25,7 +25,6 @@ export default function Post() {
                 </div>
             </div>
         </main>
-        <Footer />
 
         <style jsx>
           {`

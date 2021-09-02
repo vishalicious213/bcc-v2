@@ -24,7 +24,6 @@ export default function Post() {
                 <p>As a team, we invite you to join forces with the American Cancer Society – the nation’s nonprofit leader in the breast cancer fight. Join the Making Strides movement to help save lives and fund the future of breast cancer research and programs. Making Strides will be adhering to CDC, state, and local guidelines and regulations regarding COVID-19. As these change on a day-to-day basis, Making Strides will update us on requirements.</p>
             </div>
         </main>
-        <Footer />
 
         <style jsx>
           {`

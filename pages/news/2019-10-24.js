@@ -30,7 +30,6 @@ export default function Post() {
                 <p>BCCF encourages all individuals to contribute to our cause, whether it be through volunteering at our events or taking one step further to collect donations for our organization. To find a passion for service and to dedicate time and effort towards transforming an idea into reality is what Alaha Nasari did and we hope to inspire others in doing the same.</p>
             </div>
         </main>
-        <Footer />
 
         <style jsx>
           {`
