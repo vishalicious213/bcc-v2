@@ -20,7 +20,6 @@ export default function Post() {
                 <p>Nearly five years ago, Breast Cancer Comfort was founded by survivor Deborah Cavolo. Like many other women, Debi felt there was an absence of community and conversation about breast cancer. Women diagnosed with breast cancer face issues that significantly impact their quality and length of life. With this in mind, BCC has since set out to address the unique needs of women through the distribution of comfort baskets. Assembled with empathy, a dash of hope, and a few sprinkles of inspiration, these baskets strive to promote the spiritual, emotional, and mental healing of breast cancer patients. BCC has partnered with numerous hospitals and rehab centers within the Northwell Health System for the delivery of baskets to patients, entirely free of charge. We highly encourage requests for baskets. After all, BCC strives to offer women the sense of comradeship and understanding they seek.</p>
             </div>
         </main>
-        <Footer />
 
         <style jsx>
           {`

@@ -24,7 +24,6 @@ export default function Post() {
                 <p>Whether performing small or large acts of generosity, there are multiple creative and thoughtful ways we can do good from the comfort of our own homes. Donating money to a non-profit, writing thank you letters to healthcare workers, or picking up groceries for someone who’s at a higher risk for the virus than you are only a few ideas. These small actions ultimately translate into a beautiful difference in the lives of others. The feeling of uncertainty that haunts many of us is unavoidable, but one thing is for sure – together, we can make things better.</p>
             </div>
         </main>
-        <Footer />
 
         <style jsx>
           {`

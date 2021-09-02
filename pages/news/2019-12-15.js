@@ -22,7 +22,6 @@ export default function Post() {
                 <p>WHAT?? Those holidays passed also? This is ridiculous, next you are going to tell me I missed summer and Halloween and Thanksgiving. Well, Christmas and Hanukkah are next week so before they pass me by and its too late, I want to wish all of you a happy holiday season. May your days be warm and your drinks be cold (or the other way around lol ). I wish for you gratitude and peace, I wish acceptance and kindness, I wish support and laughter. In other words, have an amazing few weeks and start practicing your 2020’s! 🙂</p>
             </div>
         </main>
-        <Footer />
 
         <style jsx>
           {`

@@ -22,7 +22,8 @@ export default function Post() {
                 <p>TEXT</p>
             </div>
         </main>
-        <Footer />
+
+        {/* <Footer /> */}
 
         <style jsx>
           {`

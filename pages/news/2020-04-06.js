@@ -23,7 +23,6 @@ export default function Post() {
                 <p>By tuning into these silver linings, we can rise above our daily challenges and replenish the energy and inspiration we need in our lives. Whether that involves listening to beautiful music, taking a short walk outdoors, keeping a journal, or creating something, hope is the antidote that will help us see things from a new perspective. The Breast Cancer Comfort community is with you, every step of the way. Together, we can create a stronger, more unified, loving world.</p>
             </div>
         </main>
-        <Footer />
 
         <style jsx>
           {`
