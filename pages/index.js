@@ -34,22 +34,22 @@ export default function Home() {
             <p>The Breast Cancer Comfort Foundation was established in 2015 by survivor Deborah Cavolo. She strove to offer wholehearted support to women undergoing breast cancer treatment by crafting care packages. Her personal, hand-made comfort baskets have successfully offered confidence and hope to those experiencing or recovering from their difficult journey.</p>
             <p>Accompanying Deborah Cavolo, we are grateful to have Ann Guarascio. She has been involved with the Breast Cancer Comfort Foundation since 2018 in a volunteer capacity, when she began to serve the bookkeeping and accounting needs of the organization. She brings twenty-plus years of experience in the non-profit sector, with a background in both financial and development roles.</p>
             <p>As a team, we invite you to join forces with the American Cancer Society – the nation’s nonprofit leader in the breast cancer fight. Join the Making Strides movement to help save lives and fund the future of breast cancer research and programs. Making Strides will be adhering to CDC, state, and local guidelines and regulations regarding COVID-19. As these change on a day-to-day basis, Making Strides will update us on requirements.</p>
-            <p><b>Please support our team and Making Strides Against Breast Cancer by clicking on the button below!</b></p>
+            {/* <p><b>Please support our team and Making Strides Against Breast Cancer by clicking on the button below!</b></p> */}
           </div>
         </article>
 
         <div className='button-container'>
-            <a className='fb icon' target='_blank' rel='noopener' href="https://secure.acsevents.org/site/TR;jsessionid=00000000.app308b?team_id=2584056&pg=team&fr_id=100837&s_locale=en_US&et=RfVj63xp_4HduwOAiiN2dRYOcroWZKS2iWgM-NWs1lgU3YwxBH0MgQ&s_tafId=2386672&NONCE_TOKEN=E79B0F8788AB45920E08D1D89C183754">
+            {/* <a className='fb icon' target='_blank' rel='noopener' href="https://secure.acsevents.org/site/TR;jsessionid=00000000.app308b?team_id=2584056&pg=team&fr_id=100837&s_locale=en_US&et=RfVj63xp_4HduwOAiiN2dRYOcroWZKS2iWgM-NWs1lgU3YwxBH0MgQ&s_tafId=2386672&NONCE_TOKEN=E79B0F8788AB45920E08D1D89C183754">
               <button className='button'>Making Strides</button>
-            </a>
+            </a> */}
 
-            {/* <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
+            <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
               <button className='button button-1'>NETWORK FOR GOOD</button>
             </a>
 
             <a className='fb icon' target='_blank' rel='noopener' href="https://venmo.com/u/breastcancercomfort">
               <button className='button'>VENMO</button>
-            </a> */}
+            </a>
         </div>
 
         <section className='carousel'>
