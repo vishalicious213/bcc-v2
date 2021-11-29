@@ -23,6 +23,10 @@ export default function Post() {
                 <p>#cans4cancerNY #togetherwemakeadifference #recycling4acure</p>
                 <p><a className='link' target="_blank" rel="noopener" href='https://recycling4acure.org/'>Pink Cans 4 Cancer</a> is a Garden City NY non-profit organization, and movement of hope & sustainability to help people with cancer while saving the planet!</p>
                 <p>Check out our FaceBook page <a className='link' target="_blank" rel="noopener" href='https://www.facebook.com/breastcancercomfort/'>Breast Cancer Comfort</a> and the FaceBook page for <a className='link' target="_blank" rel="noopener" href='https://www.facebook.com/Cans4CancerNY'>Pink Cans 4 Cancer</a> to find out how you can #makeadifference</p>
+
+                <div className='img-container'>
+                    <img src='/news/2021-11-12.jpg' alt='' />
+                </div>
             </div>
         </main>
 
@@ -52,6 +56,15 @@ export default function Post() {
           .link {
             text-decoration: underline;
             font-weight: bold;
+          }
+
+          .img-container {
+              width: 50%;
+              margin: 2rem auto;
+          }
+
+          img {
+              width: 100%;
           }
           `}
         </style>
