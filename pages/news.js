@@ -54,18 +54,20 @@ export default function News() {
         <style jsx>
           {`
           .main-container {
+            // border: 1px solid red;
             display: flex;
-            border: 1px solid red;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 3rem;
           }
 
           .feed {
-            border: none;
+            // border: 1px solid blue;
             overflow: hidden;
           }
 
           .post {
-            width: 80%;
-            margin: 3rem auto;
+            margin-bottom: 2rem;
             color: white;
           }
 
@@ -84,6 +86,15 @@ export default function News() {
 
           span {
             color: #b83574;
+          }
+
+          @media only screen and (min-width: 1024px) {
+            .main-container {
+              justify-content: space-between;
+            }
+            .posts {
+              width: calc(100% - 380px);
+            }
           }
           `}
         </style>
