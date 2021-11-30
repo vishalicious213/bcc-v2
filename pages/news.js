@@ -49,8 +49,8 @@ export default function News() {
                       width="340" 
                       height="500" 
                       scrolling="no" 
-                      frameborder="0" 
-                      allowfullscreen="true" 
+                      frameBorder="0" 
+                      allowFullScreen={true} 
                       allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
                     </iframe>
                 </section>
