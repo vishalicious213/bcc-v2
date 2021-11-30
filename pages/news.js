@@ -38,16 +38,21 @@ export default function News() {
                     )}
                 </section>
 
-                <iframe 
-                  className='feed'
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbreastcancercomfort%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                  width="340" 
-                  height="500" 
-                  scrolling="no" 
-                  frameborder="0" 
-                  allowfullscreen="true" 
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>
+                <section className='social'>
+                    <a target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"><h2>Facebook</h2></a>
+
+                    <iframe 
+                      className='feed'
+                      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbreastcancercomfort%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                      width="340" 
+                      height="500" 
+                      scrolling="no" 
+                      frameborder="0" 
+                      allowfullscreen="true" 
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                    </iframe>
+                </section>
+
             </div>
         </main>
 
@@ -61,8 +66,11 @@ export default function News() {
             margin: 3rem;
           }
 
-          .feed {
+          .social {
             // border: 1px solid blue;
+          }
+
+          .feed {
             overflow: hidden;
           }
 
@@ -92,6 +100,7 @@ export default function News() {
             .main-container {
               justify-content: space-between;
             }
+
             .posts {
               width: calc(100% - 380px);
             }
