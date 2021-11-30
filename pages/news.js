@@ -39,7 +39,9 @@ export default function News() {
                 </section>
 
                 <section className='social'>
-                    <a target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"><h2>Facebook</h2></a>
+                    <a target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/">
+                      <h2 className='social-media-title'>BCC Facebook Feed:</h2>
+                    </a>
 
                     <iframe 
                       className='feed'
@@ -68,6 +70,10 @@ export default function News() {
 
           .social {
             // border: 1px solid blue;
+          }
+
+          .social-media-title {
+            font-weight: 700;
           }
 
           .feed {
