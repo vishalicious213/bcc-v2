@@ -26,21 +26,62 @@ export default function News() {
         <main className={styles.main}>
             <h1 className={styles.title}>NEWS</h1>
 
-            {posts.map(post =>
-              <div key={post.id} className='post'>
-                <h2 className='no-space-below'><a href={post.url}>{post.title}</a></h2>
-                <p className='no-space-above'>by <span>{post.author}</span> | {post.date}</p>
-                <p>{post.excerpt}</p>
+            <div className='main-container'>
+                <section className='posts'>
+                    {posts.map(post =>
+                      <div key={post.id} className='post'>
+                        <h2 className='no-space-below'><a href={post.url}>{post.title}</a></h2>
+                        <p className='no-space-above'>by <span>{post.author}</span> | {post.date}</p>
+                        <p>{post.excerpt}</p>
 
-              </div>
-            )}
+                      </div>
+                    )}
+                </section>
+
+                <section className='social'>
+                    <a target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/">
+                      <h2 className='social-media-title'>BCC Facebook Feed:</h2>
+                    </a>
+
+                    <iframe 
+                      className='feed'
+                      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbreastcancercomfort%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                      width="340" 
+                      height="500" 
+                      scrolling="no" 
+                      frameborder="0" 
+                      allowfullscreen="true" 
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                    </iframe>
+                </section>
+
+            </div>
         </main>
 
         <style jsx>
           {`
+          .main-container {
+            // border: 1px solid red;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 3rem;
+          }
+
+          .social {
+            // border: 1px solid blue;
+          }
+
+          .social-media-title {
+            font-weight: 700;
+          }
+
+          .feed {
+            overflow: hidden;
+          }
+
           .post {
-            width: 80%;
-            margin: 3rem auto;
+            margin-bottom: 2rem;
             color: white;
           }
 
@@ -59,6 +100,16 @@ export default function News() {
 
           span {
             color: #b83574;
+          }
+
+          @media only screen and (min-width: 1024px) {
+            .main-container {
+              justify-content: space-between;
+            }
+
+            .posts {
+              width: calc(100% - 380px);
+            }
           }
           `}
         </style>
