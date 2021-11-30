@@ -26,29 +26,38 @@ export default function News() {
         <main className={styles.main}>
             <h1 className={styles.title}>NEWS</h1>
 
-            <iframe 
-              className='feed'
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbreastcancercomfort%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-              width="340" 
-              height="500" 
-              scrolling="yes" 
-              frameborder="0" 
-              allowfullscreen="true" 
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
+            <div className='main-container'>
+                <section className='posts'>
+                    {posts.map(post =>
+                      <div key={post.id} className='post'>
+                        <h2 className='no-space-below'><a href={post.url}>{post.title}</a></h2>
+                        <p className='no-space-above'>by <span>{post.author}</span> | {post.date}</p>
+                        <p>{post.excerpt}</p>
 
-            {posts.map(post =>
-              <div key={post.id} className='post'>
-                <h2 className='no-space-below'><a href={post.url}>{post.title}</a></h2>
-                <p className='no-space-above'>by <span>{post.author}</span> | {post.date}</p>
-                <p>{post.excerpt}</p>
+                      </div>
+                    )}
+                </section>
 
-              </div>
-            )}
+                <iframe 
+                  className='feed'
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbreastcancercomfort%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                  width="340" 
+                  height="500" 
+                  scrolling="no" 
+                  frameborder="0" 
+                  allowfullscreen="true" 
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>
+            </div>
         </main>
 
         <style jsx>
           {`
+          .main-container {
+            display: flex;
+            border: 1px solid red;
+          }
+
           .feed {
             border: none;
             overflow: hidden;
