@@ -2,6 +2,8 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 const posts = [
+  // {id: '', date: '', url: '/news/', title: '', author: '', excerpt: ''},
+  {id: '009', date: 'Dev 1, 2021', url: '/news/2021-12-01', title: 'BCC Collaboration with Memorial Sloan Kettering', author: 'Maeryam Nasari & Zahel Nasari', excerpt: 'The Breast Cancer Comfort Foundation is proud to announce its most recent collaboration with Memoral Sloan Kettering, NYC’s largest cancer treatment center. CUNY School of Medicine students who are members of the American Medical Women’s Association...'},
   {id: '008', date: 'Nov 12, 2021', url: '/news/2021-11-12', title: '9th Annual Pink Cans 4 Cancer Fundraising Event', author: 'Ann M Rose Guarascio', excerpt: 'Treasurer Ann Guarascio and Volunteer Sara Guarascio attended the 9th Annual Pink Cans 4 Cancer fundraising event on November 8 at Bar Grazie Cantina, Massapequa NY. We welcome the opportunity to forge relationships with like regional organizations...'},
   {id: '007', date: 'Sep 01, 2021', url: '/news/2021-09-01', title: 'Making Strides Against Breast Cancer 2021', author: 'Maeryam Nasari & Zahel Nasari', excerpt: 'On October 17th, 2021, the Breast Cancer Comfort Foundation (BCCF) will be joining the American Cancer Society in Making Strides Against Breast Cancer. The event will take place at Jones Beach Field 5 from 7:00 A.M. to 11:00 A.M. Due to the coronavirus pandemic...'},
   {id: '006', date: 'Jan 17, 2021', url: '/news/2021-01-17', title: 'How We Started and What We Do', author: 'Alaha Nasari', excerpt: 'Nearly five years ago, Breast Cancer Comfort was founded by survivor Deborah Cavolo. Like many other women, Debi felt there was an absence of community and conversation about breast cancer. Women diagnosed with breast cancer face issues that significantly impact their...'},
@@ -10,7 +12,6 @@ const posts = [
   {id: '003', date: 'Dec 31, 2019', url: '/news/2019-12-31', title: "It's Not Too Late To Donate!!!", author: 'Debi Cavolo', excerpt: 'It is never too late to give and now would be a great time! Help us to continue our work with women and men undergoing treatment for breast cancer. With your donation we will provide someone with a “comfort basket, bag or chemo comfort” and can even put...'},
   {id: '002', date: 'Dec 15, 2019', url: '/news/2019-12-15', title: 'What to do when the end of the year is here and you are not ready', author: 'Debi Cavolo', excerpt: '2019 will be leaving us soon and I for one am not ready!! I just got used to the fact that New Years Day was over and I would now have to correct every date by putting a 9 instead of an 8. Valentines day has passed? When exactly was that because I must have blinked. I...'},
   {id: '001', date: 'Oct 24, 2019', url: '/news/2019-10-24', title: 'Hicksville High School senior raises awareness for breast cancer', author: 'Ann M Rose Guarascio', excerpt: 'A big big thank you! With a new school year having officially started in September, Breast Cancer Comfort Foundation is looking forward to the wonderful endeavors that will be taken by students who dedicate their time as volunteers to support our cause. Located in the...'},
-  // {id: '', date: '', url: '/news/', title: '', author: '', excerpt: ''},
 ]
 
 export default function News() {
@@ -49,8 +50,8 @@ export default function News() {
                       width="340" 
                       height="500" 
                       scrolling="no" 
-                      frameborder="0" 
-                      allowfullscreen="true" 
+                      frameBorder="0" 
+                      allowFullScreen={true} 
                       allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
                     </iframe>
                 </section>
