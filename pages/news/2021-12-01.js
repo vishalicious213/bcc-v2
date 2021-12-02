@@ -23,7 +23,7 @@ export default function Post() {
 
                 <div className='img-container'>
                   <a target="blank" rel="noopener" href="https://www.breastcancercomfort.org/news/mskcc-4.jpg">
-                    <img src='/news/mskcc-4.jpg' alt='' />
+                    <img src='/news/mskcc-4.jpg' alt='CUNY School of Medicine students at Memorial Sloan Kettering delivering Breast Cancer Comfort gift bags and comfort baskets for patients' />
                   </a>
                 </div>
 
@@ -43,13 +43,13 @@ export default function Post() {
 
                 <div className='img-gallery'>
                     <a className='img-gallery-link' target="blank" rel="noopener" href="https://www.breastcancercomfort.org/news/mskcc-1.jpg">
-                        <img className='gallery-img'  src='/news/mskcc-1.jpg' alt='' />
+                        <img className='gallery-img'  src='/news/mskcc-1.jpg' alt='Memorial Sloan Kettering patient room with Breast Cancer Comfort gift bag' />
                     </a>
                     <a className='img-gallery-link' target="blank" rel="noopener" href="https://www.breastcancercomfort.org/news/mskcc-2.jpg">
-                        <img className='gallery-img' src='/news/mskcc-2.jpg' alt='' />
+                        <img className='gallery-img' src='/news/mskcc-2.jpg' alt='Nurses from Memorial Sloan Kettering with Breast Cancer Comfort gift bags' />
                     </a>
                     <a className='img-gallery-link' target="blank" rel="noopener" href="https://www.breastcancercomfort.org/news/mskcc-3.jpg">
-                        <img className='gallery-img' src='/news/mskcc-3.jpg' alt='' />
+                        <img className='gallery-img' src='/news/mskcc-3.jpg' alt='Memorial Sloan Kettering patient room with Breast Cancer Comfort gift bag' />
                     </a>
                 </div>
 
