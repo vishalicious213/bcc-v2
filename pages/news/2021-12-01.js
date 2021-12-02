@@ -22,7 +22,9 @@ export default function Post() {
                 <p>The Breast Cancer Comfort Foundation is proud to announce its most recent collaboration with <a className='link' target="_blank" rel="noopener" href='https://www.mskcc.org/'>Memoral Sloan Kettering</a>, NYC’s largest cancer treatment center. <a className='link' target="_blank" rel="noopener" href='https://www.ccny.cuny.edu/csom'>CUNY School of Medicine</a> students who are members of the <a className='link' target="_blank" rel="noopener" href='https://www.amwa-doc.org/'>American Medical Women’s Association</a> delivered around 20 bags and 5 baskets to breast cancer patients who are currently undergoing chemotherapy.</p>
 
                 <div className='img-container'>
+                  <a target="blank" rel="noopener" href="https://www.breastcancercomfort.org/news/mskcc-4.jpg">
                     <img src='/news/mskcc-4.jpg' alt='' />
+                  </a>
                 </div>
 
                 <p>Pictured:</p>
@@ -40,9 +42,15 @@ export default function Post() {
                 </ul>
 
                 <div className='img-gallery'>
-                    <img className='gallery-img' src='/news/mskcc-1.jpg' alt='' />
-                    <img className='gallery-img' src='/news/mskcc-2.jpg' alt='' />
-                    <img className='gallery-img' src='/news/mskcc-3.jpg' alt='' />
+                    <a className='img-gallery-link' target="blank" rel="noopener" href="https://www.breastcancercomfort.org/news/mskcc-1.jpg">
+                        <img className='gallery-img'  src='/news/mskcc-1.jpg' alt='' />
+                    </a>
+                    <a className='img-gallery-link' target="blank" rel="noopener" href="https://www.breastcancercomfort.org/news/mskcc-2.jpg">
+                        <img className='gallery-img' src='/news/mskcc-2.jpg' alt='' />
+                    </a>
+                    <a className='img-gallery-link' target="blank" rel="noopener" href="https://www.breastcancercomfort.org/news/mskcc-3.jpg">
+                        <img className='gallery-img' src='/news/mskcc-3.jpg' alt='' />
+                    </a>
                 </div>
 
             </div>
@@ -96,8 +104,12 @@ export default function Post() {
             margin-top: 2rem;
           }
 
-          .gallery-img {
+          .img-gallery-link {
             width: 30%;
+          }
+
+          .gallery-img {
+            width: 100%;
           }
           `}
         </style>
