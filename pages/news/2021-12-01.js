@@ -97,6 +97,10 @@ export default function Post() {
               width: 100%;
           }
 
+          img:hover {
+            outline: 2px solid #ff99cc;
+          }
+
           .img-gallery {
             display: flex;
             flex-wrap: wrap;
