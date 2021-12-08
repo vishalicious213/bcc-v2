@@ -21,7 +21,12 @@ export default function Nav() {
             {/* Navbar for 768+ */}
             <nav id='menu'>
                 <Link href='/'><a>Home</a></Link>
-                <Link href='/about'><a>About Us</a></Link>
+                <div className='hover-menu'>
+                    <Link href='/about'><a className='a'>About Us &#9662;</a></Link>
+                    <div className='dropdown'>
+                        <Link href='/team'><a className='a center-link'>Our Team</a></Link>
+                    </div>
+                </div>
                 <Link href='/boobtique'><a>Shop</a></Link>
                 <div className='hover-menu'>
                     <Link href='/donate'><a className='a'>Donate &#9662;</a></Link>
@@ -43,7 +48,8 @@ export default function Nav() {
             <div id='burger-container'>
                 <nav id='burger'>
                     <a href='/'>Home</a>
-                    <a className='redline' href='/about'>About Us</a>
+                    <a className='redline' href='/about'>About Us &#9662;</a>
+                    <a href='/team'>Our Team</a>
                     <a className='redline' href='/boobtique'>Shop</a>
                     <a className='redline' href='/donate'>Donate &#9662;</a>
                     <a href='/memory'>In Memory Of</a>
