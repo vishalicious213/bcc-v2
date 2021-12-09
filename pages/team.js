@@ -2,11 +2,11 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 const team = [
-    {id: '01', name: 'Debi Cavolo', title: 'CEO & Founder', linkedIn: '', url: ''},
-    {id: '02', name: 'Ann Guarascio', title: 'Board Treasurer, Non-Profit Accounting Specialist', linkedIn: '', url: ''},
-    {id: '03', name: 'Nicole Link', title: 'Director of Events & Fundraising', linkedIn: '', url: ''},
-    {id: '04', name: 'Vish Singh', title: 'Web Developer', linkedIn: '', url: ''},
-    // {id: '', name: '', title: '', linkedIn: '', url: ''},
+    {id: '01', name: 'Debi Cavolo', title: 'CEO & Founder', pic: '', linkedIn: '', url: ''},
+    {id: '02', name: 'Ann Guarascio', title: 'Board Treasurer, Non-Profit Accounting Specialist', pic: '', linkedIn: '', url: ''},
+    {id: '03', name: 'Nicole Link', title: 'Director of Events & Fundraising', pic: '', linkedIn: '', url: ''},
+    {id: '04', name: 'Vish Singh', title: 'Web Developer', pic: '', linkedIn: '', url: ''},
+    // {id: '', name: '', title: '', pic: '', linkedIn: '', url: ''},
 ]
 
 export default function Team() {
@@ -25,9 +25,23 @@ export default function Team() {
             </div>
 
             <section className='grey-container'>
+                <h2 className='h2'>Our Team</h2>
                 <p>Do you want to help others fighting their battle with breast cancer?</p>
-                <p>You can do this by sharing your story. Sometimes hearing the story of someone who has been through breast cancer can help brighten up a persons day and give them encouragement and support though the process. You can share much needed advice and tips from first hand experience. You story will be shared on our website to provide support for all our readers. You can share who you are or you can share anonymously.</p>
-                <p>If you would like to share your story email us at <a className='email'>info@breastcancercomfort.org</a>.</p>
+
+                <section className='team'>
+                    {team.map(person =>
+                      <div key={person.id} className='person'>
+                          <h2>{person.name}</h2>
+                          <p>{person.title}</p>
+                        {/* <h2 className='no-space-below'><a href={post.url}>{post.title}</a></h2> */}
+                        {/* <p className='no-space-above'>by <span>{post.author}</span> | {post.date}</p> */}
+                        {/* <p>{post.excerpt}</p> */}
+                      </div>
+                    )}
+                </section>
+
+
+                <p>If you would like to join our team email us at <a className='email'>info@breastcancercomfort.org</a>.</p>
             </section>
         </main>
 
