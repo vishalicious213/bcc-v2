@@ -2,10 +2,10 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 const team = [
-    {id: '01', name: 'Debi Cavolo', title: 'CEO & Founder', pic: '', linkedIn: '', url: ''},
-    {id: '02', name: 'Ann Guarascio', title: 'Board Treasurer, Non-Profit Accounting Specialist', pic: '', linkedIn: '', url: ''},
-    {id: '03', name: 'Nicole Link', title: 'Director of Events & Fundraising', pic: '', linkedIn: '', url: ''},
-    {id: '04', name: 'Vish Singh', title: 'Web Developer', pic: '', linkedIn: '', url: ''},
+    {id: '01', name: 'Debi Cavolo', title: 'CEO & Founder', pic: 'debi-li.jpg', linkedIn: '', url: ''},
+    {id: '02', name: 'Ann Guarascio', title: 'Board Treasurer, Non-Profit Accounting Specialist', pic: 'ann-li.jpg', linkedIn: '', url: ''},
+    {id: '03', name: 'Nicole Link', title: 'Director of Events & Fundraising', pic: 'nicole-li.jpg', linkedIn: '', url: ''},
+    {id: '04', name: 'Vish Singh', title: 'Web Developer', pic: 'vish.jpg', linkedIn: '', url: ''},
     // {id: '', name: '', title: '', pic: '', linkedIn: '', url: ''},
 ]
 
@@ -31,6 +31,7 @@ export default function Team() {
                 <section className='team'>
                     {team.map(person =>
                         <div key={person.id} className='person'>
+                            <img className='person-img' src={`/about/${person.pic}`} alt={`${person.name}, ${person.title}`} />
                             <h2 className='no-space-below'>{person.name}</h2>
                             <p className='no-space-above person-title'>{person.title}</p>
                         </div>
@@ -70,6 +71,11 @@ export default function Team() {
 
             .person-title {
                 text-align: center;
+            }
+
+            .person-img {
+                width: 75%;
+                border-radius: 50%;
             }
 
             @media only screen and (min-width: 992px) {
