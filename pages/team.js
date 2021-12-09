@@ -24,8 +24,18 @@ export default function Team() {
                 <img src='/about/team.jpg' alt='' />
             </div>
 
+        <section className='pink-container gift-container'>
+          <div className='gift-img-container'>
+              <img className='gift-img' src='gift.png' alt='wrapped gift' />
+          </div>
+          <div className='gift-text-container'>
+              <h2 className='h2'>Our Team</h2>
+              <p className='no-space-above'>The people behind an organization are as important as the organization itself. Since 2015, The Breast Cancer Comfort Foundation has been working to provide comfort baskets and host events to support women undergoing breast cancer treatment. These are some of our team members who volunteer their time and efforts to help raise the spirits of patients and remind them that they're not alone.</p>
+          </div>
+        </section>
+
             <section className='grey-container'>
-                <h2 className='h2'>Our Team</h2>
+                {/* <h2 className='h2'>Our Team</h2> */}
                 {/* <p>Do you want to help others fighting their battle with breast cancer?</p> */}
 
                 <section className='team'>
