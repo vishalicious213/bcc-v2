@@ -1,7 +1,15 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-export default function Share() {
+const team = [
+    {id: '01', name: 'Debi Cavolo', title: 'CEO & Founder', linkedIn: '', url: ''},
+    {id: '02', name: 'Ann Guarascio', title: 'Board Treasurer, Non-Profit Accounting Specialist', linkedIn: '', url: ''},
+    {id: '03', name: 'Nicole Link', title: 'Director of Events & Fundraising', linkedIn: '', url: ''},
+    {id: '04', name: 'Vish Singh', title: 'Web Developer', linkedIn: '', url: ''},
+    // {id: '', name: '', title: '', linkedIn: '', url: ''},
+]
+
+export default function Team() {
   return (
     <div className={styles.container}>
         <Head>
@@ -21,14 +29,6 @@ export default function Share() {
                 <p>You can do this by sharing your story. Sometimes hearing the story of someone who has been through breast cancer can help brighten up a persons day and give them encouragement and support though the process. You can share much needed advice and tips from first hand experience. You story will be shared on our website to provide support for all our readers. You can share who you are or you can share anonymously.</p>
                 <p>If you would like to share your story email us at <a className='email'>info@breastcancercomfort.org</a>.</p>
             </section>
-
-            <div className='media-container'>
-            <div className='video'>
-                <div className='videoContainer'>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/O0cpKBZFAck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-          </div>
         </main>
 
         <style jsx>
@@ -39,34 +39,7 @@ export default function Share() {
 
             .email:hover {
                 text-decoration: underline;
-            }
-
-            .media-container {
-                display: flex;
-                justify-content: center;
-                background-color: #292c2f;
-            }
-    
-            .video {
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-            width: 75%;
-            }
-            
-            .videoContainer {
-                position: relative;
-                padding-top: 56.25%;
-                width: 100%;
-            }
-            
-            iframe {
-                position: absolute;
-                top: 0;
-                border-radius: 1rem;
-                border: 3px solid gainsboro;
-                width: 100%;
-                height: 100%;
-            }  
+            } 
             `}
         </style>
     </div>
