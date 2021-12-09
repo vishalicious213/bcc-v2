@@ -26,7 +26,7 @@ export default function Team() {
 
             <section className='grey-container'>
                 <h2 className='h2'>Our Team</h2>
-                <p>Do you want to help others fighting their battle with breast cancer?</p>
+                {/* <p>Do you want to help others fighting their battle with breast cancer?</p> */}
 
                 <section className='team'>
                     {team.map(person =>
@@ -53,20 +53,23 @@ export default function Team() {
             } 
 
             .team {
-                border: 1px solid red;
+                // border: 1px solid red;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
                 width: 100%;
+                margin-top: 2rem;
             }
 
             .person {
-                border: 1px solid pink;
+                // border: 1px solid pink;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 75%;
-                margin-bottom: 1rem;
+                width: 85%;
+                margin-bottom: 2rem;
+                background: linear-gradient(#292c2f 50%, #b01e65 50%);
+                border-radius: 1rem;
             }
 
             .person-title {
@@ -80,15 +83,15 @@ export default function Team() {
 
             @media only screen and (min-width: 992px) {
                 .person {
-                    border: 1px solid orange;
+                    // border: 1px solid orange;
                     width: 48%;
                 }
             }
 
             @media only screen and (min-width: 1200px) {
                 .person {
-                    border: 1px solid yellow;
-                    width: 33%;
+                    // border: 1px solid yellow;
+                    width: 30%;
                 }
             }
             `}
