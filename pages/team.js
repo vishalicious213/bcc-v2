@@ -24,20 +24,20 @@ export default function Team() {
                 <img src='/about/team.jpg' alt='' />
             </div>
 
-        <section className='pink-container gift-container'>
-          <div className='gift-img-container'>
-              <img className='gift-img' src='gift.png' alt='wrapped gift' />
-          </div>
-          <div className='gift-text-container'>
-              <h2 className='h2'>Our Team</h2>
-              <p className='no-space-above'>The people behind an organization are as important as the organization itself. Since 2015, The Breast Cancer Comfort Foundation has been working to provide comfort baskets and host events to support women undergoing breast cancer treatment. These are some of our team members who volunteer their time and efforts to help raise the spirits of patients and remind them that they're not alone.</p>
-          </div>
-        </section>
+            <section className='pink-container gift-container'>
+                <div className='gift-img-container'>
+                    <img className='gift-img' src='gift.png' alt='wrapped gift' />
+                </div>
+                <div className='gift-text-container'>
+                    <h2 className='h2'>Our Team</h2>
+                    <p className='no-space-above'>The people behind an organization are as important as the organization itself. Since 2015, The Breast Cancer Comfort Foundation has been working to provide comfort baskets and host events to support women undergoing breast cancer treatment. Below are some of our team members who volunteer their time and efforts to help raise the spirits of patients and remind them that they're not alone.</p>
+                    <h2 className='h2'>Join our organization!</h2>
+                    <p className='no-space-above'>BCC is powered by the skills and efforts of our volunteers. Our organization is seeking members to serve in the following capacities: Public Relations, Grant Writing, Marketing, Event Planning, and Social Media. Creative individuals with Fundraising experience are always welcome.</p>
+                    <p>Tell us about yourself and your ideas via email: <a id='email' href='mailto:info@breastcancercomfort.org'>info@breastcancercomfort.org</a></p>
+                </div>
+            </section>
 
             <section className='grey-container'>
-                {/* <h2 className='h2'>Our Team</h2> */}
-                {/* <p>Do you want to help others fighting their battle with breast cancer?</p> */}
-
                 <section className='team'>
                     {team.map(person =>
                         <div key={person.id} className='person'>
@@ -47,20 +47,19 @@ export default function Team() {
                         </div>
                     )}
                 </section>
-
-                <p>If you would like to join our team email us at <a className='email'>info@breastcancercomfort.org</a>.</p>
             </section>
         </main>
 
         <style jsx>
             {`
-            .email {
-                color: #ff99cc;
+            #email {
+                color: white;
+                font-weight: 700;
             }
-
-            .email:hover {
+            
+            #email:hover {
                 text-decoration: underline;
-            } 
+            }
 
             .team {
                 // border: 1px solid red;
@@ -77,9 +76,15 @@ export default function Team() {
                 flex-direction: column;
                 align-items: center;
                 width: 85%;
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
+                padding-top: 1rem;
                 background: linear-gradient(#292c2f 50%, #b01e65 50%);
                 border-radius: 1rem;
+            }
+
+            .person:hover {
+                background: #b01e65;
+                cursor: pointer;
             }
 
             .person-title {
