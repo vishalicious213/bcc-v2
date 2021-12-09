@@ -32,7 +32,7 @@ export default function Team() {
                     {team.map(person =>
                         <div key={person.id} className='person'>
                             <h2 className='no-space-below'>{person.name}</h2>
-                            <p className='no-space-above'>{person.title}</p>
+                            <p className='no-space-above person-title'>{person.title}</p>
                         </div>
                     )}
                 </section>
@@ -54,7 +54,9 @@ export default function Team() {
             .team {
                 border: 1px solid red;
                 display: flex;
-                justify-content: space-between;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                width: 100%;
             }
 
             .person {
@@ -62,6 +64,26 @@ export default function Team() {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                width: 75%;
+                margin-bottom: 1rem;
+            }
+
+            .person-title {
+                text-align: center;
+            }
+
+            @media only screen and (min-width: 992px) {
+                .person {
+                    border: 1px solid orange;
+                    width: 48%;
+                }
+            }
+
+            @media only screen and (min-width: 1200px) {
+                .person {
+                    border: 1px solid yellow;
+                    width: 33%;
+                }
             }
             `}
         </style>
