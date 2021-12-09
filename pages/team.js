@@ -30,16 +30,12 @@ export default function Team() {
 
                 <section className='team'>
                     {team.map(person =>
-                      <div key={person.id} className='person'>
-                          <h2>{person.name}</h2>
-                          <p>{person.title}</p>
-                        {/* <h2 className='no-space-below'><a href={post.url}>{post.title}</a></h2> */}
-                        {/* <p className='no-space-above'>by <span>{post.author}</span> | {post.date}</p> */}
-                        {/* <p>{post.excerpt}</p> */}
-                      </div>
+                        <div key={person.id} className='person'>
+                            <h2 className='no-space-below'>{person.name}</h2>
+                            <p className='no-space-above'>{person.title}</p>
+                        </div>
                     )}
                 </section>
-
 
                 <p>If you would like to join our team email us at <a className='email'>info@breastcancercomfort.org</a>.</p>
             </section>
@@ -54,6 +50,19 @@ export default function Team() {
             .email:hover {
                 text-decoration: underline;
             } 
+
+            .team {
+                border: 1px solid red;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .person {
+                border: 1px solid pink;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
             `}
         </style>
     </div>
