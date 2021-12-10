@@ -22,22 +22,26 @@ export default function Teammate() {
                 </div>
 
                 <div className='bio-text'>
-                    <h2 className='no-space-below'>Ann Guarascio</h2>
-                    <p className='no-space-above'><span>Board Treasurer, Non-Profit Accounting Specialist</span></p>
-                    
-                    <div className='social-media-icons'>
-                        <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/ann-guarascio-3463719/"></a>
-                        <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a>
-                        <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a>
-                        <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a>
-                    </div>
+                    <section className='identifiers'>
+                        <div className='who'>
+                            <h2 className='no-space-below'>Ann Guarascio</h2>
+                            <p className='no-space-above'><span>Board Treasurer, Non-Profit Accounting Specialist</span></p>
+                        </div>
+                        
+                        <div className='social-media-icons'>
+                            <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/ann-guarascio-3463719/"></a>
+                            <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a>
+                            <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a>
+                            <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a>
+                        </div>
+                    </section>
 
                     <p>Ann has been involved with The Breast Cancer Comfort Foundation since 2018 in a volunteer capacity, when she began to serve the bookkeeping and accounting needs of the organization.  She brings twenty plus years of experience in the non-profit sector, with background in both financial and development roles. "I am looking forward to partaking in the the growth of this organization, and the successful outreach to the beneficiaries of The Breast Cancer Comfort Foundation."</p>
                     <p>"My life experiences have led me to reach out to others, making connections, and overall sharing compassion and knowledge." A native of Long Island's waterfront community, Ann loves all things outdoors and nautical - especially the Great South Bay.</p>
                     <p>Family is most important, so when not working, Ann thoroughly enjoys time spent with her husband Tom, their three young adult children, and three senior citizens.</p>
 
-                    {/* <p>SKILLS</p> */}
-                    {/* <p>LINKS</p> */}
+                    {/* <h3>SKILLS</h3> */}
+                    {/* <h3>LINKS</h3> */}
                 </div>
             </section>
         </main>
@@ -66,12 +70,20 @@ export default function Teammate() {
             margin: 3rem auto;
           }
 
-          h2 {
+          h2, h3 {
             font-weight: 500;
             color: #ff99cc;
           }
+          
+          .link {
+            text-decoration: underline;
+          }
 
-          p {
+          .link:hover {
+            color: #b83574;
+          }
+
+          p, li {
             color: gainsboro;
           }
 
@@ -135,6 +147,15 @@ export default function Teammate() {
               background: url('/ig2.png') no-repeat;
               background-position: center;
               background-size: contain;
+          }
+          
+          @media only screen and (min-width: 992px) {
+            .identifiers {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
           }
           `}
         </style>

@@ -22,15 +22,19 @@ export default function Teammate() {
                 </div>
 
                 <div className='bio-text'>
-                    <h2 className='no-space-below'>Debi Cavolo</h2>
-                    <p className='no-space-above'><span>CEO & Founder</span></p>
-                    
-                    <div className='social-media-icons'>
-                        <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/debi-cavolo-671a78132/"></a>
-                        <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a>
-                        <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a>
-                        <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a>
-                    </div>
+                    <section className='identifiers'>
+                        <div className='who'>
+                            <h2 className='no-space-below'>Debi Cavolo</h2>
+                            <p className='no-space-above'><span>CEO & Founder</span></p>
+                        </div>
+                        
+                        <div className='social-media-icons'>
+                            <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/debi-cavolo-671a78132/"></a>
+                            <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a>
+                            <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a>
+                            <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a>
+                        </div>
+                    </section>
 
                     <p>Debi Cavolo is the CEO and Founder of The Breast Cancer Comfort Foundation (AKA Breast Cancer Comfort). Breast Cancer Comfort was created in 2015 to provide baskets and bags to women undergoing treatment for breast cancer.</p>
                     <p>Debi believes that every woman (or man) undergoing treatment deserves comfort and compassion as they begin their journey. Coming from experience, Debi knows first-hand the feelings of isolation and fear after surgery; the time when no one asked her about the loss of her breasts but asked about the level of her physical pain.</p>
@@ -38,8 +42,8 @@ export default function Teammate() {
                     <p>Debi is a Certified Registered Nurse, specializing in OR and Mental Illness. An Adjunct professor at both Molloy College and Adelphi University, Debi is a proud recipient of several awards for her work. Debi holds a BSN, with Magna Cum Laude and MSN in Nursing Education from Excelsior College, graduating with a 4.0GPA.</p>
                     <p>Debi has been featured on PIX11 for her work with breast cancer as well as NEWS12 as hero of the month. She has been honored as Mets batgirl and featured at Ducks games, throwing out the first pitch.</p>
 
-                    {/* <p>SKILLS</p> */}
-                    {/* <p>LINKS</p> */}
+                    {/* <h3>SKILLS</h3> */}
+                    {/* <h3>LINKS</h3> */}
                 </div>
             </section>
         </main>
@@ -68,12 +72,20 @@ export default function Teammate() {
             margin: 3rem auto;
           }
 
-          h2 {
+          h2, h3 {
             font-weight: 500;
             color: #ff99cc;
           }
+          
+          .link {
+            text-decoration: underline;
+          }
 
-          p {
+          .link:hover {
+            color: #b83574;
+          }
+
+          p, li {
             color: gainsboro;
           }
 
@@ -137,6 +149,15 @@ export default function Teammate() {
               background: url('/ig2.png') no-repeat;
               background-position: center;
               background-size: contain;
+          }
+          
+          @media only screen and (min-width: 992px) {
+            .identifiers {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
           }
           `}
         </style>
