@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
 
-export default function Post() {
+export default function Teammate() {
   return (
     <div className={styles.container}>
         <Head>
@@ -18,7 +18,7 @@ export default function Post() {
 
             <section className='bio'>
                 <div className='bio-img-container'>
-                    <img src='/about/ann-profile.jpg' alt='Ann Guarascio' />
+                    <img className='bio-img' src='/about/ann-profile.jpg' alt='Ann Guarascio' />
                 </div>
 
                 <div className='bio-text'>
@@ -26,7 +26,7 @@ export default function Post() {
                     <p className='no-space-above'><span>Board Treasurer, Non-Profit Accounting Specialist</span></p>
                     
                     <div className='social-media-icons'>
-                        <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/company/breast-cancer-comfort-foundation-inc/"></a>
+                        <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/ann-guarascio-3463719/"></a>
                         <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a>
                         <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a>
                         <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a>
@@ -47,17 +47,18 @@ export default function Post() {
           .bio {
             width: 100%;
             color: white;
-            // background-image: url('/about/ann-profile.jpg');
-            // background-position: center;
-            // background-repeat: no-repeat;
-            // background-size: cover;
           }
 
           .bio-img-container {
-            // outline: 1px solid red;
             margin-top: 3rem;
             display: flex;
             justify-content: center;
+            width: 80%;
+            margin: 3rem auto;
+          }
+
+          .bio-img {
+            width: 100%;
           }
           
           .bio-text {

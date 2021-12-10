@@ -86,7 +86,7 @@ export default function Team() {
 
             .person:hover {
                 background: #b01e65;
-                cursor: pointer;
+                // cursor: pointer;
             }
 
             .person-title {
