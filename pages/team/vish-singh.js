@@ -36,8 +36,21 @@ export default function Teammate() {
                     <p>My start as a developer comes from Lambda School (now Bloom Institute of Technology), a coding bootcamp. The bulk of my work experience comes from helping to build a clinical EMR for nursing homes, including research, planning, writing specifications, designing the front-end and testing. I worked with clinicians and administrative staff to ensure that software met their needs and was compliant with federal and state regulations. I also worked with vendors to ensure interoperability between our software.</p>
                     <p>My role at Breast Cancer Comfort is web developer. I redesigned the organization's former WordPress site and implemented it as a custom-built Next.js website that's faster and more customizable than its previous incarnation.</p>
 
-                    {/* <p>SKILLS</p> */}
-                    {/* <p>LINKS</p> */}
+                    <h3>SKILLS</h3>
+                    <ul>
+                      <li>HTML5</li>
+                      <li>CSS3</li>
+                      <li>JavaScript</li>
+                      <li>React.js</li>
+                      <li>Node.js</li>
+                      <li>Next.js</li>
+                      <li>Express.js</li>
+                    </ul>
+
+                    <h3>LINKS</h3>
+                    <ul>
+                      <li><a className='link' target='_blank' rel='noopener' href='https://neophyte.home.blog/'>Redo From Start (Coding Blog)</a></li>
+                    </ul>
                 </div>
             </section>
         </main>
@@ -66,12 +79,20 @@ export default function Teammate() {
             margin: 3rem auto;
           }
 
-          h2 {
+          h2, h3 {
             font-weight: 500;
             color: #ff99cc;
           }
 
-          p {
+          .link {
+            text-decoration: underline;
+          }
+
+          .link:hover {
+            color: #b83574;
+          }
+
+          p, li {
             color: gainsboro;
           }
 

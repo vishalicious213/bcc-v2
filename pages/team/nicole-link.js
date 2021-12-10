@@ -34,8 +34,8 @@ export default function Teammate() {
 
                     <p>Nicole comes to Breast Cancer Comfort with a background in public relations and a passion for building community and fundraising through events.  As our Director of Events and Fundraising, Nicole assists with social media management, community/media outreach, and fundraising events.</p>
 
-                    {/* <p>SKILLS</p> */}
-                    {/* <p>LINKS</p> */}
+                    {/* <h3>SKILLS</h3> */}
+                    {/* <h3>LINKS</h3> */}
                 </div>
             </section>
         </main>
@@ -64,12 +64,20 @@ export default function Teammate() {
             margin: 3rem auto;
           }
 
-          h2 {
+          h2, h3 {
             font-weight: 500;
             color: #ff99cc;
           }
+          
+          .link {
+            text-decoration: underline;
+          }
 
-          p {
+          .link:hover {
+            color: #b83574;
+          }
+
+          p, li {
             color: gainsboro;
           }
 

@@ -36,8 +36,8 @@ export default function Teammate() {
                     <p>"My life experiences have led me to reach out to others, making connections, and overall sharing compassion and knowledge." A native of Long Island's waterfront community, Ann loves all things outdoors and nautical - especially the Great South Bay.</p>
                     <p>Family is most important, so when not working, Ann thoroughly enjoys time spent with her husband Tom, their three young adult children, and three senior citizens.</p>
 
-                    {/* <p>SKILLS</p> */}
-                    {/* <p>LINKS</p> */}
+                    {/* <h3>SKILLS</h3> */}
+                    {/* <h3>LINKS</h3> */}
                 </div>
             </section>
         </main>
@@ -66,12 +66,20 @@ export default function Teammate() {
             margin: 3rem auto;
           }
 
-          h2 {
+          h2, h3 {
             font-weight: 500;
             color: #ff99cc;
           }
 
-          p {
+          .link {
+            text-decoration: underline;
+          }
+
+          .link:hover {
+            color: #b83574;
+          }
+
+          p, li {
             color: gainsboro;
           }
 

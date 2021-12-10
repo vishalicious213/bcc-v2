@@ -38,8 +38,8 @@ export default function Teammate() {
                     <p>Debi is a Certified Registered Nurse, specializing in OR and Mental Illness. An Adjunct professor at both Molloy College and Adelphi University, Debi is a proud recipient of several awards for her work. Debi holds a BSN, with Magna Cum Laude and MSN in Nursing Education from Excelsior College, graduating with a 4.0GPA.</p>
                     <p>Debi has been featured on PIX11 for her work with breast cancer as well as NEWS12 as hero of the month. She has been honored as Mets batgirl and featured at Ducks games, throwing out the first pitch.</p>
 
-                    {/* <p>SKILLS</p> */}
-                    {/* <p>LINKS</p> */}
+                    {/* <h3>SKILLS</h3> */}
+                    {/* <h3>LINKS</h3> */}
                 </div>
             </section>
         </main>
@@ -68,12 +68,20 @@ export default function Teammate() {
             margin: 3rem auto;
           }
 
-          h2 {
+          h2, h3 {
             font-weight: 500;
             color: #ff99cc;
           }
+          
+          .link {
+            text-decoration: underline;
+          }
 
-          p {
+          .link:hover {
+            color: #b83574;
+          }
+
+          p, li {
             color: gainsboro;
           }
 
