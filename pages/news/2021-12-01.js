@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Nav from '../../components/nav'
-import Footer from '../../components/footer'
 import styles from '../../styles/Home.module.css'
 
 export default function Post() {
@@ -18,7 +16,7 @@ export default function Post() {
         <main className={styles.main}>
             <div className='post'>
                 <h2 className='no-space-below'>BCC Collaboration with Memorial Sloan Kettering</h2>
-                <p className='no-space-above'>by <span>Maeryam Nasari & Zahel Nasari</span> | Dec 1, 2021</p>
+                <p className='no-space-above'>by <span>Amina Nasari</span> | Dec 1, 2021</p>
                 <p>The Breast Cancer Comfort Foundation is proud to announce its most recent collaboration with <a className='link' target="_blank" rel="noopener" href='https://www.mskcc.org/'>Memoral Sloan Kettering</a>, NYC’s largest cancer treatment center. <a className='link' target="_blank" rel="noopener" href='https://www.ccny.cuny.edu/csom'>CUNY School of Medicine</a> students who are members of the <a className='link' target="_blank" rel="noopener" href='https://www.amwa-doc.org/'>American Medical Women’s Association</a> delivered around 20 bags and 5 baskets to breast cancer patients who are currently undergoing chemotherapy.</p>
 
                 <div className='img-container'>

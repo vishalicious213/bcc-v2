@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Nav from '../../components/nav'
-import Footer from '../../components/footer'
 import styles from '../../styles/Home.module.css'
 
 export default function Post() {
