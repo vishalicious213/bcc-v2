@@ -11,36 +11,58 @@ export default function Post() {
             <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
         </Head>
 
-        {/* <Nav /> */}
-
         <main className={styles.main}>
             <div className='img-container'>
                 <img src='/about/collage-01.jpg' alt='BCC collage of events' />
             </div>
 
-            <div className='post'>
-                <h2 className='no-space-below'>Team Member Name</h2>
-                <p className='no-space-above'><span>Title</span></p>
-                <div className='social-media-icons'>
-                    <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/company/breast-cancer-comfort-foundation-inc/"></a>
-                    <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a>
-                    <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a>
-                    <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a>
+            <section className='bio'>
+                <div className='bio-img-container'>
+                    <img src='/about/ann-profile.jpg' alt='Ann Guarascio' />
                 </div>
-                <p>TEXT</p>
-                <p>SKILLS</p>
-                <p>LINKS</p>
-            </div>
-        </main>
 
-        {/* <Footer /> */}
+                <div className='bio-text'>
+                    <h2 className='no-space-below'>Team Member Name</h2>
+                    <p className='no-space-above'><span>Board Treasurer, Non-Profit Accounting Specialist</span></p>
+                    
+                    <div className='social-media-icons'>
+                        <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/company/breast-cancer-comfort-foundation-inc/"></a>
+                        <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a>
+                        <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a>
+                        <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a>
+                    </div>
+
+                    <p>Ann has been involved with The Breast Cancer Comfort Foundation since 2018 in a volunteer capacity, when she began to serve the bookkeeping and accounting needs of the organization.  She brings twenty plus years of experience in the non-profit sector, with background in both financial and development roles. "I am looking forward to partaking in the the growth of this organization, and the successful outreach to the beneficiaries of The Breast Cancer Comfort Foundation."</p>
+                    <p>"My life experiences have led me to reach out to others, making connections, and overall sharing compassion and knowledge." A native of Long Island's waterfront community, Ann loves all things outdoors and nautical - especially the Great South Bay.</p>
+                    <p>Family is most important, so when not working, Ann thoroughly enjoys time spent with her husband Tom, their three young adult children, and three senior citizens.</p>
+
+                    {/* <p>SKILLS</p> */}
+                    {/* <p>LINKS</p> */}
+                </div>
+            </section>
+        </main>
 
         <style jsx>
           {`
-          .post {
+          .bio {
+            width: 100%;
+            color: white;
+            // background-image: url('/about/ann-profile.jpg');
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // background-size: cover;
+          }
+
+          .bio-img-container {
+            // outline: 1px solid red;
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+          }
+          
+          .bio-text {
             width: 80%;
             margin: 3rem auto;
-            color: white;
           }
 
           h2 {
