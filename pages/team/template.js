@@ -22,7 +22,10 @@ export default function Post() {
                 <h2 className='no-space-below'>Team Member Name</h2>
                 <p className='no-space-above'><span>Title</span></p>
                 <div className='social-media-icons'>
-
+                    <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/company/breast-cancer-comfort-foundation-inc/"></a>
+                    <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a>
+                    <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a>
+                    <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a>
                 </div>
                 <p>TEXT</p>
                 <p>SKILLS</p>
@@ -55,6 +58,60 @@ export default function Post() {
 
           .social-media-icons {
             display: flex;
+          }
+
+          .icon {
+              margin: 0 .5rem;
+              width: 2.5rem;
+              height: 2.5rem;
+          }
+
+          .fb {
+              background: url('/fb.png') no-repeat;
+              background-position: center;
+              background-size: contain;
+          }
+
+          .fb:hover {
+              background: url('/fb2.png') no-repeat;
+              background-position: center;
+              background-size: contain;
+          }
+
+          .li {
+              background: url('/li.png') no-repeat;
+              background-position: center;
+              background-size: contain;
+          }
+
+          .li:hover {
+              background: url('/li2.png') no-repeat;
+              background-position: center;
+              background-size: contain;
+          }
+
+          .tw {
+              background: url('/twitter.jpg') no-repeat;
+              background-position: center;
+              background-size: contain;
+          }
+
+          .tw:hover {
+              background: url('/twitter2.jpg') no-repeat;
+              background-position: center;
+              background-size: contain;
+          }
+
+          .ig {
+              background: url('/ig.png') no-repeat;
+              background-position: center;
+              background-size: contain;
+          }
+
+          .ig:hover {
+              background: url('/ig2.png') no-repeat;
+              background-position: center;
+              background-size: contain;
           }
           `}
         </style>
