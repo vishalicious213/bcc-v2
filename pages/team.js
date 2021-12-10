@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 const team = [
     {id: '01', name: 'Debi Cavolo', title: 'CEO & Founder', pic: 'debi-li.jpg', linkedIn: '', url: ''},
     {id: '02', name: 'Ann Guarascio', title: 'Board Treasurer, Non-Profit Accounting Specialist', pic: 'ann-li.jpg', linkedIn: '', url: '/team/ann-guarascio'},
-    {id: '03', name: 'Nicole Link', title: 'Director of Events & Fundraising', pic: 'nicole-li.jpg', linkedIn: '', url: ''},
+    {id: '03', name: 'Nicole Link', title: 'Director of Events & Fundraising', pic: 'nicole-li.jpg', linkedIn: '', url: '/team/nicole-link'},
     {id: '04', name: 'Vish Singh', title: 'Web Developer', pic: 'vish.jpg', linkedIn: '', url: ''},
     // {id: '', name: '', title: '', pic: '', linkedIn: '', url: ''},
 ]
