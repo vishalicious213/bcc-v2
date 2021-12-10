@@ -22,15 +22,19 @@ export default function Teammate() {
                 </div>
 
                 <div className='bio-text'>
-                    <h2 className='no-space-below'>Vish Singh</h2>
-                    <p className='no-space-above'><span>Web Developer</span></p>
-                    
-                    <div className='social-media-icons'>
-                        <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/vish213/"></a>
-                        <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a>
-                        <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a>
-                        <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a>
-                    </div>
+                    <section className='identifiers'>
+                        <div className='who'>
+                            <h2 className='no-space-below'>Vish Singh</h2>
+                            <p className='no-space-above'><span>Web Developer</span></p>
+                        </div>
+                        
+                        <div className='social-media-icons'>
+                            <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/vish213/"></a>
+                            <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a>
+                            <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a>
+                            <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a>
+                        </div>
+                    </section>
 
                     <p>A 2020 transplant from New York to California, I'm also a 20+ year I/T veteran who took the steps to software design and then development. My focus is on web pages and web applications.</p>
                     <p>My start as a developer comes from Lambda School (now Bloom Institute of Technology), a coding bootcamp. The bulk of my work experience comes from helping to build a clinical EMR for nursing homes, including research, planning, writing specifications, designing the front-end and testing. I worked with clinicians and administrative staff to ensure that software met their needs and was compliant with federal and state regulations. I also worked with vendors to ensure interoperability between our software.</p>
@@ -156,6 +160,15 @@ export default function Teammate() {
               background: url('/ig2.png') no-repeat;
               background-position: center;
               background-size: contain;
+          }
+
+          @media only screen and (min-width: 992px) {
+            .identifiers {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
           }
           `}
         </style>
