@@ -80,13 +80,18 @@ export default function Team() {
                 width: 85%;
                 margin-bottom: 1rem;
                 padding-top: 1rem;
-                background: linear-gradient(#292c2f 50%, #b01e65 50%);
+                // background: linear-gradient(#292c2f 50%, #b01e65 50%);
                 border-radius: 1rem;
             }
 
             .person:hover {
-                background: #b01e65;
+                background: linear-gradient(#292c2f 50%, #b01e65 50%);
+                // background: #b01e65;
                 // cursor: pointer;
+            }
+
+            .person:hover .person-img {
+                outline: 2px solid white;
             }
 
             .person-title {
