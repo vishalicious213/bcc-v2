@@ -102,17 +102,24 @@ export default function Team() {
                 border-radius: 50%;
             }
 
-            @media only screen and (min-width: 992px) {
+            @media only screen and (min-width: 768px) {
                 .person {
                     // border: 1px solid orange;
                     width: 48%;
                 }
             }
 
+            @media only screen and (min-width: 992px) {
+                .person {
+                    // border: 1px solid orange;
+                    width: 32%;
+                }
+            }
+
             @media only screen and (min-width: 1200px) {
                 .person {
                     // border: 1px solid yellow;
-                    width: 30%;
+                    width: 24%;
                 }
             }
             `}
