@@ -53,7 +53,7 @@ export default function Footer() {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                padding: .5rem 0;
+                padding: 2.5rem 0 .5rem 0;
             }
 
             #middle {
