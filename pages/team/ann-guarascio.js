@@ -12,8 +12,19 @@ export default function Teammate() {
         </Head>
 
         <main className={styles.main}>
+            <div className='invisible'>
+                <h1 className='invisible-text'>Ann Guarascio</h1>
+                <h2 className='invisible-text'>Board Treasurer, Non-Profit Accounting Specialist</h2>
+                <div className='social-media-icons'>
+                    <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/ann-guarascio-3463719/"></a>
+                    {/* <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a> */}
+                    {/* <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a> */}
+                    {/* <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a> */}
+                </div>
+            </div>
+
             <div className='img-container'>
-                <img src='/about/collage-01.jpg' alt='BCC collage of events' />
+                <img src='/about/ann-bg.jpg' alt='BCC collage of events' />
             </div>
 
             <section className='bio'>
@@ -22,20 +33,6 @@ export default function Teammate() {
                 </div>
 
                 <div className='bio-text'>
-                    <section className='identifiers'>
-                        <div className='who'>
-                            <h2 className='no-space-below'>Ann Guarascio</h2>
-                            <p className='no-space-above'><span>Board Treasurer, Non-Profit Accounting Specialist</span></p>
-                        </div>
-                        
-                        <div className='social-media-icons'>
-                            <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/ann-guarascio-3463719/"></a>
-                            {/* <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a> */}
-                            {/* <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a> */}
-                            {/* <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a> */}
-                        </div>
-                    </section>
-
                     <p>Ann has been involved with The Breast Cancer Comfort Foundation since 2018 in a volunteer capacity, when she began to serve the bookkeeping and accounting needs of the organization.  She brings twenty plus years of experience in the non-profit sector, with background in both financial and development roles. "I am looking forward to partaking in the the growth of this organization, and the successful outreach to the beneficiaries of The Breast Cancer Comfort Foundation."</p>
                     <p>"My life experiences have led me to reach out to others, making connections, and overall sharing compassion and knowledge." A native of Long Island's waterfront community, Ann loves all things outdoors and nautical - especially the Great South Bay.</p>
                     <p>Family is most important, so when not working, Ann thoroughly enjoys time spent with her husband Tom, their three young adult children, and three senior citizens.</p>
@@ -91,12 +88,36 @@ export default function Teammate() {
             color: #b83574;
           }
 
+          .invisible {
+            position: absolute;
+            top: 15vw;
+            left: 50%;
+            color: white;
+          }
+
+          h1 {
+            font-size: 5vw;
+          }
+
+          h2 {
+            font-size: 3.5vw;
+            color: #b83574;
+          }
+          
+          .invisible-text {
+            position: relative;
+            left: -50%;
+            text-align: center;
+          }
+
           .social-media-icons {
+            position: relative;
+            left: -50%;
             display: flex;
+            justify-content: center;
           }
 
           .icon {
-              margin: 0 .5rem;
               width: 2.5rem;
               height: 2.5rem;
           }
@@ -147,15 +168,6 @@ export default function Teammate() {
               background: url('/ig2.png') no-repeat;
               background-position: center;
               background-size: contain;
-          }
-          
-          @media only screen and (min-width: 992px) {
-            .identifiers {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
           }
           `}
         </style>
