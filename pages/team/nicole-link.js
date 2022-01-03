@@ -12,8 +12,19 @@ export default function Teammate() {
         </Head>
 
         <main className={styles.main}>
+            <div className='invisible'>
+                <h1 className='invisible-text'>Nicole Link</h1>
+                <h2 className='invisible-text'>Director of Events and Fundraising</h2>
+                <div className='social-media-icons'>
+                    <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/nicole-link/"></a>
+                    {/* <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a> */}
+                    {/* <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a> */}
+                    {/* <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a> */}
+                </div>
+            </div>
+
             <div className='img-container'>
-                <img src='/about/collage-01.jpg' alt='BCC collage of events' />
+                <img src='/about/nicole-bg.jpg' alt='BCC collage of events' />
             </div>
 
             <section className='bio'>
@@ -22,20 +33,6 @@ export default function Teammate() {
                 </div>
 
                 <div className='bio-text'>
-                    <section className='identifiers'>
-                        <div className='who'>
-                            <h2 className='no-space-below'>Nicole Link</h2>
-                            <p className='no-space-above'><span>Director of Events and Fundraising</span></p>
-                        </div>
-                        
-                        <div className='social-media-icons'>
-                            <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/nicole-link/"></a>
-                            {/* <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a> */}
-                            {/* <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a> */}
-                            {/* <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a> */}
-                        </div>
-                    </section>
-
                     <p>Nicole comes to Breast Cancer Comfort with a background in public relations and a passion for building community and fundraising through events.  As our Director of Events and Fundraising, Nicole assists with social media management, community/media outreach, and fundraising events.</p>
 
                     {/* <h3>SKILLS</h3> */}
@@ -89,12 +86,35 @@ export default function Teammate() {
             color: #b83574;
           }
 
+          .invisible {
+            position: absolute;
+            top: 15vw;
+            left: 50%;
+            color: white;
+          }
+
+          h1 {
+            font-size: 5vw;
+          }
+
+          h2 {
+            font-size: 3.5vw;
+          }
+          
+          .invisible-text {
+            position: relative;
+            left: -50%;
+            text-align: center;
+          }
+
           .social-media-icons {
+            position: relative;
+            left: -50%;
             display: flex;
+            justify-content: center;
           }
 
           .icon {
-              margin: 0 .5rem;
               width: 2.5rem;
               height: 2.5rem;
           }
@@ -145,15 +165,6 @@ export default function Teammate() {
               background: url('/ig2.png') no-repeat;
               background-position: center;
               background-size: contain;
-          }
-          
-          @media only screen and (min-width: 992px) {
-            .identifiers {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
           }
           `}
         </style>
