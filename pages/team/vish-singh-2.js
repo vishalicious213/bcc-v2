@@ -15,6 +15,12 @@ export default function Teammate() {
             <div className='invisible'>
                 <h1 className='invisible-text'>VISH SINGH</h1>
                 <h2 className='invisible-text'>Web Developer</h2>
+                <div className='social-media-icons'>
+                    <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/vish213/"></a>
+                    {/* <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a> */}
+                    {/* <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a> */}
+                    {/* <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a> */}
+                </div>
             </div>
 
             <div className='img-container'>
@@ -27,20 +33,6 @@ export default function Teammate() {
                 </div>
 
                 <div className='bio-text'>
-                    <section className='identifiers'>
-                        <div className='who'>
-                            <h2 className='no-space-below'>Vish Singh</h2>
-                            <p className='no-space-above'><span>Web Developer</span></p>
-                        </div>
-                        
-                        <div className='social-media-icons'>
-                            <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/vish213/"></a>
-                            {/* <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a> */}
-                            {/* <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a> */}
-                            {/* <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a> */}
-                        </div>
-                    </section>
-
                     <p>A 2020 transplant from New York to California, I'm also a 20+ year I/T veteran who took the steps to software design and then development. My focus is on web pages and web applications.</p>
                     <p>My start as a developer comes from Lambda School (now Bloom Institute of Technology), a coding bootcamp. The bulk of my work experience comes from helping to build a clinical EMR for nursing homes, including research, planning, writing specifications, designing the front-end and testing. I worked with clinicians and administrative staff to ensure that software met their needs and was compliant with federal and state regulations. I also worked with vendors to ensure interoperability between our software.</p>
                     <p>My role at Breast Cancer Comfort is web developer. I redesigned the organization's former WordPress site and implemented it as a custom-built Next.js website that's faster and more customizable than its previous incarnation.</p>
@@ -110,7 +102,6 @@ export default function Teammate() {
           }
 
           .invisible {
-            // outline: 1px solid yellow;
             position: absolute;
             top: 25%;
             left: 50%;
@@ -119,7 +110,6 @@ export default function Teammate() {
           }
           
           .invisible-text {
-            // outline: 2px solid black;
             position: relative;
             left: -50%;
             text-align: center;
@@ -130,7 +120,6 @@ export default function Teammate() {
           }
 
           .icon {
-              margin: 0 .5rem;
               width: 2.5rem;
               height: 2.5rem;
           }
