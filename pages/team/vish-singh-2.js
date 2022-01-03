@@ -181,15 +181,6 @@ export default function Teammate() {
               background-position: center;
               background-size: contain;
           }
-
-          @media only screen and (min-width: 992px) {
-            .identifiers {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-          }
           `}
         </style>
     </div>
