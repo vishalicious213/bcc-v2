@@ -24,7 +24,7 @@ export default function Teammate() {
             </div>
 
             <div className='img-container'>
-                <img src='/about/debi-bg-2.jpg' alt='BCC collage of events' />
+                <img src='/about/debi-bg.jpg' alt='Nurse donning safety gear, Debi Cavolo, Founder & CEO overlaid' />
             </div>
 
             <section className='bio'>
