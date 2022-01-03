@@ -24,7 +24,7 @@ export default function Teammate() {
             </div>
 
             <div className='img-container'>
-                <img src='/about/ann-bg.jpg' alt='BCC collage of events' />
+                <img src='/about/ann-bg.jpg' alt='Long Island waterfront with Ann Guarascio, Board Treasurer, Non-Profit Accounting Specialist, overlaid' />
             </div>
 
             <section className='bio'>
@@ -101,7 +101,7 @@ export default function Teammate() {
 
           h2 {
             font-size: 3.5vw;
-            color: #b83574;
+            color: black;
           }
           
           .invisible-text {
