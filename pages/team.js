@@ -90,6 +90,7 @@ export default function Team() {
             }
 
             .person-title {
+                width: 88%;
                 text-align: center;
             }
 
