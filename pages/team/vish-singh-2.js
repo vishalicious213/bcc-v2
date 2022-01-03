@@ -12,6 +12,11 @@ export default function Teammate() {
         </Head>
 
         <main className={styles.main}>
+            <div className='invisible'>
+                <h1 className='invisible-text'>VISH SINGH</h1>
+                <h2 className='invisible-text'>Web Developer</h2>
+            </div>
+
             <div className='img-container'>
                 <img src='/about/vish-bg.jpg' alt='BCC collage of events' />
             </div>
@@ -102,6 +107,22 @@ export default function Teammate() {
 
           span {
             color: #b83574;
+          }
+
+          .invisible {
+            // outline: 1px solid yellow;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            color: white;
+            font-size: 200%;
+          }
+          
+          .invisible-text {
+            // outline: 2px solid black;
+            position: relative;
+            left: -50%;
+            text-align: center;
           }
 
           .social-media-icons {
