@@ -24,7 +24,7 @@ export default function Teammate() {
             </div>
 
             <div className='img-container'>
-                <img src='/about/vish-bg.jpg' alt='BCC collage of events' />
+                <img src='/about/vish-bg.jpg' alt='JavaScript code image with Vish Singh, Web Developer overlaid' />
             </div>
 
             <section className='bio'>
@@ -103,10 +103,17 @@ export default function Teammate() {
 
           .invisible {
             position: absolute;
-            top: 25%;
+            top: 15vw;
             left: 50%;
             color: white;
-            font-size: 200%;
+          }
+
+          h1 {
+            font-size: 5vw;
+          }
+
+          h2 {
+            font-size: 3.5vw;
           }
           
           .invisible-text {
@@ -116,7 +123,10 @@ export default function Teammate() {
           }
 
           .social-media-icons {
+            position: relative;
+            left: -50%;
             display: flex;
+            justify-content: center;
           }
 
           .icon {
