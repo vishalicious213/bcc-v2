@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
+import FB from '../../components/fb'
 
 export default function Post() {
   return (
@@ -13,7 +14,7 @@ export default function Post() {
 
         {/* <Nav /> */}
 
-        <main className={styles.main}>
+        <main className={`${styles.main} main-container`}>
             <div className='post'>
                 <h2 className='no-space-below'>BCC Collaboration with Memorial Sloan Kettering</h2>
                 <p className='no-space-above'>by <span>Amina Nasari & Zahel Nasari</span> | Dec 30, 2021</p>
@@ -50,14 +51,23 @@ export default function Post() {
                         <img className='gallery-img' src='/news/mskcc-3.jpg' alt='Memorial Sloan Kettering patient room with Breast Cancer Comfort gift bag' />
                     </a>
                 </div>
-
             </div>
+
+            <FB />
         </main>
+
 
         {/* <Footer /> */}
 
         <style jsx>
           {`
+          .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            // margin: 3rem;
+          }
+
           li {
             color: gainsboro;
           }
@@ -112,6 +122,19 @@ export default function Post() {
 
           .gallery-img {
             width: 100%;
+          }
+
+          @media only screen and (min-width: 1024px) {
+            .main-container {
+              justify-content: space-between;
+              width: 90%;
+              margin: 0 auto;
+            }
+
+            .post {
+              width: calc(100% - 380px);
+              margin: 3rem 0;
+            }
           }
           `}
         </style>
