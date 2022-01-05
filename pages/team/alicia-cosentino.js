@@ -24,7 +24,7 @@ export default function Teammate() {
             </div>
 
             <div className='img-container'>
-                <img src='/about/vish-bg.jpg' alt='JavaScript code image with Vish Singh, Web Developer overlaid' />
+                <img src='/about/alicia-bg.jpg' alt='JavaScript code image with Vish Singh, Web Developer overlaid' />
             </div>
 
             <section className='bio'>
@@ -115,10 +115,12 @@ export default function Teammate() {
 
           h1 {
             font-size: 5vw;
+            color: #b83574;
           }
 
           h2 {
             font-size: 3.5vw;
+            color: black;
           }
           
           .invisible-text {
