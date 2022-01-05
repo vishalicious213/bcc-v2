@@ -14,7 +14,7 @@ export default function Teammate() {
         <main className={styles.main}>
             <div className='invisible'>
                 <h1 className='invisible-text'>ALICIA COSENTINO</h1>
-                <h2 className='invisible-text'>Administration & Fundraising</h2>
+                <h2 className='invisible-text'>Administrative Assistant</h2>
                 <div className='social-media-icons'>
                     {/* <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/vish213/"></a> */}
                     {/* <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a> */}
