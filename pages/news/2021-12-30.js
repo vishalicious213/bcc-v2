@@ -65,7 +65,6 @@ export default function Post() {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            // margin: 3rem;
           }
 
           li {
@@ -74,7 +73,7 @@ export default function Post() {
 
           .post {
             width: 80%;
-            margin: 3rem auto;
+            margin: 3rem 0 auto;
             color: white;
           }
 
@@ -133,7 +132,6 @@ export default function Post() {
 
             .post {
               width: calc(100% - 380px);
-              margin: 3rem 0;
             }
           }
           `}
