@@ -14,7 +14,7 @@ export default function Teammate() {
         <main className={styles.main}>
             <div className='invisible'>
                 <h1 className='invisible-text'>ALICIA COSENTINO</h1>
-                <h2 className='invisible-text'>Web Developer</h2>
+                <h2 className='invisible-text'>Administration & Fundraising</h2>
                 <div className='social-media-icons'>
                     {/* <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/vish213/"></a> */}
                     {/* <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a> */}
@@ -29,7 +29,7 @@ export default function Teammate() {
 
             <section className='bio'>
                 <div className='bio-img-container'>
-                    <img className='bio-img' src='/about/vish-profile.jpg' alt='Vish Singh' />
+                    <img className='bio-img' src='/about/placeholder-f.jpg' alt='Alicia Cosentino' />
                 </div>
 
                 <div className='bio-text'>
