@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
+import FB from '../../components/fb'
 
 export default function Post() {
   return (
@@ -11,7 +12,7 @@ export default function Post() {
             <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
         </Head>
 
-        <main className={styles.main}>
+        <main className={`${styles.main} main-container`}>
             <div className='post'>
                 <h2 className='no-space-below'>Making Strides Against Breast Cancer 2021</h2>
                 <p className='no-space-above'>by <span>Maeryam Nasari & Zahel Nasari</span> | Sep 1, 2021</p>
@@ -21,13 +22,21 @@ export default function Post() {
                 <p>Accompanying Deborah Cavolo, we are grateful to have Ann Guarascio. She has been involved with the Breast Cancer Comfort Foundation since 2018 in a volunteer capacity, when she began to serve the bookkeeping and accounting needs of the organization. She brings twenty-plus years of experience in the non-profit sector, with a background in both financial and development roles.</p>
                 <p>As a team, we invite you to join forces with the American Cancer Society – the nation’s nonprofit leader in the breast cancer fight. Join the Making Strides movement to help save lives and fund the future of breast cancer research and programs. Making Strides will be adhering to CDC, state, and local guidelines and regulations regarding COVID-19. As these change on a day-to-day basis, Making Strides will update us on requirements.</p>
             </div>
+
+            <FB />
         </main>
 
         <style jsx>
           {`
+          .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
           .post {
             width: 80%;
-            margin: 3rem auto;
+            margin: 3rem 0 auto;
             color: white;
           }
 
@@ -47,6 +56,18 @@ export default function Post() {
           .link {
             text-decoration: underline;
             font-weight: bold;
+          }
+
+          @media only screen and (min-width: 1024px) {
+            .main-container {
+              justify-content: space-between;
+              width: 90%;
+              margin: 0 auto;
+            }
+
+            .post {
+              width: calc(100% - 380px);
+            }
           }
           `}
         </style>
