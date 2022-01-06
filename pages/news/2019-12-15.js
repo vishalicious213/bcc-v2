@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
+import FB from '../../components/fb'
 
 export default function Post() {
   return (
@@ -11,7 +12,7 @@ export default function Post() {
             <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
         </Head>
 
-        <main className={styles.main}>
+        <main className={`${styles.main} main-container`}>
             <div className='post'>
                 <h2 className='no-space-below'>What to do when the end of the year is here and you are not ready</h2>
                 <p className='no-space-above'>by <span>Debi Cavolo</span> | Dec 15, 2019</p>
@@ -19,13 +20,21 @@ export default function Post() {
                 <p>I love pink! I love Valentine's Day and now I have to start looking towards St. Patrick’s Day. I was not Irish, I should tell you that first, BUT I found out through 23 and Me that - lo and behold - I AM Irish, so now I should have bought something green but Easter and Passover are approaching so I have to start thinking about that.</p> 
                 <p>WHAT?? Those holidays passed also? This is ridiculous, next you are going to tell me I missed summer and Halloween and Thanksgiving. Well, Christmas and Hanukkah are next week so before they pass me by and its too late, I want to wish all of you a happy holiday season. May your days be warm and your drinks be cold (or the other way around lol ). I wish for you gratitude and peace, I wish acceptance and kindness, I wish support and laughter. In other words, have an amazing few weeks and start practicing your 2020’s! 🙂</p>
             </div>
+
+            <FB />
         </main>
 
         <style jsx>
           {`
+          .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
           .post {
             width: 80%;
-            margin: 3rem auto;
+            margin: 3rem 0 auto;
             color: white;
           }
 
@@ -40,6 +49,18 @@ export default function Post() {
 
           span {
             color: #b83574;
+          }
+
+          @media only screen and (min-width: 1024px) {
+            .main-container {
+              justify-content: space-between;
+              width: 90%;
+              margin: 0 auto;
+            }
+
+            .post {
+              width: calc(100% - 380px);
+            }
           }
           `}
         </style>
