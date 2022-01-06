@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
+import FB from '../../components/fb'
 
 export default function Post() {
   return (
@@ -11,7 +12,7 @@ export default function Post() {
             <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
         </Head>
 
-        <main className={styles.main}>
+        <main className={`${styles.main} main-container`}>
             <div className='post'>
                 <h2 className='no-space-below'>The Road to Recovery</h2>
                 <p className='no-space-above'>by <span>Alaha Nasari</span> | May 25, 2020</p>
@@ -21,13 +22,21 @@ export default function Post() {
                 <p>Ordinary people have done extraordinary things to contribute to their communities. There are inspiring stories of individuals donating homemade reusable face masks to healthcare professionals. Others have contributed food and domestic necessities to people who are unable to leave their homes. Cultivating this common sense of humanity serves as a reminder that there is still hope, after all. Here at Breast Cancer Comfort, we continue to create comfort baskets and are prepared to deliver them to hospitals as soon as conditions improve. It is the compassionate nature of the members of our community that motivates us to personify the mission our organization was founded upon. Our baskets continue to be crafted with the love and care we hope to provide for others. </p>
                 <p>Whether performing small or large acts of generosity, there are multiple creative and thoughtful ways we can do good from the comfort of our own homes. Donating money to a non-profit, writing thank you letters to healthcare workers, or picking up groceries for someone who’s at a higher risk for the virus than you are only a few ideas. These small actions ultimately translate into a beautiful difference in the lives of others. The feeling of uncertainty that haunts many of us is unavoidable, but one thing is for sure – together, we can make things better.</p>
             </div>
+
+            <FB />
         </main>
 
         <style jsx>
           {`
+          .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
           .post {
             width: 80%;
-            margin: 3rem auto;
+            margin: 3rem 0 auto;
             color: white;
           }
 
@@ -42,6 +51,18 @@ export default function Post() {
 
           span {
             color: #b83574;
+          }
+          
+          @media only screen and (min-width: 1024px) {
+            .main-container {
+              justify-content: space-between;
+              width: 90%;
+              margin: 0 auto;
+            }
+
+            .post {
+              width: calc(100% - 380px);
+            }
           }
           `}
         </style>
