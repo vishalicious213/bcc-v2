@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
+import FB from '../../components/fb'
 
 export default function Post() {
   return (
@@ -13,21 +14,29 @@ export default function Post() {
 
         {/* <Nav /> */}
 
-        <main className={styles.main}>
+        <main className={`${styles.main} main-container`}>
             <div className='post'>
                 <h2 className='no-space-below'>TITLE</h2>
                 <p className='no-space-above'>by <span>Alaha Nasari</span> | Jan 17, 2021</p>
                 <p>TEXT</p>
             </div>
+
+            <FB />
         </main>
 
         {/* <Footer /> */}
 
         <style jsx>
           {`
+          .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
           .post {
             width: 80%;
-            margin: 3rem auto;
+            margin: 3rem 0 auto;
             color: white;
           }
 
@@ -42,6 +51,18 @@ export default function Post() {
 
           span {
             color: #b83574;
+          }
+          
+          @media only screen and (min-width: 1024px) {
+            .main-container {
+              justify-content: space-between;
+              width: 90%;
+              margin: 0 auto;
+            }
+
+            .post {
+              width: calc(100% - 380px);
+            }
           }
           `}
         </style>
