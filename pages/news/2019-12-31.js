@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
+import FB from '../../components/fb'
 
 export default function Post() {
   return (
@@ -11,7 +12,7 @@ export default function Post() {
             <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
         </Head>
 
-        <main className={styles.main}>
+        <main className={`${styles.main} main-container`}>
             <div className='post'>
                 <h2 className='no-space-below'>It's Not Too Late to Donate!!!</h2>
                 <p className='no-space-above'>by <span>Debi Cavolo</span> | Dec 31, 2019</p>
@@ -22,13 +23,21 @@ export default function Post() {
                     <img src='/news/2019-12-31.jpg' alt='' />
                 </div>
             </div>
+
+            <FB />
         </main>
 
         <style jsx>
           {`
+          .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
           .post {
             width: 80%;
-            margin: 3rem auto;
+            margin: 3rem 0 auto;
             color: white;
           }
 
@@ -52,6 +61,22 @@ export default function Post() {
 
           img {
               width: 100%;
+          }
+
+          @media only screen and (min-width: 1024px) {
+            .main-container {
+              justify-content: space-between;
+              width: 90%;
+              margin: 0 auto;
+            }
+
+            .post {
+              width: calc(100% - 380px);
+            }
+
+            .img-container {
+              width: 90%;
+            }
           }
           `}
         </style>
