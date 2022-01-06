@@ -29,7 +29,7 @@ export default function Teammate() {
 
             <section className='bio'>
                 <div className='bio-img-container'>
-                    <img className='bio-img' src='/about/placeholder-f.jpg' alt='Alicia Cosentino' />
+                    <img className='bio-img' src='/about/alicia-profile.jpeg' alt='Alicia Cosentino' />
                 </div>
 
                 <div className='bio-text'>
@@ -191,6 +191,12 @@ export default function Teammate() {
               background: url('/ig2.png') no-repeat;
               background-position: center;
               background-size: contain;
+          }
+
+          @media only screen and (min-width: 992px) {
+            .bio-img-container {
+              width: 60%;
+            }
           }
           `}
         </style>
