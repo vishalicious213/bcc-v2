@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
+import FB from '../../components/fb'
 
 export default function Post() {
   return (
@@ -11,10 +12,10 @@ export default function Post() {
             <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
         </Head>
 
-        <main className={styles.main}>
+        <main className={`${styles.main} main-container`}>
             <div className='post'>
                 <h2 className='no-space-below'>Hicksville High School senior raises awareness for breast cancer</h2>
-                <p className='no-space-above'>by <span>Ann M Rose Guarascio</span> | Oct 24, 2019</p>
+                <p className='no-space-above'>by <span>Ann Guarascio</span> | Oct 24, 2019</p>
                 <p className='center'>A big big thank you!</p>
                 <p>With a new school year having officially started in September, Breast Cancer Comfort Foundation is looking forward to the wonderful endeavors that will be taken by students who dedicate their time as volunteers to support our cause. Located in the town of Hicksville, BCCF is an organization founded by survivor Debi Cavolo that aims to offer emotional support and encouragement to individuals undergoing cancer treatment. This is done by delivering unique “Comfort Baskets” containing thoughtfully chosen gifts and personal care items.</p>
                 <p>In an effort to serve her community, Alaha Nasari, a senior at Hicksville High School, arranged a special fundraiser project for BCCF during her school’s Homecoming Fair. A long held tradition at many high schools, Homecoming is an event held to welcome back alumni to the community. This is often followed by the first football game of the season, where the community gathers to cheer on the home team. At Hicksville, the Homecoming Fair was held on October 12th, prior to the football game. This was an opportunity for school-based clubs and teams to raise money in creative ways. As a current officer of the National Honor Society, Alaha and the other members of the board decided to host an obstacle course, in which the participant to complete it at the lowest time received a grand prize.</p>
@@ -27,13 +28,21 @@ export default function Post() {
                 <p>As a senior, Alaha intends to continue volunteering at BCCF and plans on organizing other service projects during the upcoming year. As a leader of several clubs and a distinct member of other honor societies, she hopes to further spread awareness of BCCF to the student body at her school.</p>
                 <p>BCCF encourages all individuals to contribute to our cause, whether it be through volunteering at our events or taking one step further to collect donations for our organization. To find a passion for service and to dedicate time and effort towards transforming an idea into reality is what Alaha Nasari did and we hope to inspire others in doing the same.</p>
             </div>
+
+            <FB />
         </main>
 
         <style jsx>
           {`
+          .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
           .post {
             width: 80%;
-            margin: 3rem auto;
+            margin: 3rem 0 auto;
             color: white;
           }
 
@@ -52,6 +61,18 @@ export default function Post() {
 
           .center {
             text-align: center;
+          }
+
+          @media only screen and (min-width: 1024px) {
+            .main-container {
+              justify-content: space-between;
+              width: 90%;
+              margin: 0 auto;
+            }
+
+            .post {
+              width: calc(100% - 380px);
+            }
           }
           `}
         </style>
