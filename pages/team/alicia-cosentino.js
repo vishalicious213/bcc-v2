@@ -29,17 +29,20 @@ export default function Teammate() {
 
             <section className='bio'>
                 <div className='bio-img-container'>
-                    <img className='bio-img' src='/about/placeholder-f.jpg' alt='Alicia Cosentino' />
+                    <img className='bio-img' src='/about/alicia-profile.jpeg' alt='Alicia Cosentino' />
                 </div>
 
                 <div className='bio-text'>
-                    <p>I am a two-time breast cancer survivor.  In September of 1999 I had a left breast mastectomy and DIEP flap reconstruction and life was good for 22 years.  On July 2, 2021 during a routine mammogram, my second breast cancer was found.  On August of 2021 I had a lumpectomy and sentinel node surgery to remove a small tumor in my right breast.  I am currently finishing radiation and will be on medication for 7 years. I am a survivor, I am lucky!  I am happy to be able to be there and to help others who are going through this horrific disease.</p>
-                    <p>I started volunteering about 20+ years ago for the American Cancer Society’s Relay for Life (an event that celebrates all cancer survivors) in my local area.  I had a team and we set up fundraising events locally to raise money. I loved doing this and meeting the survivors. I wound up first chairing the Survivor Dinner then moving on to be the Community Event Chair.  When my ACS family asked if I’d like to volunteer at Strides and be in the Survivor Tent I said yes.  Nothing compares to being able to talk to people who you can totally empathize with, it’s healing on both sides.</p>
-                    <p>About 10 years ago I started volunteering, for the then newly chartered, Bethpage Central Kiwanis Club which is part of Kiwanis International.  I have been on the Board for 9 years and was the Club President for two years.  I continue to be on their Board and volunteer with them as well.</p>
-                    <p>I met Debi Cavolo and Breast Cancer Comfort when my Surgeon’s office handed me one of their baskets after my recent surgery.  I knew I felt the love coming from this gift and knew I needed to work with them to help others, like myself, who are going through this.  We all walk together and we all need to feel that we are not alone.  No one understands this journey unless you’ve been there.</p>
+                    <p>I am a retired Administrative Assistant and worked in the Pupil Personnel Office of Bethpage Schools for the past 14 years.  I met with preschool parents and helped them get their children evaluated through the CPSE process as well as follow up and scheduling of meetings and observations.  I’ve worn many hats through the years and love helping people.</p>
+                    <p>I am a two-time breast cancer survivor.  In September of 1999 I had a left breast mastectomy and DIEP flap reconstruction and life was good for 22 years.  On July 2, 2021, during a routine mammogram, my second breast cancer was found.  August 10, 2021 I had a lumpectomy and sentinel node surgery to remove a small tumor in my right breast.  I have completed a course of radiation and will be on medication for 7 years. I am a survivor, I know I am lucky!</p>
+                    <p>I started volunteering about 20+ years ago for the American Cancer Society’s Relay for Life (an event that celebrates all cancer survivors) in my local area.  I had a team and we set up fundraising events locally to raise money. I loved doing this and meeting the survivors. I wound up first chairing the Survivor Dinner then moving on to being the Community Event Chair.  When my ACS family asked if I’d like to volunteer at Strides LI and be in the Survivor Tent I said yes.  Nothing compares to being able to talk to people who you can totally empathize with, it’s healing on both sides.</p>
+                    <p>About 10 years ago I started volunteering, for the then newly chartered, Bethpage Central Kiwanis Club which is part of Kiwanis International.  I have been on the Board for 9 years and was the Club President for two years.  I continue to be on their Board and volunteer with them as well.  Kiwanis mainly helps children.</p>
+                    <p>I met Debi Cavolo and Breast Cancer Comfort when my Surgeon’s office handed me one of their baskets after my recent surgery.  I left the office with a smile and I knew I felt the love coming from this gift and knew I needed to work with them to help others, like myself, who are going through this.</p>
+                    <p>Other than volunteering, my favorite times are shared with family.  I am married and have two adult children and two granddaughters.  Family is my heart!</p>
+                    <p>We all walk together in this life and we all need to feel that we are not alone.</p>
 
                     <p className='no-space-below'>Alicia Cosentino</p>
-                    <p className='no-space-above'>10/22/2021</p>
+                    <p className='no-space-above'>1/5/2022</p>
 
                     {/* <h3>SKILLS</h3>
                     <ul>
@@ -188,6 +191,12 @@ export default function Teammate() {
               background: url('/ig2.png') no-repeat;
               background-position: center;
               background-size: contain;
+          }
+
+          @media only screen and (min-width: 992px) {
+            .bio-img-container {
+              width: 60%;
+            }
           }
           `}
         </style>
