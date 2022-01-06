@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
+import FB from '../../components/fb'
 
 export default function Post() {
   return (
@@ -11,7 +12,7 @@ export default function Post() {
             <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
         </Head>
 
-        <main className={styles.main}>
+        <main className={`${styles.main} main-container`}>
             <div className='post'>
                 <h2 className='no-space-below'>A Recipe for Successful Coping</h2>
                 <p className='no-space-above'>by <span>Alaha Nasari</span> | Apr 6, 2020</p>
@@ -20,13 +21,21 @@ export default function Post() {
                 <p>For us, this means reflecting on our three founding principles – comfort, emotional support, and encouragement. We realize that now, more than ever, our breast cancer patients and their families are in dire need of reassurance that they are not alone. By centering our attention on the pro-social aspects of the coronavirus pandemic, we can foster a sense of unity in our communities. We urge you to savor the small moments and to look for the good in your life. It is important to be here in the present and to be grateful for the things going well, rather than dwelling on unrealistic and fearful thoughts about the future. Maintain those meaningful connections with the individuals you trust and feel safe with, and remember that we are dealing with this as one world. There is light at the end of the dark tunnel that seems to have enveloped our lives at the moment, but we can – and we will – overcome this virus.</p>
                 <p>By tuning into these silver linings, we can rise above our daily challenges and replenish the energy and inspiration we need in our lives. Whether that involves listening to beautiful music, taking a short walk outdoors, keeping a journal, or creating something, hope is the antidote that will help us see things from a new perspective. The Breast Cancer Comfort community is with you, every step of the way. Together, we can create a stronger, more unified, loving world.</p>
             </div>
+
+            <FB />
         </main>
 
         <style jsx>
           {`
+          .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
           .post {
             width: 80%;
-            margin: 3rem auto;
+            margin: 3rem 0 auto;
             color: white;
           }
 
@@ -41,6 +50,18 @@ export default function Post() {
 
           span {
             color: #b83574;
+          }
+
+          @media only screen and (min-width: 1024px) {
+            .main-container {
+              justify-content: space-between;
+              width: 90%;
+              margin: 0 auto;
+            }
+
+            .post {
+              width: calc(100% - 380px);
+            }
           }
           `}
         </style>
