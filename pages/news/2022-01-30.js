@@ -16,7 +16,7 @@ export default function Post() {
             <div className='post'>
                 <h2 className='no-space-below'>About Dr. Karen Kostroff & her relationship with BCCF</h2>
                 <p className='no-space-above'>by <span>Zahel Nasari</span> | Jan 30, 2021</p>
-                <p>Dr. Karen Michele Kostroff (MD) is a Surgical Oncology Specialist in New Hyde Park, NY, and has over 42 years of experience in the medical field. She is one of New York’s most renowned breast cancer surgeons and is presently Chief of Breast Surgery for the North Shore-Long Island Jewish Health System and operates at both Long Island Jewish Medical Center and North Shore University Hospital. Educated in the six-year medical honors program at Boston University, she then completed her surgical training at New York Hospital-Cornell Medical Center, which included a concentration on cancer surgery and breast disorders at Memorial Sloan-Kettering Cancer Institute. This was followed by additional training in cancer surgery at Brigham and Women’s Hospital of Harvard Medical School.</p>
+                <p>Dr. Karen Michele Kostroff (MD) is a Surgical Oncology Specialist in New Hyde Park, NY, and has over 42 years of experience in the medical field. She is one of New York’s most renowned breast cancer surgeons and is presently Chief of Breast Surgery for the <a className='link' target="_blank" rel="noopener" href='https://en.wikipedia.org/wiki/Northwell_Health'>North Shore-Long Island Jewish Health System</a> and operates at both <a className='link' target="_blank" rel="noopener" href='https://lij.northwell.edu/'>Long Island Jewish Medical Center</a> and <a className='link' target="_blank" rel="noopener" href='https://nsuh.northwell.edu/'>North Shore University Hospital</a>. Educated in the six-year medical honors program at Boston University, she then completed her surgical training at <a className='link' target="_blank" rel="noopener" href='https://weill.cornell.edu/'>New York Hospital-Cornell Medical Center</a>, which included a concentration on cancer surgery and breast disorders at <a className='link' target="_blank" rel="noopener" href='https://www.mskcc.org/'>Memorial Sloan-Kettering Cancer Institute</a>. This was followed by additional training in cancer surgery at <a className='link' target="_blank" rel="noopener" href='https://www.brighamandwomens.org/'>Brigham and Women’s Hospital</a> of <a className='link' target="_blank" rel="noopener" href='https://hms.harvard.edu/'>Harvard Medical School</a>.</p>
                 <p>Dr. Kostroff is one of the nation’s leading breast cancer specialists in the diagnosis and treatment of women at risk for genetic-based breast cancer. She has provided consultations for hundreds of women at risk for hereditary breast cancer. The Breast Cancer Comfort Foundation is lucky to have Dr. Kostroff as a part of our team. With her support, we can continue our mission to deliver Comfort Baskets and Chemo Comfort Bags to those who have recently undergone breast cancer surgery and remind them that they are not alone or unloved.</p>
             </div>
 
@@ -44,6 +44,11 @@ export default function Post() {
 
           p {
             color: gainsboro;
+          }
+
+          .link {
+            text-decoration: underline;
+            font-weight: bold;
           }
 
           span {
