@@ -18,6 +18,10 @@ export default function Post() {
                 <p className='no-space-above'>by <span>Zahel Nasari</span> | Jan 30, 2021</p>
                 <p>Dr. Karen Michele Kostroff (MD) is a Surgical Oncology Specialist in New Hyde Park, NY, and has over 42 years of experience in the medical field. She is one of New York’s most renowned breast cancer surgeons and is presently Chief of Breast Surgery for <a className='link' target="_blank" rel="noopener" href='https://en.wikipedia.org/wiki/Northwell_Health'>Northwell Health</a> and operates at <a className='link' target="_blank" rel="noopener" href='https://lij.northwell.edu/'>Long Island Jewish Medical Center</a>. Educated in the six-year medical honors program at Boston University, she then completed her surgical training at <a className='link' target="_blank" rel="noopener" href='https://weill.cornell.edu/'>New York Hospital-Cornell Medical Center</a>, which included a concentration on cancer surgery and breast disorders at <a className='link' target="_blank" rel="noopener" href='https://www.mskcc.org/'>Memorial Sloan-Kettering Cancer Institute</a>. This was followed by additional training in cancer surgery at <a className='link' target="_blank" rel="noopener" href='https://www.brighamandwomens.org/'>Brigham and Women’s Hospital</a> of <a className='link' target="_blank" rel="noopener" href='https://hms.harvard.edu/'>Harvard Medical School</a>.</p>
                 <p>Dr. Kostroff is one of the nation’s leading breast cancer specialists in the diagnosis and treatment of women at risk for genetic-based breast cancer. She has provided consultations for hundreds of women at risk for hereditary breast cancer. The Breast Cancer Comfort Foundation is fortunate to have Dr. Kostroff as a part of our team. With her support, we can continue our mission to deliver Comfort Baskets and Chemo Comfort Bags to those who have recently undergone breast cancer surgery and remind them that they are not alone or unloved.</p>
+
+                <div className='img-container'>
+                    <img src='/news/2022-01-30.jpg' alt='' />
+                </div>
             </div>
 
             <FB />
@@ -55,6 +59,15 @@ export default function Post() {
             color: #b83574;
           }
 
+          .img-container {
+            width: 50%;
+            margin: auto;
+          }
+
+          img {
+            width: 100%;
+          }
+
           @media only screen and (min-width: 1024px) {
             .main-container {
               justify-content: space-between;
@@ -64,6 +77,10 @@ export default function Post() {
 
             .post {
               width: calc(100% - 380px);
+            }
+
+            .img-container {
+              width: 90%;
             }
           }
           `}
