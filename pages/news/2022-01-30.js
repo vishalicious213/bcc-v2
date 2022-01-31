@@ -89,12 +89,6 @@ export default function Post() {
               width: 60%;
             }
           }
-
-          // @media only screen and (min-width: 1366px) {
-          //   .img-container {
-          //     width: 50%;
-          //   }
-          // }
           `}
         </style>
     </div>
