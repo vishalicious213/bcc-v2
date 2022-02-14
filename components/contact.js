@@ -49,26 +49,25 @@ export default function ContactForm() {
 
                 .field {
                     background: black;
-                    border: 2px solid #923360;
+                    border: 2px solid #292c2f;
                     border-radius: .35rem;
                     margin-bottom: .5rem;
                     padding: 1rem;
                     color: gainsboro;
                 }
 
+                .field:hover {
+                    // border: 2px solid white;
+                }
+
                 #contact-button {
                     color: gainsboro;
                     font-size: 1.25rem;
-                    background-color: #923360;
+                    background-color: #292c2f;
                     border: none;
                     border-radius: .35rem;
                     padding: .5rem;
                     margin-top: 1rem;
-                }
-
-                .field:focus, #contact-button:focus {
-                    outline: none;
-                    border: 2px solid #b01e65;
                 }
 
                 #contact-button:hover {
@@ -77,9 +76,14 @@ export default function ContactForm() {
                     transition: .25s
                 }
 
+                .field:focus, #contact-button:focus {
+                    outline: none;
+                    border: 2px solid #b01e65;
+                }
+                
                 @media only screen and (min-width: 1024px) {
                     form {
-                        width: 50%;
+                        width: 80%;
                     }
                 }
                 `}
