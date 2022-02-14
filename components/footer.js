@@ -5,13 +5,13 @@ export default function Footer() {
         <>
         <footer className='footer'>
             <div className='footer-text'>
-                Breast Cancer Comfort Foundation is a 501(C)(3) non-profit organization recognized by the Internal Revenue Service, and all donations to the Breast Cancer Comfort Foundation are tax-deductible in accordance with IRS regulations.
+                The Breast Cancer Comfort Foundation is a 501(C)(3) non-profit organization recognized by the Internal Revenue Service, and all donations to the Breast Cancer Comfort Foundation are tax-deductible in accordance with IRS regulations.
             </div>
 
             <div className='footer-text' id='address'>
                 <p className='no-space-below'>36C West Green Village, Hicksville, NY 11801</p>
                 <p className='no-space-above min-space-below'>(516) 490-4255   |   <a className='email' href='mailto:info@breastcancercomfort.org'>info@breastcancercomfort.org</a></p>
-                <p className='no-space-below'>Ⓒ 2021 Breast Cancer Comfort Foundation</p>
+                <p className='no-space-below'>Ⓒ 2022 Breast Cancer Comfort Foundation</p>
                 <p className='no-space-above'>All rights reserved</p>
             </div>
 
@@ -32,7 +32,7 @@ export default function Footer() {
                     <p className='no-space-below'>36C West Green Village</p>
                     <p className='no-space-above'>Hicksville, NY 11801</p>
                     <p className='no-space-above min-space-below'>(516) 490-4255   |   <a className='email' href='mailto:info@breastcancercomfort.org'>info@breastcancercomfort.org</a></p>
-                    <p className='no-space-below'>Ⓒ 2021 Breast Cancer Comfort Foundation</p>
+                    <p className='no-space-below'>Ⓒ 2022 Breast Cancer Comfort Foundation</p>
                     <p className='no-space-above'>All rights reserved</p>
                 </div>
 

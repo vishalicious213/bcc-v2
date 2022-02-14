@@ -1,5 +1,6 @@
 import Nav from '../components/nav'
 import Footer from '../components/footer'
+import ContactForm from '../components/contact'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -7,6 +8,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Nav />
       <Component {...pageProps} />
+      <ContactForm />
       <Footer />
     </>
   )
