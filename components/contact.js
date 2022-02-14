@@ -60,7 +60,7 @@ export default function ContactForm() {
                 }
 
                 .field:hover {
-                    // border: 2px solid white;
+                    border: 2px solid #b01e65;
                 }
 
                 #contact-button {
