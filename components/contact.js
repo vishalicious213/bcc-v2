@@ -33,7 +33,7 @@ export default function ContactForm() {
                     placeholder='message'
                     className='field'
                 />
-                <button id='contact-button' type='submit'>Submit</button>
+                <button id='contact-button' type='submit'>Send Message</button>
             </form>
 
             <style jsx>
@@ -57,6 +57,7 @@ export default function ContactForm() {
                 }
 
                 #contact-button {
+                    color: gainsboro;
                     font-size: 1.25rem;
                     background-color: #923360;
                     border: none;
@@ -71,6 +72,7 @@ export default function ContactForm() {
                 }
 
                 #contact-button:hover {
+                    color: white;
                     background: #b01e65;
                     transition: .25s
                 }
