@@ -43,7 +43,7 @@ export default function ContactForm() {
                     display: flex;
                     flex-direction: column;
                     width: 90%;
-                    margin: auto;
+                    margin: 1rem auto 0;
                     // outline: 1px solid red;
                 }
 
