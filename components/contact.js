@@ -3,7 +3,7 @@ export default function ContactForm() {
         <div>
             <form id='contact-form' name='contact-form' method='POST' data-netlify='true'>
                 <input type='hidden' name='form-name' value='contact-form' />
-                <p>Leave a message!</p>
+                <p>Contact Us</p>
                 <input
                     id='name'
                     name='name'
@@ -36,6 +36,16 @@ export default function ContactForm() {
                 {`
                 form {
                     color: white;
+                    display: flex;
+                    flex-direction: column;
+                    // outline: 1px solid red;
+                }
+
+                @media only screen and (min-width: 1024px) {
+                    form {
+                        width: 50%;
+                        margin: auto;
+                    }
                 }
                 `}
             </style>
