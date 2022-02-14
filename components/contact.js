@@ -1,6 +1,6 @@
 export default function ContactForm() {
     return (
-        <div>
+        <div id='form-container'>
             <form id='contact-form' name='contact-form' method='POST' data-netlify='true'>
                 <input type='hidden' name='form-name' value='contact-form' />
                 <h2 className='h2'>Contact Us</h2>
@@ -38,13 +38,16 @@ export default function ContactForm() {
 
             <style jsx>
                 {`
+                #form-container {
+                    border-top: 5px solid #b01e65;
+                }
+
                 form {
                     color: white;
                     display: flex;
                     flex-direction: column;
                     width: 90%;
                     margin: 1rem auto 0;
-                    // outline: 1px solid red;
                 }
 
                 .field {
