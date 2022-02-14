@@ -33,7 +33,7 @@ export default function ContactForm() {
                     placeholder='message'
                     className='field'
                 />
-                <button type='submit'>Submit</button>
+                <button id='contact-button' type='submit'>Submit</button>
             </form>
 
             <style jsx>
@@ -42,6 +42,8 @@ export default function ContactForm() {
                     color: white;
                     display: flex;
                     flex-direction: column;
+                    width: 90%;
+                    margin: auto;
                     // outline: 1px solid red;
                 }
 
@@ -54,15 +56,28 @@ export default function ContactForm() {
                     color: gainsboro;
                 }
 
-                .field:focus {
+                #contact-button {
+                    font-size: 1.25rem;
+                    background-color: #923360;
+                    border: none;
+                    border-radius: .35rem;
+                    padding: .5rem;
+                    margin-top: 1rem;
+                }
+
+                .field:focus, #contact-button:focus {
                     outline: none;
                     border: 2px solid #b01e65;
+                }
+
+                #contact-button:hover {
+                    background: #b01e65;
+                    transition: .25s
                 }
 
                 @media only screen and (min-width: 1024px) {
                     form {
                         width: 50%;
-                        margin: auto;
                     }
                 }
                 `}
