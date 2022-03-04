@@ -3,6 +3,15 @@ import styles from '../styles/Home.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTrophy, faAward, faMedal, faRibbon } from "@fortawesome/free-solid-svg-icons"
 
+const supporters = [
+    {id: 0, name: 'Karen Kostroff, M.D., FACS', icon: {faTrophy}, color: 'FFFFFF'},
+    {id: 1, name: 'Beth C. Tortolani Foundation', icon: {faAward}, color: 'deeppink'},
+    {id: 2, name: 'New York Breast Cancer Reconstruction Associates', icon: {faAward}, color: 'deeppink'},
+    {id: 3, name: 'AAA Northeast', icon: {faAward}, color: 'deeppink'},
+    {id: 4, name: 'We Care Fund of the Nassau County Bar Association', icon: {faAward}, color: 'deeppink'},
+    // {id: 0, name: '', icon: {}, color: ''},
+]
+
 const Tier = props => {
     return (
         <span className='award'>
