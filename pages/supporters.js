@@ -6,8 +6,8 @@ import { faTrophy, faAward, faMedal, faRibbon } from "@fortawesome/free-solid-sv
 function Trophy() {
     return (
     <span className='award'>
-        <FontAwesomeIcon icon={faTrophy} style={{ fontSize: "1.25rem", color: "#D7D7D7" }} />
-        <style jsx>{`.award {margin: 0 2rem;}`}</style>
+        <FontAwesomeIcon icon={faTrophy} style={{ fontSize: "1.25rem", color: "#FFFFFF" }} />
+        <style jsx>{`.award {width: 2rem; margin: 0 1.75rem; text-align: center;}`}</style>
     </span>
     )
 }
@@ -15,8 +15,8 @@ function Trophy() {
 function Ribbon() {
     return (
     <span className='award'>
-        <FontAwesomeIcon icon={faRibbon} style={{ fontSize: "1.25rem", color: "#D7D7D7" }} />
-        <style jsx>{`.award {margin: 0 2rem;}`}</style>
+        <FontAwesomeIcon icon={faRibbon} style={{ fontSize: "1.25rem", color: "#C9B037" }} />
+        <style jsx>{`.award {width: 2rem; margin: 0 1.75rem; text-align: center;}`}</style>
     </span>
     )
 }
@@ -24,8 +24,8 @@ function Ribbon() {
 function Medal() {
     return (
     <span className='award'>
-        <FontAwesomeIcon icon={faMedal} style={{ fontSize: "1.25rem", color: "#D7D7D7" }} />
-        <style jsx>{`.award {margin: 0 2rem;}`}</style>
+        <FontAwesomeIcon icon={faMedal} style={{ fontSize: "1.25rem", color: "#B4B4B4" }} />
+        <style jsx>{`.award {width: 2rem; margin: 0 1.75rem; text-align: center;}`}</style>
     </span>
     )
 }
@@ -33,8 +33,8 @@ function Medal() {
 function Award() {
     return (
     <span className='award'>
-        <FontAwesomeIcon icon={faAward} style={{ fontSize: "1.25rem", color: "#D7D7D7" }} />
-        <style jsx>{`.award {margin: 0 2rem;}`}</style>
+        <FontAwesomeIcon icon={faAward} style={{ fontSize: "1.25rem", color: "#AD8A56" }} />
+        <style jsx>{`.award {width: 2rem; margin: 0 1.75rem; text-align: center;}`}</style>
     </span>
     )
 }
@@ -57,16 +57,14 @@ export default function Support() {
             <section className='pink-container'>
                 <h2 className='no-space-below'>Thank you to our supporters!</h2>
 
-                {/* <FontAwesomeIcon icon={faTrophy} style={{ fontSize: 100, color: "#D7D7D7" }} />
-                <FontAwesomeIcon icon={faRibbon} style={{ fontSize: 100, color: "#D7D7D7" }} />
-                <FontAwesomeIcon icon={faMedal} style={{ fontSize: 100, color: "#D7D7D7" }} />
-                <FontAwesomeIcon icon={faAward} style={{ fontSize: 100, color: "#D7D7D7" }} /> */}
-
                 <p>We are lucky to have you as donors and appreciate you for investing in our organization. Because of you, we can continue our mission to deliver Comfort Baskets and Chemo Comfort Bags to those who have recently undergone breast cancer surgery and remind them that they are not alone or unloved.</p>
             </section>
 
             <section className='supporter-list'>
                     <h2 className='grey mem-h2'><Trophy />Karen Kostroff, M.D., FACS</h2>
+                    <h2 className='grey mem-h2'><Ribbon />Karen Kostroff, M.D., FACS</h2>
+                    <h2 className='grey mem-h2'><Medal />Karen Kostroff, M.D., FACS</h2>
+                    <h2 className='grey mem-h2'><Award />Karen Kostroff, M.D., FACS</h2>
                     <h2 className='pink mem-h2'><img src='/gift.png' />Beth C. Tortolani Foundation</h2>
                     <h2 className='grey mem-h2'><img src='/gift.png' />New York Breast Cancer Reconstruction Associates</h2>
                     <h2 className='pink mem-h2'><img src='/gift.png' />AAA Northeast</h2>
