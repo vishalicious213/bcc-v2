@@ -39,6 +39,15 @@ function Award() {
     )
 }
 
+function Friends() {
+    return (
+    <span className='award'>
+        <FontAwesomeIcon icon={faAward} style={{ fontSize: "1.25rem", color: "deeppink" }} />
+        <style jsx>{`.award {width: 2rem; margin: 0 1.75rem; text-align: center;}`}</style>
+    </span>
+    )
+}
+
 export default function Support() {
   return (
     <div className={styles.container}>
@@ -62,13 +71,11 @@ export default function Support() {
 
             <section className='supporter-list'>
                     <h2 className='grey mem-h2'><Trophy />Karen Kostroff, M.D., FACS</h2>
-                    <h2 className='grey mem-h2'><Ribbon />Karen Kostroff, M.D., FACS</h2>
-                    <h2 className='grey mem-h2'><Medal />Karen Kostroff, M.D., FACS</h2>
-                    <h2 className='grey mem-h2'><Award />Karen Kostroff, M.D., FACS</h2>
-                    <h2 className='pink mem-h2'><img src='/gift.png' />Beth C. Tortolani Foundation</h2>
-                    <h2 className='grey mem-h2'><img src='/gift.png' />New York Breast Cancer Reconstruction Associates</h2>
-                    <h2 className='pink mem-h2'><img src='/gift.png' />AAA Northeast</h2>
-                    <h2 className='grey mem-h2'><img src='/gift.png' />We Care Fund of the Nassau County Bar Association</h2>
+                    <h2 className='pink mem-h2'><Ribbon />Beth C. Tortolani Foundation</h2>
+                    <h2 className='grey mem-h2'><Medal />New York Breast Cancer Reconstruction Associates</h2>
+                    <h2 className='pink mem-h2'><Award />AAA Northeast</h2>
+                    <h2 className='grey mem-h2'><Friends />We Care Fund of the Nassau County Bar Association</h2>
+                    {/* <h2 className='pink mem-h2'><img src='/gift.png' />AAA Northeast</h2> */}
             </section>
         </main>
 
