@@ -3,10 +3,20 @@ import styles from '../styles/Home.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTrophy, faAward, faMedal, faRibbon } from "@fortawesome/free-solid-svg-icons"
 
+
+const Tier = props => {
+    return (
+        <span className='award'>
+            <FontAwesomeIcon icon={props.icon} style={{ fontsize: "1.5rem", color: props.color}} />
+            <style jsx>{`.award {width: 2rem; margin: 0 1.75rem; text-align: center;}`}</style>
+        </span>
+    )
+}
+
 function Trophy() {
     return (
     <span className='award'>
-        <FontAwesomeIcon icon={faTrophy} style={{ fontSize: "1.25rem", color: "#FFFFFF" }} />
+        <FontAwesomeIcon icon={faTrophy} style={{ fontSize: "1.5rem", color: "#FFFFFF" }} />
         <style jsx>{`.award {width: 2rem; margin: 0 1.75rem; text-align: center;}`}</style>
     </span>
     )
@@ -15,7 +25,7 @@ function Trophy() {
 function Ribbon() {
     return (
     <span className='award'>
-        <FontAwesomeIcon icon={faRibbon} style={{ fontSize: "1.25rem", color: "#C9B037" }} />
+        <FontAwesomeIcon icon={faRibbon} style={{ fontSize: "1.5rem", color: "#C9B037" }} />
         <style jsx>{`.award {width: 2rem; margin: 0 1.75rem; text-align: center;}`}</style>
     </span>
     )
@@ -24,7 +34,7 @@ function Ribbon() {
 function Medal() {
     return (
     <span className='award'>
-        <FontAwesomeIcon icon={faMedal} style={{ fontSize: "1.25rem", color: "#B4B4B4" }} />
+        <FontAwesomeIcon icon={faMedal} style={{ fontSize: "1.5rem", color: "#B4B4B4" }} />
         <style jsx>{`.award {width: 2rem; margin: 0 1.75rem; text-align: center;}`}</style>
     </span>
     )
@@ -33,7 +43,7 @@ function Medal() {
 function Award() {
     return (
     <span className='award'>
-        <FontAwesomeIcon icon={faAward} style={{ fontSize: "1.25rem", color: "#AD8A56" }} />
+        <FontAwesomeIcon icon={faAward} style={{ fontSize: "1.5rem", color: "#AD8A56" }} />
         <style jsx>{`.award {width: 2rem; margin: 0 1.75rem; text-align: center;}`}</style>
     </span>
     )
@@ -42,7 +52,7 @@ function Award() {
 function Friends() {
     return (
     <span className='award'>
-        <FontAwesomeIcon icon={faAward} style={{ fontSize: "1.25rem", color: "deeppink" }} />
+        <FontAwesomeIcon icon={faAward} style={{ fontSize: "1.5rem", color: "deeppink" }} />
         <style jsx>{`.award {width: 2rem; margin: 0 1.75rem; text-align: center;}`}</style>
     </span>
     )
@@ -75,7 +85,12 @@ export default function Support() {
                     <h2 className='grey mem-h2'><Medal />New York Breast Cancer Reconstruction Associates</h2>
                     <h2 className='pink mem-h2'><Award />AAA Northeast</h2>
                     <h2 className='grey mem-h2'><Friends />We Care Fund of the Nassau County Bar Association</h2>
-                    {/* <h2 className='pink mem-h2'><img src='/gift.png' />AAA Northeast</h2> */}
+                    {/* <h2 className='grey mem-h2'><Tier icon={faTrophy} color='#FFFFFF' />Platinum</h2>
+                    <h2 className='grey mem-h2'><Tier icon={faRibbon} color='#C9B037' />Gold</h2>
+                    <h2 className='grey mem-h2'><Tier icon={faMedal} color='#B4B4B4' />Silver</h2>
+                    <h2 className='grey mem-h2'><Tier icon={faAward} color='#AD8A56' />Bronze</h2>
+                    <h2 className='grey mem-h2'><Tier icon={faAward} color='deeppink' />Friend</h2>
+                    <h2 className='pink mem-h2'><img src='/gift.png' />Gift Icon</h2> */}
             </section>
         </main>
 
