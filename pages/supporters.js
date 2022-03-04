@@ -1,5 +1,16 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTrophy, faAward, faMedal, faRibbon } from "@fortawesome/free-solid-svg-icons"
+
+const Tier = props => {
+    return (
+        <span className='award'>
+            <FontAwesomeIcon icon={props.icon} style={{ fontsize: "1.5rem", color: props.color}} />
+            <style jsx>{`.award {width: 2rem; margin: 0 1.75rem; text-align: center;}`}</style>
+        </span>
+    )
+}
 
 export default function Support() {
   return (
@@ -18,15 +29,22 @@ export default function Support() {
 
             <section className='pink-container'>
                 <h2 className='no-space-below'>Thank you to our supporters!</h2>
+
                 <p>We are lucky to have you as donors and appreciate you for investing in our organization. Because of you, we can continue our mission to deliver Comfort Baskets and Chemo Comfort Bags to those who have recently undergone breast cancer surgery and remind them that they are not alone or unloved.</p>
             </section>
 
             <section className='supporter-list'>
-                    <h2 className='grey mem-h2'><img src='/gift.png' />Karen Kostroff, M.D., FACS</h2>
-                    <h2 className='pink mem-h2'><img src='/gift.png' />Beth C. Tortolani Foundation</h2>
-                    <h2 className='grey mem-h2'><img src='/gift.png' />New York Breast Cancer Reconstruction Associates</h2>
-                    <h2 className='pink mem-h2'><img src='/gift.png' />AAA Northeast</h2>
-                    <h2 className='grey mem-h2'><img src='/gift.png' />We Care Fund of the Nassau County Bar Association</h2>
+                    <h2 className='grey mem-h2'><Tier icon={faTrophy} color='#FFFFFF' />Karen Kostroff, M.D., FACS</h2>
+                    <h2 className='pink mem-h2'><Tier icon={faAward} color='deeppink' />Beth C. Tortolani Foundation</h2>
+                    <h2 className='grey mem-h2'><Tier icon={faAward} color='deeppink' />New York Breast Cancer Reconstruction Associates</h2>
+                    <h2 className='pink mem-h2'><Tier icon={faAward} color='deeppink' />AAA Northeast</h2>
+                    <h2 className='grey mem-h2'><Tier icon={faAward} color='deeppink' />We Care Fund of the Nassau County Bar Association</h2>
+                    {/* <h2 className='grey mem-h2'><Tier icon={faTrophy} color='#FFFFFF' />Platinum</h2> */}
+                    {/* <h2 className='grey mem-h2'><Tier icon={faRibbon} color='#C9B037' />Gold</h2> */}
+                    {/* <h2 className='grey mem-h2'><Tier icon={faMedal} color='#B4B4B4' />Silver</h2> */}
+                    {/* <h2 className='grey mem-h2'><Tier icon={faAward} color='#AD8A56' />Bronze</h2> */}
+                    {/* <h2 className='grey mem-h2'><Tier icon={faAward} color='deeppink' />Friend</h2> */}
+                    {/* <h2 className='pink mem-h2'><img src='/gift.png' />Gift Icon</h2> */}
             </section>
         </main>
 
