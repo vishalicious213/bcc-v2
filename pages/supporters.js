@@ -12,6 +12,16 @@ function Trophy() {
     )
 }
 
+function Ribbon() {
+    return (
+    <span className='award'>
+        <FontAwesomeIcon icon={faRibbon} style={{ fontSize: "1.25rem", color: "#D7D7D7" }} />
+        <style jsx>{`.award {margin: 0 2rem;}`}</style>
+    </span>
+    )
+}
+
+
 export default function Support() {
   return (
     <div className={styles.container}>
