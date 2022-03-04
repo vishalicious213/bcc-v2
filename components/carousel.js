@@ -69,7 +69,7 @@ export default function Carousel() {
                     <img src='/carousel-images/carousel-03.jpg' alt='Breast Cancer Comfort event' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-04.jpg' alt='Crafting materials' />
+                    <img src='/carousel-images/carousel-04.jpg' alt='Breast Cancer Comfort comfort baskets and chemo bags' />
                 </div>
                 <div>
                     <img src='/carousel-images/carousel-05.jpg' alt='Breast Cancer Comfort event' />
@@ -78,10 +78,10 @@ export default function Carousel() {
                     <img src='/carousel-images/carousel-06.jpg' alt='Breast Cancer Comfort event' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-07.jpg' alt='Crafting materials' />
+                    <img src='/carousel-images/carousel-07.jpg' alt='Breast Cancer Comfort comfort baskets and chemo bags' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-08.jpg' alt='Salt & pepper' />
+                    <img src='/carousel-images/carousel-08.jpg' alt='New York Mets Salt & Pepper' />
                 </div>
                 <div>
                     <img src='/carousel-images/carousel-09.jpg' alt='Breast Cancer Comfort comfort baskets' />
