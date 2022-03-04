@@ -21,6 +21,15 @@ function Ribbon() {
     )
 }
 
+function Medal() {
+    return (
+    <span className='award'>
+        <FontAwesomeIcon icon={faMedal} style={{ fontSize: "1.25rem", color: "#D7D7D7" }} />
+        <style jsx>{`.award {margin: 0 2rem;}`}</style>
+    </span>
+    )
+}
+
 
 export default function Support() {
   return (
