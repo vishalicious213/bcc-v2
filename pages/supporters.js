@@ -3,14 +3,15 @@ import styles from '../styles/Home.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTrophy, faAward, faMedal, faRibbon } from "@fortawesome/free-solid-svg-icons"
 
-const supporters = [
-    {id: 0, name: 'Karen Kostroff, M.D., FACS', icon: {faTrophy}, color: 'FFFFFF'},
-    {id: 1, name: 'Beth C. Tortolani Foundation', icon: {faAward}, color: 'deeppink'},
-    {id: 2, name: 'New York Breast Cancer Reconstruction Associates', icon: {faAward}, color: 'deeppink'},
-    {id: 3, name: 'AAA Northeast', icon: {faAward}, color: 'deeppink'},
-    {id: 4, name: 'We Care Fund of the Nassau County Bar Association', icon: {faAward}, color: 'deeppink'},
-    // {id: 0, name: '', icon: {}, color: ''},
-]
+// supporters is to be used as data for supporter-list section, below:
+// const supporters = [
+//     {id: 0, name: 'Karen Kostroff, M.D., FACS', icon: {faTrophy}, color: 'FFFFFF'},
+//     {id: 1, name: 'Beth C. Tortolani Foundation', icon: {faAward}, color: 'deeppink'},
+//     {id: 2, name: 'New York Breast Cancer Reconstruction Associates', icon: {faAward}, color: 'deeppink'},
+//     {id: 3, name: 'AAA Northeast', icon: {faAward}, color: 'deeppink'},
+//     {id: 4, name: 'We Care Fund of the Nassau County Bar Association', icon: {faAward}, color: 'deeppink'},
+//     // {id: 0, name: '', icon: {}, color: ''},
+// ]
 
 const Tier = props => {
     return (
@@ -41,6 +42,13 @@ export default function Support() {
 
                 <p>We are lucky to have you as donors and appreciate you for investing in our organization. Because of you, we can continue our mission to deliver Comfort Baskets and Chemo Comfort Bags to those who have recently undergone breast cancer surgery and remind them that they are not alone or unloved.</p>
             </section>
+
+            {/* icon attribute is not working in Tier component, below: */}
+            {/* <section className='supporter-list'>
+                {supporters.map(supporter =>
+                    <h2 className={supporter.id % 2 === 0 ? 'grey mem-h2' : 'pink mem-h2'} key={supporter.id}><Tier icon={supporter.icon} color={supporter.color} />{supporter.name}</h2>
+                )}
+            </section> */}
 
             <section className='supporter-list'>
                     <h2 className='grey mem-h2'><Tier icon={faTrophy} color='#FFFFFF' />Karen Kostroff, M.D., FACS</h2>
