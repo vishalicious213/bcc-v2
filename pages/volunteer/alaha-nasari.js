@@ -78,7 +78,7 @@ export default function Teammate() {
 
           .invisible {
             color: white;
-            background-image: url('/volunteer/2.jpg');
+            background-image: url('/volunteer/profile-bg.jpg');
             background-size: cover;
             background-position: center center;
             display: flex;
