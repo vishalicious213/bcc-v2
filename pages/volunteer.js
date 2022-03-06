@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Bio from '../components/bio'
 
 export default function Volunteer() {
   return (
@@ -48,6 +49,8 @@ export default function Volunteer() {
                 </ul>
             </div>
           </section>
+
+          <Bio />
       </main>
     </div>
   )
