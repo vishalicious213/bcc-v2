@@ -16,7 +16,7 @@ export default function Teammate() {
                 <h1 className='invisible-text'>Alaha Nasari</h1>
                 <h2 className='invisible-text'>Volunteer</h2>
                 <div className='social-media-icons'>
-                    <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/nicole-link/"></a>
+                    {/* <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/nicole-link/"></a> */}
                     {/* <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a> */}
                     {/* <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a> */}
                     {/* <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a> */}
@@ -33,7 +33,7 @@ export default function Teammate() {
                 </div>
 
                 <div className='bio-text'>
-                    <p>Nicole comes to Breast Cancer Comfort with a background in public relations and a passion for building community and fundraising through events.  As our Director of Events and Fundraising, Nicole assists with social media management, community/media outreach, and fundraising events.</p>
+                    <p>I have performed service work for the Breast Cancer Comfort Foundation for the past five years. From leading a mental health initiative during the pandemic to assembling baskets for patients undergoing recovery, I have been closely involved with the team at BCCF. I have also played a prominent role in publishing articles for the website and local newspaper to promote our initiatives. As a current college sophomore, I am looking forward to continuing my work with the organization through involvement in outreach and fundraising events.</p>
 
                     {/* <h3>SKILLS</h3> */}
                     {/* <h3>LINKS</h3> */}
