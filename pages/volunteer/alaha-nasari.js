@@ -15,16 +15,6 @@ export default function Teammate() {
             <div className='invisible'>
                 <h1 className='invisible-text'>Alaha Nasari</h1>
                 <h2 className='invisible-text'>Volunteer</h2>
-                <div className='social-media-icons'>
-                    {/* <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/nicole-link/"></a> */}
-                    {/* <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a> */}
-                    {/* <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a> */}
-                    {/* <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a> */}
-                </div>
-            </div>
-
-            <div className='img-container'>
-                <img src='/about/nicole-bg.jpg' alt='BCC collage of events' />
             </div>
 
             <section className='bio'>
@@ -87,85 +77,33 @@ export default function Teammate() {
           }
 
           .invisible {
-            position: absolute;
-            top: 15vw;
-            left: 50%;
             color: white;
+            background-image: url('/volunteer/2.jpg');
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 40rem;
           }
 
           h1 {
             font-size: 5vw;
+            padding-bottom: 1rem;
+            margin-bottom: 0;
           }
 
           h2 {
             font-size: 3.5vw;
+            margin-top: 0;
           }
           
           .invisible-text {
+            width: 100%;
             position: relative;
-            left: -50%;
             text-align: center;
-          }
-
-          .social-media-icons {
-            position: relative;
-            left: -50%;
-            display: flex;
-            justify-content: center;
-          }
-
-          .icon {
-              width: 2.5rem;
-              height: 2.5rem;
-              border-radius: 50%;
-          }
-
-          .fb {
-              background: url('/fb.png') no-repeat;
-              background-position: center;
-              background-size: contain;
-          }
-
-          .fb:hover {
-              background: url('/fb2.png') no-repeat;
-              background-position: center;
-              background-size: contain;
-          }
-
-          .li {
-              background: url('/li.png') no-repeat;
-              background-position: center;
-              background-size: contain;
-          }
-
-          .li:hover {
-              background: url('/li2.png') no-repeat;
-              background-position: center;
-              background-size: contain;
-          }
-
-          .tw {
-              background: url('/twitter.jpg') no-repeat;
-              background-position: center;
-              background-size: contain;
-          }
-
-          .tw:hover {
-              background: url('/twitter2.jpg') no-repeat;
-              background-position: center;
-              background-size: contain;
-          }
-
-          .ig {
-              background: url('/ig.png') no-repeat;
-              background-position: center;
-              background-size: contain;
-          }
-
-          .ig:hover {
-              background: url('/ig2.png') no-repeat;
-              background-position: center;
-              background-size: contain;
+            background: rgba(0,0,0,0.3);
           }
           `}
         </style>
