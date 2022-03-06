@@ -1,11 +1,7 @@
 import styles from '../styles/Home.module.css'
 
 const team = [
-    {id: '01', name: 'Debi Cavolo', title: 'CEO & Founder', pic: 'debi-li.jpg', linkedIn: 'https://www.linkedin.com/in/debi-cavolo-671a78132/', url: '/team/debi-cavolo'},
-    {id: '02', name: 'Ann Guarascio', title: 'Board Treasurer, Non-Profit Accounting Specialist', pic: 'ann-li.jpg', linkedIn: 'https://www.linkedin.com/in/ann-guarascio-3463719/', url: '/team/ann-guarascio'},
-    {id: '03', name: 'Nicole Link', title: 'Director of Events & Fundraising', pic: 'nicole-li.jpg', linkedIn: 'https://www.linkedin.com/in/nicole-link/', url: '/team/nicole-link'},
-    {id: '04', name: 'Alicia Cosentino', title: 'Administrative Assistant', pic: 'alicia-thumb.jpeg', linkedIn: '', url: '/team/alicia-cosentino'},
-    {id: '05', name: 'Vish Singh', title: 'Web Developer', pic: 'vish.jpg', linkedIn: 'https://www.linkedin.com/in/vish213/', url: '/team/vish-singh'},
+    {id: '01', name: 'Alaha Nasari', title: 'Volunteer', pic: 'alaha-thumb.jpg', url: '/volunteer/alaha-nasari'},
     // {id: '', name: '', title: '', pic: '', linkedIn: '', url: ''},
 ]
 
@@ -26,12 +22,12 @@ export default function Bio() {
             </div>
         </section> */}
 
-        <section className='grey-container'>
+        <section className='pink-container'>
             <section className='team'>
                 {team.map(person =>
                     <div key={person.id} className='person'>
                         <a className='person-link' href={person.url}>
-                            <img className='person-img' src={`/about/${person.pic}`} alt={`${person.name}, ${person.title}`} />
+                            <img className='person-img' src={`/volunteer/${person.pic}`} alt={`${person.name}, ${person.title}`} />
                         </a>
                         <h2 className='no-space-below'>{person.name}</h2>
                         <p className='no-space-above person-title'>{person.title}</p>
@@ -63,7 +59,6 @@ export default function Bio() {
             }
 
             .team {
-                // border: 1px solid red;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
@@ -72,21 +67,17 @@ export default function Bio() {
             }
 
             .person {
-                // border: 1px solid pink;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 width: 85%;
                 margin-bottom: 1rem;
                 padding-top: 1rem;
-                // background: linear-gradient(#292c2f 50%, #b01e65 50%);
                 border-radius: 1rem;
             }
 
             .person:hover {
-                background: linear-gradient(#292c2f 50%, #b01e65 50%);
-                // background: #b01e65;
-                // cursor: pointer;
+                background: linear-gradient(#b01e65 50%, #292c2f 50%);
             }
 
             .person:hover .person-img {
@@ -109,21 +100,18 @@ export default function Bio() {
 
             @media only screen and (min-width: 768px) {
                 .person {
-                    // border: 1px solid orange;
                     width: 48%;
                 }
             }
 
             @media only screen and (min-width: 992px) {
                 .person {
-                    // border: 1px solid orange;
                     width: 32%;
                 }
             }
 
             @media only screen and (min-width: 1200px) {
                 .person {
-                    // border: 1px solid yellow;
                     width: 24%;
                 }
             }
