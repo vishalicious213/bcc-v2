@@ -22,14 +22,6 @@ export default function Bio() {
 
         <style jsx>
             {`
-            .gift-container {
-                padding-top: 3rem;
-            }
-
-            .gift-img-container {
-                padding-top: 0;
-            }
-
             .team {
                 display: flex;
                 flex-wrap: wrap;
