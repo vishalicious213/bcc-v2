@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Bio from '../components/bio'
 
 export default function Volunteer() {
   return (
@@ -48,6 +49,18 @@ export default function Volunteer() {
                 </ul>
             </div>
           </section>
+
+          <section className='pink-container gift-container'>
+            <div className='gift-img-container'>
+                <img className='gift-img' src='gift.png' alt='wrapped gift' />
+            </div>
+            <div className='gift-text-container'>
+                <h2 className='h2'>Current Volunteers</h2>
+                <p className='no-space-above'>Volunteers are the backbone of the Breast Cancer Comfort Foundation. They are present at events, create content for the website, help produce comfort baskets and engage with the community to publicize our mission. Each and every one takes on initiatives to further our cause and delivers on them. We are honored to have shared in the selfless efforts of the following talented individuals:</p>
+            </div>
+          </section>
+
+          <Bio />
       </main>
     </div>
   )

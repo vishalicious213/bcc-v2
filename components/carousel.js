@@ -60,43 +60,43 @@ export default function Carousel() {
 
             <Slider {...settings}>
                 <div>
-                    <img src='/carousel-images/carousel-01.jpg' alt='BCC event' />
+                    <img src='/carousel-images/carousel-01.jpg' alt='Breast Cancer Comfort event' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-02.jpg' alt='BCC basket' />
+                    <img src='/carousel-images/carousel-02.jpg' alt='Breast Cancer Comfort comfort basket' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-03.jpg' alt='BCC event' />
+                    <img src='/carousel-images/carousel-03.jpg' alt='Breast Cancer Comfort event' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-04.jpg' alt='Crafting materials' />
+                    <img src='/carousel-images/carousel-04.jpg' alt='Breast Cancer Comfort comfort baskets and chemo bags' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-05.jpg' alt='BCC event' />
+                    <img src='/carousel-images/carousel-05.jpg' alt='Breast Cancer Comfort event' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-06.jpg' alt='BCC event' />
+                    <img src='/carousel-images/carousel-06.jpg' alt='Breast Cancer Comfort event' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-07.jpg' alt='Crafting materials' />
+                    <img src='/carousel-images/carousel-07.jpg' alt='Breast Cancer Comfort comfort baskets and chemo bags' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-08.jpg' alt='Salt & pepper' />
+                    <img src='/carousel-images/carousel-08.jpg' alt='New York Mets Salt & Pepper' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-09.jpg' alt='BCC baskets' />
+                    <img src='/carousel-images/carousel-09.jpg' alt='Breast Cancer Comfort comfort baskets' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-10.jpg' alt='BCC event' />
+                    <img src='/carousel-images/carousel-10.jpg' alt='Breast Cancer Comfort event' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-11.jpg' alt='BCC basket' />
+                    <img src='/carousel-images/carousel-11.jpg' alt='Breast Cancer Comfort comfort basket' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-12.jpg' alt='BCC event' />
+                    <img src='/carousel-images/carousel-12.jpg' alt='Breast Cancer Comfort event' />
                 </div>
                 <div>
-                    <img src='/carousel-images/carousel-13.jpg' alt='BCC basket' />
+                    <img src='/carousel-images/carousel-13.jpg' alt='Breast Cancer Comfort comfort basket' />
                 </div>
             </Slider>
 
