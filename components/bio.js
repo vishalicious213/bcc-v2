@@ -7,45 +7,28 @@ const team = [
 
 export default function Bio() {
   return (
-    <div className={styles.container}>
-        {/* <div className='img-container'>
-            <img src='/about/team.jpg' alt='' />
-        </div> */}
-
-        {/* <section className='pink-container gift-container'>
+    <div>
+        <section className='pink-container gift-container'>
             <div className='gift-img-container'>
                 <img className='gift-img' src='gift.png' alt='wrapped gift' />
             </div>
-            <div className='gift-text-container'>
-                <h2 className='h2'>Our Team</h2>
-                <p className='no-space-above'>The people behind an organization are as important as the organization itself. Since 2015, The Breast Cancer Comfort Foundation has been working to provide comfort baskets and host events to support women undergoing breast cancer treatment. Below are some of our team members who volunteer their time and efforts to help raise the spirits of patients and remind them that they're not alone.</p>
-            </div>
-        </section> */}
 
-        <section className='pink-container'>
-            <section className='team'>
-                {team.map(person =>
-                    <div key={person.id} className='person'>
-                        <a className='person-link' href={person.url}>
-                            <img className='person-img' src={`/volunteer/${person.pic}`} alt={`${person.name}, ${person.title}`} />
-                        </a>
-                        <h2 className='no-space-below'>{person.name}</h2>
-                        <p className='no-space-above person-title'>{person.title}</p>
-                    </div>
-                )}
-            </section>
+            <div className='gift-text-container'>
+                <h2 className='h2'>Current Volunteers</h2>
+            </div>
         </section>
 
-        {/* <section className='pink-container gift-container'>
-            <div className='gift-img-container'>
-                <img className='gift-img' src='gift.png' alt='wrapped gift' />
-            </div>
-            <div className='gift-text-container'>
-                <h2 className='h2'>Join our organization!</h2>
-                <p className='no-space-above'>BCC is powered by the skills and efforts of our volunteers. Our organization is seeking members to serve in the following capacities: Public Relations, Grant Writing, Marketing, Event Planning, and Social Media. Creative individuals with Fundraising experience are always welcome.</p>
-                <p>Tell us about yourself and your ideas via email: <a id='email' href='mailto:info@breastcancercomfort.org'>info@breastcancercomfort.org</a></p>
-            </div>
-        </section> */}
+        <section className='team pink-container'>
+            {team.map(person =>
+                <div key={person.id} className='person'>
+                    <a className='person-link' href={person.url}>
+                        <img className='person-img' src={`/volunteer/${person.pic}`} alt={`${person.name}, ${person.title}`} />
+                    </a>
+                    <h2 className='no-space-below'>{person.name}</h2>
+                    <p className='no-space-above person-title'>{person.title}</p>
+                </div>
+            )}
+        </section>
 
         <style jsx>
             {`
@@ -62,8 +45,6 @@ export default function Bio() {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
-                width: 100%;
-                margin-top: 2rem;
             }
 
             .person {
