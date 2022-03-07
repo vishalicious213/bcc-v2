@@ -32,13 +32,12 @@ export default function Bio() {
 
         <style jsx>
             {`
-            #email {
-                color: white;
-                font-weight: 700;
+            .gift-container {
+                padding-top: 3rem;
             }
-            
-            #email:hover {
-                text-decoration: underline;
+
+            .gift-img-container {
+                padding-top: 0;
             }
 
             .team {
