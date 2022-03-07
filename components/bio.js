@@ -8,16 +8,6 @@ const team = [
 export default function Bio() {
   return (
     <div>
-        <section className='pink-container gift-container'>
-            <div className='gift-img-container'>
-                <img className='gift-img' src='gift.png' alt='wrapped gift' />
-            </div>
-
-            <div className='gift-text-container'>
-                <h2 className='h2'>Current Volunteers</h2>
-            </div>
-        </section>
-
         <section className='team pink-container'>
             {team.map(person =>
                 <div key={person.id} className='person'>
