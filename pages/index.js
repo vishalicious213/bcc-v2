@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Carousel from '../components/carousel'
+import Video from '../components/video'
 // import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
 
@@ -94,13 +95,8 @@ export default function Home() {
             </a>
         </div>
 
-        <div className='media-container'>
-          <div className='video'>
-              <div className='videoContainer'>
-                  <iframe src="https://www.youtube.com/embed/3NSI1KX-5kk"></iframe>
-              </div>
-          </div>
-        </div>
+        {/* News 12 video */}
+        <Video vid="https://www.youtube.com/embed/3NSI1KX-5kk" />
       </main>
 
       <style jsx>
@@ -132,33 +128,6 @@ export default function Home() {
           margin-right: 1rem;
         }
 
-        .media-container {
-          display: flex;
-          justify-content: center;
-          background-color: #292c2f;
-        }
-
-        .video {
-          padding-top: 2rem;
-          padding-bottom: 2rem;
-          width: 75%;
-        }
-        
-        .videoContainer {
-            position: relative;
-            padding-top: 56.25%;
-            width: 100%;
-        }
-        
-        iframe {
-            position: absolute;
-            top: 0;
-            border-radius: 1rem;
-            border: 3px solid gainsboro;
-            width: 100%;
-            height: 100%;
-        }
-
         @media only screen and (min-width: 768px) {
           .message {
             display: flex;
@@ -179,29 +148,6 @@ export default function Home() {
           #ribbon img {
             width: 100%;
           }
-
-          // .vid-img {
-          //   outline: 1px solid red;
-          //   width: 22.5%;
-          //   margin: 1rem;
-          //   display: flex;
-          //   flex-direction: column;
-          //   justify-content: space-between;
-          // }
-
-          // .vid-img img {
-          //   width: 100%;
-          // }
-
-          // .side-pic {
-          //   outline: 1px solid orange;
-          //   width: 100%;
-          //   height: 30%;
-          //   border-radius: 50%;
-          //   background: url('/index/baskets.jpg') no-repeat;
-          //   background-position: center;
-          //   background-size: contain;
-          // }
         }
 
         @media only screen and (min-width: 1024px) {
