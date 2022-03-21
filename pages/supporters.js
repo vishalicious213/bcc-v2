@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Video from '../components/video'
 import styles from '../styles/Home.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTrophy, faAward, faMedal, faRibbon } from "@fortawesome/free-solid-svg-icons"
@@ -56,14 +57,8 @@ export default function Support() {
                 )}
             </section>
 
-            <div className='media-container'>
-                <div className='video'>
-                    <div className='videoContainer'>
-                        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/O0cpKBZFAck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/6WCnE0x2654" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
+            {/* Sana Hashmat's video */}
+            <Video vid="https://www.youtube.com/embed/6WCnE0x2654" />
         </main>
 
         <style jsx>
@@ -97,33 +92,6 @@ export default function Support() {
                 height: 1.75rem;
                 margin: 0 2rem 0 0;
             }
-
-            .media-container {
-                display: flex;
-                justify-content: center;
-                background-color: #292c2f;
-            }
-
-            .video {
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-            width: 75%;
-            }
-
-            .videoContainer {
-                position: relative;
-                padding-top: 56.25%;
-                width: 100%;
-            }
-
-            iframe {
-                position: absolute;
-                top: 0;
-                border-radius: 1rem;
-                border: 3px solid gainsboro;
-                width: 100%;
-                height: 100%;
-            } 
 
             // 768 PX
 
