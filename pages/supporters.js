@@ -55,6 +55,15 @@ export default function Support() {
                     <h2 className={supporter.id % 2 === 0 ? 'grey mem-h2' : 'pink mem-h2'} key={supporter.id}><Tier icon={supporter.icon} color={supporter.color} />{supporter.name}</h2>
                 )}
             </section>
+
+            <div className='media-container'>
+                <div className='video'>
+                    <div className='videoContainer'>
+                        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/O0cpKBZFAck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/6WCnE0x2654" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <style jsx>
@@ -88,6 +97,33 @@ export default function Support() {
                 height: 1.75rem;
                 margin: 0 2rem 0 0;
             }
+
+            .media-container {
+                display: flex;
+                justify-content: center;
+                background-color: #292c2f;
+            }
+
+            .video {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            width: 75%;
+            }
+
+            .videoContainer {
+                position: relative;
+                padding-top: 56.25%;
+                width: 100%;
+            }
+
+            iframe {
+                position: absolute;
+                top: 0;
+                border-radius: 1rem;
+                border: 3px solid gainsboro;
+                width: 100%;
+                height: 100%;
+            } 
 
             // 768 PX
 
