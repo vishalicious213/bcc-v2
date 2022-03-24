@@ -28,16 +28,6 @@ export default function Donate() {
             </div>
           </section>
 
-          <div className='button-container'>
-            <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
-              <button className='button button-1'>NETWORK FOR GOOD</button>
-            </a>
-
-            <a className='fb icon' target='_blank' rel='noopener' href="https://venmo.com/u/breastcancercomfort">
-              <button className='button'>VENMO</button>
-            </a>
-          </div>
-
           <section className='grey-container gift-container'>
             <div className='gift-img-container-top'>
                 <img className='gift-img' src='gift.png' alt='wrapped gift' />
@@ -73,15 +63,6 @@ export default function Donate() {
         {`
         .li {
           margin-bottom: .25rem;
-        }
-
-        .button {
-          width: 9rem;
-          height: 4rem;
-        }
-
-        .button-1 {
-          margin-right: 1rem;
         }
         `}
       </style>
