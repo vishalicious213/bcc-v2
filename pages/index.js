@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Carousel from '../components/carousel'
-import DonateBanner from '../components/donateBanner'
 import Video from '../components/video'
 // import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
@@ -22,8 +21,6 @@ export default function Home() {
         <link rel="icon" href="/cropped-BCCF-basket-logo-white-5001-192x192.png" sizes="192x192" />
         <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
       </Head>
-
-      <DonateBanner />
 
       <main className={styles.main}>
         <article className='pink-container message'>
