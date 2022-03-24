@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css'
 
-export default function donateBanner() {
+export default function DonateBanner() {
     return (
         <>
         <div className='button-container'>
@@ -12,6 +12,47 @@ export default function donateBanner() {
                 <button className='button'>VENMO</button>
             </a>
         </div>
+
+        <style jsx>
+        {`
+        .button-container {
+            display: flex;
+            justify-content: center;
+            background-image: linear-gradient(#b01e65 50%, #292c2f 50%);
+        }
+
+        .button {
+            color: gainsboro;
+            background-color: #b01e65;
+            font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: .1rem;
+            text-transform: uppercase;
+            border: 2px solid gainsboro;
+            border-radius: 1rem;
+            text-align: center;
+            padding: .75rem;
+            width: 9rem;
+            height: 4rem;
+        }
+
+        .button:hover {
+            color: white;
+            background-color: deeppink;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+
+        .button:focus {
+            outline: none;
+        }
+
+        .button-1 {
+            margin-right: 1rem;
+        }        
+        `}            
+        </style>
         </>
     )
 }
