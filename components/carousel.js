@@ -107,6 +107,12 @@ export default function Carousel() {
                 <div>
                     <img src='/carousel-images/carousel-16.jpg' alt='Breast Cancer Comfort comfort basket' />
                 </div>
+                <div>
+                    <img src='/carousel-images/carousel-17.jpg' alt='Breast Cancer Comfort comfort basket' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-18.jpg' alt='Breast Cancer Comfort comfort basket' />
+                </div>
             </Slider>
 
             <style jsx>
