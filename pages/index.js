@@ -88,16 +88,6 @@ export default function Home() {
           </div>
         </section>
 
-        <div className='button-container'>
-            <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
-              <button className='button button-1'>NETWORK FOR GOOD</button>
-            </a>
-
-            <a className='fb icon' target='_blank' rel='noopener' href="https://venmo.com/u/breastcancercomfort">
-              <button className='button'>VENMO</button>
-            </a>
-        </div>
-
         {/* News 12 video */}
         <Video vid="https://www.youtube.com/embed/3NSI1KX-5kk" />
       </main>
@@ -120,15 +110,6 @@ export default function Home() {
           padding: 1rem 0 2rem 0;
           // height: 22rem;
           position: relative;
-        }
-
-        .button {
-          width: 9rem;
-          height: 4rem;
-        }
-
-        .button-1 {
-          margin-right: 1rem;
         }
 
         @media only screen and (min-width: 768px) {
