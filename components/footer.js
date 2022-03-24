@@ -167,7 +167,7 @@ export default function Footer() {
     
                 .footer-text {
                     padding: 0;
-                    width: 50%;
+                    width: 55%;
                 }
 
                 .footer-social {
