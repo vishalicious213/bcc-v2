@@ -4,6 +4,8 @@ export default function DonateBanner() {
     return (
         <>
         <div className='button-container'>
+            <h2>DONATE:</h2>
+
             <a className='fb icon' target='_blank' rel='noopener' href="https://www.nfggive.com/donation/47-2782120">
                 <button className='button button-1'>NETWORK FOR GOOD</button>
             </a>
@@ -18,7 +20,15 @@ export default function DonateBanner() {
         .button-container {
             display: flex;
             justify-content: center;
-            background-image: linear-gradient(#b01e65 50%, #292c2f 50%);
+            // background-image: linear-gradient(#b01e65 50%, #292c2f 50%);
+            background: #b01e65;
+            border-bottom: 2px solid black;
+            padding: 1rem 0;
+        }
+
+        h2 {
+            color: gainsboro;
+            margin-right: 1rem;
         }
 
         .button {
