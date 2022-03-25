@@ -36,6 +36,10 @@ export default function ContactForm() {
                 <button id='contact-button' type='submit'>SEND MESSAGE</button>
             </form>
 
+            <div id='map'>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.8108990738788!2d-73.53659328442512!3d40.74418634358251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c281a876179661%3A0xbadeec4cf4e2343b!2sBreast%20Cancer%20Comfort%20Foundation!5e0!3m2!1sen!2sus!4v1648242838531!5m2!1sen!2sus" width="100%" height="300" style={{border:0, borderRadius: "1rem", outline: "3px solid #b01e65"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
             <style jsx>
                 {`
                 #form-container {
@@ -83,9 +87,21 @@ export default function ContactForm() {
                     outline: none;
                     border: 2px solid #b01e65;
                 }
-                
+
+                #map {
+                    width: 90%;
+                    margin-top: 2rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                    border-radius: 1rem;
+                }
+
                 @media only screen and (min-width: 1024px) {
                     form {
+                        width: 80%;
+                    }
+
+                    #map {
                         width: 80%;
                     }
                 }
