@@ -40,9 +40,15 @@ const Shop = () => {
         {products.map (product => {
             return (
                 <div key={product.id} className='product'>
-                    <img src={product.id} alt={product.alt} />
-                    <h3>{product.name}</h3>
-                    <p>{product.desc}</p>
+                    <div className='product-img'>
+                        <img className='img' src={product.img} alt={product.alt} />
+                    </div>
+                    <div className='product-txt'>
+                        <h3>{product.name}</h3>
+                        <p>{`Price: $${product.price/100}.00`}</p>
+                        <p>Number left: {product.quantity}</p>
+                        <p>{product.desc}</p>
+                    </div>
                 </div>
             )
         })}
@@ -50,17 +56,37 @@ const Shop = () => {
         <style jsx>
             {`
             #shop {
+                // outline: 1px solid red;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-            }
-
-            h2 {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
                 color: white;
             }
 
             .product {
-                color: white;
+                // outline: 1px solid orange;
+                width: 100%;
+                display: flex;
+                margin-bottom: 1rem;
+                border-bottom: 1px solid #b01e65;
+            }
+
+            .product-img {
+                // outline: 1px solid yellow;
+                width: 20%;
+            }
+
+            .img {
+                // outline: 1px solid green;
+                width: 100%;
+            }
+
+            .product-txt {
+                width: 80%;
+                padding-left: 2rem;
             }
             `}
         </style>
