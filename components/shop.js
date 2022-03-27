@@ -47,7 +47,7 @@ const Shop = () => {
                         <h3>{product.name}</h3>
                         <div className='pricing'>
                             <p>{`Price: $${product.price/100}.00`}</p>
-                            <p>Number left: {product.quantity}</p>
+                            <p>Quantity available: {product.quantity}</p>
                         </div>
                         <p>{product.desc}</p>
                     </div>
