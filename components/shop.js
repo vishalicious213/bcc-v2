@@ -35,7 +35,7 @@ const Shop = () => {
     return (
         <>
         <div id="shop">
-        <h2>SHOP</h2>
+        <h2>Make a donation and send a comfort basket or bag to a loved one</h2>
 
         {products.map (product => {
             return (
@@ -45,8 +45,10 @@ const Shop = () => {
                     </div>
                     <div className='product-txt'>
                         <h3>{product.name}</h3>
-                        <p>{`Price: $${product.price/100}.00`}</p>
-                        <p>Number left: {product.quantity}</p>
+                        <div className='pricing'>
+                            <p>{`Price: $${product.price/100}.00`}</p>
+                            <p>Number left: {product.quantity}</p>
+                        </div>
                         <p>{product.desc}</p>
                     </div>
                 </div>
@@ -64,6 +66,10 @@ const Shop = () => {
                 margin-left: auto;
                 margin-right: auto;
                 color: white;
+            }
+
+            h2 {
+                margin-bottom: 2rem;
             }
 
             .product {
@@ -84,9 +90,21 @@ const Shop = () => {
                 width: 100%;
             }
 
+            h3 {
+                margin-bottom: 0;
+            }
+
             .product-txt {
                 width: 80%;
                 padding-left: 2rem;
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+
+            .pricing {
+                display: flex;
+                justify-content: space-between;
+                padding-right: 2rem;
             }
             `}
         </style>
