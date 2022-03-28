@@ -46,10 +46,10 @@ const Shop = () => {
                     <div className='product-txt'>
                         <h3>{product.name}</h3>
                         <div className='pricing'>
-                            <p>{`Price: $${product.price/100}.00`}</p>
-                            <p>Quantity available: {product.quantity}</p>
+                            <p><span><b>Price: </b></span>{`$${product.price/100}.00`}</p>
+                            <p><span><b>Quantity available:</b></span> {product.quantity}</p>
                         </div>
-                        <p>{product.desc}</p>
+                        <p className='desc'>{product.desc}</p>
                     </div>
                 </div>
             )
@@ -69,6 +69,7 @@ const Shop = () => {
 
             h2 {
                 margin-bottom: 2rem;
+                margin-top: 2rem;
             }
 
             .product {
@@ -98,6 +99,10 @@ const Shop = () => {
                 padding-left: 2rem;
                 margin-bottom: 0;
                 margin-top: 0;
+            }
+
+            .desc {
+                color: gainsboro;
             }
 
             .pricing {
