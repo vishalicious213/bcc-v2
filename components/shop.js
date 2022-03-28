@@ -76,13 +76,15 @@ const Shop = () => {
                 // outline: 1px solid orange;
                 width: 100%;
                 display: flex;
+                flex-direction: column;
+                align-items: center;
                 margin-bottom: 1rem;
                 border-bottom: 1px solid #b01e65;
             }
 
             .product-img {
                 // outline: 1px solid yellow;
-                width: 20%;
+                width: 50%;
             }
 
             .img {
@@ -95,7 +97,7 @@ const Shop = () => {
             }
 
             .product-txt {
-                width: 80%;
+                width: 100%;
                 padding-left: 2rem;
                 margin-bottom: 0;
                 margin-top: 0;
@@ -105,6 +107,21 @@ const Shop = () => {
                 display: flex;
                 justify-content: space-between;
                 padding-right: 2rem;
+            }
+
+            @media only screen and (min-width: 1024px) {
+                .product {
+                    flex-direction: row;
+                    align-items: center;
+                }
+
+                .product-img {
+                    width: 20%;
+                }
+
+                .product-txt {
+                    width: 80%;
+                }
             }
             `}
         </style>
