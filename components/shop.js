@@ -78,7 +78,8 @@ const Shop = () => {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-bottom: 1rem;
+                margin-bottom: 3rem;
+                padding-bottom: 2rem;
                 border-bottom: 1px solid #b01e65;
             }
 
