@@ -58,7 +58,6 @@ const Shop = () => {
         <style jsx>
             {`
             #shop {
-                // outline: 1px solid red;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -73,7 +72,6 @@ const Shop = () => {
             }
 
             .product {
-                // outline: 1px solid orange;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
@@ -84,12 +82,10 @@ const Shop = () => {
             }
 
             .product-img {
-                // outline: 1px solid yellow;
                 width: 50%;
             }
 
             .img {
-                // outline: 1px solid green;
                 width: 100%;
             }
 
