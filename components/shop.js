@@ -1,4 +1,6 @@
-const products = [
+import Link from 'next/link'
+
+export const products = [
     {
         id: 0,
         name: 'Comfort basket',
@@ -7,7 +9,7 @@ const products = [
         img: '/breast-cancer-ribbon.png',
         alt: '',
         quantity: 10,
-        slug: '/comfort-basket',
+        slug: 'comfort-basket',
     },
     {
         id: 1,
@@ -17,7 +19,7 @@ const products = [
         img: '/breast-cancer-ribbon.png',
         alt: '',
         quantity: 10,
-        slug: '/chemo-comfort-bag',
+        slug: 'chemo-comfort-bag',
     },
     {
         id: 2,
@@ -27,7 +29,7 @@ const products = [
         img: '/breast-cancer-ribbon.png',
         alt: '',
         quantity: 10,
-        slug: '/comfort-bag-with-blanket',
+        slug: 'comfort-bag-with-blanket',
     },
 ]
 
@@ -44,7 +46,9 @@ const Shop = () => {
                         <img className='img' src={product.img} alt={product.alt} />
                     </div>
                     <div className='product-txt'>
-                        <h3>{product.name}</h3>
+                        <Link href={`/gifts/${product.slug}`}>
+                            <a><h3>{product.name}</h3></a>
+                        </Link>
                         <div className='pricing'>
                             <p><span className='pricing-detail'><b>Price: </b></span>{`$${product.price/100}.00`}</p>
                             <p><span className='pricing-detail'><b>Quantity available:</b></span> {product.quantity}</p>
