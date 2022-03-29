@@ -1,5 +1,6 @@
 import Head from 'next/head'
 // import Shopify from '../components/shopify'
+import Shop from '../components/shop'
 import styles from '../styles/Home.module.css'
 
 export default function Boobtique() {
@@ -53,6 +54,8 @@ export default function Boobtique() {
                 <p className='no-space-above'><b>Chemo Comfort Bags</b> can include a puzzle or coloring book, pen, unflavored lip balm, tissues, mints,  pocket calendar, thank you cards, and blanket. </p>
             </div>
           </section>
+
+          {/* <Shop /> */}
           
           {/* <Shopify /> */}
           
