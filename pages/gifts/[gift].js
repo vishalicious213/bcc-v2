@@ -7,6 +7,24 @@ const Gift = (props) => {
     )
 }
 
+export const getStaticPaths = () => {
+    const filenames = products.slug
+    console.log(filenames)
+    
+    const paths = filenames.map(filename => {
+        return {
+            params: {
+                gift: `/gifts/${filename}`
+            }
+        }
+    })
+
+    return {
+        paths,
+        fallback: false,
+    }
+}
+
 export const getStaticProps = async (context) => {
     const giftName = context.params.gift
     return {
