@@ -113,6 +113,9 @@ export default function Carousel() {
                 <div>
                     <img src='/carousel-images/carousel-18.jpg' alt='Breast Cancer Comfort, Raven Thomas and her mother' />
                 </div>
+                <div>
+                    <img src='/carousel-images/carousel-19.jpg' alt='Breast Cancer Comfort comfort basket with letter from Renae Eager' />
+                </div>
             </Slider>
 
             <style jsx>
