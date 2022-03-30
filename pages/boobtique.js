@@ -55,7 +55,7 @@ export default function Boobtique() {
             </div>
           </section>
 
-          <Shop />
+          {/* <Shop /> */}
           
           {/* <Shopify /> */}
           
