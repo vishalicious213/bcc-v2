@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export const products = [
+export const gifts = [
     {
         id: 0,
         name: 'Comfort basket',
@@ -39,21 +39,21 @@ const Shop = () => {
         <div id="shop">
         <h2>Make a donation and send a comfort basket or bag to a loved one</h2>
 
-        {products.map (product => {
+        {gifts.map (gift => {
             return (
-                <div key={product.id} className='product'>
-                    <div className='product-img'>
-                        <img className='img' src={product.img} alt={product.alt} />
+                <div key={gift.id} className='gift'>
+                    <div className='gift-img'>
+                        <img className='img' src={gift.img} alt={gift.alt} />
                     </div>
-                    <div className='product-txt'>
-                        <Link href={`/gifts/${product.slug}`}>
-                            <a><h3>{product.name}</h3></a>
+                    <div className='gift-txt'>
+                        <Link href={`/gifts/${gift.slug}`}>
+                            <a><h3>{gift.name}</h3></a>
                         </Link>
                         <div className='pricing'>
-                            <p><span className='pricing-detail'><b>Price: </b></span>{`$${product.price/100}.00`}</p>
-                            <p><span className='pricing-detail'><b>Quantity available:</b></span> {product.quantity}</p>
+                            <p><span className='pricing-detail'><b>Price: </b></span>{`$${gift.price/100}.00`}</p>
+                            <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p>
                         </div>
-                        <p className='desc'>{product.desc}</p>
+                        <p className='desc'>{gift.desc}</p>
                     </div>
                 </div>
             )
@@ -77,7 +77,7 @@ const Shop = () => {
                 color: #f5d3e4;
             }
 
-            .product {
+            .gift {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
@@ -87,7 +87,7 @@ const Shop = () => {
                 border-bottom: 1px solid #b01e65;
             }
 
-            .product-img {
+            .gift-img {
                 width: 50%;
             }
 
@@ -101,7 +101,7 @@ const Shop = () => {
                 color: #b01e65;
             }
 
-            .product-txt {
+            .gift-txt {
                 width: 100%;
                 padding-left: 2rem;
                 margin-bottom: 0;
@@ -124,16 +124,16 @@ const Shop = () => {
             }
 
             @media only screen and (min-width: 1024px) {
-                .product {
+                .gift {
                     flex-direction: row;
                     align-items: center;
                 }
 
-                .product-img {
+                .gift-img {
                     width: 20%;
                 }
 
-                .product-txt {
+                .gift-txt {
                     width: 80%;
                 }
             }
