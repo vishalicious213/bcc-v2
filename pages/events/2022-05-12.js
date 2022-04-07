@@ -17,7 +17,10 @@ export default function Post() {
         <main className={`${styles.main} main-container`}>
             <div className='post'>
                 <h1 className='no-space-below'>Fundraiser at Scrubz</h1>
-                <p>Thursday | <span>May 12, 2022</span> (7 - 9 pm)</p>
+                <p className='no-bot'>Thursday | <span>May 12, 2022</span> (7 - 9 pm)</p>
+                <p className='no-top no-bot'>RSVP required by <span>April 30, 2022</span></p>
+                <p className='no-top no-bot'>Contact: Alicia @ <span>onthego44@yahoo.com</span></p>
+                <p className='no-top'>Call or text <span>(516) 695-2076 </span>for more information!</p>
                 <div className='poster'>
                   <img src='/events/2022-05-12-scrubz.jpg' alt='Breast Cancer Comfort fundraiser with Scrubz in Farmingdale NY' />
                 </div>
@@ -49,10 +52,19 @@ export default function Post() {
 
           p {
             color: gainsboro;
+            font-size: 1.25rem;
           }
 
           span {
             color: #b83574;
+          }
+
+          .no-top {
+            margin-top: 0;
+          }
+
+          .no-bot {
+            margin-bottom: .25rem;
           }
 
           .poster {
