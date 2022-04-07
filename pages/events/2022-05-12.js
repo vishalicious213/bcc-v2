@@ -16,11 +16,10 @@ export default function Post() {
 
         <main className={`${styles.main} main-container`}>
             <div className='post'>
-                <h2 className='no-space-below'>TITLE</h2>
-                <p className='no-space-above'>by <span>Alaha Nasari</span> | Jan 17, 2021</p>
-                <p>TEXT</p>
+                <h1 className='no-space-below'>Fundraiser at Scrubz</h1>
+                <p>Thursday | <span>May 12, 2022</span> (7 - 9 pm)</p>
                 <div className='poster'>
-                  <img src='/events/2022-05-12-scrubz.jpg' alt='' />
+                  <img src='/events/2022-05-12-scrubz.jpg' alt='Breast Cancer Comfort fundraiser with Scrubz in Farmingdale NY' />
                 </div>
             </div>
 
@@ -43,7 +42,7 @@ export default function Post() {
             color: white;
           }
 
-          h2 {
+          h1 {
             font-weight: 500;
             color: #ff99cc;
           }
