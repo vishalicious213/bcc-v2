@@ -1,7 +1,8 @@
 import { gifts } from "../../components/shop"
 
 const Gift = (props) => {
-    console.log(props)
+    console.log('props: ', props)
+    console.log('gifts: ', gifts)
     return (
         <>
         <p>Gift</p>
@@ -37,6 +38,7 @@ const Gift = (props) => {
 
 // export const getStaticProps = async (context) => {
 //     const giftName = context.params.gift
+//     console.log('giftName: ', giftName)
 //     return {
 //         props: {
 //             gift
