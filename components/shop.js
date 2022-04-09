@@ -1,4 +1,5 @@
 import Link from 'next/link'
+// import fs from 'fs'
 
 export const gifts = [
     {
@@ -33,7 +34,8 @@ export const gifts = [
     },
 ]
 
-const Shop = () => {
+const Shop = (props) => {
+    console.log(props)
     return (
         <>
         <div id="shop">
@@ -143,5 +145,16 @@ const Shop = () => {
         </>
     )
 }
+
+// export const getStaticProps = async () => {
+//     const directory = `${process.cwd()}/content` // returns local directory or Netlify directory
+//     const filenames = fs.readdirSync(directory)
+//     console.log(filenames)
+//     return {
+//         props: {
+
+//         }
+//     }
+// }
 
 export default Shop
