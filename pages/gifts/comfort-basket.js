@@ -48,7 +48,7 @@ export default function ComfortBasket() {
                     display: flex;
                     justify-content: space-between;
                     padding-right: 2rem;
-                    width: 50%;
+                    width: 100%;
                 }
                 
                 .pricing-detail {
@@ -58,6 +58,8 @@ export default function ComfortBasket() {
 
                 .gift-img {
                     width: 50%;
+                    margin-bottom: 2rem;
+                    margin-top: 1rem;
                 }
                 
                 .img {
@@ -68,35 +70,3 @@ export default function ComfortBasket() {
         </div>
     )
 }
-
-{/* <div key={gift.id} className='gift'>
-<div className='gift-img'>
-    <img className='img' src={gift.img} alt={gift.alt} />
-</div>
-<div className='gift-txt'>
-    <Link href={`/gifts/${gift.slug}`}>
-        <a><h3>{gift.name}</h3></a>
-    </Link>
-    <div className='pricing'>
-        <p><span className='pricing-detail'><b>Price: </b></span>{`$${gift.price/100}.00`}</p>
-        <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p>
-    </div>
-    <p className='desc'>{gift.desc}</p>
-</div>
-</div>
-
-
-@media only screen and (min-width: 1024px) {
-    .gift {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .gift-img {
-        width: 20%;
-    }
-
-    .gift-txt {
-        width: 80%;
-    }
-} */}
