@@ -53,7 +53,7 @@ const Shop = (props) => {
                                 <a><h3>{gift.name}</h3></a>
                             </Link>
                             <div className='pricing'>
-                                <p><span className='pricing-detail'><b>Price: </b></span>{`$${gift.price/100}.00`}</p>
+                                <p><span className='pricing-detail'><b>Donation: </b></span>{`$${gift.price/100}.00`}</p>
                                 <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p>
                             </div>
                             <p className='desc'>{gift.desc}</p>

@@ -9,7 +9,7 @@ export default function ComfortBasket() {
             <div className='gift-txt'>
                 <h1>{gift.name}</h1>
                 <div className='pricing'>
-                    <p><span className='pricing-detail'><b>Price: </b></span>{`$${gift.price/100}.00`}</p>
+                    <p><span className='pricing-detail'><b>Donation: </b></span>{`$${gift.price/100}.00`}</p>
                     <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p>
                 </div>
             </div>
