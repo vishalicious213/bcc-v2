@@ -92,6 +92,10 @@ const Shop = (props) => {
                 border-bottom: 1px solid #b01e65;
             }
 
+            .gifts .gift:last-child {
+                border-bottom: none;
+            }
+
             .gift-img {
                 // outline: 1px solid orange;
                 width: 50%;
@@ -135,6 +139,7 @@ const Shop = (props) => {
                     display: grid;
                     grid-gap: 2rem;
                     grid-template-columns: 1fr 1fr;
+                    margin-bottom: 3rem;
                 }
 
                 .gift {
@@ -143,6 +148,7 @@ const Shop = (props) => {
                     border-bottom: none;
                     border-radius: 1rem;
                     background-color: #292c2f;
+                    margin-bottom: 0;
                 }
 
                 .gift:hover {
