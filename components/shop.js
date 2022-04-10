@@ -41,25 +41,27 @@ const Shop = (props) => {
         <div id="shop">
         <h2>Make a donation and send a comfort basket or bag to a loved one</h2>
 
-        {gifts.map (gift => {
-            return (
-                <div key={gift.id} className='gift'>
-                    <div className='gift-img'>
-                        <img className='img' src={gift.img} alt={gift.alt} />
-                    </div>
-                    <div className='gift-txt'>
-                        <Link href={`/gifts/${gift.slug}`}>
-                            <a><h3>{gift.name}</h3></a>
-                        </Link>
-                        <div className='pricing'>
-                            <p><span className='pricing-detail'><b>Price: </b></span>{`$${gift.price/100}.00`}</p>
-                            <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p>
+        <div className='gifts'>
+            {gifts.map (gift => {
+                return (
+                    <div key={gift.id} className='gift'>
+                        <div className='gift-img'>
+                            <img className='img' src={gift.img} alt={gift.alt} />
                         </div>
-                        <p className='desc'>{gift.desc}</p>
+                        <div className='gift-txt'>
+                            <Link href={`/gifts/${gift.slug}`}>
+                                <a><h3>{gift.name}</h3></a>
+                            </Link>
+                            <div className='pricing'>
+                                <p><span className='pricing-detail'><b>Price: </b></span>{`$${gift.price/100}.00`}</p>
+                                <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p>
+                            </div>
+                            <p className='desc'>{gift.desc}</p>
+                        </div>
                     </div>
-                </div>
-            )
-        })}
+                )
+            })}
+        </div>
 
         <style jsx>
             {`
@@ -80,6 +82,7 @@ const Shop = (props) => {
             }
 
             .gift {
+                // outline: 1px solid red;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
@@ -90,6 +93,7 @@ const Shop = (props) => {
             }
 
             .gift-img {
+                // outline: 1px solid orange;
                 width: 50%;
             }
 
@@ -104,6 +108,7 @@ const Shop = (props) => {
             }
 
             .gift-txt {
+                // outline: 1px solid yellow;
                 width: 100%;
                 padding-left: 2rem;
                 margin-bottom: 0;
@@ -126,17 +131,30 @@ const Shop = (props) => {
             }
 
             @media only screen and (min-width: 1024px) {
+                .gifts {
+                    display: grid;
+                    grid-gap: 2rem;
+                    grid-template-columns: 1fr 1fr;
+                }
+
                 .gift {
                     flex-direction: row;
-                    align-items: center;
+                    align-items: start;
+                    // justify-content: flex-start;
+                    border-bottom: none;
                 }
 
                 .gift-img {
-                    width: 20%;
+                    width: 30%;
+                    margin-top: 4rem;
+                }
+
+                h3 {
+                    margin-top: 0;
                 }
 
                 .gift-txt {
-                    width: 80%;
+                    width: 70%;
                 }
             }
             `}
