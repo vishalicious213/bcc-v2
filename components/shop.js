@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import useCart from '../hooks/useCart'
 // import fs from 'fs'
 
 export const gifts = [
@@ -35,7 +36,9 @@ export const gifts = [
 ]
 
 const Shop = (props) => {
-    console.log(props)
+    const { cart } = useCart()
+    console.log('cart:', cart)
+    // console.log('props:', props)
     return (
         <>
         <div id="shop">
