@@ -26,7 +26,7 @@ export default function Boobtique() {
             <div className='gift-text-container'>
                 <h2 className='h2'>Welcome to our Shop!</h2>
                 <p className='no-space-above'>Our doors are now open to the public! If you know someone who is undergoing treatment for breast cancer and you don’t know what to give, then let us help you.</p>
-                <p>Handmade hearts, comfort bags, and custom gift baskets will be available soon. Select any one of our specialty items and we will ship to you, or anyone you choose, within 48 hours.</p>
+                <p>Handmade hearts, comfort bags, and custom gift baskets are now available for a small donation. Select any one of our specialty items and we will ship to you, or anyone you choose, within 48 hours.</p>
             </div>
           </section>
 
