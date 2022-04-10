@@ -140,21 +140,40 @@ const Shop = (props) => {
                 .gift {
                     flex-direction: row;
                     align-items: start;
-                    // justify-content: flex-start;
                     border-bottom: none;
+                    border-radius: 1rem;
+                    background-color: #292c2f;
+                }
+
+                .gift:hover {
+                    outline: 2px solid #b01e65;
                 }
 
                 .gift-img {
                     width: 30%;
                     margin-top: 4rem;
+                    margin-left: 1rem;
                 }
 
                 h3 {
-                    margin-top: 0;
+                    margin-top: 1rem;
                 }
 
                 .gift-txt {
                     width: 70%;
+                    margin-right: 2rem;
+                }
+
+                .pricing {
+                    flex-direction: column;
+                }
+
+                .pricing p {
+                    margin-bottom: 0;
+                }
+
+                .pricing p:last-child {
+                    margin-top: 0;
                 }
             }
             `}
