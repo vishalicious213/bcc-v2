@@ -1,7 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const useCart = () => {
     const [cart, setCart] = useState([])
+
+    useEffect(() => {
+        // write to local storage
+        localStorage.setItem('cart', JSON.stringify(cart))
+    }, [cart])
 
     // takes item ID and quantity. quantity defaults to 1 if none passed in.
     const addItemToCart = (id, qty = 1) => {
