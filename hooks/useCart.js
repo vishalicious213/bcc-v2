@@ -5,7 +5,16 @@ const useCart = () => {
 
     // takes item ID and quantity. quantity defaults to 1 if none passed in.
     const addItemToCart = (id, qty = 1) => {
-        setCart([...cart, { id, qty }])
+        // check if item being added is already in cart
+        const item = cart.find(i => i.id === id)
+
+        if (item) {
+            // if item is in cart and same item is added, increase quantity
+            item.qty += qty
+            setCart([...cart])
+        } else {
+            setCart([...cart, { id, qty }])
+        }
     }
 
     // returns a new cart with items that match the ID removed

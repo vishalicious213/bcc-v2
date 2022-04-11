@@ -38,7 +38,7 @@ import Link from 'next/link'
 const Shop = (props) => {
     // const { cart, addItemToCart } = useCart()
     // console.log('cart:', cart)
-    console.log('props:', props)
+    // console.log('props:', props)
 
     const handleClick = (e) => {
         e.stopPropagation()
