@@ -1,9 +1,14 @@
 import Head from 'next/head'
 // import Shopify from '../components/shopify'
 import Shop from '../components/shop'
+import useCart from '../hooks/useCart'
+import { gifts } from '../content/gifts'
 import styles from '../styles/Home.module.css'
 
 export default function Boobtique() {
+  const { cart, addItemToCart } = useCart()
+  console.log('cart:', cart)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -55,7 +60,7 @@ export default function Boobtique() {
             </div>
           </section>
 
-          <Shop />
+          <Shop add={addItemToCart} gifts={gifts} />
           
           {/* <Shopify /> */}
           

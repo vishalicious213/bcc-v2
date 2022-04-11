@@ -1,4 +1,4 @@
-import { gifts } from '../../components/shop'
+import { gifts } from '../../content/gifts'
 
 let gift = gifts[1]
 
