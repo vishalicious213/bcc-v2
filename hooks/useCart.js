@@ -2,9 +2,19 @@ import { useState, useEffect } from 'react'
 
 const useCart = () => {
     const [cart, setCart] = useState([])
+    // if there's already a cart, load it
+    const getInitialCart = () => JSON.parse(localStorage.getItem('cart'))
 
     useEffect(() => {
-        // write to local storage
+        // when page first loads, if there's a cart, load it
+        const initialCart = getInitialCart()
+        if (initialCart) {
+            setCart(initialCart)
+        }
+    }, [])
+
+    useEffect(() => {
+        // save cart to local storage if a change is made
         localStorage.setItem('cart', JSON.stringify(cart))
     }, [cart])
 
