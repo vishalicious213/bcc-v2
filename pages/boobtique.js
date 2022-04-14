@@ -60,7 +60,7 @@ export default function Boobtique() {
             </div>
           </section>
 
-          <Shop add={addItemToCart} gifts={gifts} />
+          <Shop addItem={addItemToCart} gifts={gifts} />
           
           {/* <Shopify /> */}
           
