@@ -7,7 +7,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Boobtique() {
   const { cart, addItemToCart } = useCart()
-  console.log('cart:', cart)
+  console.log('boobtique cart:', cart)
 
   return (
     <div className={styles.container}>
