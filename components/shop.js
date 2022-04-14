@@ -15,157 +15,155 @@ const Shop = (props) => {
     }
 
     return (
-        <>
         <div id="shop">
-        <h2>Make a donation and send a comfort basket or bag to a loved one</h2>
+            <h2>Make a donation and send a comfort basket or bag to a loved one</h2>
 
-        <div className='gifts'>
-            {props.gifts.map (gift => {
-                return (
-                    <div key={gift.id} className='gift'>
-                        <div className='gift-img'>
-                            <img className='img' src={gift.img} alt={gift.alt} />
-                        </div>
-                        <div className='gift-txt'>
-                            <Link href={`/gifts/${gift.slug}`}>
-                                <a><h3>{gift.name}</h3></a>
-                            </Link>
-                            <div className='pricing'>
-                                <p><span className='pricing-detail'><b>Donation: </b></span>{`$${gift.price/100}.00`}</p>
-                                <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p>
+            <div className='gifts'>
+                {props.gifts.map (gift => {
+                    return (
+                        <div key={gift.id} className='gift'>
+                            <div className='gift-img'>
+                                <img className='img' src={gift.img} alt={gift.alt} />
                             </div>
-                            <p className='desc'>{gift.desc}</p>
-                            <button onClick={() => props.addItem(gift.id)}>Add to cart</button>
-                            {/* <button onClick={handleClick} giftid={gift.id}>Add to cart</button> */}
+                            <div className='gift-txt'>
+                                <Link href={`/gifts/${gift.slug}`}>
+                                    <a><h3>{gift.name}</h3></a>
+                                </Link>
+                                <div className='pricing'>
+                                    <p><span className='pricing-detail'><b>Donation: </b></span>{`$${gift.price/100}.00`}</p>
+                                    <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p>
+                                </div>
+                                <p className='desc'>{gift.desc}</p>
+                                <button onClick={() => props.addItem(gift.id)}>Add to cart</button>
+                                {/* <button onClick={handleClick} giftid={gift.id}>Add to cart</button> */}
+                            </div>
                         </div>
-                    </div>
-                )
-            })}
-        </div>
+                    )
+                })}
+            </div>
 
-        <style jsx>
-            {`
-            #shop {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 90%;
-                margin-left: auto;
-                margin-right: auto;
-                color: white;
-            }
+            <style jsx>
+                {`
+                #shop {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    color: white;
+                }
 
-            h2 {
-                margin-bottom: 2rem;
-                margin-top: 2rem;
-                color: #f5d3e4;
-            }
-
-            .gift {
-                // outline: 1px solid red;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-bottom: 3rem;
-                padding-bottom: 2rem;
-                border-bottom: 1px solid #b01e65;
-            }
-
-            .gifts .gift:last-child {
-                border-bottom: none;
-            }
-
-            .gift-img {
-                // outline: 1px solid orange;
-                width: 50%;
-            }
-
-            .img {
-                width: 100%;
-            }
-
-            h3 {
-                font-size: 2rem;
-                margin-bottom: 0;
-                color: #b01e65;
-            }
-
-            .gift-txt {
-                // outline: 1px solid yellow;
-                width: 100%;
-                padding-left: 2rem;
-                margin-bottom: 0;
-                margin-top: 0;
-            }
-
-            .desc {
-                color: gainsboro;
-            }
-
-            .pricing {
-                display: flex;
-                justify-content: space-between;
-                padding-right: 2rem;
-            }
-
-            .pricing-detail {
-                color: gainsboro;
-                color: #f5d3e4;
-            }
-
-            @media only screen and (min-width: 1024px) {
-                .gifts {
-                    display: grid;
-                    grid-gap: 2rem;
-                    grid-template-columns: 1fr 1fr;
-                    margin-bottom: 3rem;
+                h2 {
+                    margin-bottom: 2rem;
+                    margin-top: 2rem;
+                    color: #f5d3e4;
                 }
 
                 .gift {
-                    flex-direction: row;
-                    align-items: start;
-                    border-bottom: none;
-                    border-radius: 1rem;
-                    background-color: #292c2f;
-                    margin-bottom: 0;
+                    // outline: 1px solid red;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 3rem;
+                    padding-bottom: 2rem;
+                    border-bottom: 1px solid #b01e65;
                 }
 
-                .gift:hover {
-                    outline: 2px solid #b01e65;
+                .gifts .gift:last-child {
+                    border-bottom: none;
                 }
 
                 .gift-img {
-                    width: 30%;
-                    margin-top: 4rem;
-                    margin-left: 1rem;
+                    // outline: 1px solid orange;
+                    width: 50%;
+                }
+
+                .img {
+                    width: 100%;
                 }
 
                 h3 {
-                    margin-top: 1rem;
+                    font-size: 2rem;
+                    margin-bottom: 0;
+                    color: #b01e65;
                 }
 
                 .gift-txt {
-                    width: 70%;
-                    margin-right: 2rem;
+                    // outline: 1px solid yellow;
+                    width: 100%;
+                    padding-left: 2rem;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                }
+
+                .desc {
+                    color: gainsboro;
                 }
 
                 .pricing {
-                    flex-direction: column;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-right: 2rem;
                 }
 
-                .pricing p {
-                    margin-bottom: 0;
+                .pricing-detail {
+                    color: gainsboro;
+                    color: #f5d3e4;
                 }
 
-                .pricing p:last-child {
-                    margin-top: 0;
+                @media only screen and (min-width: 1024px) {
+                    .gifts {
+                        display: grid;
+                        grid-gap: 2rem;
+                        grid-template-columns: 1fr 1fr;
+                        margin-bottom: 3rem;
+                    }
+
+                    .gift {
+                        flex-direction: row;
+                        align-items: start;
+                        border-bottom: none;
+                        border-radius: 1rem;
+                        background-color: #292c2f;
+                        margin-bottom: 0;
+                    }
+
+                    .gift:hover {
+                        outline: 2px solid #b01e65;
+                    }
+
+                    .gift-img {
+                        width: 30%;
+                        margin-top: 4rem;
+                        margin-left: 1rem;
+                    }
+
+                    h3 {
+                        margin-top: 1rem;
+                    }
+
+                    .gift-txt {
+                        width: 70%;
+                        margin-right: 2rem;
+                    }
+
+                    .pricing {
+                        flex-direction: column;
+                    }
+
+                    .pricing p {
+                        margin-bottom: 0;
+                    }
+
+                    .pricing p:last-child {
+                        margin-top: 0;
+                    }
                 }
-            }
-            `}
-        </style>
+                `}
+            </style>
         </div>
-        </>
     )
 }
 
