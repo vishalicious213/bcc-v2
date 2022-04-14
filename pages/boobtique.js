@@ -2,12 +2,16 @@ import Head from 'next/head'
 // import Shopify from '../components/shopify'
 import Shop from '../components/shop'
 import useCart from '../hooks/useCart'
+import { useContext } from 'react'
+import { Context } from '../context/Cart'
 import { gifts } from '../content/gifts'
 import styles from '../styles/Home.module.css'
 
 export default function Boobtique() {
   const { cart, addItemToCart } = useCart()
   console.log('cart:', cart)
+  const { test } = useContext(Context)
+  console.log(test)
 
   return (
     <div className={styles.container}>
