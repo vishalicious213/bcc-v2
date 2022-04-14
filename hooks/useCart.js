@@ -28,6 +28,7 @@ const useCart = () => {
             item.qty += qty
             setCart([...cart])
         } else {
+            // if item not in cart, add to cart (item quantity = 1)
             setCart([...cart, { id, qty }])
         }
     }

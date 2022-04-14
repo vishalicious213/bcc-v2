@@ -9,7 +9,7 @@ const Shop = (props) => {
 
     const handleClick = (e) => {
         e.stopPropagation()
-        console.log(giftid)
+        console.log(props.gifts)
         // console.log(props.gifts[giftid])
         // props.add(props.gift.id)
     }
@@ -35,7 +35,7 @@ const Shop = (props) => {
                                 </div>
                                 <p className='desc'>{gift.desc}</p>
                                 <button onClick={() => props.addItem(gift.id)}>Add to cart</button>
-                                {/* <button onClick={handleClick} giftid={gift.id}>Add to cart</button> */}
+                                {/* <button onClick={handleClick}>Add to cart</button> */}
                             </div>
                         </div>
                     )
