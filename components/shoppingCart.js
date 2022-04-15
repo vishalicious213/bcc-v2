@@ -1,7 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"
+import useCart from "../hooks/useCart"
 
 const ShoppingCart = () => {
+    const { cart } = useCart()
+
     const handleClick = () => {
         console.log('close cart')
     }
@@ -14,6 +17,12 @@ const ShoppingCart = () => {
                     <FontAwesomeIcon icon={faCircleXmark} style={{ fontsize: "1.5rem"}} />
                 </span>
             </div>
+
+            <ul>
+                {cart.map((item) => {
+                    return <li key={item.id}>{item.id} - {item.qty}</li>
+                })}
+            </ul>
 
             <style jsx>
                 {`
