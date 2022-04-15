@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons"
 
 export default function Nav() {
     function myFunction() {
@@ -42,6 +44,9 @@ export default function Nav() {
                     </div>
                 </div>
                 <Link href='/news'><a>News</a></Link>
+                <a className='shopping-cart'>
+                    <FontAwesomeIcon icon={faCartShopping} style={{ fontsize: "1.5rem"}} />
+                </a>
             </nav>
 
             {/* Hamburger menu for < 768 */}
@@ -142,11 +147,12 @@ export default function Nav() {
                     }
     
                     a {
-                        font-size: .9rem;
-                        width: 6rem;
+                        font-size: .8rem;
+                        width: 4.5rem;
                         padding: .5rem;
                         text-align: center;
                         border: 1px solid #292c2f;
+                        // outline: 1px solid red;
                     }
     
                     a:hover {
@@ -180,6 +186,10 @@ export default function Nav() {
     
                     .hover-menu:hover .dropdown {
                         display: block;
+                    }
+
+                    .shopping-cart {
+                        width: 2rem;
                     }
                 }
             `}
