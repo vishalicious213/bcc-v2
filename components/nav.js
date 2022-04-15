@@ -78,6 +78,7 @@ export default function Nav() {
                     justify-content: space-between;
                     padding: .5rem;
                     background: #292c2f;
+                    position: relative;
                 }
 
                 #logo-container {
