@@ -12,6 +12,10 @@ export default function Nav() {
         }
     }
 
+    const handleClick = () => {
+        console.log('cart clicked')
+    }
+
     return (
         <div id='menu-container'>
             <div id='logo-container'>
@@ -44,7 +48,7 @@ export default function Nav() {
                     </div>
                 </div>
                 <Link href='/news'><a>News</a></Link>
-                <a className='shopping-cart'>
+                <a className='shopping-cart' onClick={handleClick}>
                     <FontAwesomeIcon icon={faCartShopping} style={{ fontsize: "1.5rem"}} />
                 </a>
             </nav>
@@ -190,6 +194,10 @@ export default function Nav() {
 
                     .shopping-cart {
                         width: 2rem;
+                    }
+
+                    .shopping-cart:hover {
+                        cursor: pointer;
                     }
                 }
             `}
