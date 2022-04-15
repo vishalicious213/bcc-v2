@@ -7,11 +7,13 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 import DonateBanner from '../components/donateBanner'
 config.autoAddCss = false // don't add css automatically (we imported above)
 import CartProvider from '../context/Cart'
+import ShoppingCart from '../components/shoppingCart'
 
 function MyApp({ Component, pageProps }) {
   return (
     <CartProvider>
       <Nav />
+      <ShoppingCart />
       <DonateBanner />
       <Component {...pageProps} />
       <ContactForm />
