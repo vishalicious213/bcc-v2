@@ -13,7 +13,7 @@ export default function Nav() {
     }
 
     const handleClick = () => {
-        console.log('cart clicked')
+        console.log('open cart')
     }
 
     return (

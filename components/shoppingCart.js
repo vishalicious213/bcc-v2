@@ -2,11 +2,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
 const ShoppingCart = () => {
+    const handleClick = () => {
+        console.log('close cart')
+    }
+
     return (
         <div className='shopping-cart'>
             <div className='cart-head'>
                 <span>SHOPPING CART</span>
-                <FontAwesomeIcon icon={faCircleXmark} style={{ fontsize: "1.5rem"}} />
+                <span className='X' onClick={handleClick}>
+                    <FontAwesomeIcon icon={faCircleXmark} style={{ fontsize: "1.5rem"}} />
+                </span>
             </div>
 
             <style jsx>
@@ -27,6 +33,10 @@ const ShoppingCart = () => {
                     align-items: center;
                     padding: .25rem 1rem;
                     outline: 2px solid blue;
+                }
+
+                .X:hover {
+                    cursor: pointer;
                 }
                 `}
             </style>
