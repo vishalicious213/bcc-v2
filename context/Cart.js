@@ -22,9 +22,9 @@ const Cart = ({ children }) => {
     }, [cart])
 
     // takes item ID and quantity. quantity defaults to 1 if none passed in.
-    const addItemToCart = (id, qty = 1) => {
+    const addItemToCart = (product, qty = 1) => {
         // check if item being added is already in cart
-        const item = cart.find(i => i.id === id)
+        const item = cart.find(i => i.id === product.id)
 
         if (item) {
             // if item is in cart and same item is added, increase quantity
@@ -32,7 +32,7 @@ const Cart = ({ children }) => {
             setCart([...cart])
         } else {
             // if item not in cart, add to cart (item quantity = 1)
-            setCart([...cart, { id, qty }])
+            setCart([...cart, { ...product, qty }])
         }
     }
 
