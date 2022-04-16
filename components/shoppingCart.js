@@ -18,11 +18,20 @@ const ShoppingCart = () => {
                 </span>
             </div>
 
-            <ul>
+            <div className='cart-body'>
                 {cart.map((item) => {
-                    return <li key={item.id}>{item.id} - {item.qty}</li>
+                    return (
+                        <div key={item.id}>
+                            <h2>{item.name}</h2>
+                            <div className='pricing'>
+                                <p>Qty: {item.qty}</p>
+                                <p>{`Price: $${item.price / 100}.00`}</p>
+                                <p><b>Total: </b>{`$${item.price * item.qty / 100}.00`}</p>
+                            </div>
+                        </div>
+                    )
                 })}
-            </ul>
+            </div>
 
             <style jsx>
                 {`
@@ -33,7 +42,7 @@ const ShoppingCart = () => {
                     width: 300px;
                     background-color: white;
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-                    color: gainsboro;
+                    color: black;
                 }
                 
                 .cart-head {
@@ -46,6 +55,22 @@ const ShoppingCart = () => {
 
                 .X:hover {
                     cursor: pointer;
+                }
+
+                .cart-body {
+                    padding: 1rem;
+                }
+
+                h2 {
+                    margin-bottom: 0;
+                    // outline: 1px solid red;
+                }
+
+                .pricing {
+                    display: grid;
+                    grid-gap: 2rem;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    margin-bottom: 3rem;
                 }
                 `}
             </style>
