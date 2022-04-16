@@ -1,15 +1,11 @@
 import useCart from '../hooks/useCart'
 
 const Checkout = () => {
-    const { cart } = useCart()
+    const { cart, total } = useCart()
 
     const processPayment = () => {
         console.log('process payment')
     }
-
-    let total = 0
-    cart.forEach((item) => total += item.price * item.qty)
-    console.log('TOTAL', total)
 
     return (
         <div className='checkout'>

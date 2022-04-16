@@ -5,6 +5,7 @@ export const Context = createContext()
 
 const Cart = ({ children }) => {
     const [cart, setCart] = useState([]) // cart contents
+    const [total, setTotal] = useState(0) // total price, for shoppingCart & /checkout page
     // const [isOpen, setIsOpen] = useState(false) // is shopping cart open/visible
     // if there's already a cart, load it
     const getInitialCart = () => JSON.parse(localStorage.getItem('cart'))
@@ -20,6 +21,14 @@ const Cart = ({ children }) => {
     useEffect(() => {
         // save cart to local storage if a change is made
         localStorage.setItem('cart', JSON.stringify(cart))
+
+        // calculate total cost of all items in cart
+        let newTotal = 0
+        cart.forEach((item) => {
+            newTotal += item.price * item.qty
+        })
+
+        setTotal(newTotal)
     }, [cart])
 
     // const openCart = () => {
@@ -60,6 +69,7 @@ const Cart = ({ children }) => {
         // openCart,
         // closeCart,
         // isOpen
+        total
     }
 
     return <Context.Provider value={exposed}>{children}</Context.Provider>
