@@ -62,8 +62,8 @@ const ShoppingCart = () => {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    padding: 1.5rem 1rem .25rem 1rem;
-                    border-bottom: 1.5px solid gainsboro;
+                    padding: 1.5rem 1rem .5rem 1rem;
+                    border-bottom: 1.5px solid #b01e65;
                     // outline: 2px solid blue;
                 }
 
@@ -90,7 +90,7 @@ const ShoppingCart = () => {
                     grid-gap: 2rem;
                     grid-template-columns: 1fr 1fr 1fr;
                     margin-bottom: 1rem;
-                    border-bottom: 1px solid gainsboro;
+                    border-bottom: 1px solid #b01e65;
                 }
 
                 .total {
