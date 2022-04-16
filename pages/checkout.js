@@ -1,11 +1,21 @@
+import useCart from '../hooks/useCart'
+
 const Checkout = () => {
+    const { cart } = useCart()
+
     return (
-        <div>
-            <h1>Checkout!</h1>
+        <div className='checkout'>
+            <h1>Checkout</h1>
+
+            {cart.length > 0 ? (
+                <p>Has items</p>
+            ) : (
+                <p>Your cart has no gifts!</p>
+            )}
 
             <style jsx>
                 {`
-                h1 {
+                .checkout {
                     color: white;
                 }
                 `}
