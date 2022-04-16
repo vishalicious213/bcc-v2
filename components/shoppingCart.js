@@ -21,7 +21,7 @@ const ShoppingCart = () => {
             <div className='cart-body'>
                 {cart.map((item) => {
                     return (
-                        <div key={item.id}>
+                        <div className='item' key={item.id}>
                             <h2>{item.name}</h2>
                             <div className='pricing'>
                                 <p>Qty: {item.qty}</p>
@@ -38,7 +38,7 @@ const ShoppingCart = () => {
                 .shopping-cart {
                     position: fixed;
                     right: 0;
-                    height: 50vh;
+                    height: 80vh;
                     width: 300px;
                     background-color: white;
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -50,7 +50,8 @@ const ShoppingCart = () => {
                     justify-content: space-between;
                     align-items: center;
                     padding: .25rem 1rem;
-                    outline: 2px solid blue;
+                    border-bottom: 1.5px solid gainsboro;
+                    // outline: 2px solid blue;
                 }
 
                 .X:hover {
@@ -59,6 +60,10 @@ const ShoppingCart = () => {
 
                 .cart-body {
                     padding: 1rem;
+                }
+
+                .item {
+                    // outline: 1px solid red;
                 }
 
                 h2 {
@@ -70,7 +75,8 @@ const ShoppingCart = () => {
                     display: grid;
                     grid-gap: 2rem;
                     grid-template-columns: 1fr 1fr 1fr;
-                    margin-bottom: 3rem;
+                    margin-bottom: 1rem;
+                    border-bottom: 1px solid gainsboro;
                 }
                 `}
             </style>
