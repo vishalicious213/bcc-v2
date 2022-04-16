@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 import useCart from "../hooks/useCart"
+import Link from 'next/link'
 
 const ShoppingCart = () => {
     const { cart, isOpen, openCart, closeCart } = useCart()
@@ -39,7 +40,9 @@ const ShoppingCart = () => {
             <p className='total'>TOTAL:</p>
 
             <div className='checkout'>
-                <button>Checkout</button>
+                <Link href='/checkout'>
+                    <button onClick={handleClick}>Checkout</button>
+                </Link>
             </div>
 
             <style jsx>
@@ -100,8 +103,6 @@ const ShoppingCart = () => {
                 }
 
                 .checkout {
-                    display: flex;
-                    justify-content: flex-end;
                     padding: 0 1rem;
                 }
 
