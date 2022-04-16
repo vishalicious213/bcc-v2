@@ -22,20 +22,26 @@ const ShoppingCart = () => {
                 </span>
             </div>
 
-            <div className='cart-body'>
-                {cart.map((item) => {
-                    return (
-                        <div className='item' key={item.id}>
-                            <h2>{item.name}</h2>
-                            <div className='pricing'>
-                                <p>Qty: {item.qty}</p>
-                                <p>{`Donation: $${item.price / 100}.00`}</p>
-                                <p><b>Subtotal: </b>{`$${item.price * item.qty / 100}.00`}</p>
+            {cart.length > 0 ? (
+                <div className='cart-body'>
+                    {cart.map((item) => {
+                        return (
+                            <div className='item' key={item.id}>
+                                <h2>{item.name}</h2>
+                                <div className='pricing'>
+                                    <p>Qty: {item.qty}</p>
+                                    <p>{`Donation: $${item.price / 100}.00`}</p>
+                                    <p><b>Subtotal: </b>{`$${item.price * item.qty / 100}.00`}</p>
+                                </div>
                             </div>
-                        </div>
-                    )
-                })}
-            </div>
+                        )
+                    })}
+                </div>
+            ) : (
+                <div className='cart-body'>
+                    <p className='empty'>Gift cart is empty!</p>
+                </div>
+            )}
 
             <p className='total'>{`Total: $${total / 100}.00`}</p>
 
@@ -121,6 +127,10 @@ const ShoppingCart = () => {
                     color: white;
                     background-color: deeppink;
                     // outline: 2px solid #b01e65;
+                }
+
+                .empty {
+                    text-align: center;
                 }
                 `}
             </style>
