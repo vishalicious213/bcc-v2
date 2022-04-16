@@ -14,6 +14,8 @@ export default function Nav() {
 
     const handleClick = () => {
         console.log('open cart')
+        const shoppingCart = document.getElementById('cart')
+        shoppingCart.style.outline = "2px solid blue"
     }
 
     return (

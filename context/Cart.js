@@ -58,7 +58,8 @@ const Cart = ({ children }) => {
         addItemToCart,
         removeItemFromCart,
         openCart,
-        closeCart
+        closeCart,
+        isOpen
     }
 
     return <Context.Provider value={exposed}>{children}</Context.Provider>

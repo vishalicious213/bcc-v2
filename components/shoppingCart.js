@@ -3,14 +3,17 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 import useCart from "../hooks/useCart"
 
 const ShoppingCart = () => {
-    const { cart } = useCart()
+    const { cart, isOpen, openCart, closeCart } = useCart()
 
     const handleClick = () => {
         console.log('close cart')
+        // closeCart()
+        const shoppingCart = document.getElementById('cart')
+        shoppingCart.style.outline = "2px solid red"
     }
 
     return (
-        <div className='shopping-cart'>
+        <div id='cart' className='shopping-cart' isopen={isOpen.toString()}>
             <div className='cart-head'>
                 <span>SHOPPING CART</span>
                 <span className='X' onClick={handleClick}>
@@ -49,6 +52,7 @@ const ShoppingCart = () => {
                     background-color: white;
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                     color: black;
+                    transform: translateX(${isOpen ? '0' : '100'});
                 }
                 
                 .cart-head {
