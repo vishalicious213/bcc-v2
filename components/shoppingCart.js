@@ -4,7 +4,7 @@ import useCart from "../hooks/useCart"
 import Link from 'next/link'
 
 const ShoppingCart = () => {
-    const { cart, isOpen, openCart, closeCart } = useCart()
+    const { cart, isOpen, openCart, closeCart, total } = useCart()
 
     const handleClick = () => {
         // console.log('close cart')
@@ -12,9 +12,6 @@ const ShoppingCart = () => {
         const shoppingCart = document.getElementById('cart')
         shoppingCart.style.display = "none"
     }
-
-    let total = 0
-    cart.forEach((item) => total += item.price * item.qty)
 
     return (
         <div id='cart' className='shopping-cart'>
