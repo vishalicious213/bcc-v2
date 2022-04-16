@@ -5,7 +5,7 @@ export const Context = createContext()
 
 const Cart = ({ children }) => {
     const [cart, setCart] = useState([]) // cart contents
-    const [isOpen, setIsOpen] = useState(false) // is shopping cart open/visible
+    // const [isOpen, setIsOpen] = useState(false) // is shopping cart open/visible
     // if there's already a cart, load it
     const getInitialCart = () => JSON.parse(localStorage.getItem('cart'))
 
@@ -22,13 +22,13 @@ const Cart = ({ children }) => {
         localStorage.setItem('cart', JSON.stringify(cart))
     }, [cart])
 
-    const openCart = () => {
-        setIsOpen(true)
-    }
+    // const openCart = () => {
+    //     setIsOpen(true)
+    // }
 
-    const closeCart = () => {
-        setIsOpen(false)
-    }
+    // const closeCart = () => {
+    //     setIsOpen(false)
+    // }
 
     // takes item ID and quantity. quantity defaults to 1 if none passed in.
     const addItemToCart = (product, qty = 1) => {
@@ -57,9 +57,9 @@ const Cart = ({ children }) => {
         cart,
         addItemToCart,
         removeItemFromCart,
-        openCart,
-        closeCart,
-        isOpen
+        // openCart,
+        // closeCart,
+        // isOpen
     }
 
     return <Context.Provider value={exposed}>{children}</Context.Provider>

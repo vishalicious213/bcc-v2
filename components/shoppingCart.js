@@ -9,11 +9,11 @@ const ShoppingCart = () => {
         console.log('close cart')
         // closeCart()
         const shoppingCart = document.getElementById('cart')
-        shoppingCart.style.outline = "2px solid red"
+        shoppingCart.style.display = "none"
     }
 
     return (
-        <div id='cart' className='shopping-cart' isopen={isOpen.toString()}>
+        <div id='cart' className='shopping-cart'>
             <div className='cart-head'>
                 <span>SHOPPING CART</span>
                 <span className='X' onClick={handleClick}>
@@ -45,6 +45,7 @@ const ShoppingCart = () => {
             <style jsx>
                 {`
                 .shopping-cart {
+                    display: none;
                     position: fixed;
                     right: 0;
                     height: 80vh;
@@ -52,7 +53,7 @@ const ShoppingCart = () => {
                     background-color: white;
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                     color: black;
-                    transform: translateX(${isOpen ? '0' : '100'});
+                    // transform: translateX(${isOpen ? '0' : '100'});
                 }
                 
                 .cart-head {
