@@ -30,7 +30,10 @@ const Checkout = () => {
                         <p className='test'></p>
                         <p className='test'>{`Total: $${total / 100}.00`}</p>
                     </div>
-                    <button onClick={processPayment}>Process Payment</button>
+
+                    <div className='pay-button'>
+                        <button onClick={processPayment}>Process Payment</button>
+                    </div>
                 </div>
             ) : (
                 <p>Your cart has no gifts!</p>
@@ -70,6 +73,27 @@ const Checkout = () => {
                     grid-template-columns: 1fr 1fr 1fr;
                     font-size: 1.25rem;
                     font-weight: 600;
+                }
+
+                .pay-button {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 1rem;
+                }
+
+                button {
+                    color: gainsboro;
+                    background-color: #b01e65;
+                    border: none;
+                    font-size: 1.5rem;
+                    width: 90%;
+                    padding: .5rem 0;
+                    border-radius: 1rem;
+                }
+
+                button:hover {
+                    color: white;
+                    background-color: deeppink;
                 }
                 `}
             </style>
