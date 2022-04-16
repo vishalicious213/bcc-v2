@@ -6,7 +6,7 @@ const ShoppingCart = () => {
     const { cart, isOpen, openCart, closeCart } = useCart()
 
     const handleClick = () => {
-        console.log('close cart')
+        // console.log('close cart')
         // closeCart()
         const shoppingCart = document.getElementById('cart')
         shoppingCart.style.display = "none"
@@ -15,7 +15,7 @@ const ShoppingCart = () => {
     return (
         <div id='cart' className='shopping-cart'>
             <div className='cart-head'>
-                <span>SHOPPING CART</span>
+                <span>GIFT CART</span>
                 <span className='X' onClick={handleClick}>
                     <FontAwesomeIcon icon={faCircleXmark} style={{ fontsize: "1.5rem"}} />
                 </span>
@@ -28,7 +28,7 @@ const ShoppingCart = () => {
                             <h2>{item.name}</h2>
                             <div className='pricing'>
                                 <p>Qty: {item.qty}</p>
-                                <p>{`Price: $${item.price / 100}.00`}</p>
+                                <p>{`Donation: $${item.price / 100}.00`}</p>
                                 <p><b>Subtotal: </b>{`$${item.price * item.qty / 100}.00`}</p>
                             </div>
                         </div>
@@ -48,25 +48,28 @@ const ShoppingCart = () => {
                     display: none;
                     position: fixed;
                     right: 0;
-                    height: 80vh;
-                    width: 300px;
-                    background-color: white;
+                    top: 0;
+                    height: 100vh;
+                    width: 305px;
+                    background-color: ghostwhite;
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                     color: black;
-                    // transform: translateX(${isOpen ? '0' : '100'});
+                    border-left: 3px solid #b01e65;
+                    border-radius: 1rem 0 0 1rem;
                 }
                 
                 .cart-head {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    padding: .25rem 1rem;
+                    padding: 1.5rem 1rem .25rem 1rem;
                     border-bottom: 1.5px solid gainsboro;
                     // outline: 2px solid blue;
                 }
 
                 .X:hover {
                     cursor: pointer;
+                    color: #b01e65;
                 }
 
                 .cart-body {
@@ -92,12 +95,30 @@ const ShoppingCart = () => {
 
                 .total {
                     padding: 0 1rem;
+                    font-size: 1.25rem;
+                    font-weight: 600;
                 }
 
                 .checkout {
                     display: flex;
                     justify-content: flex-end;
                     padding: 0 1rem;
+                }
+
+                button {
+                    color: gainsboro;
+                    background-color: #b01e65;
+                    border: none;
+                    font-size: 1.5rem;
+                    width: 100%;
+                    padding: .5rem 0;
+                    border-radius: 1rem;
+                }
+
+                button:hover {
+                    color: white;
+                    background-color: deeppink;
+                    // outline: 2px solid #b01e65;
                 }
                 `}
             </style>
