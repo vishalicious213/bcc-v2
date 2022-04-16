@@ -62,6 +62,12 @@ const Cart = ({ children }) => {
         setCart(newCart)
     }
 
+    // empty all of the cart's contents after a successful Stripe payment
+    const clearCart = () => {
+        localStorage.removeItem('cart')
+        setCart([])
+    }
+
     const exposed = {
         cart,
         addItemToCart,
@@ -69,7 +75,8 @@ const Cart = ({ children }) => {
         // openCart,
         // closeCart,
         // isOpen
-        total
+        total,
+        clearCart
     }
 
     return <Context.Provider value={exposed}>{children}</Context.Provider>
