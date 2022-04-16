@@ -22,6 +22,7 @@ const ShoppingCart = () => {
                 </span>
             </div>
 
+            {/* if cart is not empty, show contents, else show empty message */}
             {cart.length > 0 ? (
                 <div className='cart-body'>
                     {cart.map((item) => {
@@ -43,13 +44,23 @@ const ShoppingCart = () => {
                 </div>
             )}
 
-            <p className='total'>{`Total: $${total / 100}.00`}</p>
+            {/* if cart is not empty, show total price, else show nothing */}
+            {cart.length > 0 ? (
+                <p className='total'>{`Total: $${total / 100}.00`}</p>
+            ) : (
+                <p></p>
+            )}
 
-            <div className='checkout'>
-                <Link href='/checkout'>
-                    <button onClick={handleClick}>Checkout</button>
-                </Link>
-            </div>
+            {/* if cart is not empty, show checkout button, else show nothing */}
+            {cart.length > 0 ? (
+                <div className='checkout'>
+                    <Link href='/checkout'>
+                        <button onClick={handleClick}>Checkout</button>
+                    </Link>
+                </div>
+            ) : (
+                <p></p>
+            )}
 
             <style jsx>
                 {`
