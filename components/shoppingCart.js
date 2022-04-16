@@ -13,6 +13,9 @@ const ShoppingCart = () => {
         shoppingCart.style.display = "none"
     }
 
+    let total = 0
+    cart.forEach((item) => total += item.price * item.qty)
+
     return (
         <div id='cart' className='shopping-cart'>
             <div className='cart-head'>
@@ -37,7 +40,7 @@ const ShoppingCart = () => {
                 })}
             </div>
 
-            <p className='total'>TOTAL:</p>
+            <p className='total'>{`Total: $${total / 100}.00`}</p>
 
             <div className='checkout'>
                 <Link href='/checkout'>
@@ -97,9 +100,10 @@ const ShoppingCart = () => {
                 }
 
                 .total {
-                    padding: 0 1rem;
+                    padding: 0 1.1rem;
                     font-size: 1.25rem;
                     font-weight: 600;
+                    text-align: right;
                 }
 
                 .checkout {

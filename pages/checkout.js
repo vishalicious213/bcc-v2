@@ -29,7 +29,7 @@ const Checkout = () => {
                             </div>
                         )
                     })}
-                    <p className='total'>{`TOTAL: $${total / 100}.00`}</p>
+                    <p className='total'>{`Total: $${total / 100}.00`}</p>
                     <button onClick={processPayment}>Process Payment</button>
                 </div>
             ) : (
