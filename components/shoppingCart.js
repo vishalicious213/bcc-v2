@@ -26,11 +26,17 @@ const ShoppingCart = () => {
                             <div className='pricing'>
                                 <p>Qty: {item.qty}</p>
                                 <p>{`Price: $${item.price / 100}.00`}</p>
-                                <p><b>Total: </b>{`$${item.price * item.qty / 100}.00`}</p>
+                                <p><b>Subtotal: </b>{`$${item.price * item.qty / 100}.00`}</p>
                             </div>
                         </div>
                     )
                 })}
+            </div>
+
+            <p className='total'>TOTAL:</p>
+
+            <div className='checkout'>
+                <button>Checkout</button>
             </div>
 
             <style jsx>
@@ -77,6 +83,16 @@ const ShoppingCart = () => {
                     grid-template-columns: 1fr 1fr 1fr;
                     margin-bottom: 1rem;
                     border-bottom: 1px solid gainsboro;
+                }
+
+                .total {
+                    padding: 0 1rem;
+                }
+
+                .checkout {
+                    display: flex;
+                    justify-content: flex-end;
+                    padding: 0 1rem;
                 }
                 `}
             </style>
