@@ -4,13 +4,12 @@ const giftsArray = gifts.gifts
 // giftsArray let us access those as an array
 
 exports.handler = async (event, context) => {
-    // console.log(event.body)
-    // console.log('giftsArray', giftsArray)
+    // event.body is a string, so we need to parse it into JSON
     const { cart } = JSON.parse(event.body)
-    // console.log('node cart', cart)
 
+    // get id and qty of gifts in cart and match them with pricing data from backend
     const cartWithGifts = cart.map(({ id, qty }) => {
-        const gift = giftsArray.find((g) => g.id === id)
+        const gift = giftsArray.find((giftFromArray) => giftFromArray.id === id)
         return {
             ...gift,
             qty,
