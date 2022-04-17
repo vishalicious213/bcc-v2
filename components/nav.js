@@ -28,28 +28,48 @@ export default function Nav() {
 
             {/* Navbar for 768+ */}
             <nav id='menu'>
-                <Link href='/'><a>Home</a></Link>
+                <Link href='/'>
+                    <a>Home</a>
+                </Link>
                 <div className='hover-menu'>
-                    <Link href='/about'><a className='a'>About Us &#9662;</a></Link>
+                    <Link href='/about'>
+                        <a className='a'>About Us &#9662;</a>
+                    </Link>
                     <div className='dropdown'>
-                        <Link href='/team'><a className='a center-link'>Our Team</a></Link>
+                        <Link href='/team'>
+                            <a className='a center-link'>Our Team</a>
+                        </Link>
                     </div>
                 </div>
-                <Link href='/boobtique'><a>Shop</a></Link>
+                <Link href='/boobtique'>
+                    <a>Shop</a>
+                </Link>
                 <div className='hover-menu'>
-                    <Link href='/donate'><a className='a'>Donate &#9662;</a></Link>
+                    <Link href='/donate'>
+                        <a className='a'>Donate &#9662;</a>
+                    </Link>
                     <div className='dropdown'>
-                        <Link href='/memory'><a className='a center-link'>In Memory Of</a></Link>
-                        <Link href='/supporters'><a className='a center-link'>Supporters</a></Link>
+                        <Link href='/memory'>
+                            <a className='a center-link'>In Memory Of</a>
+                        </Link>
+                        <Link href='/supporters'>
+                            <a className='a center-link'>Supporters</a>
+                        </Link>
                     </div>
                 </div>
                 <div className='hover-menu'>
-                    <Link href='/volunteer'><a className='a'>Volunteer &#9662;</a></Link>
+                    <Link href='/volunteer'>
+                        <a className='a'>Volunteer &#9662;</a>
+                    </Link>
                     <div className='dropdown'>
-                        <Link href='/share'><a className='a center-link'>Share Your Story</a></Link>
+                        <Link href='/share'>
+                            <a className='a center-link'>Share Your Story</a>
+                        </Link>
                     </div>
                 </div>
-                <Link href='/news'><a>News</a></Link>
+                <Link href='/news'>
+                    <a>News</a>
+                </Link>
                 <a className='shopping-cart' onClick={handleClick}>
                     <FontAwesomeIcon icon={faCartShopping} style={{ fontsize: "1.5rem"}} />
                 </a>
