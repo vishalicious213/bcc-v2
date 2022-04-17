@@ -1,9 +1,19 @@
 import useCart from '../hooks/useCart'
+import axios from 'axios'
 
 const Checkout = () => {
     const { cart, total } = useCart()
 
-    const processPayment = () => {
+    const processPayment = async () => {
+        const url ='/.netlify/functions/charge-card'
+
+        // get id and qty of products in cart (don't trust client-side prices!)
+        const newCart = cart.map(({ id, qty }) => ({
+            id,
+            qty
+        }))
+
+        const { data } = await axios.post(url, { cart: newCart })
         console.log('process payment')
     }
 
