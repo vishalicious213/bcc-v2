@@ -1,5 +1,6 @@
 import useCart from '../hooks/useCart'
 import axios from 'axios'
+import { loadStripe } from '@stripe/stripe-js'
 
 const Checkout = () => {
     const { cart, total } = useCart()
@@ -13,8 +14,11 @@ const Checkout = () => {
             qty
         }))
 
+        const stripe = await loadStripe(process.env.local.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
+
         const { data } = await axios.post(url, { cart: newCart })
-        console.log('process payment')
+        // console.log('process payment')
+        await stripe.redirectToCheckout({ sessionId: data.id })
     }
 
     return (
