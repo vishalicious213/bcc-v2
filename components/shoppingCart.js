@@ -41,6 +41,8 @@ const ShoppingCart = () => {
             ) : (
                 <div className='cart-body'>
                     <p className='empty'>Gift cart is empty!</p>
+                    <p className='empty no-bottom-margin'>Please visit our Shop to</p>
+                    <p className='empty no-top-margin'>send a gift to a loved one.</p>
                 </div>
             )}
 
@@ -142,6 +144,18 @@ const ShoppingCart = () => {
 
                 .empty {
                     text-align: center;
+                }
+
+                .no-bottom-margin {
+                    margin-bottom: 0;
+                    color: #b01e65;
+                    font-weight: 600;
+                }
+
+                .no-top-margin {
+                    margin-top: 0;
+                    color: #b01e65;
+                    font-weight: 600;
                 }
                 `}
             </style>
