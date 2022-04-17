@@ -1,4 +1,4 @@
-export const gifts = [
+const gifts = [
     {
         id: 0,
         name: 'Comfort basket',
@@ -30,3 +30,5 @@ export const gifts = [
         slug: 'comfort-bag-with-blanket',
     },
 ]
+
+module.exports = { gifts }
