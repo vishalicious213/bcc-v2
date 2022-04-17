@@ -1,7 +1,8 @@
 const gifts = require('../content/gifts')
-const giftsArray = gifts.gifts
 // gifts was returning an object with the gifts array inside of it
 // giftsArray let us access those as an array
+const giftsArray = gifts.gifts
+const stripe = require('stripe')(process.env.local.STRIPE_SECRET_KEY)
 
 exports.handler = async (event, context) => {
     // event.body is a string, so we need to parse it into JSON
@@ -16,9 +17,20 @@ exports.handler = async (event, context) => {
         }
     })
 
-    console.log(cartWithGifts)
+    // console.log(cartWithGifts)
     
     // talking to Stripe
+    const lineItems = cartWithGifts.map(gift => ({
+        price_data: {
+            currency: "usd",
+            product_data: {
+                name: gift.name,
+            },
+            unit_amount: gift.price,
+        },
+        quantity: gift.qty,
+    }))
+
     // charging the card 
     return {
         statusCode: 200,
