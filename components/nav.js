@@ -91,7 +91,13 @@ export default function Nav() {
                 </nav>
             </div>
 
-            <button onClick={myFunction}>☰</button>
+            <div id='mobile-buttons'>
+                <a className='shopping-cart' id='burger-cart' onClick={handleClick}>
+                    <FontAwesomeIcon icon={faCartShopping} style={{ fontsize: "1.5rem"}} />
+                </a>
+
+                <button onClick={myFunction}>☰</button>
+            </div>
 
             <style jsx>
             {`
@@ -110,6 +116,12 @@ export default function Nav() {
 
                 #logo-container img {
                     width: 100%;
+                }
+
+                #mobile-buttons {
+                    display: flex;
+                    align-items: center;
+                    // outline: 1px solid red;
                 }
 
                 button {
@@ -147,7 +159,7 @@ export default function Nav() {
                     text-align: center;
                 }
 
-                #burger a:hover {
+                #burger a:hover, #burger-cart:hover {
                     color: black;
                     background: gainsboro;
                 }
@@ -160,10 +172,24 @@ export default function Nav() {
                     display: none;
                 }
 
+                #burger-cart {
+                    color: gainsboro;
+                    padding: .5rem;
+                    margin-right: 1rem;
+                }
+
+                .shopping-cart {
+                    width: 2rem;
+                }
+
+                .shopping-cart:hover {
+                    cursor: pointer;
+                }
+
                 /* 768 PX */
 
                 @media only screen and (min-width: 768px) {
-                    button, #burger {
+                    button, #burger, #burger-cart, #mobile-buttons {
                         display: none;
                     }
 
@@ -213,14 +239,6 @@ export default function Nav() {
     
                     .hover-menu:hover .dropdown {
                         display: block;
-                    }
-
-                    .shopping-cart {
-                        width: 2rem;
-                    }
-
-                    .shopping-cart:hover {
-                        cursor: pointer;
                     }
                 }
             `}
