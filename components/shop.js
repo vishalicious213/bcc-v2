@@ -6,7 +6,7 @@ const Shop = (props) => {
     // const { cart, addItemToCart } = useCart()
     // console.log('cart:', cart)
     // console.log('props:', props)
-    console.log('shop cart', props.cart)
+    // console.log('shop cart', props.cart)
 
     const handleClick = (e) => {
         e.stopPropagation()
@@ -33,7 +33,7 @@ const Shop = (props) => {
                                 </Link>
                                 <div className='pricing'>
                                     <p><span className='pricing-detail'><b>Donation: </b></span>{`$${gift.price/100}.00`}</p>
-                                    <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p>
+                                    {/* <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p> */}
                                 </div>
                                 <p className='desc'>{gift.desc}</p>
                                 <button onClick={() => props.addItem(gift)}>Add to cart</button>
