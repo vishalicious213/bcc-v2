@@ -58,9 +58,15 @@ const Cart = ({ children }) => {
     const removeItemFromCart = (id) => {
         const item = cart.find(i => i.id === id)
 
+        // if item is not in cart, it can't be removed, so return
+        if (!item) {
+            return
+        }
+
         // if item is in cart, remove 1 of that item from qty
         if (item) {
             item.qty -= 1
+            if (item.qty < 1) {item.qty = 0}
             setCart([...cart])
         }
 

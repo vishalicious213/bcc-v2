@@ -114,6 +114,26 @@ const Shop = (props) => {
                     color: #f5d3e4;
                 }
 
+                button {
+                    color: gainsboro;
+                    background-color: #b01e65;
+                    border: none;
+                    font-size: 1.5rem;
+                    width: 100%;
+                    padding: .5rem 0;
+                    border-radius: 1rem;
+                    // margin-bottom: 1rem;
+                }
+
+                button:hover {
+                    color: white;
+                    background-color: deeppink;
+                }
+
+                button:last-child {
+                    margin-top: 1rem;
+                }
+
                 @media only screen and (min-width: 1024px) {
                     .gifts {
                         display: grid;
