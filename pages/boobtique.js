@@ -6,7 +6,7 @@ import { gifts } from '../content/gifts'
 import styles from '../styles/Home.module.css'
 
 export default function Boobtique() {
-  const { cart, addItemToCart } = useCart()
+  const { cart, addItemToCart, removeItemFromCart } = useCart()
   console.log('boobtique cart:', cart)
 
   return (
@@ -60,7 +60,7 @@ export default function Boobtique() {
             </div>
           </section>
 
-          <Shop addItem={addItemToCart} gifts={gifts} />
+          <Shop addItem={addItemToCart} removeItem={removeItemFromCart} gifts={gifts} />
           
           {/* <Shopify /> */}
           

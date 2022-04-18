@@ -35,6 +35,7 @@ const Shop = (props) => {
                                 </div>
                                 <p className='desc'>{gift.desc}</p>
                                 <button onClick={() => props.addItem(gift)}>Add to cart</button>
+                                <button onClick={() => props.removeItem(gift.id)}>Remove from cart</button>
                                 {/* <button onClick={handleClick}>Add to cart</button> */}
                             </div>
                         </div>
