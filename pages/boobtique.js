@@ -7,7 +7,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Boobtique() {
   const { cart, addItemToCart, removeItemFromCart } = useCart()
-  console.log('boobtique cart:', cart)
+  // console.log('boobtique cart:', cart)
 
   return (
     <div className={styles.container}>
@@ -60,7 +60,7 @@ export default function Boobtique() {
             </div>
           </section>
 
-          <Shop addItem={addItemToCart} removeItem={removeItemFromCart} gifts={gifts} />
+          <Shop addItem={addItemToCart} removeItem={removeItemFromCart} gifts={gifts} cart={cart} />
           
           {/* <Shopify /> */}
           

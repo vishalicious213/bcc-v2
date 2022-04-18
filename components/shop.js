@@ -6,6 +6,7 @@ const Shop = (props) => {
     // const { cart, addItemToCart } = useCart()
     // console.log('cart:', cart)
     // console.log('props:', props)
+    console.log('shop cart', props.cart)
 
     const handleClick = (e) => {
         e.stopPropagation()
@@ -20,6 +21,7 @@ const Shop = (props) => {
 
             <div className='gifts'>
                 {props.gifts.map (gift => {
+                    const item = props.cart.find(i => i.id === gift.id)
                     return (
                         <div key={gift.id} className='gift'>
                             <div className='gift-img'>
@@ -35,7 +37,11 @@ const Shop = (props) => {
                                 </div>
                                 <p className='desc'>{gift.desc}</p>
                                 <button onClick={() => props.addItem(gift)}>Add to cart</button>
-                                <button onClick={() => props.removeItem(gift.id)}>Remove from cart</button>
+                                {item ? (
+                                    <button onClick={() => props.removeItem(gift.id)}>Remove from cart</button>
+                                ) : (
+                                    <></>
+                                )}
                                 {/* <button onClick={handleClick}>Add to cart</button> */}
                             </div>
                         </div>
