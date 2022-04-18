@@ -1,8 +1,10 @@
+// frontend is able to read .env natively, node file is not able to
+require('dotenv').config()
 const gifts = require('../content/gifts')
 // gifts was returning an object with the gifts array inside of it
 // giftsArray let us access those as an array
 const giftsArray = gifts.gifts
-const stripe = require('stripe')(process.env.local.STRIPE_SECRET_KEY)
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
 exports.handler = async (event, context) => {
     // event.body is a string, so we need to parse it into JSON
@@ -35,8 +37,8 @@ exports.handler = async (event, context) => {
         payment_method_types: ["card"],
         line_items: lineItems,
         mode: "payment",
-        success_url: `${event.headers.host}/success`,
-        cancel_url: `${event.headers.host}/cancelled`,
+        success_url: `${process.env.URL}/success`,
+        cancel_url: `${process.env.URL}/cancelled`,
     })
 
     // charging the card 
