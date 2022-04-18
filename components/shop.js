@@ -178,6 +178,7 @@ const Shop = (props) => {
 
                     .pricing {
                         flex-direction: column;
+                        margin-top: .5rem;
                     }
 
                     .pricing p {
