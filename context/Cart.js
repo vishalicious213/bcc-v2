@@ -56,10 +56,21 @@ const Cart = ({ children }) => {
 
     // returns a new cart with items that match the ID removed
     const removeItemFromCart = (id) => {
-        const newCart = cart.filter(item => {
-            return item.id != id
-        })
-        setCart(newCart)
+        const item = cart.find(i => i.id === id)
+
+        // if item is in cart, remove 1 of that item from qty
+        if (item) {
+            item.qty -= 1
+            setCart([...cart])
+        }
+
+        // if less than 1 of that item, completely remove it from cart (so no 0-count of item)
+        if (item.qty < 1) {
+            const newCart = cart.filter(item => {
+                return item.id != id
+            })
+            setCart(newCart)
+        }
     }
 
     // empty all of the cart's contents after a successful Stripe payment
