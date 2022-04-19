@@ -12,6 +12,24 @@ const comfortBaskets = [
     // {id: 0, img: '/gifts/comfort-basket-01.jpg', alt: ''}
 ]
 
+const chemoComfortBags = [
+    {id: 0, img: '/gifts/chemo-comfort-bag-01.jpg', alt: 'chemo comfort bag'},
+    {id: 1, img: '/gifts/chemo-comfort-bag-02.jpg', alt: 'chemo comfort bag'},
+    {id: 2, img: '/gifts/chemo-comfort-bag-03.jpg', alt: 'chemo comfort bag'},
+    {id: 3, img: '/gifts/chemo-comfort-bag-04.jpg', alt: 'chemo comfort bag'},
+    {id: 4, img: '/gifts/chemo-comfort-bag-05.jpg', alt: 'chemo comfort bag'},
+    {id: 5, img: '/gifts/chemo-comfort-bag-06.jpg', alt: 'filled chemo bag'},
+    {id: 6, img: '/gifts/chemo-comfort-bag-07.jpg', alt: 'filled chemo bag'},
+    {id: 7, img: '/gifts/chemo-comfort-bag-08.jpg', alt: 'chemo comfort bag'},
+    {id: 8, img: '/gifts/chemo-comfort-bag-09.jpg', alt: 'chemo comfort bag'},
+    {id: 9, img: '/gifts/chemo-comfort-bag-10.jpg', alt: 'chemo comfort bag'},
+    {id: 10, img: '/gifts/chemo-comfort-bag-11.jpg', alt: 'chemo comfort bag'},
+    {id: 11, img: '/gifts/chemo-comfort-bag-12.jpg', alt: 'chemo comfort bag'},
+    {id: 12, img: '/gifts/chemo-comfort-bag-13.jpg', alt: 'chemo comfort bag'},
+    // {id: 0, img: '/gifts/comfort-basket-01.jpg', alt: ''}
+
+]
+
 export default function GiftsCarousel() {
     const settings = {
         arrows: true,
