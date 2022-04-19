@@ -1,7 +1,13 @@
 import { gifts } from '../../content/gifts'
 import useCart from '../../hooks/useCart'
 
-let gift = gifts[0]
+const gift = gifts[0]
+const pics = [
+    {id: 0, img: '/gifts/comfort-basket-01.jpg', alt: 'comfort basket with animal'},
+    {id: 1, img: '/gifts/comfort-basket-02.jpg', alt: 'comfort basket with dark tulle'},
+    {id: 2, img: '/gifts/comfort-basket-03.jpg', alt: 'comfort basket with reusable shopping bag'},
+    // {id: 0, img: '/gifts/comfort-basket-01.jpg', alt: ''}
+]
 
 export default function ComfortBasket() {
     const { cart, addItemToCart, removeItemFromCart } = useCart()
