@@ -1,8 +1,10 @@
 import { gifts } from '../../content/gifts'
+import useCart from '../../hooks/useCart'
 
 let gift = gifts[0]
 
 export default function ComfortBasket() {
+    const { cart, addItemToCart, removeItemFromCart } = useCart()
     // console.log(gift)
     return (
         <div className='gift'>
@@ -12,6 +14,8 @@ export default function ComfortBasket() {
                     <p><span className='pricing-detail'><b>Donation: </b></span>{`$${gift.price/100}.00`}</p>
                     {/* <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p> */}
                 </div>
+                <button onClick={() => addItemToCart(gift)}>Add to cart</button>
+                <button onClick={() => removeItemFromCart(gift.id)}>Remove from cart</button>
             </div>
 
             <div className='gift-img'>
