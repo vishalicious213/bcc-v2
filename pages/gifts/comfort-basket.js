@@ -34,12 +34,14 @@ export default function ComfortBasket() {
                     align-items: center;
                     margin-bottom: 3rem;
                 }
-
+                
                 .gift-txt {
                     width: 100%;
                     padding-left: 2rem;
+                    padding-right: 2rem;
                     margin-bottom: 0;
                     margin-top: 0;
+                    outline: 1px solid blue;
                 }
 
                 h1 {
@@ -69,6 +71,25 @@ export default function ComfortBasket() {
                 .img {
                     width: 100%;
                 }
+
+                button {
+                    color: gainsboro;
+                    background-color: #b01e65;
+                    border: none;
+                    font-size: 1.5rem;
+                    width: 100%;
+                    padding: .5rem 0;
+                    border-radius: 1rem;
+                }
+
+                button:hover {
+                    color: white;
+                    background-color: deeppink;
+                }
+
+                button:last-child {
+                    margin-top: 1rem;
+                }                
                 `}
             </style>
         </div>
