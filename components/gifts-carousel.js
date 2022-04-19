@@ -2,6 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 import Slider from 'react-slick'
 
+let pics
+
 const comfortBaskets = [
     {id: 0, img: '/gifts/comfort-basket-01.jpg', alt: 'comfort basket with animal'},
     {id: 1, img: '/gifts/comfort-basket-02.jpg', alt: 'comfort basket with dark tulle'},
@@ -24,13 +26,14 @@ const chemoComfortBags = [
     {id: 8, img: '/gifts/chemo-comfort-bag-09.jpg', alt: 'chemo comfort bag'},
     {id: 9, img: '/gifts/chemo-comfort-bag-10.jpg', alt: 'chemo comfort bag'},
     {id: 10, img: '/gifts/chemo-comfort-bag-11.jpg', alt: 'chemo comfort bag'},
-    {id: 11, img: '/gifts/chemo-comfort-bag-12.jpg', alt: 'chemo comfort bag'},
-    {id: 12, img: '/gifts/chemo-comfort-bag-13.jpg', alt: 'chemo comfort bag'},
     // {id: 0, img: '/gifts/comfort-basket-01.jpg', alt: ''}
 
 ]
 
-export default function GiftsCarousel() {
+export default function GiftsCarousel(props) {
+    if (props.pics === 'comfortBaskets') {pics = comfortBaskets}
+    if (props.pics === 'chemoComfortBags') {pics = chemoComfortBags}
+
     const settings = {
         arrows: true,
         dots: true,
@@ -87,7 +90,7 @@ export default function GiftsCarousel() {
             </Head>
 
             <Slider {...settings}>
-                {comfortBaskets.map (pic => {
+                {pics.map (pic => {
                     return (
                         <div id={pic.id}>
                             <img src={pic.img} alt={pic.alt} />

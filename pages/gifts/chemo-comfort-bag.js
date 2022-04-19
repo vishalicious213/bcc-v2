@@ -19,7 +19,7 @@ export default function ChemoComfortBag() {
             </div>
 
             <section className='carousel'>
-                <GiftsCarousel />
+                <GiftsCarousel pics='chemoComfortBags' />
             </section>
 
             <p className='gift-txt'>{gift.desc}</p>
