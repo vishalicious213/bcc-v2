@@ -1,6 +1,6 @@
 import Head from 'next/head'
 // import Shopify from '../components/shopify'
-import Shop from '../components/shop'
+import Shop from '../components/shop-v2'
 import useCart from '../hooks/useCart'
 import { gifts } from '../content/gifts'
 import styles from '../styles/Home.module.css'
