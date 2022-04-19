@@ -163,8 +163,12 @@ const Shop = (props) => {
 
                     .gift-img {
                         width: 30%;
-                        margin-top: 4rem;
+                        margin-top: 2rem;
                         margin-left: 1rem;
+                    }
+
+                    .img {
+                        border-top-left-radius: 1rem;
                     }
 
                     h3 {

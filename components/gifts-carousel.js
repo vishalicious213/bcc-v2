@@ -100,7 +100,7 @@ export default function GiftsCarousel(props) {
             <Slider {...settings}>
                 {pics.map (pic => {
                     return (
-                        <div id={pic.id}>
+                        <div key={pic.id}>
                             <img src={pic.img} alt={pic.alt} />
                         </div>                        
                     )
