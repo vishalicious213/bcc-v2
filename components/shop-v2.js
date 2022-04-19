@@ -17,7 +17,7 @@ const Shop = (props) => {
 
     return (
         <div id="shop">
-            <h2>Make a donation and send a comfort basket or bag to a loved one (V2)</h2>
+            <h2>Make a donation and send a comfort basket or bag to a loved one</h2>
 
             <div className='gifts'>
                 {props.gifts.map (gift => {
@@ -72,20 +72,16 @@ const Shop = (props) => {
                 }
 
                 .gift {
-                    // outline: 1px solid red;
                     width: 100%;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    min-height: 75vh;
-                    
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
-                    // align-items: center;
-                    // margin-bottom: 3rem;
-                    // padding-bottom: 2rem;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
                     border-bottom: 1px solid #b01e65;
+                    min-height: 75vh;
+                    margin-bottom: 2rem;
                 }
 
                 .gifts .gift:last-child {
@@ -93,7 +89,6 @@ const Shop = (props) => {
                 }
 
                 .gift-img {
-                    // outline: 1px solid orange;
                     width: 50%;
                 }
 
@@ -102,21 +97,17 @@ const Shop = (props) => {
                 }
 
                 h3 {
-                    font-size: 2rem;
+                    font-size: 1.75rem;
                     margin-bottom: 0;
-                    // color: #b01e65;
                     color: deeppink;
                 }
 
                 .gift-txt {
-                    // outline: 1px solid yellow;
                     width: 100%;
                     min-height: 50%;
                     padding-left: 2rem;
                     padding-right: 2rem;
                     padding-bottom: 2rem;
-                    // margin-bottom: 0;
-                    // margin-top: 0;
                     background: rgba(0, 0, 0, 0.5);
                     display: flex;
                     flex-direction: column;
@@ -140,9 +131,7 @@ const Shop = (props) => {
 
                 .buttons {
                     display: flex;
-                    // align-items: center;
                     justify-content: space-between;
-                    // outline: 1px solid blue;
                 }
 
                 button {
@@ -154,7 +143,6 @@ const Shop = (props) => {
                     width: 45%;
                     padding: .5rem 0;
                     border-radius: 1rem;
-                    // margin-bottom: 1rem;
                 }
 
                 button:hover {
@@ -162,25 +150,17 @@ const Shop = (props) => {
                     background-color: deeppink;
                 }
 
-                // button:last-child {
-                //     margin-top: 1rem;
-                // }
-
-                @media only screen and (min-width: 1200px) {
+                @media only screen and (min-width: 800px) {
                     .gifts {
                         display: grid;
                         grid-gap: 2rem;
-                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-columns: 1fr 1fr;
                         margin-bottom: 3rem;
                     }
 
                     .gift {
-                        // flex-direction: row;
-                        // align-items: start;
-                        // border-bottom: none;
-                        // border-radius: 1rem;
                         background-color: #292c2f;
-                        // margin-bottom: 0;
+                        margin-bottom: 0;
                     }
 
                     .gift:hover {
@@ -201,11 +181,6 @@ const Shop = (props) => {
                         margin-top: 1rem;
                     }
 
-                    .gift-txt {
-                        // width: 70%;
-                        // margin-right: 2rem;
-                    }
-
                     .pricing {
                         flex-direction: column;
                         margin-top: .5rem;
@@ -217,6 +192,15 @@ const Shop = (props) => {
 
                     .pricing p:last-child {
                         margin-top: 0;
+                    }
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    .gifts {
+                        display: grid;
+                        grid-gap: 2rem;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        margin-bottom: 3rem;
                     }
                 }
                 `}
