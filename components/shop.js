@@ -35,7 +35,7 @@ const Shop = (props) => {
                                     <p><span className='pricing-detail'><b>Donation: </b></span>{`$${gift.price/100}.00`}</p>
                                     {/* <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p> */}
                                 </div>
-                                <p className='desc'>{gift.desc}</p>
+                                <p className='desc'>{gift.short}</p>
                                 <button onClick={() => props.addItem(gift)}>Add to cart</button>
                                 {item ? (
                                     <button onClick={() => props.removeItem(gift.id)}>Remove from cart</button>
