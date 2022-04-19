@@ -1,5 +1,6 @@
 import { gifts } from '../../content/gifts'
 import useCart from '../../hooks/useCart'
+import GiftsCarousel from '../../components/gifts-carousel'
 
 const gift = gifts[0]
 const pics = [
@@ -24,9 +25,13 @@ export default function ComfortBasket() {
                 <button onClick={() => removeItemFromCart(gift.id)}>Remove from cart</button>
             </div>
 
-            <div className='gift-img'>
+            <section className='carousel'>
+                <GiftsCarousel />
+            </section>
+
+            {/* <div className='gift-img'>
                 <img className='img' src={gift.img} alt={gift.alt} />
-            </div>
+            </div> */}
 
             <p className='gift-txt'>{gift.desc}</p>
             
@@ -95,7 +100,16 @@ export default function ComfortBasket() {
 
                 button:last-child {
                     margin-top: 1rem;
-                }                
+                }
+
+                .carousel {
+                    // outline: 2px solid yellow;
+                    width: 100%;
+                    background-color: #292c2f;
+                    padding: 1rem 0 2rem 0;
+                    // height: 22rem;
+                    position: relative;
+                  }                
                 `}
             </style>
         </div>
