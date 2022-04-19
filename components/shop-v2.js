@@ -41,7 +41,7 @@ const Shop = (props) => {
                                 <div className='buttons'>
                                     <button onClick={() => props.addItem(gift)}>Add to cart</button>
                                     {item ? (
-                                        <button onClick={() => props.removeItem(gift.id)}>Remove from cart</button>
+                                        <button onClick={() => props.removeItem(gift.id)}>Remove</button>
                                     ) : (
                                         <></>
                                     )}
@@ -140,6 +140,7 @@ const Shop = (props) => {
 
                 .buttons {
                     display: flex;
+                    // align-items: center;
                     justify-content: space-between;
                     // outline: 1px solid blue;
                 }
@@ -149,6 +150,7 @@ const Shop = (props) => {
                     background-color: #b01e65;
                     border: none;
                     font-size: 1.1rem;
+                    height: 2rem;
                     width: 45%;
                     padding: .5rem 0;
                     border-radius: 1rem;
@@ -160,11 +162,11 @@ const Shop = (props) => {
                     background-color: deeppink;
                 }
 
-                button:last-child {
-                    margin-top: 1rem;
-                }
+                // button:last-child {
+                //     margin-top: 1rem;
+                // }
 
-                @media only screen and (min-width: 1024px) {
+                @media only screen and (min-width: 1200px) {
                     .gifts {
                         display: grid;
                         grid-gap: 2rem;
