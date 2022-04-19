@@ -28,20 +28,24 @@ const Shop = (props) => {
                                 <img className='img' src={gift.img} alt={gift.alt} />
                             </div> */}
                             <div className='gift-txt'>
-                                <Link href={`/gifts/${gift.slug}`}>
-                                    <a><h3>{gift.name}</h3></a>
-                                </Link>
-                                <div className='pricing'>
-                                    <p><span className='pricing-detail'><b>Donation: </b></span>{`$${gift.price/100}.00`}</p>
-                                    {/* <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p> */}
+                                <div>
+                                    <Link href={`/gifts/${gift.slug}`}>
+                                        <a><h3>{gift.name}</h3></a>
+                                    </Link>
+                                    <div className='pricing'>
+                                        <p><span className='pricing-detail'><b>Donation: </b></span>{`$${gift.price/100}.00`}</p>
+                                        {/* <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p> */}
+                                    </div>
+                                    <p className='desc'>{gift.short}</p>
                                 </div>
-                                <p className='desc'>{gift.short}</p>
-                                <button onClick={() => props.addItem(gift)}>Add to cart</button>
-                                {item ? (
-                                    <button onClick={() => props.removeItem(gift.id)}>Remove from cart</button>
-                                ) : (
-                                    <></>
-                                )}
+                                <div className='buttons'>
+                                    <button onClick={() => props.addItem(gift)}>Add to cart</button>
+                                    {item ? (
+                                        <button onClick={() => props.removeItem(gift.id)}>Remove from cart</button>
+                                    ) : (
+                                        <></>
+                                    )}
+                                </div>
                                 {/* <button onClick={handleClick}>Add to cart</button> */}
                             </div>
                         </div>
@@ -74,7 +78,6 @@ const Shop = (props) => {
                     background-repeat: no-repeat;
                     background-size: cover;
                     min-height: 75vh;
-                    position: relative;
                     
                     display: flex;
                     flex-direction: column;
@@ -115,6 +118,9 @@ const Shop = (props) => {
                     // margin-bottom: 0;
                     // margin-top: 0;
                     background: rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                 }
 
                 .desc {
@@ -132,12 +138,18 @@ const Shop = (props) => {
                     color: #f5d3e4;
                 }
 
+                .buttons {
+                    display: flex;
+                    justify-content: space-between;
+                    // outline: 1px solid blue;
+                }
+
                 button {
                     color: gainsboro;
                     background-color: #b01e65;
                     border: none;
-                    font-size: 1.5rem;
-                    width: 100%;
+                    font-size: 1.1rem;
+                    width: 45%;
                     padding: .5rem 0;
                     border-radius: 1rem;
                     // margin-bottom: 1rem;
