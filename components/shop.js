@@ -23,25 +23,29 @@ const Shop = (props) => {
                 {props.gifts.map (gift => {
                     const item = props.cart.find(i => i.id === gift.id)
                     return (
-                        <div key={gift.id} className='gift'>
-                            <div className='gift-img'>
+                        <div key={gift.id} className='gift' style={{backgroundImage: `url(${gift.img})`}}>
+                            {/* <div className='gift-img'>
                                 <img className='img' src={gift.img} alt={gift.alt} />
-                            </div>
+                            </div> */}
                             <div className='gift-txt'>
-                                <Link href={`/gifts/${gift.slug}`}>
-                                    <a><h3>{gift.name}</h3></a>
-                                </Link>
-                                <div className='pricing'>
-                                    <p><span className='pricing-detail'><b>Donation: </b></span>{`$${gift.price/100}.00`}</p>
-                                    {/* <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p> */}
+                                <div>
+                                    <Link href={`/gifts/${gift.slug}`}>
+                                        <a><h3>{gift.name}</h3></a>
+                                    </Link>
+                                    <div className='pricing'>
+                                        <p><span className='pricing-detail'><b>Donation: </b></span>{`$${gift.price/100}.00`}</p>
+                                        {/* <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p> */}
+                                    </div>
+                                    <p className='desc'>{gift.short}</p>
                                 </div>
-                                <p className='desc'>{gift.short}</p>
-                                <button onClick={() => props.addItem(gift)}>Add to cart</button>
-                                {item ? (
-                                    <button onClick={() => props.removeItem(gift.id)}>Remove from cart</button>
-                                ) : (
-                                    <></>
-                                )}
+                                <div className='buttons'>
+                                    <button onClick={() => props.addItem(gift)}>Add to cart</button>
+                                    {item ? (
+                                        <button onClick={() => props.removeItem(gift.id)}>Remove</button>
+                                    ) : (
+                                        <></>
+                                    )}
+                                </div>
                                 {/* <button onClick={handleClick}>Add to cart</button> */}
                             </div>
                         </div>
@@ -68,14 +72,16 @@ const Shop = (props) => {
                 }
 
                 .gift {
-                    // outline: 1px solid red;
                     width: 100%;
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
-                    margin-bottom: 3rem;
-                    padding-bottom: 2rem;
+                    justify-content: flex-end;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
                     border-bottom: 1px solid #b01e65;
+                    min-height: 75vh;
+                    margin-bottom: 2rem;
                 }
 
                 .gifts .gift:last-child {
@@ -83,7 +89,6 @@ const Shop = (props) => {
                 }
 
                 .gift-img {
-                    // outline: 1px solid orange;
                     width: 50%;
                 }
 
@@ -92,17 +97,21 @@ const Shop = (props) => {
                 }
 
                 h3 {
-                    font-size: 2rem;
+                    font-size: 1.75rem;
                     margin-bottom: 0;
-                    color: #b01e65;
+                    color: deeppink;
                 }
 
                 .gift-txt {
-                    // outline: 1px solid yellow;
                     width: 100%;
+                    min-height: 50%;
                     padding-left: 2rem;
-                    margin-bottom: 0;
-                    margin-top: 0;
+                    padding-right: 2rem;
+                    padding-bottom: 2rem;
+                    background: rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                 }
 
                 .desc {
@@ -120,15 +129,20 @@ const Shop = (props) => {
                     color: #f5d3e4;
                 }
 
+                .buttons {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
                 button {
                     color: gainsboro;
                     background-color: #b01e65;
                     border: none;
-                    font-size: 1.5rem;
-                    width: 100%;
+                    font-size: 1.1rem;
+                    height: 2rem;
+                    width: 45%;
                     padding: .5rem 0;
                     border-radius: 1rem;
-                    // margin-bottom: 1rem;
                 }
 
                 button:hover {
@@ -136,11 +150,7 @@ const Shop = (props) => {
                     background-color: deeppink;
                 }
 
-                button:last-child {
-                    margin-top: 1rem;
-                }
-
-                @media only screen and (min-width: 1024px) {
+                @media only screen and (min-width: 800px) {
                     .gifts {
                         display: grid;
                         grid-gap: 2rem;
@@ -149,10 +159,6 @@ const Shop = (props) => {
                     }
 
                     .gift {
-                        flex-direction: row;
-                        align-items: start;
-                        border-bottom: none;
-                        border-radius: 1rem;
                         background-color: #292c2f;
                         margin-bottom: 0;
                     }
@@ -175,11 +181,6 @@ const Shop = (props) => {
                         margin-top: 1rem;
                     }
 
-                    .gift-txt {
-                        width: 70%;
-                        margin-right: 2rem;
-                    }
-
                     .pricing {
                         flex-direction: column;
                         margin-top: .5rem;
@@ -191,6 +192,15 @@ const Shop = (props) => {
 
                     .pricing p:last-child {
                         margin-top: 0;
+                    }
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    .gifts {
+                        display: grid;
+                        grid-gap: 2rem;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        margin-bottom: 3rem;
                     }
                 }
                 `}
