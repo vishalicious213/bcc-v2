@@ -69,6 +69,7 @@ const ShoppingCart = () => {
                 .shopping-cart {
                     display: none;
                     position: fixed;
+                    z-index: 1;
                     right: 0;
                     top: 0;
                     height: 100vh;

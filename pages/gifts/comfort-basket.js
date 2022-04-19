@@ -7,9 +7,7 @@ const gift = gifts[0]
 export default function ComfortBasket() {
     const { cart, addItemToCart, removeItemFromCart } = useCart()
     const item = cart.find(i => i.id === 0)
-    // console.log(gift)
-    console.log('cart', cart)
-    console.log('item', item)
+
     return (
         <div className='gift'>
             <div className='gift-txt'>
