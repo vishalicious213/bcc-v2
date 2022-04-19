@@ -6,19 +6,22 @@ const comfortBaskets = [
     {id: 0, img: '/gifts/comfort-basket-01.jpg', alt: 'comfort basket with animal'},
     {id: 1, img: '/gifts/comfort-basket-02.jpg', alt: 'comfort basket with dark tulle'},
     {id: 2, img: '/gifts/comfort-basket-03.jpg', alt: 'comfort basket with reusable shopping bag'},
+    {id: 3, img: '/gifts/comfort-basket-01.jpg', alt: 'comfort basket with animal'},
+    {id: 4, img: '/gifts/comfort-basket-02.jpg', alt: 'comfort basket with dark tulle'},
+    {id: 5, img: '/gifts/comfort-basket-03.jpg', alt: 'comfort basket with reusable shopping bag'},
     // {id: 0, img: '/gifts/comfort-basket-01.jpg', alt: ''}
 ]
 
 export default function GiftsCarousel() {
     const settings = {
-        arrows: false,
+        arrows: true,
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3.5,
+        slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
-        speed: 5000,
+        autoplay: false,
+        speed: 600,
         autoplaySpeed: 0,
         cssEase: "linear",
         responsive: [
@@ -26,7 +29,7 @@ export default function GiftsCarousel() {
               breakpoint: 1024,
               settings: {
                 slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToScroll: 1,
                 infinite: true,
                 dots: true
               }
@@ -35,7 +38,7 @@ export default function GiftsCarousel() {
               breakpoint: 600,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
                 initialSlide: 2
               }
             },
@@ -78,7 +81,7 @@ export default function GiftsCarousel() {
             <style jsx>
                 {`
                 img {
-                    width: 100%;
+                    width: 96%;
                 }
                 `}
             </style>

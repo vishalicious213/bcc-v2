@@ -6,28 +6,30 @@ const gift = gifts[0]
 
 export default function ComfortBasket() {
     const { cart, addItemToCart, removeItemFromCart } = useCart()
+    const item = cart.find(i => i.id === 0)
     // console.log(gift)
+    console.log('cart', cart)
+    console.log('item', item)
     return (
         <div className='gift'>
             <div className='gift-txt'>
                 <h1>{gift.name}</h1>
                 <div className='pricing'>
-                    <p><span className='pricing-detail'><b>Donation: </b></span>{`$${gift.price/100}.00`}</p>
-                    {/* <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p> */}
+                    <p><span className='pricing-detail'><b>Donation:</b></span><span className='detail'> {`$${gift.price/100}.00`}</span></p>
+                    <p><span className='pricing-detail'><b>Quantity in cart:</b></span><span className='detail'> {item.qty}</span></p>
                 </div>
-                <button onClick={() => addItemToCart(gift)}>Add to cart</button>
-                <button onClick={() => removeItemFromCart(gift.id)}>Remove from cart</button>
             </div>
 
             <section className='carousel'>
                 <GiftsCarousel />
             </section>
 
-            {/* <div className='gift-img'>
-                <img className='img' src={gift.img} alt={gift.alt} />
-            </div> */}
-
             <p className='gift-txt'>{gift.desc}</p>
+
+            <div className='buttons'>
+                <button onClick={() => addItemToCart(gift)}>Add to cart</button>
+                <button onClick={() => removeItemFromCart(gift.id)}>Remove from cart</button>
+            </div>
             
             <style jsx>
                 {`
@@ -46,7 +48,6 @@ export default function ComfortBasket() {
                     padding-right: 2rem;
                     margin-bottom: 0;
                     margin-top: 0;
-                    outline: 1px solid blue;
                 }
 
                 h1 {
@@ -67,14 +68,16 @@ export default function ComfortBasket() {
                     color: #f5d3e4;
                 }
 
-                .gift-img {
-                    width: 50%;
-                    margin-bottom: 2rem;
-                    margin-top: 1rem;
+                .detail {
+                    font-size: 1.5rem;
                 }
-                
-                .img {
+
+                .buttons {
                     width: 100%;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                    margin-bottom: 0;
+                    margin-top: 1rem;
                 }
 
                 button {
@@ -85,6 +88,7 @@ export default function ComfortBasket() {
                     width: 100%;
                     padding: .5rem 0;
                     border-radius: 1rem;
+                    margin-top: 1rem;
                 }
 
                 button:hover {
@@ -92,18 +96,11 @@ export default function ComfortBasket() {
                     background-color: deeppink;
                 }
 
-                button:last-child {
-                    margin-top: 1rem;
-                }
-
                 .carousel {
-                    // outline: 2px solid yellow;
-                    width: 100%;
-                    background-color: #292c2f;
+                    width: 90%;
                     padding: 1rem 0 2rem 0;
-                    // height: 22rem;
                     position: relative;
-                  }                
+                }
                 `}
             </style>
         </div>
