@@ -156,7 +156,7 @@ const Shop = (props) => {
                     .gifts {
                         display: grid;
                         grid-gap: 2rem;
-                        grid-template-columns: 1fr 1fr;
+                        grid-template-columns: 1fr 1fr 1fr;
                         margin-bottom: 3rem;
                     }
 
