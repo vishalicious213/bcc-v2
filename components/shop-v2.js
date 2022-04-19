@@ -70,9 +70,15 @@ const Shop = (props) => {
                 .gift {
                     // outline: 1px solid red;
                     width: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    min-height: 75vh;
+                    position: relative;
                     
-                    // display: flex;
-                    // flex-direction: column;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
                     // align-items: center;
                     // margin-bottom: 3rem;
                     // padding-bottom: 2rem;
@@ -95,15 +101,20 @@ const Shop = (props) => {
                 h3 {
                     font-size: 2rem;
                     margin-bottom: 0;
-                    color: #b01e65;
+                    // color: #b01e65;
+                    color: deeppink;
                 }
 
                 .gift-txt {
                     // outline: 1px solid yellow;
                     width: 100%;
+                    min-height: 50%;
                     padding-left: 2rem;
-                    margin-bottom: 0;
-                    margin-top: 0;
+                    padding-right: 2rem;
+                    padding-bottom: 2rem;
+                    // margin-bottom: 0;
+                    // margin-top: 0;
+                    background: rgba(0, 0, 0, 0.5);
                 }
 
                 .desc {
@@ -177,8 +188,8 @@ const Shop = (props) => {
                     }
 
                     .gift-txt {
-                        width: 70%;
-                        margin-right: 2rem;
+                        // width: 70%;
+                        // margin-right: 2rem;
                     }
 
                     .pricing {
