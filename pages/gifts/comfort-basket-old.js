@@ -1,11 +1,10 @@
 import { gifts } from '../../content/gifts'
 import useCart from '../../hooks/useCart'
 import GiftsCarousel from '../../components/gifts-carousel'
-import Link from 'next/link'
 
 const gift = gifts[0]
 
-export default function ComfortBasket() {
+export default function ComfortBasketOld() {
     const { cart, addItemToCart, removeItemFromCart } = useCart()
     const item = cart.find(i => i.id === 0)
 
@@ -25,19 +24,9 @@ export default function ComfortBasket() {
 
             <p className='gift-txt'>{gift.desc}</p>
 
-            <div className='gift-txt'>
-                <p><span className='pricing-detail'><b>Donation:</b></span><span className='detail'> {`$${gift.price/100}.00`}</span></p>
-            </div>            
-
             <div className='buttons'>
-                <div className='add-remove'>
-                    <button onClick={() => addItemToCart(gift)}>Add</button>
-                    <span className='detail quantity'> {item ? item.qty : 0}</span>
-                    <button onClick={() => removeItemFromCart(gift.id)}>Remove</button>
-                </div>
-                <Link href='/checkout'>
-                            <button className='checkout'>Go to checkout</button>
-                </Link>
+                <button onClick={() => addItemToCart(gift)}>Add to cart</button>
+                <button onClick={() => removeItemFromCart(gift.id)}>Remove from cart</button>
             </div>
             
             <style jsx>
@@ -81,24 +70,20 @@ export default function ComfortBasket() {
                     font-size: 1.5rem;
                 }
 
-                .quantity {
-                    outline: 1px solid #b01e65;
-                    width: 4rem;
-                    text-align: center;
-                }
-
                 .buttons {
-                    width: 90%;
-                    display: flex;
-                    flex-direction: column;
+                    width: 100%;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                    margin-bottom: 0;
+                    margin-top: 1rem;
                 }
 
                 button {
                     color: gainsboro;
                     background-color: #b01e65;
                     border: none;
-                    font-size: 1rem;
-                    width: 30%;
+                    font-size: 1.5rem;
+                    width: 100%;
                     padding: .5rem 0;
                     border-radius: 1rem;
                     margin-top: 1rem;
@@ -107,17 +92,6 @@ export default function ComfortBasket() {
                 button:hover {
                     color: white;
                     background-color: deeppink;
-                }
-
-                .add-remove {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: baseline;
-                }
-
-                .checkout {
-                    margin: 1rem auto 0 auto;
-                    width: 100%;
                 }
 
                 .carousel {
