@@ -15,11 +15,14 @@ export default function ComfortBasket() {
                 <h1>{gift.name}</h1>
             </div>
 
-            <section className='carousel'>
-                <GiftsCarousel pics='comfortBaskets' />
-            </section>
+            <div className='top'>
+                <section className='carousel'>
+                    <GiftsCarousel pics='comfortBaskets' />
+                </section>
 
-            <p className='gift-txt'>{gift.desc}</p>
+                <p className='gift-txt gift-desc'>{gift.desc}</p>
+            </div>
+
 
             <div className='gift-txt'>
                 <p><span className='pricing-detail'><b>Donation:</b></span><span className='detail'> {`$${gift.price/100}.00`}</span></p>
@@ -53,6 +56,13 @@ export default function ComfortBasket() {
                     padding-right: 2rem;
                     margin-bottom: 0;
                     margin-top: 0;
+                }
+
+                .top {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                 }
 
                 h1 {
@@ -132,6 +142,26 @@ export default function ComfortBasket() {
                     button {
                         font-size: 1.25rem;
                         padding: .75rem 0;
+                    }
+                }
+
+                @media only screen and (min-width: 1024px) {
+                    .top {
+                        flex-direction: row;
+                        justify-content: space-around;
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                    }
+
+                    .gift-desc {
+                        // outline: 1px solid red;
+                        width: 50%;
+                    }
+
+                    .carousel {
+                        // outline: 1px solid orange;
+                        width: 40%;
+                        margin: 0 auto;
                     }
                 }
                 `}
