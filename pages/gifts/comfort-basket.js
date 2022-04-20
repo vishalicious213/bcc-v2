@@ -13,10 +13,6 @@ export default function ComfortBasket() {
         <div className='gift'>
             <div className='gift-txt'>
                 <h1>{gift.name}</h1>
-                <div className='pricing'>
-                    <p><span className='pricing-detail'><b>Donation:</b></span><span className='detail'> {`$${gift.price/100}.00`}</span></p>
-                    <p><span className='pricing-detail'><b>Quantity in cart:</b></span><span className='detail'> {item ? item.qty : 0}</span></p>
-                </div>
             </div>
 
             <section className='carousel'>
