@@ -121,6 +121,19 @@ export default function ComfortBasket() {
                     padding: 1rem 0 2rem 0;
                     position: relative;
                 }
+
+                @media only screen and (min-width: 480px) {
+                    button {
+                        width: 40%;
+                    }
+                }
+
+                @media only screen and (min-width: 800px) {
+                    button {
+                        font-size: 1.25rem;
+                        padding: .75rem 0;
+                    }
+                }
                 `}
             </style>
         </div>
