@@ -24,9 +24,9 @@ const Shop = (props) => {
                     const item = props.cart.find(i => i.id === gift.id)
                     return (
                         <div key={gift.id} className='gift' style={{backgroundImage: `url(${gift.img})`}}>
-                            {/* <div className='gift-img'>
-                                <img className='img' src={gift.img} alt={gift.alt} />
-                            </div> */}
+                            <Link href={`/gifts/${gift.slug}`}>
+                                <div className='top-overlay'></div>
+                            </Link>
                             <div className='gift-txt'>
                                 <div>
                                     <Link href={`/gifts/${gift.slug}`}>
@@ -34,7 +34,6 @@ const Shop = (props) => {
                                     </Link>
                                     <div className='pricing'>
                                         <p><span className='pricing-detail'><b>Donation: </b></span>{`$${gift.price/100}.00`}</p>
-                                        {/* <p><span className='pricing-detail'><b>Quantity available:</b></span> {gift.quantity}</p> */}
                                     </div>
                                     <p className='desc'>{gift.short}</p>
                                 </div>
@@ -88,18 +87,16 @@ const Shop = (props) => {
                     border-bottom: none;
                 }
 
-                .gift-img {
-                    width: 50%;
-                }
-
-                .img {
-                    width: 100%;
-                }
-
                 h3 {
                     font-size: 1.75rem;
                     margin-bottom: 0;
                     color: deeppink;
+                }
+
+                .top-overlay {
+                    height: 50%;
+                    width: 100%;
+                    cursor: pointer;
                 }
 
                 .gift-txt {
@@ -166,16 +163,6 @@ const Shop = (props) => {
                     .gift:hover {
                         outline: 2px solid #b01e65;
                         background-size: auto;
-                    }
-
-                    .gift-img {
-                        width: 30%;
-                        margin-top: 2rem;
-                        margin-left: 1rem;
-                    }
-
-                    .img {
-                        border-top-left-radius: 1rem;
                     }
 
                     h3 {
