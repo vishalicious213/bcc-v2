@@ -165,6 +165,7 @@ const Shop = (props) => {
 
                     .gift:hover {
                         outline: 2px solid #b01e65;
+                        background-size: auto;
                     }
 
                     .gift-img {
