@@ -95,8 +95,10 @@ export default function ComfortBasket() {
 
                 .buttons {
                     width: 90%;
-                    display: flex;
-                    flex-direction: column;
+                    // display: flex;
+                    // flex-direction: column;
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
                 }
 
                 button {
