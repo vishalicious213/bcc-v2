@@ -84,15 +84,14 @@ export default function Nav() {
             {/* Hamburger menu for < 768 */}
             <div id='burger-container'>
                 <nav id='burger'>
-                    <a href='/'>Home</a>
                     <a className='redline' href='/about'>About Us &#9662;</a>
                     <a href='/team'>Our Team</a>
+                    <a href='/share'>Share Your Story</a>
                     <a className='redline' href='/boobtique'>Shop</a>
                     <a className='redline' href='/donate'>Donate &#9662;</a>
                     <a href='/memory'>In Memory Of</a>
                     <a href='/supporters'>Supporters</a>
-                    <a className='redline' href='/volunteer'>Volunteer &#9662;</a>
-                    <a href='/share'>Share Your Story</a>
+                    <a href='/volunteer'>Volunteer</a>
                     <a className='redline' href='/news'>News</a>
                 </nav>
             </div>
