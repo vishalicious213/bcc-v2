@@ -74,7 +74,7 @@ const Shop = (props) => {
                     width: 100%;
                     display: flex;
                     flex-direction: column;
-                    justify-content: flex-end;
+                    justify-content: space-between;
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -94,7 +94,7 @@ const Shop = (props) => {
                 }
 
                 .top-overlay {
-                    height: 50%;
+                    min-height: 45vh;
                     width: 100%;
                     cursor: pointer;
                 }
@@ -163,6 +163,10 @@ const Shop = (props) => {
                     .gift:hover {
                         outline: 2px solid #b01e65;
                         background-size: auto;
+                    }
+
+                    .top-overlay {
+                        min-height: 50%;
                     }
 
                     h3 {
