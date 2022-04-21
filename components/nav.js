@@ -22,7 +22,7 @@ export default function Nav() {
         <div id='menu-container'>
             <div id='logo-container'>
                 <Link href='/'>
-                    <img src='/logo.png' alt='logo' />
+                    <img src='/logo-wide.png' alt='logo' />
                 </Link>
             </div>
 
@@ -111,7 +111,12 @@ export default function Nav() {
                     justify-content: space-between;
                     padding: .5rem;
                     background: #292c2f;
-                    position: relative;
+                    // position: relative;
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    height: 3rem;
                 }
 
                 #logo-container {
@@ -120,7 +125,9 @@ export default function Nav() {
                 }
 
                 #logo-container img {
-                    width: 100%;
+                    width: 14rem;
+                    // max-height: 2.4rem;
+                    // max-width: 17rem;
                 }
 
                 #mobile-buttons {

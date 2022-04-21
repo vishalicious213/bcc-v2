@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <CartProvider>
       <Nav />
+      <div style={{height: '3rem'}}></div>
       <ShoppingCart />
       <DonateBanner />
       <Component {...pageProps} />
