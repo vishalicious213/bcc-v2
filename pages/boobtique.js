@@ -21,7 +21,10 @@ export default function Boobtique() {
 
       <main className={styles.main}>
           <div className='img-container'>
-            <img src='/boobtique/boobtique.jpg' alt='' />
+            {/* <img src='/boobtique/boobtique.jpg' alt='' /> */}
+            <img src='/gifts/chemo-comfort-bag-10.jpg' alt='' />
+            <img className='middle-pic' src='/boobtique/boobtique-4.jpg' alt='' />
+            <img src='/gifts/chemo-comfort-bag-11.jpg' alt='' />
           </div>
 
           <section className='pink-container gift-container'>
@@ -71,6 +74,19 @@ export default function Boobtique() {
 
       <style jsx>
         {`
+        .img-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .img-container img {
+          width: 33.3%;
+        }
+
+        .middle-pic {
+          // border-radius: 50%;
+        }
+
         .button-container {
             display: flex;
             justify-content: center;
