@@ -28,9 +28,9 @@ export default function Nav() {
 
             {/* Navbar for 768+ */}
             <nav id='menu'>
-                <Link href='/'>
+                {/* <Link href='/'>
                     <a>Home</a>
-                </Link>
+                </Link> */}
                 <div className='hover-menu'>
                     <Link href='/about'>
                         <a className='a'>About Us &#9662;</a>
@@ -38,6 +38,9 @@ export default function Nav() {
                     <div className='dropdown'>
                         <Link href='/team'>
                             <a className='a center-link'>Our Team</a>
+                        </Link>
+                        <Link href='/share'>
+                            <a className='a center-link'>Share Your Story</a>
                         </Link>
                     </div>
                 </div>
@@ -55,9 +58,12 @@ export default function Nav() {
                         <Link href='/supporters'>
                             <a className='a center-link'>Supporters</a>
                         </Link>
+                        <Link href='/volunteer'>
+                            <a className='a center-link'>Volunteer</a>
+                        </Link>
                     </div>
                 </div>
-                <div className='hover-menu'>
+                {/* <div className='hover-menu'>
                     <Link href='/volunteer'>
                         <a className='a'>Volunteer &#9662;</a>
                     </Link>
@@ -66,7 +72,7 @@ export default function Nav() {
                             <a className='a center-link'>Share Your Story</a>
                         </Link>
                     </div>
-                </div>
+                </div> */}
                 <Link href='/news'>
                     <a>News</a>
                 </Link>
