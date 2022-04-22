@@ -116,7 +116,7 @@ export default function Nav() {
                     top: 0;
                     right: 0;
                     left: 0;
-                    height: 3rem;
+                    height: 3.5rem;
                     z-index: 1;
                 }
 
