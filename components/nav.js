@@ -39,8 +39,8 @@ export default function Nav() {
                         <Link href='/team'>
                             <a className='a center-link'>Our Team</a>
                         </Link>
-                        <Link href='/share'>
-                            <a className='a center-link'>Share Your Story</a>
+                        <Link href='/volunteer'>
+                            <a className='a center-link'>Volunteer</a>
                         </Link>
                     </div>
                 </div>
@@ -58,8 +58,8 @@ export default function Nav() {
                         <Link href='/supporters'>
                             <a className='a center-link'>Supporters</a>
                         </Link>
-                        <Link href='/volunteer'>
-                            <a className='a center-link'>Volunteer</a>
+                        <Link href='/share'>
+                            <a className='a center-link'>Share Your Story</a>
                         </Link>
                     </div>
                 </div>
@@ -86,12 +86,12 @@ export default function Nav() {
                 <nav id='burger'>
                     <a className='redline' href='/about'>About Us &#9662;</a>
                     <a href='/team'>Our Team</a>
-                    <a href='/share'>Share Your Story</a>
+                    <a href='/volunteer'>Volunteer</a>
                     <a className='redline' href='/boobtique'>Shop</a>
                     <a className='redline' href='/donate'>Donate &#9662;</a>
                     <a href='/memory'>In Memory Of</a>
                     <a href='/supporters'>Supporters</a>
-                    <a href='/volunteer'>Volunteer</a>
+                    <a href='/share'>Share Your Story</a>
                     <a className='redline' href='/news'>News</a>
                 </nav>
             </div>
@@ -117,6 +117,7 @@ export default function Nav() {
                     right: 0;
                     left: 0;
                     height: 3rem;
+                    z-index: 1;
                 }
 
                 #logo-container {
