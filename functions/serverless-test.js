@@ -15,7 +15,11 @@ const fromAddress = new api.Address({
     zip: '94104',
     phone: '415-528-7555'
 });
-fromAddress.save().then(console.log);
+// fromAddress.save().then(console.log);
+fromAddress.save().then((res) => {
+    fromAddressId = res.id
+    console.log('fromAddressId', fromAddressId)
+});
 
 const toAddress = new api.Address({
     name: 'George Costanza',
@@ -25,7 +29,11 @@ const toAddress = new api.Address({
     state: 'NY',
     zip: '10451'
 });
-toAddress.save().then(console.log);
+// toAddress.save().then(console.log);
+toAddress.save().then((res) => {
+    toAddressId = res.id
+    console.log('toAddressId', toAddressId)
+});
 
 const parcel = new api.Parcel({
     length: 9,
