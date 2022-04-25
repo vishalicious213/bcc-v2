@@ -6,8 +6,8 @@ const Checkout = () => {
     const { cart, total } = useCart()
 
     const processPayment = async () => {
-        // const url ='/.netlify/functions/serverless-test'
-        const url ='/.netlify/functions/charge-card'
+        const url ='/.netlify/functions/serverless-test'
+        // const url ='/.netlify/functions/charge-card')
 
         // get id and qty of products in cart (don't trust client-side prices!)
         const newCart = cart.map(({ id, qty }) => ({
@@ -18,8 +18,9 @@ const Checkout = () => {
         const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
 
         const { data } = await axios.post(url, { cart: newCart })
-        // console.log('process payment')
-        await stripe.redirectToCheckout({ sessionId: data.id })
+        console.log('process payment')
+        console.log(data)
+        // await stripe.redirectToCheckout({ sessionId: data.id })
     }
 
     return (
