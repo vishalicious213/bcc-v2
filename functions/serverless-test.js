@@ -11,11 +11,11 @@ async function getFromAddress() {
         state: 'CA',
         zip: '94104',
         phone: '415-528-7555'
-    });
+    })
 
     let id = await fromAddress.save().then((res) => {
         return res.id
-    });
+    })
 
     return id
 }
@@ -28,10 +28,10 @@ async function getToAddress() {
         city: 'Bronx',
         state: 'NY',
         zip: '10451'
-    });
+    })
     let id = await toAddress.save().then((res) => {
         return res.id
-    });
+    })
 
     return id
 }
@@ -42,13 +42,28 @@ async function getParcel() {
         width: 6,
         height: 2,
         weight: 10,
-    });
+    })
 
     let id = await parcel.save().then((res) => {
         return res.id
-    });
+    })
 
     return id
+}
+
+async function getShipment(toAddressId, fromAddressId, parcelId) {
+    const shipment = new api.Shipment({
+        to_address: toAddressId,
+        from_address: fromAddressId,
+        parcel: parcelId
+    })
+
+    let shippers = await shipment.save().then((res) => {
+        console.log('shipment', res)
+        return res
+    })
+
+    return shippers
 }
 
 exports.handler =  async function(event, context) {
@@ -56,6 +71,10 @@ exports.handler =  async function(event, context) {
     let fromAddressId = await getFromAddress()
     let parcelId = await getParcel()
     console.log('serverless-test response')
+    console.log('toAddressId', toAddressId)
+    console.log('fromAddressId', fromAddressId)
+    console.log('parcelId', parcelId)
+    getShipment(toAddressId, fromAddressId, parcelId)
 
     return {
         statusCode: 200,
