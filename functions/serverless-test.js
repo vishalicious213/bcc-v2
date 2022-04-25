@@ -4,13 +4,13 @@ const api = new Easypost(process.env.EASYPOST_TEST_API_KEY)
 
 async function getFromAddress() {
     const fromAddress = new api.Address({
-        company: 'EasyPost',
-        street1: '417 Montgomery Street',
-        street2: '5th Floor',
-        city: 'San Francisco',
-        state: 'CA',
-        zip: '94104',
-        phone: '415-528-7555'
+        company: 'The Breast Cancer Comfort Foundation',
+        street1: '36C West Village Green',
+        // street2: '5th Floor',
+        city: 'Hicksville',
+        state: 'NY',
+        zip: '11801',
+        phone: '516-622-1917'
     })
 
     let id = await fromAddress.save().then((res) => {
