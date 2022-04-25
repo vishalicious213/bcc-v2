@@ -6,6 +6,7 @@ const Checkout = () => {
     const { cart, total } = useCart()
 
     const processPayment = async () => {
+        // const url ='/.netlify/functions/serverless-test'
         const url ='/.netlify/functions/charge-card'
 
         // get id and qty of products in cart (don't trust client-side prices!)
