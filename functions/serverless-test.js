@@ -42,6 +42,9 @@ exports.handler =  async function(event, context) {
         body: JSON.stringify({
             test: 'SERVERLESS TEST SUCCESSFUL',
             easypost: api,
+            to_address: toAddress,
+            from_address: fromAddress,
+            parcel: parcel,
         }),
     }    
 }
