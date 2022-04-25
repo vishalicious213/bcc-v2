@@ -59,7 +59,7 @@ async function getShipment(toAddressId, fromAddressId, parcelId) {
     })
 
     let shippers = await shipment.save().then((res) => {
-        console.log('shipment', res)
+        // console.log('shipment', res)
         return res
     })
 
@@ -70,11 +70,11 @@ exports.handler =  async function(event, context) {
     let toAddressId = await getToAddress()
     let fromAddressId = await getFromAddress()
     let parcelId = await getParcel()
+    let carriers = await getShipment(toAddressId, fromAddressId, parcelId)
     console.log('serverless-test response')
-    console.log('toAddressId', toAddressId)
-    console.log('fromAddressId', fromAddressId)
-    console.log('parcelId', parcelId)
-    getShipment(toAddressId, fromAddressId, parcelId)
+    // console.log('toAddressId', toAddressId)
+    // console.log('fromAddressId', fromAddressId)
+    // console.log('parcelId', parcelId)
 
     return {
         statusCode: 200,
@@ -82,6 +82,7 @@ exports.handler =  async function(event, context) {
             to_address: toAddressId || 'no to_address data',
             from_address: fromAddressId || 'no from_address data',
             parcel: parcelId || 'no parcel data',
+            carriers: carriers || 'no carrier data',
         }),
     }    
 }
