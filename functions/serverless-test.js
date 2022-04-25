@@ -2,6 +2,10 @@ require('dotenv').config()
 const Easypost = require('@easypost/api')
 const api = new Easypost(process.env.EASYPOST_TEST_API_KEY)
 
+let parcelId
+let fromAddressId
+let toAddressId
+
 const fromAddress = new api.Address({
     company: 'EasyPost',
     street1: '417 Montgomery Street',
@@ -29,7 +33,11 @@ const parcel = new api.Parcel({
     height: 2,
     weight: 10,
 });
-parcel.save().then(console.log);
+// parcel.save().then(console.log);
+parcel.save().then((res) => {
+    parcelId = res.id
+    console.log('parcelId', parcelId)
+});
 
 exports.handler =  async function(event, context) {
     // console.log("EVENT: \n" + JSON.stringify(event, null, 2))
@@ -40,8 +48,8 @@ exports.handler =  async function(event, context) {
     return {
         statusCode: 200,
         body: JSON.stringify({
-            test: 'SERVERLESS TEST SUCCESSFUL',
-            easypost: api,
+            // test: 'SERVERLESS TEST SUCCESSFUL',
+            // easypost: api,
             to_address: toAddress,
             from_address: fromAddress,
             parcel: parcel,
