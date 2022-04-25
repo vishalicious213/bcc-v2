@@ -23,6 +23,14 @@ const toAddress = new api.Address({
 });
 toAddress.save().then(console.log);
 
+const parcel = new api.Parcel({
+    length: 9,
+    width: 6,
+    height: 2,
+    weight: 10,
+});
+parcel.save().then(console.log);
+
 exports.handler =  async function(event, context) {
     // console.log("EVENT: \n" + JSON.stringify(event, null, 2))
     // return context.logStreamName
