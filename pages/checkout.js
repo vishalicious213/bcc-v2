@@ -23,25 +23,7 @@ const Checkout = () => {
         const getRates = data.carriers.rates
         setRates(getRates)
         // console.log('rates', getRates)
-        // return rates
         // await stripe.redirectToCheckout({ sessionId: data.id })
-
-        // return (
-        //     <div>
-        //         <div className='rates'>{data.carriers.rates}</div>
-
-        //         <style jsx>
-        //             {`
-        //             .rates {
-        //                 color: white;
-        //                 outline: 1px solid white;
-        //                 height: 5rem;
-        //                 width: 90%;
-        //             }
-        //             `}
-        //         </style>
-        //     </div>
-        // )
     }    
 
     const processPayment = async () => {
@@ -90,18 +72,21 @@ const Checkout = () => {
             <div className='checkout-body'>
                 <h2>Choose shipping</h2>
 
+                <div>
+                    {rates.map((carrier) => {
+                        return (
+                            <div key={carrier.id}>
+                                <p>{carrier.carrier}</p>
+                                <p>{carrier.service}</p>
+                                <p>{carrier.rate}</p>
+                            </div>
+                        )
+                    })}
+                </div>
+
                 <div className='pay-button'>
                     <button onClick={processShipping}>Process Shipping</button>
-                </div>
-                <div>{rates.map((carrier) => {
-                    return (
-                        <div key={carrier.id}>
-                            <p>{carrier.carrier}</p>
-                            <p>{carrier.service}</p>
-                            <p>{carrier.rate}</p>
-                        </div>
-                    )
-                })}</div>
+                </div>                
             </div>
 
             <div className='checkout-body'>
