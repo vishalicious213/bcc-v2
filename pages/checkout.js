@@ -22,7 +22,7 @@ const Checkout = () => {
         // console.log('process shipping', data)
         const getRates = data.carriers.rates
         setRates(getRates)
-        // console.log('rates', getRates)
+        console.log('rates', getRates)
         // await stripe.redirectToCheckout({ sessionId: data.id })
     }    
 
@@ -76,9 +76,14 @@ const Checkout = () => {
                     {rates.map((carrier) => {
                         return (
                             <div className='carriers' key={carrier.id}>
-                                <p>{`${carrier.carrier} ${carrier.service}`}</p>
+                                <span>{`${carrier.carrier} ${carrier.service}`}</span>
                                 {/* <p>{carrier.service}</p> */}
-                                <p>{`$${carrier.rate}`}</p>
+                                <span>{`$${carrier.rate}`}</span>
+                                {carrier.delivery_days ? (
+                                    <span>{`${carrier.delivery_days} days`}</span>
+                                ) : (
+                                    <span>unknown</span>
+                                )}
                             </div>
                         )
                     })}
@@ -160,7 +165,8 @@ const Checkout = () => {
 
                 .carriers {
                     display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 1rem;
                     // outline: 1px solid red;
                 }
                 `}
