@@ -1,13 +1,14 @@
+import { useState } from 'react'
 import useCart from '../hooks/useCart'
 import axios from 'axios'
 import { loadStripe } from '@stripe/stripe-js'
 
 const Checkout = () => {
     const { cart, total } = useCart()
+    const [rates, setRates] = useState([])
 
-    const processPayment = async () => {
+    const processShipping = async () => {
         const url ='/.netlify/functions/serverless-test'
-        // const url ='/.netlify/functions/charge-card')
 
         // get id and qty of products in cart (don't trust client-side prices!)
         const newCart = cart.map(({ id, qty }) => ({
@@ -18,8 +19,44 @@ const Checkout = () => {
         const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
 
         const { data } = await axios.post(url, { cart: newCart })
-        console.log('process payment')
-        console.log(data)
+        // console.log('process shipping', data)
+        const getRates = data.carriers.rates
+        setRates(getRates)
+        // console.log('rates', getRates)
+        // return rates
+        // await stripe.redirectToCheckout({ sessionId: data.id })
+
+        // return (
+        //     <div>
+        //         <div className='rates'>{data.carriers.rates}</div>
+
+        //         <style jsx>
+        //             {`
+        //             .rates {
+        //                 color: white;
+        //                 outline: 1px solid white;
+        //                 height: 5rem;
+        //                 width: 90%;
+        //             }
+        //             `}
+        //         </style>
+        //     </div>
+        // )
+    }    
+
+    const processPayment = async () => {
+        const url ='/.netlify/functions/charge-card'
+
+        // get id and qty of products in cart (don't trust client-side prices!)
+        const newCart = cart.map(({ id, qty }) => ({
+            id,
+            qty
+        }))
+
+        const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
+
+        const { data } = await axios.post(url, { cart: newCart })
+        console.log('process payment', data)
         // await stripe.redirectToCheckout({ sessionId: data.id })
     }
 
@@ -41,19 +78,39 @@ const Checkout = () => {
                             </div>
                         )
                     })}
-                    <div className='total'>
-                        <p className='test'></p>
-                        <p className='test'></p>
-                        <p className='test'>{`Total: $${total / 100}.00`}</p>
-                    </div>
-
-                    <div className='pay-button'>
-                        <button onClick={processPayment}>Process Payment</button>
-                    </div>
                 </div>
             ) : (
                 <p>Your cart has no gifts!</p>
             )}
+
+            <div className='checkout-body'>
+                <h2>Choose shipping</h2>
+
+                <div className='pay-button'>
+                    <button onClick={processShipping}>Process Shipping</button>
+                </div>
+                <div>{rates.map((carrier) => {
+                    return (
+                        <div key={carrier.id}>
+                            <p>{carrier.carrier}</p>
+                            <p>{carrier.service}</p>
+                            <p>{carrier.rate}</p>
+                        </div>
+                    )
+                })}</div>
+            </div>
+
+            <div className='checkout-body'>
+                <div className='total'>
+                    <p className='test'></p>
+                    <p className='test'></p>
+                    <p className='test'>{`Total: $${total / 100}.00`}</p>
+                </div>
+
+                <div className='pay-button'>
+                    <button onClick={processPayment}>Process Payment</button>
+                </div>
+            </div>
 
             <style jsx>
                 {`
