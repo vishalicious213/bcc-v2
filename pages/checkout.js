@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import useCart from '../hooks/useCart'
 import axios from 'axios'
 import { loadStripe } from '@stripe/stripe-js'
@@ -59,6 +59,10 @@ const Checkout = () => {
         console.log('process payment', data)
         // await stripe.redirectToCheckout({ sessionId: data.id })
     }
+
+    useEffect(() => {
+        processShipping()
+    }, [])    
 
     return (
         <div className='checkout'>
