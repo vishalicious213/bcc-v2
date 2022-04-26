@@ -172,10 +172,10 @@ const Checkout = () => {
 
                 .shipping {
                     // outline: 1px solid red;
-                    padding-bottom: .5rem;
+                    padding-bottom: 1rem;
                     margin: 1rem 1rem 0 1rem;
                     // width: 90%;
-                    border-bottom: 1px solid #b01e65;
+                    border-bottom: 2px solid #b01e65;
                 }
 
                 .shipping h2 {
@@ -187,6 +187,7 @@ const Checkout = () => {
                     grid-template-columns: .5fr 1fr 1fr 1fr;
                     grid-gap: 1rem;
                     padding: .5rem;
+                    border-bottom: 1px solid gainsboro;
                     // outline: 1px solid red;
                 }
 
@@ -202,8 +203,9 @@ const Checkout = () => {
                 }
 
                 .carrier-option:hover {
-                    outline: 1px solid #b01e65;
+                    // outline: 1px solid #b01e65;
                     color: white;
+                    font-weight: 600;
                 }
                 `}
             </style>
