@@ -71,7 +71,7 @@ exports.handler =  async function(event, context) {
     let fromAddressId = await getFromAddress()
     let parcelId = await getParcel()
     let carriers = await getShipment(toAddressId, fromAddressId, parcelId)
-    console.log('serverless-test response')
+    console.log('serverless-test event', event.body)
     // console.log('toAddressId', toAddressId)
     // console.log('fromAddressId', fromAddressId)
     // console.log('parcelId', parcelId)

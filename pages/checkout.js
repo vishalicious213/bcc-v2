@@ -11,12 +11,14 @@ const Checkout = () => {
         const url ='/.netlify/functions/shipping'
 
         // get id and qty of products in cart (don't trust client-side prices!)
-        const newCart = cart.map(({ id, qty }) => ({
+        const newCart = await cart.map(({ id, qty }) => ({
             id,
             qty
         }))
 
-        const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
+        // console.log('newCart',newCart)
+
+        // const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
 
         const { data } = await axios.post(url, { cart: newCart })
         // console.log('process shipping', data)
