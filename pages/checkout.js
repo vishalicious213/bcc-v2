@@ -69,7 +69,7 @@ const Checkout = () => {
                 <p>Your cart has no gifts!</p>
             )}
 
-            <div className='checkout-body'>
+            <div className='shipping'>
                 <h2>Choose shipping</h2>
 
                 <div>
@@ -96,9 +96,9 @@ const Checkout = () => {
                     })}
                 </div>
 
-                <div className='pay-button'>
+                {/* <div className='pay-button'>
                     <button onClick={processShipping}>Process Shipping</button>
-                </div>                
+                </div>                 */}
             </div>
 
             <div className='checkout-body'>
@@ -168,6 +168,18 @@ const Checkout = () => {
                 button:hover {
                     color: white;
                     background-color: deeppink;
+                }
+
+                .shipping {
+                    // outline: 1px solid red;
+                    padding-bottom: .5rem;
+                    margin: 1rem 1rem 0 1rem;
+                    // width: 90%;
+                    border-bottom: 1px solid #b01e65;
+                }
+
+                .shipping h2 {
+                    margin-top: 0;
                 }
 
                 .carriers {
