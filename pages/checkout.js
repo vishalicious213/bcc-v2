@@ -8,7 +8,7 @@ const Checkout = () => {
     const [rates, setRates] = useState([])
 
     const processShipping = async () => {
-        const url ='/.netlify/functions/serverless-test'
+        const url ='/.netlify/functions/shipping'
 
         // get id and qty of products in cart (don't trust client-side prices!)
         const newCart = cart.map(({ id, qty }) => ({
