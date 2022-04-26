@@ -73,11 +73,18 @@ const Checkout = () => {
                 <h2>Choose shipping</h2>
 
                 <div>
+                    <div className='carriers'>
+                        <span className='carrier-heading'>Carrier</span>
+                        <span className='carrier-heading'>Service</span>
+                        <span className='carrier-heading'>Rate</span>
+                        <span className='carrier-heading'>Time</span>
+                    </div>
                     {rates.map((carrier) => {
                         return (
-                            <div className='carriers' key={carrier.id}>
-                                <span>{`${carrier.carrier} ${carrier.service}`}</span>
-                                {/* <p>{carrier.service}</p> */}
+                            <div className='carriers carrier-option' key={carrier.id}>
+                                {/* <span>{`${carrier.carrier} ${carrier.service}`}</span> */}
+                                <span>{carrier.carrier}</span>
+                                <span>{carrier.service}</span>
                                 <span>{`$${carrier.rate}`}</span>
                                 {carrier.delivery_days ? (
                                     <span>{`${carrier.delivery_days} days`}</span>
@@ -165,9 +172,25 @@ const Checkout = () => {
 
                 .carriers {
                     display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-columns: .5fr 1fr 1fr 1fr;
                     grid-gap: 1rem;
+                    padding: .5rem;
                     // outline: 1px solid red;
+                }
+
+                .carrier-heading {
+                    font-weight: 600;
+                    margin-bottom: .5rem;
+                    margin-top: .5rem;
+                    color: white;
+                }
+
+                .carrier-option {
+                    // margin-bottom: .5rem;
+                }
+
+                .carrier-option:hover {
+                    outline: 1px solid #b01e65;
                 }
                 `}
             </style>
