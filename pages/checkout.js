@@ -75,10 +75,10 @@ const Checkout = () => {
                 <div>
                     {rates.map((carrier) => {
                         return (
-                            <div key={carrier.id}>
-                                <p>{carrier.carrier}</p>
-                                <p>{carrier.service}</p>
-                                <p>{carrier.rate}</p>
+                            <div className='carriers' key={carrier.id}>
+                                <p>{`${carrier.carrier} ${carrier.service}`}</p>
+                                {/* <p>{carrier.service}</p> */}
+                                <p>{`$${carrier.rate}`}</p>
                             </div>
                         )
                     })}
@@ -156,6 +156,12 @@ const Checkout = () => {
                 button:hover {
                     color: white;
                     background-color: deeppink;
+                }
+
+                .carriers {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    // outline: 1px solid red;
                 }
                 `}
             </style>
