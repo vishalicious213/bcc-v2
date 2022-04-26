@@ -203,6 +203,7 @@ const Checkout = () => {
 
                 .carrier-option:hover {
                     outline: 1px solid #b01e65;
+                    color: white;
                 }
                 `}
             </style>
