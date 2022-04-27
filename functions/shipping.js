@@ -48,13 +48,24 @@ async function getParcel(cart) {
         }
     })
 
-    console.log('cartWithGifts', cartWithGifts)
+    // console.log('cartWithGifts', cartWithGifts)
+
+    let totalWeight = 0
+
+    const calculateWeight = cartWithGifts.map((gift) => {
+        let itemWeight = gift.weight * gift.qty
+        console.log('gift weight', gift.weight)
+        console.log('gift quantity', gift.qty)
+
+        totalWeight = totalWeight + itemWeight
+        console.log('totalWeight', totalWeight)
+    })
 
     const parcel = await new api.Parcel({
-        length: cartWithGifts[0].length,
-        width: cartWithGifts[0].width,
-        height: cartWithGifts[0].height,
-        weight: cartWithGifts[0].weight,
+        // length: cartWithGifts[0].length,
+        // width: cartWithGifts[0].width,
+        // height: cartWithGifts[0].height,
+        weight: totalWeight,
         // length: 9,
         // width: 6,
         // height: 2,
@@ -89,9 +100,9 @@ exports.handler =  async function(event, context) {
     let fromAddressId = await getFromAddress()
     let parcelId = await getParcel(cartData.cart)
     let carriers = await getShipment(toAddressId, fromAddressId, parcelId)
-    console.log('serverless-test event', event.body)
+    // console.log('serverless-test event', event.body)
     // console.log('cartData', cartData)
-    console.log('cartData cart', cartData.cart)
+    // console.log('cartData cart', cartData.cart)
     // console.log('cartData cart 0', cartData.cart[0])
     // console.log('toAddressId', toAddressId)
     // console.log('fromAddressId', fromAddressId)

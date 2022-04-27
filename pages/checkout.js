@@ -21,7 +21,7 @@ const Checkout = () => {
         // const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
 
         // const { data } = await axios.post(url, { cart: newCart })
-        // console.log('checkout cart', cart)
+        console.log('checkout cart', cart)
         const { data } = await axios.post(url, { cart: cart })
         // console.log('process shipping', data)
         const getRates = data.carriers.rates
