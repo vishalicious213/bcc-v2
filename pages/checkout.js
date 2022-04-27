@@ -113,7 +113,7 @@ const Checkout = () => {
                     <p className='test'></p>
                     <p className='test'></p>
                     {/* <p className='test'>{`Total: $${total / 100}.00`}</p> */}
-                    <p className='test'>{`Total: $${total / 100}`}</p>
+                    <p className='test'>{`Total: $${(total / 100).toFixed(2)}`}</p>
                 </div>
 
                 <div className='pay-button'>

@@ -99,20 +99,20 @@ const Cart = ({ children }) => {
 
     const calculateShipping = (prevShipPrice, newShipPrice) => {
         // plan: subtract previous shipping price from total & add current shipping price
-        // console.log('-----prevShipPrice', prevShipPrice)
-        // console.log('------newShipPrice', newShipPrice)
+        console.log('-----prevShipPrice', prevShipPrice)
+        console.log('------newShipPrice', newShipPrice)
 
         let prevTotal = total
-        // console.log('prevTotal', prevTotal)
+        console.log('prevTotal', prevTotal)
 
         let newTotal = prevTotal - prevShipPrice + newShipPrice
-        // console.log('newTotal', newTotal)
+        console.log('newTotal', newTotal)
 
         setShipPrice(newShipPrice)
-        // console.log('setShipPrice', shipPrice)
+        console.log('setShipPrice', shipPrice)
 
         setTotal(newTotal)
-        // console.log('setTotal', total)
+        console.log('setTotal', total)
     }
 
     const exposed = {
