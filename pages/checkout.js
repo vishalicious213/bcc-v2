@@ -20,14 +20,16 @@ const Checkout = () => {
 
     const calculateShipping = (carrierRate) => {
         if (shipPrice === 0) {
-            setShipPrice(shipPrice + carrierRate)
+            // setShipPrice(shipPrice + carrierRate)
             console.log('shipPrice', shipPrice)
+            console.log(carrierRate)
         }
 
         if (shipPrice !== 0) {
             setShipPrice(0)
-            setShipPrice(shipPrice + carrierRate)
+            // setShipPrice(shipPrice + carrierRate)
             console.log('shipPrice', shipPrice)
+            console.log(carrierRate)
         }
     }
 
@@ -88,7 +90,14 @@ const Checkout = () => {
                     {rates.map((carrier) => {
                         return (
                             <label htmlFor={carrier.service} className='carriers carrier-option' key={carrier.id}>
-                                <input type='radio' id={carrier.service} name='shipment-option' value={carrier.id} />
+                                <input 
+                                    type='radio' 
+                                    id={carrier.service} 
+                                    name='shipment-option' 
+                                    value={carrier.id} 
+                                    onClick={() => calculateShipping(carrier.rate)}
+                                    // onClick={setShipPrice(carrier.rate)}
+                                />
                                 <span>{carrier.carrier}</span>
                                 <span>{carrier.service}</span>
                                 <span>{`$${carrier.rate}`}</span>
