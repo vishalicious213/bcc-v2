@@ -78,6 +78,7 @@ const Checkout = () => {
 
                 <div>
                     <div className='carriers'>
+                        <span className='carrier-heading'></span>
                         <span className='carrier-heading'>Carrier</span>
                         <span className='carrier-heading'>Service</span>
                         <span className='carrier-heading'>Rate</span>
@@ -87,6 +88,7 @@ const Checkout = () => {
                         return (
                             <div className='carriers carrier-option' key={carrier.id}>
                                 {/* <span>{`${carrier.carrier} ${carrier.service}`}</span> */}
+                                <input type='radio' id={carrier.service} name='shipment-option' value={carrier.id} />
                                 <span>{carrier.carrier}</span>
                                 <span>{carrier.service}</span>
                                 <span>{`$${carrier.rate}`}</span>
@@ -188,7 +190,7 @@ const Checkout = () => {
 
                 .carriers {
                     display: grid;
-                    grid-template-columns: .5fr 1fr 1fr 1fr;
+                    grid-template-columns: .5fr .5fr 1fr 1fr 1fr;
                     grid-gap: 1rem;
                     padding: .5rem;
                     border-bottom: 1px solid gainsboro;
