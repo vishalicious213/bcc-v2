@@ -6,6 +6,7 @@ export const Context = createContext()
 const Cart = ({ children }) => {
     const [cart, setCart] = useState([]) // cart contents
     const [total, setTotal] = useState(0) // total price, for shoppingCart & /checkout page
+    const [shipPrice, setShipPrice] = useState(0) // shipping cost
     // const [isOpen, setIsOpen] = useState(false) // is shopping cart open/visible
     // if there's already a cart, load it
     const getInitialCart = () => JSON.parse(localStorage.getItem('cart'))
@@ -19,6 +20,13 @@ const Cart = ({ children }) => {
     }, [])
 
     useEffect(() => {
+        // when page first loads, if there's a shipping cost, load it
+        if (shipPrice) {
+            setShipPrice(shipPrice)
+        }
+    }, [])    
+
+    useEffect(() => {
         // save cart to local storage if a change is made
         localStorage.setItem('cart', JSON.stringify(cart))
 
@@ -27,6 +35,10 @@ const Cart = ({ children }) => {
         cart.forEach((item) => {
             newTotal += item.price * item.qty
         })
+
+        if (shipPrice) {
+            newTotal += shipPrice
+        }
 
         setTotal(newTotal)
     }, [cart])
@@ -85,6 +97,24 @@ const Cart = ({ children }) => {
         setCart([])
     }
 
+    const calculateShipping = (prevShipPrice, newShipPrice) => {
+        // plan: subtract previous shipping price from total & add current shipping price
+        // console.log('-----prevShipPrice', prevShipPrice)
+        // console.log('------newShipPrice', newShipPrice)
+
+        let prevTotal = total
+        // console.log('prevTotal', prevTotal)
+
+        let newTotal = prevTotal - prevShipPrice + newShipPrice
+        // console.log('newTotal', newTotal)
+
+        setShipPrice(newShipPrice)
+        // console.log('setShipPrice', shipPrice)
+
+        setTotal(newTotal)
+        // console.log('setTotal', total)
+    }
+
     const exposed = {
         cart,
         addItemToCart,
@@ -93,7 +123,9 @@ const Cart = ({ children }) => {
         // closeCart,
         // isOpen
         total,
-        clearCart
+        clearCart,
+        calculateShipping,
+        shipPrice
     }
 
     return <Context.Provider value={exposed}>{children}</Context.Provider>

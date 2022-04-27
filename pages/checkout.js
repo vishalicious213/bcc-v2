@@ -4,9 +4,9 @@ import axios from 'axios'
 import { loadStripe } from '@stripe/stripe-js'
 
 const Checkout = () => {
-    const { cart, total } = useCart()
+    const { cart, total, shipPrice, calculateShipping } = useCart()
     const [rates, setRates] = useState([])
-    const [shipPrice, setShipPrice] = useState(0)
+    // const [shipPrice, setShipPrice] = useState(0)
 
     const processShipping = async () => {
         const url ='/.netlify/functions/shipping'
@@ -15,22 +15,14 @@ const Checkout = () => {
         // console.log('process shipping', data)
         const getRates = data.carriers.rates
         setRates(getRates)
-        // console.log('rates', getRates)
+        console.log('rates', getRates)
     }
 
-    const calculateShipping = (carrierRate) => {
-        if (shipPrice === 0) {
-            // setShipPrice(shipPrice + carrierRate)
-            console.log('shipPrice', shipPrice)
-            console.log(carrierRate)
-        }
+    const sendShippingRate = (newCarrierRate) => {
+        let prevShipPrice = shipPrice
+        let newShipPrice = newCarrierRate
 
-        if (shipPrice !== 0) {
-            setShipPrice(0)
-            // setShipPrice(shipPrice + carrierRate)
-            console.log('shipPrice', shipPrice)
-            console.log(carrierRate)
-        }
+        calculateShipping(prevShipPrice, (newShipPrice * 100))
     }
 
     const processPayment = async () => {
@@ -95,8 +87,8 @@ const Checkout = () => {
                                     id={carrier.service} 
                                     name='shipment-option' 
                                     value={carrier.id} 
-                                    onClick={() => calculateShipping(carrier.rate)}
-                                    // onClick={setShipPrice(carrier.rate)}
+                                    // onClick={() => calculateShipping(parseFloat(carrier.rate) * 100)}
+                                    onClick={() => sendShippingRate(carrier.rate)}
                                 />
                                 <span>{carrier.carrier}</span>
                                 <span>{carrier.service}</span>
@@ -120,7 +112,8 @@ const Checkout = () => {
                 <div className='total'>
                     <p className='test'></p>
                     <p className='test'></p>
-                    <p className='test'>{`Total: $${total / 100}.00`}</p>
+                    {/* <p className='test'>{`Total: $${total / 100}.00`}</p> */}
+                    <p className='test'>{`Total: $${total / 100}`}</p>
                 </div>
 
                 <div className='pay-button'>
