@@ -48,7 +48,7 @@ const ShoppingCart = () => {
 
             {/* if cart is not empty, show total price, else show nothing */}
             {cart.length > 0 ? (
-                <p className='total'>{`Total: $${total / 100}.00`}</p>
+                <p className='total'>{`Total: $${(total / 100).toFixed(2)}`}</p>
             ) : (
                 <p></p>
             )}
