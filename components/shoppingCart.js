@@ -4,7 +4,7 @@ import useCart from "../hooks/useCart"
 import Link from 'next/link'
 
 const ShoppingCart = () => {
-    const { cart, isOpen, openCart, closeCart, total } = useCart()
+    const { cart, isOpen, openCart, closeCart, total, shipPrice } = useCart()
 
     const handleClick = () => {
         // console.log('close cart')
@@ -45,6 +45,11 @@ const ShoppingCart = () => {
                     <p className='empty no-top-margin'>send a gift to a loved one.</p>
                 </div>
             )}
+
+            <div className='cart-body shipping'>
+                <span>Shipping Price:</span>
+                <span>{`$${(shipPrice / 100).toFixed(2)}`}</span>
+            </div>
 
             {/* if cart is not empty, show total price, else show nothing */}
             {cart.length > 0 ? (
@@ -114,6 +119,13 @@ const ShoppingCart = () => {
                     grid-template-columns: 1fr 1fr 1fr;
                     margin-bottom: 1rem;
                     border-bottom: 1px solid #b01e65;
+                }
+
+                .shipping {
+                    margin-top: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-right: 2.25rem;
                 }
 
                 .total {
