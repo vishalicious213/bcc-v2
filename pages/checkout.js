@@ -87,7 +87,6 @@ const Checkout = () => {
                                     id={carrier.service} 
                                     name='shipment-option' 
                                     value={carrier.id} 
-                                    // onClick={() => calculateShipping(parseFloat(carrier.rate) * 100)}
                                     onClick={() => sendShippingRate(carrier.rate)}
                                 />
                                 <span>{carrier.carrier}</span>
@@ -112,7 +111,6 @@ const Checkout = () => {
                 <div className='total'>
                     <p className='test'></p>
                     <p className='test'></p>
-                    {/* <p className='test'>{`Total: $${total / 100}.00`}</p> */}
                     <p className='test'>{`Total: $${(total / 100).toFixed(2)}`}</p>
                 </div>
 
