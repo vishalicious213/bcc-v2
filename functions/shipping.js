@@ -1,6 +1,8 @@
 require('dotenv').config()
 const Easypost = require('@easypost/api')
 const api = new Easypost(process.env.EASYPOST_TEST_API_KEY)
+const gifts = require('../content/gifts')
+const giftsArray = gifts.gifts
 
 async function getFromAddress() {
     const fromAddress = new api.Address({
@@ -36,12 +38,27 @@ async function getToAddress() {
     return id
 }
 
-async function getParcel() {
-    const parcel = new api.Parcel({
-        length: 9,
-        width: 6,
-        height: 2,
-        weight: 10,
+async function getParcel(cart) {
+    // get id and qty of gifts in cart and match them with pricing data from backend
+    const cartWithGifts = await cart.map(({ id, qty }) => {
+        const gift = giftsArray.find((giftFromArray) => giftFromArray.id === id)
+        return {
+            ...gift,
+            qty,
+        }
+    })
+
+    console.log('cartWithGifts', cartWithGifts)
+
+    const parcel = await new api.Parcel({
+        length: cartWithGifts[0].length,
+        width: cartWithGifts[0].width,
+        height: cartWithGifts[0].height,
+        weight: cartWithGifts[0].weight,
+        // length: 9,
+        // width: 6,
+        // height: 2,
+        // weight: 10,
     })
 
     let id = await parcel.save().then((res) => {
@@ -67,14 +84,19 @@ async function getShipment(toAddressId, fromAddressId, parcelId) {
 }
 
 exports.handler =  async function(event, context) {
+    let cartData = JSON.parse(event.body)
     let toAddressId = await getToAddress()
     let fromAddressId = await getFromAddress()
-    let parcelId = await getParcel()
+    let parcelId = await getParcel(cartData.cart)
     let carriers = await getShipment(toAddressId, fromAddressId, parcelId)
     console.log('serverless-test event', event.body)
+    // console.log('cartData', cartData)
+    console.log('cartData cart', cartData.cart)
+    // console.log('cartData cart 0', cartData.cart[0])
     // console.log('toAddressId', toAddressId)
     // console.log('fromAddressId', fromAddressId)
     // console.log('parcelId', parcelId)
+    // console.log('giftsArray', giftsArray)
 
     return {
         statusCode: 200,

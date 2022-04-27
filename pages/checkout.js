@@ -11,16 +11,18 @@ const Checkout = () => {
         const url ='/.netlify/functions/shipping'
 
         // get id and qty of products in cart (don't trust client-side prices!)
-        const newCart = await cart.map(({ id, qty }) => ({
-            id,
-            qty
-        }))
+        // const newCart = await cart.map(({ id, qty }) => ({
+        //     id,
+        //     qty
+        // }))
 
-        // console.log('newCart',newCart)
+        // console.log('newCart',newCart) // w/o this, shipping's event.body is empty!
 
         // const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
 
-        const { data } = await axios.post(url, { cart: newCart })
+        // const { data } = await axios.post(url, { cart: newCart })
+        // console.log('checkout cart', cart)
+        const { data } = await axios.post(url, { cart: cart })
         // console.log('process shipping', data)
         const getRates = data.carriers.rates
         setRates(getRates)
