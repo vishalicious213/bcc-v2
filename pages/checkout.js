@@ -76,7 +76,7 @@ const Checkout = () => {
             <div className='shipping'>
                 <h2>Choose shipping</h2>
 
-                <div>
+                <form>
                     <div className='carriers'>
                         <span className='carrier-heading'></span>
                         <span className='carrier-heading'>Carrier</span>
@@ -86,8 +86,7 @@ const Checkout = () => {
                     </div>
                     {rates.map((carrier) => {
                         return (
-                            <div className='carriers carrier-option' key={carrier.id}>
-                                {/* <span>{`${carrier.carrier} ${carrier.service}`}</span> */}
+                            <label htmlFor={carrier.service} className='carriers carrier-option' key={carrier.id}>
                                 <input type='radio' id={carrier.service} name='shipment-option' value={carrier.id} />
                                 <span>{carrier.carrier}</span>
                                 <span>{carrier.service}</span>
@@ -97,10 +96,10 @@ const Checkout = () => {
                                 ) : (
                                     <span>unknown</span>
                                 )}
-                            </div>
+                            </label>
                         )
                     })}
-                </div>
+                </form>
 
                 {/* <div className='pay-button'>
                     <button onClick={processShipping}>Process Shipping</button>
@@ -190,7 +189,7 @@ const Checkout = () => {
 
                 .carriers {
                     display: grid;
-                    grid-template-columns: .5fr .5fr 1fr 1fr 1fr;
+                    grid-template-columns: .25fr .5fr 1fr 1fr 1fr;
                     grid-gap: 1rem;
                     padding: .5rem;
                     border-bottom: 1px solid gainsboro;
