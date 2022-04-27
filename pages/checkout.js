@@ -6,29 +6,30 @@ import { loadStripe } from '@stripe/stripe-js'
 const Checkout = () => {
     const { cart, total } = useCart()
     const [rates, setRates] = useState([])
+    const [shipPrice, setShipPrice] = useState(0)
 
     const processShipping = async () => {
         const url ='/.netlify/functions/shipping'
-
-        // get id and qty of products in cart (don't trust client-side prices!)
-        // const newCart = await cart.map(({ id, qty }) => ({
-        //     id,
-        //     qty
-        // }))
-
-        // console.log('newCart',newCart) // w/o this, shipping's event.body is empty!
-
-        // const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
-
-        // const { data } = await axios.post(url, { cart: newCart })
-        console.log('checkout cart', cart)
+        // console.log('checkout cart', cart)
         const { data } = await axios.post(url, { cart: cart })
         // console.log('process shipping', data)
         const getRates = data.carriers.rates
         setRates(getRates)
-        console.log('rates', getRates)
-        // await stripe.redirectToCheckout({ sessionId: data.id })
-    }    
+        // console.log('rates', getRates)
+    }
+
+    const calculateShipping = (carrierRate) => {
+        if (shipPrice === 0) {
+            setShipPrice(shipPrice + carrierRate)
+            console.log('shipPrice', shipPrice)
+        }
+
+        if (shipPrice !== 0) {
+            setShipPrice(0)
+            setShipPrice(shipPrice + carrierRate)
+            console.log('shipPrice', shipPrice)
+        }
+    }
 
     const processPayment = async () => {
         const url ='/.netlify/functions/charge-card'
