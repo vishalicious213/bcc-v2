@@ -6,7 +6,6 @@ import { loadStripe } from '@stripe/stripe-js'
 const Checkout = () => {
     const { cart, total, shipPrice, calculateShipping } = useCart()
     const [rates, setRates] = useState([])
-    // const [shipPrice, setShipPrice] = useState(0)
 
     // get shipping services info from easypost
     const processShipping = async () => {
@@ -40,8 +39,8 @@ const Checkout = () => {
         const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
 
         const { data } = await axios.post(url, { cart: newCart })
-        console.log('process payment', data)
-        // await stripe.redirectToCheckout({ sessionId: data.id })
+        // console.log('process payment', data)
+        await stripe.redirectToCheckout({ sessionId: data.id })
     }
 
     // get initial shipping service options when page loads
@@ -105,10 +104,6 @@ const Checkout = () => {
                         )
                     })}
                 </form>
-
-                {/* <div className='pay-button'>
-                    <button onClick={processShipping}>Process Shipping</button>
-                </div>                 */}
             </div>
 
             <div className='checkout-body'>
