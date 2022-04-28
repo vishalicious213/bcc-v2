@@ -46,10 +46,18 @@ const ShoppingCart = () => {
                 </div>
             )}
 
-            <div className='cart-body shipping'>
-                <span>Shipping Price:</span>
-                <span>{`$${(shipPrice / 100).toFixed(2)}`}</span>
-            </div>
+            {cart.length > 0 && shipPrice ? (
+                <div className='cart-body shipping'>
+                    <span><b>Shipping Price:</b></span>
+                    {shipPrice ? (
+                        <span>{`$${(shipPrice / 100).toFixed(2)}`}</span>
+                    ) : (
+                        <span>none</span>
+                    )}
+                </div>                
+            ) : (
+                <p></p>
+            )}
 
             {/* if cart is not empty, show total price, else show nothing */}
             {cart.length > 0 ? (
