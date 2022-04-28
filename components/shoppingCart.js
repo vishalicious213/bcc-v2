@@ -46,6 +46,9 @@ const ShoppingCart = () => {
                 </div>
             )}
 
+            {/* if cart is empty, shipping price does not appear. if gift is in cart but
+            no shipping service is selected shipping shows "none". if gift is in cart
+            and shipping service is selected, shipping price is shown.*/}
             {cart.length > 0 && shipPrice ? (
                 <div className='cart-body shipping'>
                     <span><b>Shipping Price:</b></span>
@@ -137,7 +140,7 @@ const ShoppingCart = () => {
                 }
 
                 .total {
-                    padding: 0 1.1rem;
+                    padding: 0 2.1rem;
                     font-size: 1.25rem;
                     font-weight: 600;
                     text-align: right;
