@@ -7,7 +7,6 @@ const Cart = ({ children }) => {
     const [cart, setCart] = useState([]) // cart contents
     const [total, setTotal] = useState(0) // total price, for shoppingCart & /checkout page
     const [shipPrice, setShipPrice] = useState(0) // shipping cost
-    // const [isOpen, setIsOpen] = useState(false) // is shopping cart open/visible
     // if there's already a cart, load it
     const getInitialCart = () => JSON.parse(localStorage.getItem('cart'))
 
@@ -42,14 +41,6 @@ const Cart = ({ children }) => {
 
         setTotal(newTotal)
     }, [cart])
-
-    // const openCart = () => {
-    //     setIsOpen(true)
-    // }
-
-    // const closeCart = () => {
-    //     setIsOpen(false)
-    // }
 
     // takes item ID and quantity. quantity defaults to 1 if none passed in.
     const addItemToCart = (product, qty = 1) => {
@@ -119,9 +110,6 @@ const Cart = ({ children }) => {
         cart,
         addItemToCart,
         removeItemFromCart,
-        // openCart,
-        // closeCart,
-        // isOpen
         total,
         clearCart,
         calculateShipping,
