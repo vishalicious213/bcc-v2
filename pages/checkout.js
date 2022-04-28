@@ -8,6 +8,7 @@ const Checkout = () => {
     const [rates, setRates] = useState([])
     // const [shipPrice, setShipPrice] = useState(0)
 
+    // get shipping services info from easypost
     const processShipping = async () => {
         const url ='/.netlify/functions/shipping'
         // console.log('checkout cart', cart)
@@ -18,6 +19,7 @@ const Checkout = () => {
         console.log('rates', getRates)
     }
 
+    // send data to Context to globally calculate & update shipping costs
     const sendShippingRate = (newCarrierRate) => {
         let prevShipPrice = shipPrice
         let newShipPrice = newCarrierRate
@@ -25,6 +27,7 @@ const Checkout = () => {
         calculateShipping(prevShipPrice, (newShipPrice * 100))
     }
 
+    // send data to Stripe to charge visitor's credit card
     const processPayment = async () => {
         const url ='/.netlify/functions/charge-card'
 
@@ -41,6 +44,7 @@ const Checkout = () => {
         // await stripe.redirectToCheckout({ sessionId: data.id })
     }
 
+    // get initial shipping service options when page loads
     useEffect(() => {
         processShipping()
     }, [])    
