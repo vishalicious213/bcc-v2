@@ -10,6 +10,7 @@ const CheckoutAddress = () => {
         name: 'George Costanza',
         company: 'Vandelay Industries',
         street1: '1 E 161st St.',
+        street2: '',
         city: 'Bronx',
         state: 'NY',
         zip: '10451'
@@ -80,9 +81,19 @@ const CheckoutAddress = () => {
             )} */}
 
             <div className='shipping'>
-                <h2>Choose shipping</h2>
+                <h2>Enter destination address</h2>
 
                 <form>
+                    <input type="text" id="name" name="name" placeholder={address.name}/>
+                    <input type="text" id="company" name="company" placeholder={address.company}/>
+                    <input type="text" id="street1" name="street1" placeholder={address.street1}/>
+                    <input type="text" id="street2" name="street2" placeholder={address.street2}/>
+                    <input type="text" id="city" name="city" placeholder={address.city}/>
+                    <input type="text" id="state" name="state" placeholder={address.state}/>
+                    <input type="text" id="zip" name="zip" placeholder={address.zip}/>
+                </form>
+
+                {/* <form>
                     <div className='carriers'>
                         <span className='carrier-heading'></span>
                         <span className='carrier-heading'>Carrier</span>
@@ -111,7 +122,7 @@ const CheckoutAddress = () => {
                             </label>
                         )
                     })}
-                </form>
+                </form> */}
             </div>
 
             <div className='checkout-body'>
