@@ -7,13 +7,13 @@ const CheckoutAddress = () => {
     const { cart, total, shipPrice, calculateShipping } = useCart()
     const [rates, setRates] = useState([])
     const [address, setAddress] = useState({
-        name: 'George Costanza',
-        company: 'Vandelay Industries',
-        street1: '1 E 161st St.',
+        name: '',
+        company: '',
+        street1: '',
         street2: '',
-        city: 'Bronx',
-        state: 'NY',
-        zip: '10451'
+        city: '',
+        state: '',
+        zip: ''
     })
 
     // get shipping services info from easypost
@@ -84,27 +84,27 @@ const CheckoutAddress = () => {
                 <h2>Enter destination address</h2>
 
                 <form className='address-form'>
-                    <label htmlFor="name">Full Name
-                        <input type="text" id="name" name="name" placeholder={address.name}/>
+                    <label htmlFor="name">
+                        <input className='field' type="text" id="name" name="name" placeholder='name'/>
                     </label>
-                    <label htmlFor="company">Company
-                        <input type="text" id="company" name="company" placeholder={address.company}/>
+                    <label htmlFor="company">
+                        <input className='field' type="text" id="company" name="company" placeholder='company'/>
                     </label>
-                    <label htmlFor="street1">Address 1
-                        <input type="text" id="street1" name="street1" placeholder={address.street1}/>
+                    <label htmlFor="street1">
+                        <input className='field' type="text" id="street1" name="street1" placeholder='address 1'/>
                     </label>
-                    <label htmlFor="street2">Address 2
-                        <input type="text" id="street2" name="street2" placeholder={address.street2}/>
+                    <label htmlFor="street2">
+                        <input className='field' type="text" id="street2" name="street2" placeholder='address 2'/>
                     </label>
-                    <label htmlFor="city">City
-                        <input type="text" id="city" name="city" placeholder={address.city}/>
+                    <label htmlFor="city">
+                        <input className='field' type="text" id="city" name="city" placeholder='city'/>
                     </label>
                     <div className='state-zip'>
-                        <label htmlFor="state">State
-                            <input type="text" id="state" name="state" placeholder={address.state}/>
+                        <label htmlFor="state">
+                            <input className='field state' type="text" id="state" name="state" placeholder='state'/>
                         </label>
-                        <label htmlFor="zip">Zip Code
-                            <input type="text" id="zip" name="zip" placeholder={address.zip}/>
+                        <label htmlFor="zip">
+                            <input className='field zip' type="text" id="zip" name="zip" placeholder='zip code'/>
                         </label>
                     </div>
                 </form>
@@ -163,20 +163,37 @@ const CheckoutAddress = () => {
                 label {
                     display: flex;
                     flex-direction: column;
-                    margin-bottom: 1rem;
+                    margin-bottom: .5rem;
                     font-size: 1.25rem;
                     // outline: 1px solid red;
-                }
-
-                input {
-                    // margin-left: 1rem;
-                    font-size: 1.25rem;
                 }
 
                 .state-zip {
                     display: flex;
                     justify-content: space-between;
                 }
+
+                .state {
+                    width: 60%;
+                }
+
+                .zip {
+                    width: 100%;
+                }
+
+                .field {
+                    background: black;
+                    border: 2px solid #292c2f;
+                    border-radius: .35rem;
+                    margin-bottom: .5rem;
+                    padding: 1rem;
+                    color: gainsboro;
+                    font-size: 1.1rem;
+                }
+
+                .field:hover {
+                    border: 2px solid #b01e65;
+                }                
 
                 .checkout {
                     color: gainsboro;
