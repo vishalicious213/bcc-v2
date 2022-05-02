@@ -83,7 +83,7 @@ const CheckoutAddress = () => {
             <div className='shipping'>
                 <h2>Enter destination address</h2>
 
-                <form>
+                <form className='address-form'>
                     <label htmlFor="name">Full Name
                         <input type="text" id="name" name="name" placeholder={address.name}/>
                     </label>
@@ -153,6 +153,22 @@ const CheckoutAddress = () => {
 
             <style jsx>
                 {`
+                .address-form {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                label {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 1rem;
+                    // outline: 1px solid red;
+                }
+
+                input {
+                    // margin-left: 1rem;
+                }
+
                 .checkout {
                     color: gainsboro;
                 }
