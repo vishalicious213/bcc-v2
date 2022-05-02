@@ -149,7 +149,7 @@ const CheckoutAddress = () => {
                     <p className='test'>{`Total: $${(total / 100).toFixed(2)}`}</p>
                 </div> */}
 
-                <Link href='/checkout-address'>
+                <Link href='/checkout-shipping'>
                     <div className='pay-button'>
                         <button>Choose Shipping Service</button>
                     </div>
