@@ -6,6 +6,14 @@ import { loadStripe } from '@stripe/stripe-js'
 const CheckoutAddress = () => {
     const { cart, total, shipPrice, calculateShipping } = useCart()
     const [rates, setRates] = useState([])
+    const [address, setAddress] = useState({
+        name: 'George Costanza',
+        company: 'Vandelay Industries',
+        street1: '1 E 161st St.',
+        city: 'Bronx',
+        state: 'NY',
+        zip: '10451'
+    })
 
     // get shipping services info from easypost
     const processShipping = async () => {
