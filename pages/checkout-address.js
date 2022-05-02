@@ -84,13 +84,27 @@ const CheckoutAddress = () => {
                 <h2>Enter destination address</h2>
 
                 <form>
-                    <input type="text" id="name" name="name" placeholder={address.name}/>
-                    <input type="text" id="company" name="company" placeholder={address.company}/>
-                    <input type="text" id="street1" name="street1" placeholder={address.street1}/>
-                    <input type="text" id="street2" name="street2" placeholder={address.street2}/>
-                    <input type="text" id="city" name="city" placeholder={address.city}/>
-                    <input type="text" id="state" name="state" placeholder={address.state}/>
-                    <input type="text" id="zip" name="zip" placeholder={address.zip}/>
+                    <label htmlFor="name">Full Name
+                        <input type="text" id="name" name="name" placeholder={address.name}/>
+                    </label>
+                    <label htmlFor="company">Company
+                        <input type="text" id="company" name="company" placeholder={address.company}/>
+                    </label>
+                    <label htmlFor="street1">Address 1
+                        <input type="text" id="street1" name="street1" placeholder={address.street1}/>
+                    </label>
+                    <label htmlFor="street2">Address 2
+                        <input type="text" id="street2" name="street2" placeholder={address.street2}/>
+                    </label>
+                    <label htmlFor="city">City
+                        <input type="text" id="city" name="city" placeholder={address.city}/>
+                    </label>
+                    <label htmlFor="state">State
+                        <input type="text" id="state" name="state" placeholder={address.state}/>
+                    </label>
+                    <label htmlFor="zip">Zip Code
+                        <input type="text" id="zip" name="zip" placeholder={address.zip}/>
+                    </label>
                 </form>
 
                 {/* <form>
