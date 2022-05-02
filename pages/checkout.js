@@ -8,45 +8,45 @@ const Checkout = () => {
     const [rates, setRates] = useState([])
 
     // get shipping services info from easypost
-    const processShipping = async () => {
-        const url ='/.netlify/functions/shipping'
-        // console.log('checkout cart', cart)
-        const { data } = await axios.post(url, { cart: cart })
-        // console.log('process shipping', data)
-        const getRates = data.carriers.rates
-        setRates(getRates)
-        // console.log('rates', getRates)
-    }
+    // const processShipping = async () => {
+    //     const url ='/.netlify/functions/shipping'
+    //     // console.log('checkout cart', cart)
+    //     const { data } = await axios.post(url, { cart: cart })
+    //     // console.log('process shipping', data)
+    //     const getRates = data.carriers.rates
+    //     setRates(getRates)
+    //     // console.log('rates', getRates)
+    // }
 
     // send data to Context to globally calculate & update shipping costs
-    const sendShippingRate = (newCarrierRate) => {
-        let prevShipPrice = shipPrice
-        let newShipPrice = newCarrierRate
+    // const sendShippingRate = (newCarrierRate) => {
+    //     let prevShipPrice = shipPrice
+    //     let newShipPrice = newCarrierRate
 
-        calculateShipping(prevShipPrice, (newShipPrice * 100))
-    }
+    //     calculateShipping(prevShipPrice, (newShipPrice * 100))
+    // }
 
     // send data to Stripe to charge visitor's credit card
-    const processPayment = async () => {
-        const url ='/.netlify/functions/charge-card'
+    // const processPayment = async () => {
+    //     const url ='/.netlify/functions/charge-card'
 
-        // get id and qty of products in cart (don't trust client-side prices!)
-        const newCart = cart.map(({ id, qty }) => ({
-            id,
-            qty
-        }))
+    //     // get id and qty of products in cart (don't trust client-side prices!)
+    //     const newCart = cart.map(({ id, qty }) => ({
+    //         id,
+    //         qty
+    //     }))
 
-        const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
+    //     const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
 
-        const { data } = await axios.post(url, { cart: newCart })
-        // console.log('process payment', data)
-        await stripe.redirectToCheckout({ sessionId: data.id })
-    }
+    //     const { data } = await axios.post(url, { cart: newCart })
+    //     // console.log('process payment', data)
+    //     await stripe.redirectToCheckout({ sessionId: data.id })
+    // }
 
     // get initial shipping service options when page loads
-    useEffect(() => {
-        processShipping()
-    }, [])    
+    // useEffect(() => {
+    //     processShipping()
+    // }, [])    
 
     return (
         <div className='checkout'>
@@ -71,7 +71,7 @@ const Checkout = () => {
                 <p>Your cart has no gifts!</p>
             )}
 
-            <div className='shipping'>
+            {/* <div className='shipping'>
                 <h2>Choose shipping</h2>
 
                 <form>
@@ -104,7 +104,7 @@ const Checkout = () => {
                         )
                     })}
                 </form>
-            </div>
+            </div> */}
 
             <div className='checkout-body'>
                 <div className='total'>
@@ -113,9 +113,9 @@ const Checkout = () => {
                     <p className='test'>{`Total: $${(total / 100).toFixed(2)}`}</p>
                 </div>
 
-                <div className='pay-button'>
+                {/* <div className='pay-button'>
                     <button onClick={processPayment}>Process Payment</button>
-                </div>
+                </div> */}
             </div>
 
             <style jsx>
@@ -175,43 +175,43 @@ const Checkout = () => {
                     background-color: deeppink;
                 }
 
-                .shipping {
-                    // outline: 1px solid red;
-                    padding-bottom: 1rem;
-                    margin: 1rem 1rem 0 1rem;
-                    // width: 90%;
-                    border-bottom: 2px solid #b01e65;
-                }
+                // .shipping {
+                //     // outline: 1px solid red;
+                //     padding-bottom: 1rem;
+                //     margin: 1rem 1rem 0 1rem;
+                //     // width: 90%;
+                //     border-bottom: 2px solid #b01e65;
+                // }
 
-                .shipping h2 {
-                    margin-top: 0;
-                }
+                // .shipping h2 {
+                //     margin-top: 0;
+                // }
 
-                .carriers {
-                    display: grid;
-                    grid-template-columns: .25fr .5fr 1fr 1fr 1fr;
-                    grid-gap: 1rem;
-                    padding: .5rem;
-                    border-bottom: 1px solid gainsboro;
-                    // outline: 1px solid red;
-                }
+                // .carriers {
+                //     display: grid;
+                //     grid-template-columns: .25fr .5fr 1fr 1fr 1fr;
+                //     grid-gap: 1rem;
+                //     padding: .5rem;
+                //     border-bottom: 1px solid gainsboro;
+                //     // outline: 1px solid red;
+                // }
 
-                .carrier-heading {
-                    font-weight: 600;
-                    margin-bottom: .5rem;
-                    margin-top: .5rem;
-                    color: white;
-                }
+                // .carrier-heading {
+                //     font-weight: 600;
+                //     margin-bottom: .5rem;
+                //     margin-top: .5rem;
+                //     color: white;
+                // }
 
-                .carrier-option {
-                    // margin-bottom: .5rem;
-                }
+                // .carrier-option {
+                //     // margin-bottom: .5rem;
+                // }
 
-                .carrier-option:hover {
-                    // outline: 1px solid #b01e65;
-                    color: white;
-                    font-weight: 600;
-                }
+                // .carrier-option:hover {
+                //     // outline: 1px solid #b01e65;
+                //     color: white;
+                //     font-weight: 600;
+                // }
                 `}
             </style>
         </div>
