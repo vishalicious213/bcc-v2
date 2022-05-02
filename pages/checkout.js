@@ -118,7 +118,7 @@ const Checkout = () => {
                     <button onClick={processPayment}>Process Payment</button>
                 </div> */}
 
-                <Link href='/checkout'>
+                <Link href='/checkout-shipping'>
                     <div className='pay-button'>
                         <button>Enter Shipping Address</button>
                     </div>
