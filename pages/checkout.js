@@ -15,7 +15,7 @@ const Checkout = () => {
         // console.log('process shipping', data)
         const getRates = data.carriers.rates
         setRates(getRates)
-        console.log('rates', getRates)
+        // console.log('rates', getRates)
     }
 
     // send data to Context to globally calculate & update shipping costs
