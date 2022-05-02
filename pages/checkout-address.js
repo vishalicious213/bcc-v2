@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import useCart from '../hooks/useCart'
 import axios from 'axios'
 import { loadStripe } from '@stripe/stripe-js'
+import Link from 'next/link'
 
 const CheckoutAddress = () => {
     const { cart, total, shipPrice, calculateShipping } = useCart()
@@ -142,15 +143,17 @@ const CheckoutAddress = () => {
             </div>
 
             <div className='checkout-body'>
-                <div className='total'>
+                {/* <div className='total'>
                     <p className='test'></p>
                     <p className='test'></p>
                     <p className='test'>{`Total: $${(total / 100).toFixed(2)}`}</p>
-                </div>
+                </div> */}
 
-                <div className='pay-button'>
-                    <button onClick={processPayment}>Process Payment</button>
-                </div>
+                <Link href='/checkout-address'>
+                    <div className='pay-button'>
+                        <button>Choose Shipping Service</button>
+                    </div>
+                </Link>
             </div>
 
             <style jsx>
