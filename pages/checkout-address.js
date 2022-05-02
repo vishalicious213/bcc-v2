@@ -99,12 +99,14 @@ const CheckoutAddress = () => {
                     <label htmlFor="city">City
                         <input type="text" id="city" name="city" placeholder={address.city}/>
                     </label>
-                    <label htmlFor="state">State
-                        <input type="text" id="state" name="state" placeholder={address.state}/>
-                    </label>
-                    <label htmlFor="zip">Zip Code
-                        <input type="text" id="zip" name="zip" placeholder={address.zip}/>
-                    </label>
+                    <div className='state-zip'>
+                        <label htmlFor="state">State
+                            <input type="text" id="state" name="state" placeholder={address.state}/>
+                        </label>
+                        <label htmlFor="zip">Zip Code
+                            <input type="text" id="zip" name="zip" placeholder={address.zip}/>
+                        </label>
+                    </div>
                 </form>
 
                 {/* <form>
@@ -162,11 +164,18 @@ const CheckoutAddress = () => {
                     display: flex;
                     flex-direction: column;
                     margin-bottom: 1rem;
+                    font-size: 1.25rem;
                     // outline: 1px solid red;
                 }
 
                 input {
                     // margin-left: 1rem;
+                    font-size: 1.25rem;
+                }
+
+                .state-zip {
+                    display: flex;
+                    justify-content: space-between;
                 }
 
                 .checkout {
@@ -184,7 +193,7 @@ const CheckoutAddress = () => {
                 }
 
                 h2 {
-                    margin-bottom: 0;
+                    // margin-bottom: 0;
                 }
 
                 .pricing {
