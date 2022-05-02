@@ -3,7 +3,7 @@ import useCart from '../hooks/useCart'
 import axios from 'axios'
 import { loadStripe } from '@stripe/stripe-js'
 
-const CheckoutShipping = () => {
+const CheckoutAddress = () => {
     const { cart, total, shipPrice, calculateShipping } = useCart()
     const [rates, setRates] = useState([])
 
@@ -218,4 +218,4 @@ const CheckoutShipping = () => {
     )
 }
 
-export default CheckoutShipping
+export default CheckoutAddress
