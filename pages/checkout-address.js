@@ -8,6 +8,14 @@ const CheckoutAddress = () => {
     const { cart, total, shipPrice, shipAddress, setShipAddress, calculateShipping } = useCart()
     const [rates, setRates] = useState([])
 
+    let formName = document.getElementById("name").value
+    let formCompany = document.getElementById("company").value
+    let formStreet1 = document.getElementById("street1").value
+    let formStreet2 = document.getElementById("street2").value
+    let formCity = document.getElementById("city").value
+    let formState = document.getElementById("state").value
+    let formZip = document.getElementById("zip").value
+
     // get shipping services info from easypost
     const processShipping = async () => {
         const url ='/.netlify/functions/shipping'
@@ -84,11 +92,21 @@ const CheckoutAddress = () => {
             </div>
 
             <div className='checkout-body'>
-                <Link href='/checkout-shipping'>
+                {/* <Link href='/checkout-shipping'> */}
                     <div className='pay-button'>
-                        <button>Choose Shipping Service</button>
+                        {/* <button>Choose Shipping Service</button> */}
+                        <button onClick={() => setShipAddress({
+                            name: formName,
+                            company: formCompany,
+                            street1: formStreet1,
+                            street2: formStreet2,
+                            city: formCity,
+                            state: formState,
+                            zip: formZip
+                        })}>Choose Shipping Service</button>
                     </div>
-                </Link>
+                {/* </Link> */}
+                {/* <button onClick={() => console.log('Shipping Address', shipAddress)}>CHECK</button> */}
             </div>
 
             <style jsx>
