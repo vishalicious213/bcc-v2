@@ -62,25 +62,6 @@ const CheckoutAddress = () => {
         <div className='checkout'>
             <h1>Checkout</h1>
 
-            {/* {cart.length > 0 ? (
-                <div className='checkout-body'>
-                    {cart.map((item) => {
-                        return (
-                            <div className='item' key={item.id}>
-                                <h2>{item.name}</h2>
-                                <div className='pricing'>
-                                    <p>Qty: {item.qty}</p>
-                                    <p>{`Donation: $${item.price / 100}.00`}</p>
-                                    <p><b>Subtotal: </b>{`$${item.price * item.qty / 100}.00`}</p>
-                                </div>
-                            </div>
-                        )
-                    })}
-                </div>
-            ) : (
-                <p>Your cart has no gifts!</p>
-            )} */}
-
             <div className='shipping'>
                 <h2>Enter destination address</h2>
 
@@ -109,46 +90,9 @@ const CheckoutAddress = () => {
                         </label>
                     </div>
                 </form>
-
-                {/* <form>
-                    <div className='carriers'>
-                        <span className='carrier-heading'></span>
-                        <span className='carrier-heading'>Carrier</span>
-                        <span className='carrier-heading'>Service</span>
-                        <span className='carrier-heading'>Rate</span>
-                        <span className='carrier-heading'>Time</span>
-                    </div>
-                    {rates.map((carrier) => {
-                        return (
-                            <label htmlFor={carrier.service} className='carriers carrier-option' key={carrier.id}>
-                                <input 
-                                    type='radio' 
-                                    id={carrier.service} 
-                                    name='shipment-option' 
-                                    value={carrier.id} 
-                                    onClick={() => sendShippingRate(carrier.rate)}
-                                />
-                                <span>{carrier.carrier}</span>
-                                <span>{carrier.service}</span>
-                                <span>{`$${carrier.rate}`}</span>
-                                {carrier.delivery_days ? (
-                                    <span>{`${carrier.delivery_days} days`}</span>
-                                ) : (
-                                    <span>unknown</span>
-                                )}
-                            </label>
-                        )
-                    })}
-                </form> */}
             </div>
 
             <div className='checkout-body'>
-                {/* <div className='total'>
-                    <p className='test'></p>
-                    <p className='test'></p>
-                    <p className='test'>{`Total: $${(total / 100).toFixed(2)}`}</p>
-                </div> */}
-
                 <Link href='/checkout-shipping'>
                     <div className='pay-button'>
                         <button>Choose Shipping Service</button>
