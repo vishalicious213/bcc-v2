@@ -1,12 +1,8 @@
-import { useState, useEffect } from 'react'
 import useCart from '../hooks/useCart'
-import axios from 'axios'
-import { loadStripe } from '@stripe/stripe-js'
 import Link from 'next/link'
 
 const CheckoutAddress = () => {
-    const { cart, total, shipPrice, shipAddress, setShipAddress, calculateShipping } = useCart()
-    const [rates, setRates] = useState([])
+    const { shipAddress, setShipAddress } = useCart()
 
     let formName = document.getElementById("name").value
     let formCompany = document.getElementById("company").value
@@ -15,47 +11,6 @@ const CheckoutAddress = () => {
     let formCity = document.getElementById("city").value
     let formState = document.getElementById("state").value
     let formZip = document.getElementById("zip").value
-
-    // get shipping services info from easypost
-    const processShipping = async () => {
-        const url ='/.netlify/functions/shipping'
-        // console.log('checkout cart', cart)
-        const { data } = await axios.post(url, { cart: cart })
-        // console.log('process shipping', data)
-        const getRates = data.carriers.rates
-        setRates(getRates)
-        // console.log('rates', getRates)
-    }
-
-    // send data to Context to globally calculate & update shipping costs
-    const sendShippingRate = (newCarrierRate) => {
-        let prevShipPrice = shipPrice
-        let newShipPrice = newCarrierRate
-
-        calculateShipping(prevShipPrice, (newShipPrice * 100))
-    }
-
-    // send data to Stripe to charge visitor's credit card
-    const processPayment = async () => {
-        const url ='/.netlify/functions/charge-card'
-
-        // get id and qty of products in cart (don't trust client-side prices!)
-        const newCart = cart.map(({ id, qty }) => ({
-            id,
-            qty
-        }))
-
-        const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
-
-        const { data } = await axios.post(url, { cart: newCart })
-        // console.log('process payment', data)
-        await stripe.redirectToCheckout({ sessionId: data.id })
-    }
-
-    // get initial shipping service options when page loads
-    useEffect(() => {
-        processShipping()
-    }, [])    
 
     return (
         <div className='checkout'>
