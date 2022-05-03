@@ -7,6 +7,17 @@ const Cart = ({ children }) => {
     const [cart, setCart] = useState([]) // cart contents
     const [total, setTotal] = useState(0) // total price, for shoppingCart & /checkout page
     const [shipPrice, setShipPrice] = useState(0) // shipping cost
+
+    const [shipAddress, setShipAddress] = useState({
+        name: '',
+        company: '',
+        street1: '',
+        street2: '',
+        city: '',
+        state: '',
+        zip: ''
+    })
+
     // if there's already a cart, load it
     const getInitialCart = () => JSON.parse(localStorage.getItem('cart'))
 
@@ -113,7 +124,9 @@ const Cart = ({ children }) => {
         total,
         clearCart,
         calculateShipping,
-        shipPrice
+        shipPrice,
+        shipAddress,
+        setShipAddress
     }
 
     return <Context.Provider value={exposed}>{children}</Context.Provider>

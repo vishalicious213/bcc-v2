@@ -5,17 +5,8 @@ import { loadStripe } from '@stripe/stripe-js'
 import Link from 'next/link'
 
 const CheckoutAddress = () => {
-    const { cart, total, shipPrice, calculateShipping } = useCart()
+    const { cart, total, shipPrice, shipAddress, setShipAddress, calculateShipping } = useCart()
     const [rates, setRates] = useState([])
-    const [address, setAddress] = useState({
-        name: '',
-        company: '',
-        street1: '',
-        street2: '',
-        city: '',
-        state: '',
-        zip: ''
-    })
 
     // get shipping services info from easypost
     const processShipping = async () => {
