@@ -3,13 +3,18 @@ import Link from 'next/link'
 
 const CheckoutAddress = () => {
     const { shipAddress, setShipAddress } = useCart()
-    let formName = document.getElementById("name").value
-    let formCompany = document.getElementById("company").value
-    let formStreet1 = document.getElementById("street1").value
-    let formStreet2 = document.getElementById("street2").value
-    let formCity = document.getElementById("city").value
-    let formState = document.getElementById("state").value
-    let formZip = document.getElementById("zip").value
+
+    const handleChange = event => {
+        setShipAddress({ ...shipAddress, [event.target.name]: event.target.value });
+    };
+
+    // let formName = document.getElementById("name").value
+    // let formCompany = document.getElementById("company").value
+    // let formStreet1 = document.getElementById("street1").value
+    // let formStreet2 = document.getElementById("street2").value
+    // let formCity = document.getElementById("city").value
+    // let formState = document.getElementById("state").value
+    // let formZip = document.getElementById("zip").value
 
     return (
         <div className='checkout'>
@@ -27,6 +32,7 @@ const CheckoutAddress = () => {
                             name="name" 
                             placeholder='name'
                             value={shipAddress.name}
+                            onChange={event => handleChange(event)}
                         />
                     </label>
 
@@ -38,6 +44,7 @@ const CheckoutAddress = () => {
                             name="company" 
                             placeholder='company'
                             value={shipAddress.company}
+                            onChange={event => handleChange(event)}
                         />
                     </label>
 
@@ -49,6 +56,7 @@ const CheckoutAddress = () => {
                             name="street1" 
                             placeholder='address 1'
                             value={shipAddress.street1}
+                            onChange={event => handleChange(event)}
                         />
                     </label>
 
@@ -60,6 +68,7 @@ const CheckoutAddress = () => {
                             name="street2" 
                             placeholder='address 2'
                             value={shipAddress.street2}
+                            onChange={event => handleChange(event)}
                         />
                     </label>
 
@@ -71,6 +80,7 @@ const CheckoutAddress = () => {
                             name="city" 
                             placeholder='city'
                             value={shipAddress.city}
+                            onChange={event => handleChange(event)}
                         />
                     </label>
 
@@ -83,6 +93,7 @@ const CheckoutAddress = () => {
                                 name="state" 
                                 placeholder='state'
                                 value={shipAddress.state}
+                                onChange={event => handleChange(event)}
                             />
                         </label>
 
@@ -94,6 +105,7 @@ const CheckoutAddress = () => {
                                 name="zip" 
                                 placeholder='zip code'
                                 value={shipAddress.zip}
+                                onChange={event => handleChange(event)}
                             />
                         </label>
                     </div>
@@ -114,7 +126,7 @@ const CheckoutAddress = () => {
                         })}>Choose Shipping Service</button>
                     </div>
                 </Link>
-                {/* <button onClick={() => console.log('Shipping Address', shipAddress)}>CHECK BUTTON CONTEXT</button> */}
+                <button onClick={() => console.log('Shipping Address', shipAddress)}>CHECK BUTTON CONTEXT</button>
             </div>
 
             <style jsx>
