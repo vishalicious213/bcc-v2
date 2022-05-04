@@ -26,6 +26,7 @@ const CheckoutAddress = () => {
                             id="name" 
                             name="name" 
                             placeholder='name'
+                            value={shipAddress.name}
                         />
                     </label>
 
@@ -36,6 +37,7 @@ const CheckoutAddress = () => {
                             id="company" 
                             name="company" 
                             placeholder='company'
+                            value={shipAddress.company}
                         />
                     </label>
 
@@ -46,6 +48,7 @@ const CheckoutAddress = () => {
                             id="street1" 
                             name="street1" 
                             placeholder='address 1'
+                            value={shipAddress.street1}
                         />
                     </label>
 
@@ -56,6 +59,7 @@ const CheckoutAddress = () => {
                             id="street2" 
                             name="street2" 
                             placeholder='address 2'
+                            value={shipAddress.street2}
                         />
                     </label>
 
@@ -66,6 +70,7 @@ const CheckoutAddress = () => {
                             id="city" 
                             name="city" 
                             placeholder='city'
+                            value={shipAddress.city}
                         />
                     </label>
 
@@ -77,6 +82,7 @@ const CheckoutAddress = () => {
                                 id="state" 
                                 name="state" 
                                 placeholder='state'
+                                value={shipAddress.state}
                             />
                         </label>
 
@@ -87,7 +93,7 @@ const CheckoutAddress = () => {
                                 id="zip" 
                                 name="zip" 
                                 placeholder='zip code'
-                                value={shipAddress ? shipAddress.zip : ''}
+                                value={shipAddress.zip}
                             />
                         </label>
                     </div>
