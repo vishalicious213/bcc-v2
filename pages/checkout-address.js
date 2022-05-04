@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 const CheckoutAddress = () => {
     const { shipAddress, setShipAddress } = useCart()
-
     let formName = document.getElementById("name").value
     let formCompany = document.getElementById("company").value
     let formStreet1 = document.getElementById("street1").value
@@ -17,39 +16,87 @@ const CheckoutAddress = () => {
             <h1>Checkout</h1>
 
             <div className='shipping'>
-                <h2>Enter destination address</h2>
+                <h2>Enter destination address:</h2>
 
                 <form className='address-form'>
                     <label htmlFor="name">
-                        <input className='field' type="text" id="name" name="name" placeholder='name'/>
+                        <input 
+                            className='field' 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder='name'
+                        />
                     </label>
+
                     <label htmlFor="company">
-                        <input className='field' type="text" id="company" name="company" placeholder='company'/>
+                        <input 
+                            className='field' 
+                            type="text" 
+                            id="company" 
+                            name="company" 
+                            placeholder='company'
+                        />
                     </label>
+
                     <label htmlFor="street1">
-                        <input className='field' type="text" id="street1" name="street1" placeholder='address 1'/>
+                        <input 
+                            className='field' 
+                            type="text" 
+                            id="street1" 
+                            name="street1" 
+                            placeholder='address 1'
+                        />
                     </label>
+
                     <label htmlFor="street2">
-                        <input className='field' type="text" id="street2" name="street2" placeholder='address 2'/>
+                        <input 
+                            className='field' 
+                            type="text" 
+                            id="street2" 
+                            name="street2" 
+                            placeholder='address 2'
+                        />
                     </label>
+
                     <label htmlFor="city">
-                        <input className='field' type="text" id="city" name="city" placeholder='city'/>
+                        <input 
+                            className='field' 
+                            type="text" 
+                            id="city" 
+                            name="city" 
+                            placeholder='city'
+                        />
                     </label>
+
                     <div className='state-zip'>
                         <label htmlFor="state">
-                            <input className='field state' type="text" id="state" name="state" placeholder='state'/>
+                            <input 
+                                className='field' 
+                                type="text" 
+                                id="state" 
+                                name="state" 
+                                placeholder='state'
+                            />
                         </label>
+
                         <label htmlFor="zip">
-                            <input className='field zip' type="text" id="zip" name="zip" placeholder='zip code'/>
+                            <input 
+                                className='field' 
+                                type="text" 
+                                id="zip" 
+                                name="zip" 
+                                placeholder='zip code'
+                                value={shipAddress ? shipAddress.zip : ''}
+                            />
                         </label>
                     </div>
                 </form>
             </div>
 
             <div className='checkout-body'>
-                {/* <Link href='/checkout-shipping'> */}
+                <Link href='/checkout-shipping'>
                     <div className='pay-button'>
-                        {/* <button>Choose Shipping Service</button> */}
                         <button onClick={() => setShipAddress({
                             name: formName,
                             company: formCompany,
@@ -60,8 +107,8 @@ const CheckoutAddress = () => {
                             zip: formZip
                         })}>Choose Shipping Service</button>
                     </div>
-                {/* </Link> */}
-                {/* <button onClick={() => console.log('Shipping Address', shipAddress)}>CHECK</button> */}
+                </Link>
+                {/* <button onClick={() => console.log('Shipping Address', shipAddress)}>CHECK BUTTON CONTEXT</button> */}
             </div>
 
             <style jsx>
@@ -71,24 +118,16 @@ const CheckoutAddress = () => {
                     flex-direction: column;
                 }
 
-                label {
-                    display: flex;
-                    flex-direction: column;
-                    margin-bottom: .5rem;
-                    font-size: 1.25rem;
-                    // outline: 1px solid red;
-                }
-
                 .state-zip {
                     display: flex;
                     justify-content: space-between;
                 }
 
-                .state {
-                    width: 60%;
+                #state {
+                    width: 50%;
                 }
 
-                .zip {
+                #zip {
                     width: 100%;
                 }
 
@@ -100,6 +139,7 @@ const CheckoutAddress = () => {
                     padding: 1rem;
                     color: gainsboro;
                     font-size: 1.1rem;
+                    width: 100%;
                 }
 
                 .field:hover {
@@ -118,26 +158,6 @@ const CheckoutAddress = () => {
 
                 .checkout-body {
                     padding: 1rem;
-                }
-
-                h2 {
-                    // margin-bottom: 0;
-                }
-
-                .pricing {
-                    display: grid;
-                    grid-gap: 2rem;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    margin-bottom: 1rem;
-                    border-bottom: 1px solid #b01e65;
-                }
-
-                .total {
-                    display: grid;
-                    grid-gap: 2rem;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    font-size: 1.25rem;
-                    font-weight: 600;
                 }
 
                 .pay-button {
@@ -171,32 +191,6 @@ const CheckoutAddress = () => {
 
                 .shipping h2 {
                     margin-top: 0;
-                }
-
-                .carriers {
-                    display: grid;
-                    grid-template-columns: .25fr .5fr 1fr 1fr 1fr;
-                    grid-gap: 1rem;
-                    padding: .5rem;
-                    border-bottom: 1px solid gainsboro;
-                    // outline: 1px solid red;
-                }
-
-                .carrier-heading {
-                    font-weight: 600;
-                    margin-bottom: .5rem;
-                    margin-top: .5rem;
-                    color: white;
-                }
-
-                .carrier-option {
-                    // margin-bottom: .5rem;
-                }
-
-                .carrier-option:hover {
-                    // outline: 1px solid #b01e65;
-                    color: white;
-                    font-weight: 600;
                 }
                 `}
             </style>
