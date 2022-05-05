@@ -21,6 +21,9 @@ const Cart = ({ children }) => {
     // if there's already a cart, load it
     const getInitialCart = () => JSON.parse(localStorage.getItem('cart'))
 
+    // if there's already a shipping address, load it
+    const getShipTo = () => JSON.parse(localStorage.getItem('shipTo'))    
+
     useEffect(() => {
         // when page first loads, if there's a cart, load it
         const initialCart = getInitialCart()
@@ -34,7 +37,17 @@ const Cart = ({ children }) => {
         if (shipPrice) {
             setShipPrice(shipPrice)
         }
-    }, [])    
+    }, [])
+
+    useEffect(() => {
+        // when page first loads, if there's a shipping address, load it
+        console.log('loading shipping address context')
+        const initialShipTo = getShipTo()
+        if (initialShipTo) {
+            setShipAddress(initialShipTo)
+        }
+        console.log(shipAddress)
+    }, [])
 
     useEffect(() => {
         // save cart to local storage if a change is made

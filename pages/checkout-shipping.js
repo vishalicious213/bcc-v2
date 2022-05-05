@@ -4,7 +4,7 @@ import axios from 'axios'
 import { loadStripe } from '@stripe/stripe-js'
 
 const CheckoutShipping = () => {
-    const { cart, total, shipPrice, calculateShipping } = useCart()
+    const { cart, total, shipPrice, shipAddress, calculateShipping } = useCart()
     const [rates, setRates] = useState([])
 
     // get shipping services info from easypost
@@ -46,7 +46,9 @@ const CheckoutShipping = () => {
     // get initial shipping service options when page loads
     useEffect(() => {
         processShipping()
-    }, [])    
+    }, [])
+
+    console.log('shipping address from context', shipAddress)
 
     return (
         <div className='checkout'>
