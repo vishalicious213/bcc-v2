@@ -15,12 +15,18 @@ const Checkout = () => {
                     <div>
                         {cart.map((item) => {
                             return (
-                                <div key={item.id}>
-                                    <h3>{item.name}</h3>
-                                    <div className='pricing'>
-                                        <p>Qty: {item.qty}</p>
-                                        <p>{`Donation: $${item.price / 100}.00`}</p>
-                                        <p><b>Subtotal: </b>{`$${item.price * item.qty / 100}.00`}</p>
+                                <div className='gift' key={item.id}>
+                                    <div className='checkout-gift-img-container'>
+                                        <img src={item.img} alt={item.alt} />
+                                    </div>
+
+                                    <div className='gift-details'>
+                                        <h3>{item.name}</h3>
+                                        <div className='pricing'>
+                                            <p>Qty: {item.qty}</p>
+                                            <p>{`Donation: $${item.price / 100}.00`}</p>
+                                            <p><b>Subtotal: </b>{`$${item.price * item.qty / 100}.00`}</p>
+                                        </div>
                                     </div>
                                 </div>
                             )
@@ -51,6 +57,15 @@ const Checkout = () => {
                     color: gainsboro;
                 }
 
+                .gift {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .gift-details {
+                    width: 100%;
+                }
+
                 h1 {
                     margin: 1rem 1rem 0 1rem;
                     padding-bottom: .5rem;
@@ -59,6 +74,17 @@ const Checkout = () => {
 
                 h3 {
                     margin-bottom: 0;
+                }
+
+                .checkout-gift-img-container {
+                    width: 10%;
+                }
+
+                .checkout-gift-img-container img {
+                    width: 70%;
+                    border-top-right-radius: 1rem;
+                    border-top-left-radius: 1rem;
+                    border-bottom-left-radius: 1rem;
                 }
 
                 .pricing {
