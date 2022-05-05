@@ -55,25 +55,6 @@ const CheckoutShipping = () => {
         <div className='checkout'>
             <h1>Checkout</h1>
 
-            {/* {cart.length > 0 ? (
-                <div className='checkout-body'>
-                    {cart.map((item) => {
-                        return (
-                            <div className='item' key={item.id}>
-                                <h2>{item.name}</h2>
-                                <div className='pricing'>
-                                    <p>Qty: {item.qty}</p>
-                                    <p>{`Donation: $${item.price / 100}.00`}</p>
-                                    <p><b>Subtotal: </b>{`$${item.price * item.qty / 100}.00`}</p>
-                                </div>
-                            </div>
-                        )
-                    })}
-                </div>
-            ) : (
-                <p>Your cart has no gifts!</p>
-            )} */}
-
             <div className='shipping'>
                 <h2>Choose shipping</h2>
 
@@ -111,9 +92,9 @@ const CheckoutShipping = () => {
 
             <div className='checkout-body'>
                 <div className='total'>
-                    <p className='test'></p>
-                    <p className='test'></p>
-                    <p className='test'>{`Total: $${(total / 100).toFixed(2)}`}</p>
+                    <p></p>
+                    <p></p>
+                    <p>{`Total: $${(total / 100).toFixed(2)}`}</p>
                 </div>
 
                 <div className='pay-button'>
@@ -141,14 +122,6 @@ const CheckoutShipping = () => {
                     margin-bottom: 0;
                 }
 
-                .pricing {
-                    display: grid;
-                    grid-gap: 2rem;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    margin-bottom: 1rem;
-                    border-bottom: 1px solid #b01e65;
-                }
-
                 .total {
                     display: grid;
                     grid-gap: 2rem;
@@ -167,7 +140,7 @@ const CheckoutShipping = () => {
                     color: gainsboro;
                     background-color: #b01e65;
                     border: none;
-                    font-size: 1.5rem;
+                    font-size: 1.25rem;
                     width: 90%;
                     padding: .5rem 0;
                     border-radius: 1rem;
