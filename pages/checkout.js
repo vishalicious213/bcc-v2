@@ -39,7 +39,7 @@ const Checkout = () => {
 
                     <Link href='/checkout-address'>
                         <div className='pay-button'>
-                            <button>Enter Shipping Address</button>
+                            <button>Continue: Enter Shipping Address</button>
                         </div>
                     </Link>
                 </div>
@@ -87,7 +87,7 @@ const Checkout = () => {
                     color: gainsboro;
                     background-color: #b01e65;
                     border: none;
-                    font-size: 1.5rem;
+                    font-size: 1.25rem;
                     width: 90%;
                     padding: .5rem 0;
                     border-radius: 1rem;
