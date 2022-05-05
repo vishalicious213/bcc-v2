@@ -112,7 +112,7 @@ const CheckoutAddress = () => {
             </div>
 
             <div className='checkout-body'>
-                {/* <Link href='/checkout-shipping'> */}
+                <Link href='/checkout-shipping'>
                     <div className='pay-button'>
                         <button onClick={() => saveAddress()}>Choose Shipping Service</button>
                         {/* <button onClick={() => setShipAddress({
@@ -125,7 +125,7 @@ const CheckoutAddress = () => {
                             zip: formZip
                         })}>Choose Shipping Service</button> */}
                     </div>
-                {/* </Link> */}
+                </Link>
                 <button onClick={() => console.log('Shipping Address', shipAddress)}>CHECK BUTTON CONTEXT</button>
             </div>
 

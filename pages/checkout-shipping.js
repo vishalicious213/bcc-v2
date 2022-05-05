@@ -11,7 +11,8 @@ const CheckoutShipping = () => {
     const processShipping = async () => {
         const url ='/.netlify/functions/shipping'
         // console.log('checkout cart', cart)
-        const { data } = await axios.post(url, { cart: cart })
+        console.log('shipping address (to send)', shipAddress)
+        const { data } = await axios.post(url, { cart: cart, shipTo: shipAddress })
         // console.log('process shipping', data)
         const getRates = data.carriers.rates
         setRates(getRates)

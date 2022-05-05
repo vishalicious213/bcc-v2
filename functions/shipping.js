@@ -22,14 +22,23 @@ async function getFromAddress() {
     return id
 }
 
-async function getToAddress() {
+async function getToAddress(addr) {
+    console.log('shipping addr for calculation', addr)
     const toAddress = new api.Address({
-        name: 'George Costanza',
-        company: 'Vandelay Industries',
-        street1: '1 E 161st St.',
-        city: 'Bronx',
-        state: 'NY',
-        zip: '10451'
+        name: addr.name,
+        company: addr.company,
+        street1: addr.street1,
+        street2: addr.street2,
+        city: addr.city,
+        state: addr.state,
+        zip: addr.zip,
+
+        // name: 'George Costanza',
+        // company: 'Vandelay Industries',
+        // street1: '1 E 161st St.',
+        // city: 'Bronx',
+        // state: 'NY',
+        // zip: '10451'
     })
     let id = await toAddress.save().then((res) => {
         return res.id
@@ -96,10 +105,11 @@ async function getShipment(toAddressId, fromAddressId, parcelId) {
 
 exports.handler =  async function(event, context) {
     let cartData = JSON.parse(event.body)
-    let toAddressId = await getToAddress()
+    let toAddressId = await getToAddress(cartData.shipTo)
     let fromAddressId = await getFromAddress()
     let parcelId = await getParcel(cartData.cart)
     let carriers = await getShipment(toAddressId, fromAddressId, parcelId)
+    // console.log('serverless-test: event', event)
     // console.log('serverless-test event', event.body)
     // console.log('cartData', cartData)
     // console.log('cartData cart', cartData.cart)
