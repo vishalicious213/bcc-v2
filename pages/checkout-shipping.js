@@ -56,6 +56,12 @@ const CheckoutShipping = () => {
             <h1>Checkout</h1>
 
             <div className='shipping'>
+                <p className='address address-first'>To: {shipAddress.name}</p>
+                {shipAddress.company ? <p className='address'>{shipAddress.company}</p> : <></>}
+                <p className='address'>{shipAddress.street1}</p>
+                {shipAddress.street2 ? <p className='address'>{shipAddress.street2}</p> : <></>}
+                <p className='address address-last'>{shipAddress.city}, {shipAddress.state} {shipAddress.zip}</p>
+
                 <h2>Choose shipping</h2>
 
                 <form>
@@ -112,6 +118,21 @@ const CheckoutShipping = () => {
                     margin: 1rem 1rem 0 1rem;
                     padding-bottom: .5rem;
                     border-bottom: 2px solid #b01e65;
+                }
+
+                .address {
+                    margin-bottom: 0;
+                    margin-top: 0;
+                }
+
+                .address-first {
+                    font-weight: 600;
+                }
+
+                .address-last {
+                    margin-bottom: 1rem;
+                    padding-bottom: .5rem;
+                    border-bottom: 1px solid #b01e65;
                 }
 
                 .checkout-body {
