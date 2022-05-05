@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import useCart from '../hooks/useCart'
 import Link from 'next/link'
 
@@ -11,7 +10,6 @@ const CheckoutAddress = () => {
 
     const saveAddress = () => {
         // save shipping address to local storage
-        console.log('saving shipping address to localStorage')
         localStorage.setItem('shipTo', JSON.stringify(shipAddress))        
     }
 
@@ -114,19 +112,10 @@ const CheckoutAddress = () => {
             <div className='checkout-body'>
                 <Link href='/checkout-shipping'>
                     <div className='pay-button'>
-                        <button onClick={() => saveAddress()}>Choose Shipping Service</button>
-                        {/* <button onClick={() => setShipAddress({
-                            name: formName,
-                            company: formCompany,
-                            street1: formStreet1,
-                            street2: formStreet2,
-                            city: formCity,
-                            state: formState,
-                            zip: formZip
-                        })}>Choose Shipping Service</button> */}
+                        <button onClick={() => saveAddress()}>Continue: Choose Shipping Service</button>
                     </div>
                 </Link>
-                <button onClick={() => console.log('Shipping Address', shipAddress)}>CHECK BUTTON CONTEXT</button>
+                {/* <button onClick={() => console.log('Shipping Address', shipAddress)}>CHECK BUTTON CONTEXT</button> */}
             </div>
 
             <style jsx>
@@ -188,7 +177,7 @@ const CheckoutAddress = () => {
                     color: gainsboro;
                     background-color: #b01e65;
                     border: none;
-                    font-size: 1.5rem;
+                    font-size: 1.25rem;
                     width: 90%;
                     padding: .5rem 0;
                     border-radius: 1rem;
