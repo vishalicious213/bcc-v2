@@ -7,7 +7,6 @@ const Cart = ({ children }) => {
     const [cart, setCart] = useState([]) // cart contents
     const [total, setTotal] = useState(0) // total price, for shoppingCart & /checkout page
     const [shipPrice, setShipPrice] = useState(0) // shipping cost
-
     const [shipAddress, setShipAddress] = useState({
         name: '',
         company: '',
@@ -16,7 +15,7 @@ const Cart = ({ children }) => {
         city: '',
         state: '',
         zip: ''
-    })
+    }) // address to ship to
 
     // if there's already a cart, load it
     const getInitialCart = () => JSON.parse(localStorage.getItem('cart'))
@@ -46,7 +45,6 @@ const Cart = ({ children }) => {
         if (initialShipTo) {
             setShipAddress(initialShipTo)
         }
-        console.log(shipAddress)
     }, [])
 
     useEffect(() => {
@@ -113,21 +111,12 @@ const Cart = ({ children }) => {
     }
 
     const calculateShipping = (prevShipPrice, newShipPrice) => {
-        // plan: subtract previous shipping price from total & add current shipping price
-        // console.log('-----prevShipPrice', prevShipPrice)
-        // console.log('------newShipPrice', newShipPrice)
-
+        // subtract previous shipping price from total & add current shipping price
         let prevTotal = total
-        // console.log('prevTotal', prevTotal)
-
         let newTotal = prevTotal - prevShipPrice + newShipPrice
-        // console.log('newTotal', newTotal)
 
         setShipPrice(newShipPrice)
-        // console.log('setShipPrice', shipPrice)
-
         setTotal(newTotal)
-        // console.log('setTotal', total)
     }
 
     const exposed = {
