@@ -3,11 +3,15 @@ import useCart from '../../hooks/useCart'
 import GiftsCarousel from '../../components/gifts-carousel'
 import Link from 'next/link'
 
-const gift = gifts[2]
+// changed gift from 2 to 1 to resolve error on Netlify
+
+// const gift = gifts[2]
+const gift = gifts[1]
 
 export default function ComfortBagWithBlanket() {
     const { cart, addItemToCart, removeItemFromCart } = useCart()
-    const item = cart.find(i => i.id === 2)
+    // const item = cart.find(i => i.id === 2)
+    const item = cart.find(i => i.id === 1)
 
     return (
         <div className='gift'>
