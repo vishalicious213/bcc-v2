@@ -23,7 +23,6 @@ async function getFromAddress() {
 }
 
 async function getToAddress(addr) {
-    console.log('shipping addr for calculation', addr)
     const toAddress = new api.Address({
         name: addr.name,
         company: addr.company,
@@ -32,13 +31,6 @@ async function getToAddress(addr) {
         city: addr.city,
         state: addr.state,
         zip: addr.zip,
-
-        // name: 'George Costanza',
-        // company: 'Vandelay Industries',
-        // street1: '1 E 161st St.',
-        // city: 'Bronx',
-        // state: 'NY',
-        // zip: '10451'
     })
     let id = await toAddress.save().then((res) => {
         return res.id
@@ -57,24 +49,20 @@ async function getParcel(cart) {
         }
     })
 
-    // console.log('cartWithGifts', cartWithGifts)
-
     let totalWeight = 0
 
     const calculateWeight = cartWithGifts.map((gift) => {
         let itemWeight = gift.weight * gift.qty
-        console.log('gift weight', gift.weight)
-        console.log('gift quantity', gift.qty)
-
         totalWeight = totalWeight + itemWeight
-        console.log('totalWeight', totalWeight)
     })
 
     const parcel = await new api.Parcel({
+        weight: totalWeight,
+
         // length: cartWithGifts[0].length,
         // width: cartWithGifts[0].width,
         // height: cartWithGifts[0].height,
-        weight: totalWeight,
+
         // length: 9,
         // width: 6,
         // height: 2,
@@ -96,7 +84,6 @@ async function getShipment(toAddressId, fromAddressId, parcelId) {
     })
 
     let shippers = await shipment.save().then((res) => {
-        // console.log('shipment', res)
         return res
     })
 
@@ -109,15 +96,6 @@ exports.handler =  async function(event, context) {
     let fromAddressId = await getFromAddress()
     let parcelId = await getParcel(cartData.cart)
     let carriers = await getShipment(toAddressId, fromAddressId, parcelId)
-    // console.log('serverless-test: event', event)
-    // console.log('serverless-test event', event.body)
-    // console.log('cartData', cartData)
-    // console.log('cartData cart', cartData.cart)
-    // console.log('cartData cart 0', cartData.cart[0])
-    // console.log('toAddressId', toAddressId)
-    // console.log('fromAddressId', fromAddressId)
-    // console.log('parcelId', parcelId)
-    // console.log('giftsArray', giftsArray)
 
     return {
         statusCode: 200,
