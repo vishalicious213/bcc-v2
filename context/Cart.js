@@ -40,7 +40,6 @@ const Cart = ({ children }) => {
 
     useEffect(() => {
         // when page first loads, if there's a shipping address, load it
-        console.log('loading shipping address context')
         const initialShipTo = getShipTo()
         if (initialShipTo) {
             setShipAddress(initialShipTo)
