@@ -10,13 +10,10 @@ const CheckoutShipping = () => {
     // get shipping services info from easypost
     const processShipping = async () => {
         const url ='/.netlify/functions/shipping'
-        // console.log('checkout cart', cart)
-        console.log('shipping address (to send)', shipAddress)
         const { data } = await axios.post(url, { cart: cart, shipTo: shipAddress })
-        // console.log('process shipping', data)
         const getRates = data.carriers.rates
+
         setRates(getRates)
-        // console.log('rates', getRates)
     }
 
     // send data to Context to globally calculate & update shipping costs
@@ -29,18 +26,15 @@ const CheckoutShipping = () => {
 
     // send data to Stripe to charge visitor's credit card
     const processPayment = async () => {
-        const url ='/.netlify/functions/charge-card'
-
         // get id and qty of products in cart (don't trust client-side prices!)
         const newCart = cart.map(({ id, qty }) => ({
             id,
             qty
         }))
-
         const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
-
+        const url ='/.netlify/functions/charge-card'
         const { data } = await axios.post(url, { cart: newCart })
-        // console.log('process payment', data)
+
         await stripe.redirectToCheckout({ sessionId: data.id })
     }
 
@@ -48,8 +42,6 @@ const CheckoutShipping = () => {
     useEffect(() => {
         processShipping()
     }, [])
-
-    console.log('shipping address from context', shipAddress)
 
     return (
         <div className='checkout'>
