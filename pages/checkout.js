@@ -101,6 +101,7 @@ const Checkout = () => {
                     grid-template-columns: 1fr 1fr 1fr;
                     font-size: 1.25rem;
                     font-weight: 600;
+                    margin-left: 10%;
                 }
 
                 .pay-button {
