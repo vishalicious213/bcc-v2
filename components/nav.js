@@ -22,7 +22,7 @@ export default function Nav() {
         <div id='menu-container'>
             <div id='logo-container'>
                 <Link href='/'>
-                    <img src='/logo-wide.png' alt='logo' />
+                    <img src='/logo-wide-2.png' alt='logo' />
                 </Link>
             </div>
 
@@ -111,7 +111,6 @@ export default function Nav() {
                     justify-content: space-between;
                     padding: .5rem;
                     background: #292c2f;
-                    // position: relative;
                     position: fixed;
                     top: 0;
                     right: 0;
@@ -121,20 +120,19 @@ export default function Nav() {
                 }
 
                 #logo-container {
-                    width: 25%;
+                    width: 40%;
+                    display: flex;
+                    align-items: center;
                     cursor: pointer;
                 }
 
                 #logo-container img {
-                    width: 14rem;
-                    // max-height: 2.4rem;
-                    // max-width: 17rem;
+                    width: 100%;
                 }
 
                 #mobile-buttons {
                     display: flex;
                     align-items: center;
-                    // outline: 1px solid red;
                 }
 
                 button {
@@ -218,7 +216,6 @@ export default function Nav() {
                         padding: .5rem;
                         text-align: center;
                         border: 1px solid #292c2f;
-                        // outline: 1px solid red;
                     }
     
                     a:hover {
@@ -252,6 +249,10 @@ export default function Nav() {
     
                     .hover-menu:hover .dropdown {
                         display: block;
+                    }
+
+                    #logo-container {
+                        width: 30%;
                     }
                 }
             `}
