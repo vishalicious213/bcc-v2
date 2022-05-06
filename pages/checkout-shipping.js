@@ -13,6 +13,9 @@ const CheckoutShipping = () => {
         const { data } = await axios.post(url, { cart: cart, shipTo: shipAddress })
         const getRates = data.carriers.rates
 
+        // console.log('shipping data', data)
+        console.log('carriers data', data.carriers.rates)
+
         setRates(getRates)
     }
 
@@ -96,7 +99,7 @@ const CheckoutShipping = () => {
                 </div>
 
                 <div className='pay-button'>
-                    <button onClick={processPayment}>Process Payment</button>
+                    <button onClick={() => processPayment()}>Process Payment</button>
                 </div>
             </div>
 
