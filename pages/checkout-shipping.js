@@ -6,6 +6,8 @@ import { loadStripe } from '@stripe/stripe-js'
 const CheckoutShipping = () => {
     const { cart, total, shipPrice, shipAddress, calculateShipping } = useCart()
     const [rates, setRates] = useState([])
+    const [shippingLabel, setShippingLabel] = useState()
+    // let shippingLabel
 
     // get shipping services info from easypost
     const processShipping = async () => {
@@ -20,25 +22,40 @@ const CheckoutShipping = () => {
     }
 
     // send data to Context to globally calculate & update shipping costs
-    const sendShippingRate = (newCarrierRate) => {
+    const sendShippingRate = (newCarrierRate, carrierId) => {
         let prevShipPrice = shipPrice
         let newShipPrice = newCarrierRate
+        setShippingLabel(carrierId)
+
+        console.log('carrierId', carrierId)
+        console.log('shippingLabel / sendShippingRate', shippingLabel)
 
         calculateShipping(prevShipPrice, (newShipPrice * 100))
     }
 
     // send data to Stripe to charge visitor's credit card
     const processPayment = async () => {
+        const url ='/.netlify/functions/charge-card'
+        const shipUrl = '/.netlify/functions/shipping-purchase'
         // get id and qty of products in cart (don't trust client-side prices!)
         const newCart = cart.map(({ id, qty }) => ({
             id,
             qty
         }))
+
         const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
-        const url ='/.netlify/functions/charge-card'
         const { data } = await axios.post(url, { cart: newCart })
 
-        await stripe.redirectToCheckout({ sessionId: data.id })
+        console.log('shippingLabel / processPayment', shippingLabel)
+        await axios.post(shipUrl, { labelId: shippingLabel})
+        .then((res) => console.log('shipping-purchage response', res.data))
+        
+        // .then((res) => console.log('res', res))
+        // const { shipData } = await axios.post(shipUrl, { labelId: shippingLabel})
+        // .then((res) => console.log('res', res))
+        // console.log('shipData', shipData)
+
+        // await stripe.redirectToCheckout({ sessionId: data.id })
     }
 
     // get initial shipping service options when page loads
@@ -75,7 +92,7 @@ const CheckoutShipping = () => {
                                     id={carrier.service} 
                                     name='shipment-option' 
                                     value={carrier.id} 
-                                    onClick={() => sendShippingRate(carrier.rate)}
+                                    onClick={() => sendShippingRate(carrier.rate, carrier.id)}
                                 />
                                 <span>{carrier.carrier}</span>
                                 <span>{carrier.service}</span>
