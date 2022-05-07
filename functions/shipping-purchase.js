@@ -25,8 +25,7 @@ exports.handler =  async function(event, context) {
     return {
         statusCode: 200,
         body: JSON.stringify({
-            test: 'this is a test',
-            label : label || 'no label data'
+            success: 'gift request received'
         }),
     }    
 }
