@@ -7,6 +7,10 @@ const CheckoutShipping = () => {
     const { cart, total, shipPrice, shipAddress, calculateShipping } = useCart()
     const [rates, setRates] = useState([])
     const [shippingLabel, setShippingLabel] = useState()
+    const [shippingInfo, setShippingInfo] = useState({
+        carrier_id: '',
+        shipment_id: ''
+    })
     // let shippingLabel
 
     // get shipping services info from easypost
@@ -15,20 +19,28 @@ const CheckoutShipping = () => {
         const { data } = await axios.post(url, { cart: cart, shipTo: shipAddress })
         const getRates = data.carriers.rates
 
-        // console.log('shipping data', data)
-        console.log('carriers data', data.carriers.rates)
+        console.log('shipping data', data)
+        // console.log('carriers data', data.carriers.rates)
 
         setRates(getRates)
     }
 
     // send data to Context to globally calculate & update shipping costs
-    const sendShippingRate = (newCarrierRate, carrierId) => {
+    const sendShippingRate = (newCarrierRate, carrierId, shipmentId) => {
         let prevShipPrice = shipPrice
         let newShipPrice = newCarrierRate
         setShippingLabel(carrierId)
 
         console.log('carrierId', carrierId)
+        console.log('shipmentId', shipmentId)
         console.log('shippingLabel / sendShippingRate', shippingLabel)
+
+        setShippingInfo({
+            carrier_id: carrierId,
+            shipment_id: shipmentId
+        })
+
+        console.log('shipping info', shippingInfo)
 
         calculateShipping(prevShipPrice, (newShipPrice * 100))
     }
@@ -47,8 +59,10 @@ const CheckoutShipping = () => {
         const { data } = await axios.post(url, { cart: newCart })
 
         console.log('shippingLabel / processPayment', shippingLabel)
-        await axios.post(shipUrl, { labelId: shippingLabel })
-        .then((res) => console.log('shipping-purchage response', res.data))
+        await axios.post(shipUrl, { labelId: shippingInfo.carrier_id, shipId: shippingInfo.shipment_id })
+        .then((res) => console.log('shipping-purchage response', res.data))        
+        // await axios.post(shipUrl, { labelId: shippingLabel })
+        // .then((res) => console.log('shipping-purchage response', res.data))
         
         // .then((res) => console.log('res', res))
         // const { shipData } = await axios.post(shipUrl, { labelId: shippingLabel})
@@ -92,7 +106,7 @@ const CheckoutShipping = () => {
                                     id={carrier.service} 
                                     name='shipment-option' 
                                     value={carrier.id} 
-                                    onClick={() => sendShippingRate(carrier.rate, carrier.id)}
+                                    onClick={() => sendShippingRate(carrier.rate, carrier.id, carrier.shipment_id)}
                                 />
                                 <span>{carrier.carrier}</span>
                                 <span>{carrier.service}</span>
