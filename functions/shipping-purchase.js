@@ -9,7 +9,11 @@ async function buyShippingLabel(rateId, shipId) {
 
     api.Shipment.retrieve(shipId)
     .then((shipment) => {
-        shipment.buy(rateId).then(console.log).catch(console.log)
+        shipment.buy(rateId).then((res) => {
+            console.log('----- shipping success results', res)
+        }).catch((res) => {
+            console.log('----- shipping failure results', res)
+        })
     })
     .catch(console.log)
 }
