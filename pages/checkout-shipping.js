@@ -11,16 +11,12 @@ const CheckoutShipping = () => {
         carrier_id: '',
         shipment_id: ''
     })
-    // let shippingLabel
-
+    
     // get shipping services info from easypost
     const processShipping = async () => {
         const url ='/.netlify/functions/shipping'
         const { data } = await axios.post(url, { cart: cart, shipTo: shipAddress })
         const getRates = data.carriers.rates
-
-        console.log('shipping data', data)
-        // console.log('carriers data', data.carriers.rates)
 
         setRates(getRates)
     }
@@ -31,20 +27,15 @@ const CheckoutShipping = () => {
         let newShipPrice = newCarrierRate
         setShippingLabel(carrierId)
 
-        console.log('carrierId', carrierId)
-        console.log('shipmentId', shipmentId)
-        console.log('shippingLabel / sendShippingRate', shippingLabel)
-
         setShippingInfo({
             carrier_id: carrierId,
             shipment_id: shipmentId
         })
 
-        console.log('shipping info', shippingInfo)
-
         calculateShipping(prevShipPrice, (newShipPrice * 100))
     }
 
+    // send data to easypost to generate shipping label and
     // send data to Stripe to charge visitor's credit card
     const processPayment = async () => {
         const url ='/.netlify/functions/charge-card'
@@ -58,18 +49,10 @@ const CheckoutShipping = () => {
         const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
         const { data } = await axios.post(url, { cart: newCart })
 
-        console.log('shippingLabel / processPayment', shippingLabel)
         await axios.post(shipUrl, { labelId: shippingInfo.carrier_id, shipId: shippingInfo.shipment_id })
-        .then((res) => console.log('shipping-purchage response', res.data))        
-        // await axios.post(shipUrl, { labelId: shippingLabel })
         // .then((res) => console.log('shipping-purchage response', res.data))
-        
-        // .then((res) => console.log('res', res))
-        // const { shipData } = await axios.post(shipUrl, { labelId: shippingLabel})
-        // .then((res) => console.log('res', res))
-        // console.log('shipData', shipData)
 
-        // await stripe.redirectToCheckout({ sessionId: data.id })
+        await stripe.redirectToCheckout({ sessionId: data.id })
     }
 
     // get initial shipping service options when page loads
