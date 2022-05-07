@@ -8,7 +8,7 @@ async function buyShippingLabel(rateId) {
     console.log('Buy Shipping Label (rateId)', rateId)
     // let shippingLabel = await api.shipment.buy(rateId).then(console.log);
 
-    return shippingLabel
+    // return shippingLabel
 }
 
 exports.handler =  async function(event, context) {
@@ -28,13 +28,13 @@ exports.handler =  async function(event, context) {
     // let labelInfo = JSON.parse(event.body.labelId)
     console.log('labelInfo', labelInfo)
 
-    // let label = await buyShippingLabel(event.body.labelId)
+    let label = await buyShippingLabel(bodyTest.labelId)
 
     return {
         statusCode: 200,
         body: JSON.stringify({
-            test: 'this is a test'
-            // label : label || 'no label data'
+            test: 'this is a test',
+            label : label || 'no label data'
             // label: labelInfo || 'no label data'
             // test: "test"
         }),
