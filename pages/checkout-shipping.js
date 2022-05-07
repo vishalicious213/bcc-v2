@@ -47,7 +47,7 @@ const CheckoutShipping = () => {
         const { data } = await axios.post(url, { cart: newCart })
 
         console.log('shippingLabel / processPayment', shippingLabel)
-        await axios.post(shipUrl, { labelId: shippingLabel})
+        await axios.post(shipUrl, { labelId: shippingLabel })
         .then((res) => console.log('shipping-purchage response', res.data))
         
         // .then((res) => console.log('res', res))

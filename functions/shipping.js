@@ -84,6 +84,7 @@ async function getShipment(toAddressId, fromAddressId, parcelId) {
     })
 
     let shippers = await shipment.save().then((res) => {
+        console.log('shipment.save', res)
         return res
     })
 
