@@ -44,7 +44,6 @@ export default function Teammate() {
         <style jsx>
           {`
           #main {
-            outline: 1px solid white;
             position: relative;
           }
 
