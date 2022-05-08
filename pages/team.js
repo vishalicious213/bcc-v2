@@ -55,8 +55,8 @@ export default function Team() {
                 </div>
                 <div className='gift-text-container'>
                     <h2 className='h2'>Join our organization!</h2>
-                    <p className='no-space-above'>BCC is powered by the skills and efforts of our volunteers. Our organization is seeking members to serve in the following capacities: Public Relations, Grant Writing, Marketing, Event Planning, and Social Media. Creative individuals with Fundraising experience are always welcome.</p>
-                    <p>Tell us about yourself and your ideas via email: <a id='email' href='mailto:info@breastcancercomfort.org'>info@breastcancercomfort.org</a></p>
+                    <p className='no-space-above'>BCC is powered by the skills and efforts of our volunteers. Our organization is seeking members to serve in the following capacities: Public Relations, Grant Writing, Marketing, Event Planning, and Social Media. Creative individuals with fundraising experience are always welcome.</p>
+                    <p>Tell us about yourself and your ideas via email: <a id='email' href='mailto:info@breastcancercomfort.org'>info@breastcancercomfort.org</a> or using our contact form, below.</p>
                 </div>
             </section>
         </main>
