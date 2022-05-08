@@ -12,29 +12,32 @@ export default function Teammate() {
         </Head>
 
         <main className={styles.main}>
+            <div className='invisible'>
+                <h1 className='invisible-text'>Debi Cavolo</h1>
+                <h2 className='invisible-text'>CEO & Founder</h2>
+                <div className='social-media-icons'>
+                    <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/debi-cavolo-671a78132/"></a>
+                    {/* <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a> */}
+                    {/* <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a> */}
+                    {/* <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a> */}
+                </div>
+            </div>
+
             <div className='img-container'>
-                <img src='/about/collage-01.jpg' alt='BCC collage of events' />
+                <img src='/about/debi-bg.jpg' alt='Nurse donning safety gear, Debi Cavolo, Founder & CEO overlaid' />
             </div>
 
             <section className='bio'>
                 <div className='bio-img-container'>
-                    <img className='bio-img' src='/about/ann-profile.jpg' alt='Ann Guarascio' />
+                    <img className='bio-img' src='/about/debi-profile.jpg' alt='Debi Cavolo' />
                 </div>
 
                 <div className='bio-text'>
-                    <h2 className='no-space-below'>Ann Guarascio</h2>
-                    <p className='no-space-above'><span>Board Treasurer, Non-Profit Accounting Specialist</span></p>
-                    
-                    <div className='social-media-icons'>
-                        <a className='li icon' target='_blank' rel='noopener' href="https://www.linkedin.com/in/ann-guarascio-3463719/"></a>
-                        <a className='tw icon' target='_blank' rel='noopener' href="https://twitter.com/BreastComfort"></a>
-                        <a className='fb icon' target='_blank' rel='noopener' href="https://www.facebook.com/breastcancercomfort/"></a>
-                        <a className='ig icon' target='_blank' rel='noopener' href="https://www.instagram.com/breastcancercomfort/"></a>
-                    </div>
-
-                    <p>Ann has been involved with The Breast Cancer Comfort Foundation since 2018 in a volunteer capacity, when she began to serve the bookkeeping and accounting needs of the organization.  She brings twenty plus years of experience in the non-profit sector, with background in both financial and development roles. "I am looking forward to partaking in the the growth of this organization, and the successful outreach to the beneficiaries of The Breast Cancer Comfort Foundation."</p>
-                    <p>"My life experiences have led me to reach out to others, making connections, and overall sharing compassion and knowledge." A native of Long Island's waterfront community, Ann loves all things outdoors and nautical - especially the Great South Bay.</p>
-                    <p>Family is most important, so when not working, Ann thoroughly enjoys time spent with her husband Tom, their three young adult children, and three senior citizens.</p>
+                    <p>Debi Cavolo is the CEO and Founder of The Breast Cancer Comfort Foundation (AKA Breast Cancer Comfort). Breast Cancer Comfort was created in 2015 to provide baskets and bags to women undergoing treatment for breast cancer.</p>
+                    <p>Debi believes that every woman (or man) undergoing treatment deserves comfort and compassion as they begin their journey. Coming from experience, Debi knows first-hand the feelings of isolation and fear after surgery; the time when no one asked her about the loss of her breasts but asked about the level of her physical pain.</p>
+                    <p>To date, Debi has supplied over 1900 “comfort” baskets and bags, gaining the support of a major healthcare system as well as doctors and cancer centers from all over Long Island. This would not have been possible without the help of her team and especially her sister, Susan Weber.</p>
+                    <p>Debi is a Certified Registered Nurse, specializing in OR and Mental Illness. An Adjunct professor at both Molloy College and Adelphi University, Debi is a proud recipient of several awards for her work. Debi holds a BSN, with Magna Cum Laude and MSN in Nursing Education from Excelsior College, graduating with a 4.0GPA.</p>
+                    <p>Debi has been featured on PIX11 for her work with breast cancer as well as NEWS12 as hero of the month. She has been honored as Mets batgirl and featured at Ducks games, throwing out the first pitch.</p>
 
                     {/* <h3>SKILLS</h3> */}
                     {/* <h3>LINKS</h3> */}
@@ -70,7 +73,7 @@ export default function Teammate() {
             font-weight: 500;
             color: #ff99cc;
           }
-
+          
           .link {
             text-decoration: underline;
           }
@@ -87,14 +90,39 @@ export default function Teammate() {
             color: #b83574;
           }
 
+          .invisible {
+            position: absolute;
+            top: 15vw;
+            left: 50%;
+            color: white;
+          }
+
+          h1 {
+            font-size: 5vw;
+          }
+
+          h2 {
+            font-size: 3.5vw;
+            color: white;
+          }
+          
+          .invisible-text {
+            position: relative;
+            left: -50%;
+            text-align: center;
+          }
+
           .social-media-icons {
+            position: relative;
+            left: -50%;
             display: flex;
+            justify-content: center;
           }
 
           .icon {
-              margin: 0 .5rem;
               width: 2.5rem;
               height: 2.5rem;
+              border-radius: 50%;
           }
 
           .fb {
