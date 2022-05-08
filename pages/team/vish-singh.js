@@ -11,7 +11,7 @@ export default function Teammate() {
             <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
         </Head>
 
-        <main className={styles.main}>
+        <main className={styles.main} id='main'>
             <div className='invisible'>
                 <h1 className='invisible-text'>VISH SINGH</h1>
                 <h2 className='invisible-text'>Web Developer</h2>
@@ -58,6 +58,11 @@ export default function Teammate() {
 
         <style jsx>
           {`
+          #main {
+            outline: 1px solid white;
+            position: relative;
+          }
+
           .bio {
             width: 100%;
             color: white;
@@ -103,7 +108,7 @@ export default function Teammate() {
 
           .invisible {
             position: absolute;
-            top: 15vw;
+            top: 6vw;
             left: 50%;
             color: white;
           }
