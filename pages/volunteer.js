@@ -41,12 +41,13 @@ export default function Volunteer() {
             <div className='gift-text-container'>
             <h2 className='h2'>Become a part of the team!</h2>
             <p>We are looking for volunteers to:</p>
-                <ul>
-                    <li className='li'>Deliver baskets</li>
-                    <li className='li'>Attend our meetings</li>
-                    <li className='li'>Join us at fundraising events</li>
-                    <li className='li'>Be excited, be inspired and Have Fun!</li>
-                </ul>
+            <ul>
+                <li className='li'>Deliver baskets</li>
+                <li className='li'>Attend our meetings</li>
+                <li className='li'>Join us at fundraising events</li>
+                <li className='li'>Be excited, be inspired and Have Fun!</li>
+            </ul>
+            <p>Tell us about yourself and your ideas via email: <a id='email' href='mailto:info@breastcancercomfort.org'>info@breastcancercomfort.org</a> or using our contact form, below.</p>
             </div>
           </section>
 
@@ -65,6 +66,15 @@ export default function Volunteer() {
 
       <style jsx>
         {`
+            #email {
+              color: white;
+              font-weight: 700;
+          }
+          
+          #email:hover {
+              text-decoration: underline;
+          }
+                  
         .button-container {
             display: flex;
             justify-content: center;
