@@ -120,7 +120,8 @@ export default function Nav() {
                 }
 
                 #logo-container {
-                    width: 40%;
+                    width: 70%;
+                    max-width: 300px;
                     display: flex;
                     align-items: center;
                     cursor: pointer;
@@ -252,7 +253,8 @@ export default function Nav() {
                     }
 
                     #logo-container {
-                        width: 30%;
+                        width: 40%;
+                        max-width: 400px;
                     }
                 }
             `}
