@@ -142,7 +142,7 @@ const CheckoutShipping = () => {
 
                 .address-last {
                     margin-bottom: 1rem;
-                    padding-bottom: .5rem;
+                    padding-bottom: 1rem;
                     border-bottom: 1px solid #b01e65;
                 }
 
