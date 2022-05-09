@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import useCart from '../hooks/useCart'
 import axios from 'axios'
 import { loadStripe } from '@stripe/stripe-js'
+import Link from 'next/link'
 
 const CheckoutShipping = () => {
     const { cart, total, shipPrice, shipAddress, calculateShipping } = useCart()
@@ -113,8 +114,10 @@ const CheckoutShipping = () => {
                 </div>
 
                 <div className='pay-button'>
-                    <button onClick={() => processPayment()}>Back</button>
-                    <button onClick={() => processPayment()}>Process Payment</button>
+                    <Link href='/checkout-address'>
+                        <button>Back</button>
+                    </Link>
+                    <button onClick={() => processPayment()}>Send Payment</button>
                 </div>
             </div>
 
@@ -165,7 +168,7 @@ const CheckoutShipping = () => {
 
                 .pay-button {
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: space-around;
                     margin: 1rem;
                 }
 
@@ -174,7 +177,7 @@ const CheckoutShipping = () => {
                     background-color: #b01e65;
                     border: none;
                     font-size: 1rem;
-                    width: 90%;
+                    width: 40%;
                     max-width: 150px;
                     padding: .5rem 0;
                     border-radius: 1rem;
@@ -214,10 +217,10 @@ const CheckoutShipping = () => {
                     font-weight: 600;
                 }
 
-                @media only screen and (min-width: 414px) {
+                @media only screen and (min-width: 460px) {
                     button {
-                        font-size: 1.25rem;
-                        max-width: 260px;
+                        // font-size: 1.25rem;
+                        max-width: 12rem;
                     }
                 }
                 `}
