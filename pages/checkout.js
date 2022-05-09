@@ -45,7 +45,7 @@ const Checkout = () => {
 
                     <Link href='/checkout-address'>
                         <div className='pay-button'>
-                            <Link href='/boobtique'>
+                            <Link href='/boobtique#shop-jump'>
                                 <button>Back to Shop</button>
                             </Link>                            
                             <button>Enter Address</button>

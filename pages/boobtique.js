@@ -59,7 +59,7 @@ export default function Boobtique() {
             </div>
             <div className='gift-text-container'>
                 <h2 className='h2'>Chemotherapy</h2>
-                <p className='no-space-above'><b>Chemo Comfort Bags</b> can include a puzzle or coloring book, pen, unflavored lip balm, tissues, mints,  pocket calendar, thank you cards, and blanket. </p>
+                <p className='no-space-above' id='shop-jump'><b>Chemo Comfort Bags</b> can include a puzzle or coloring book, pen, unflavored lip balm, tissues, mints,  pocket calendar, thank you cards, and blanket. </p>
             </div>
           </section>
 
