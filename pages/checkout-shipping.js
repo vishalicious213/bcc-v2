@@ -199,13 +199,15 @@ const CheckoutShipping = () => {
 
                 .carriers {
                     display: grid;
-                    grid-template-columns: .25fr .5fr 1fr 1fr 1fr;
+                    grid-template-columns: .25fr .5fr 1fr .5fr .75fr;
                     grid-gap: 1rem;
                     padding: .5rem;
                     border-bottom: 1px solid gainsboro;
+                    font-size: .75rem;
                 }
 
                 .carrier-heading {
+                    font-size: .9rem;
                     font-weight: 600;
                     margin-bottom: .5rem;
                     margin-top: .5rem;
@@ -219,8 +221,15 @@ const CheckoutShipping = () => {
 
                 @media only screen and (min-width: 460px) {
                     button {
-                        // font-size: 1.25rem;
                         max-width: 12rem;
+                    }
+
+                    .carriers {
+                        font-size: 1rem;
+                    }
+
+                    .carrier-heading {
+                        font-size: 1rem;
                     }
                 }
                 `}
