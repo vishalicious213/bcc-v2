@@ -114,8 +114,9 @@ const Checkout = () => {
                     color: gainsboro;
                     background-color: #b01e65;
                     border: none;
-                    font-size: 1.25rem;
+                    font-size: 1rem;
                     width: 90%;
+                    max-width: 360px;
                     padding: .5rem 0;
                     border-radius: 1rem;
                 }
@@ -134,6 +135,12 @@ const Checkout = () => {
                 .shipping h2 {
                     margin-top: 0;
                 }
+
+                @media only screen and (min-width: 414px) {
+                    button {
+                        font-size: 1.25rem;
+                    }
+                }                
                 `}
             </style>
         </div>
