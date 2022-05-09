@@ -176,7 +176,7 @@ const CheckoutAddress = () => {
                 .pay-button {
                     display: flex;
                     justify-content: center;
-                    margin-top: 1rem;
+                    margin: 1rem;
                 }
 
                 button {
