@@ -112,7 +112,10 @@ const CheckoutAddress = () => {
             <div className='checkout-body'>
                 <Link href='/checkout-shipping'>
                     <div className='pay-button'>
-                        <button onClick={() => saveAddress()}>Continue: Choose Shipping Service</button>
+                        <Link href='/checkout'>
+                            <button>Back</button>
+                        </Link>
+                        <button onClick={() => saveAddress()}>Choose Shipping</button>
                     </div>
                 </Link>
                 {/* <button onClick={() => console.log('Shipping Address', shipAddress)}>CHECK BUTTON CONTEXT</button> */}
@@ -175,8 +178,8 @@ const CheckoutAddress = () => {
 
                 .pay-button {
                     display: flex;
-                    justify-content: center;
-                    margin: 1rem;
+                    justify-content: space-around;
+                    margin: 1rem 0;
                 }
 
                 button {
@@ -184,8 +187,8 @@ const CheckoutAddress = () => {
                     background-color: #b01e65;
                     border: none;
                     font-size: 1rem;
-                    width: 90%;
-                    max-width: 360px;
+                    width: 40%;
+                    max-width: 150px;
                     padding: .5rem 0;
                     border-radius: 1rem;
                 }
@@ -204,9 +207,10 @@ const CheckoutAddress = () => {
                     margin-top: 0;
                 }
 
-                @media only screen and (min-width: 414px) {
+                @media only screen and (min-width: 460px) {
                     button {
-                        font-size: 1.25rem;
+                        // font-size: 1.25rem;
+                        max-width: 12rem;
                     }
                 }                   
                 `}

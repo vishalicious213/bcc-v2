@@ -113,6 +113,7 @@ const CheckoutShipping = () => {
                 </div>
 
                 <div className='pay-button'>
+                    <button onClick={() => processPayment()}>Back</button>
                     <button onClick={() => processPayment()}>Process Payment</button>
                 </div>
             </div>
@@ -164,7 +165,7 @@ const CheckoutShipping = () => {
 
                 .pay-button {
                     display: flex;
-                    justify-content: center;
+                    justify-content: space-between;
                     margin: 1rem;
                 }
 
@@ -174,7 +175,7 @@ const CheckoutShipping = () => {
                     border: none;
                     font-size: 1rem;
                     width: 90%;
-                    max-width: 360px;
+                    max-width: 150px;
                     padding: .5rem 0;
                     border-radius: 1rem;
                 }
@@ -216,6 +217,7 @@ const CheckoutShipping = () => {
                 @media only screen and (min-width: 414px) {
                     button {
                         font-size: 1.25rem;
+                        max-width: 260px;
                     }
                 }
                 `}
