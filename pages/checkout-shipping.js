@@ -122,7 +122,7 @@ const CheckoutShipping = () => {
                 .checkout {
                     color: gainsboro;
                     max-width: 600px;
-                    margin: auto;
+                    margin: 2rem auto 0 auto;
                 }
 
                 h1 {
