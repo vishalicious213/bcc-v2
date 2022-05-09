@@ -209,7 +209,6 @@ const CheckoutAddress = () => {
 
                 @media only screen and (min-width: 460px) {
                     button {
-                        // font-size: 1.25rem;
                         max-width: 12rem;
                     }
                 }                   
