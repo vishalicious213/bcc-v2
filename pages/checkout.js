@@ -55,6 +55,8 @@ const Checkout = () => {
                 {`
                 .checkout {
                     color: gainsboro;
+                    max-width: 600px;
+                    margin: auto;
                 }
 
                 .gift {
@@ -128,8 +130,7 @@ const Checkout = () => {
 
                 .shipping {
                     padding-bottom: 1rem;
-                    margin: 1rem 1rem 0 1rem;
-                    border-bottom: 2px solid #b01e65;
+                    margin: 1rem;
                 }
 
                 .shipping h2 {
