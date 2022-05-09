@@ -120,6 +120,12 @@ const CheckoutAddress = () => {
 
             <style jsx>
                 {`
+                .checkout {
+                    color: gainsboro;
+                    max-width: 600px;
+                    margin: auto;
+                }
+
                 .address-form {
                     display: flex;
                     flex-direction: column;
@@ -177,8 +183,9 @@ const CheckoutAddress = () => {
                     color: gainsboro;
                     background-color: #b01e65;
                     border: none;
-                    font-size: 1.25rem;
+                    font-size: 1rem;
                     width: 90%;
+                    max-width: 360px;
                     padding: .5rem 0;
                     border-radius: 1rem;
                 }
@@ -189,16 +196,19 @@ const CheckoutAddress = () => {
                 }
 
                 .shipping {
-                    // outline: 1px solid red;
                     padding-bottom: 1rem;
                     margin: 1rem 1rem 0 1rem;
-                    // width: 90%;
-                    border-bottom: 2px solid #b01e65;
                 }
 
                 .shipping h2 {
                     margin-top: 0;
                 }
+
+                @media only screen and (min-width: 414px) {
+                    button {
+                        font-size: 1.25rem;
+                    }
+                }                   
                 `}
             </style>
         </div>
