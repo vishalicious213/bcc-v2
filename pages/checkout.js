@@ -45,7 +45,7 @@ const Checkout = () => {
 
                     <Link href='/checkout-address'>
                         <div className='pay-button'>
-                            <button>Continue: Enter Shipping Address</button>
+                            <button>Enter Address</button>
                         </div>
                     </Link>
                 </div>
@@ -117,8 +117,8 @@ const Checkout = () => {
                     background-color: #b01e65;
                     border: none;
                     font-size: 1rem;
-                    width: 90%;
-                    max-width: 360px;
+                    width: 40%;
+                    max-width: 150px;
                     padding: .5rem 0;
                     border-radius: 1rem;
                 }
@@ -137,9 +137,10 @@ const Checkout = () => {
                     margin-top: 0;
                 }
 
-                @media only screen and (min-width: 414px) {
+                @media only screen and (min-width: 460px) {
                     button {
-                        font-size: 1.25rem;
+                        // font-size: 1.25rem;
+                        max-width: 12rem;
                     }
                 }                
                 `}
