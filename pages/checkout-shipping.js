@@ -121,6 +121,8 @@ const CheckoutShipping = () => {
                 {`
                 .checkout {
                     color: gainsboro;
+                    max-width: 600px;
+                    margin: auto;
                 }
 
                 h1 {
@@ -163,15 +165,16 @@ const CheckoutShipping = () => {
                 .pay-button {
                     display: flex;
                     justify-content: center;
-                    margin-top: 1rem;
+                    margin: 1rem;
                 }
 
                 button {
                     color: gainsboro;
                     background-color: #b01e65;
                     border: none;
-                    font-size: 1.25rem;
+                    font-size: 1rem;
                     width: 90%;
+                    max-width: 360px;
                     padding: .5rem 0;
                     border-radius: 1rem;
                 }
@@ -182,11 +185,8 @@ const CheckoutShipping = () => {
                 }
 
                 .shipping {
-                    // outline: 1px solid red;
                     padding-bottom: 1rem;
                     margin: 1rem 1rem 0 1rem;
-                    // width: 90%;
-                    border-bottom: 2px solid #b01e65;
                 }
 
                 .shipping h2 {
@@ -199,7 +199,6 @@ const CheckoutShipping = () => {
                     grid-gap: 1rem;
                     padding: .5rem;
                     border-bottom: 1px solid gainsboro;
-                    // outline: 1px solid red;
                 }
 
                 .carrier-heading {
@@ -209,14 +208,15 @@ const CheckoutShipping = () => {
                     color: white;
                 }
 
-                .carrier-option {
-                    // margin-bottom: .5rem;
-                }
-
                 .carrier-option:hover {
-                    // outline: 1px solid #b01e65;
                     color: white;
                     font-weight: 600;
+                }
+
+                @media only screen and (min-width: 414px) {
+                    button {
+                        font-size: 1.25rem;
+                    }
                 }
                 `}
             </style>
