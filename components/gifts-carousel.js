@@ -27,6 +27,7 @@ const chemoComfortBags = [
     {id: 10, img: '/gifts/chemo-comfort-bag-11.jpg', alt: 'chemo comfort bag'},
     {id: 11, img: '/gifts/chemo-comfort-bag-12.jpg', alt: 'chemo comfort bag'},
     {id: 12, img: '/gifts/chemo-comfort-bag-13.jpg', alt: 'chemo comfort bag'},
+    {id: 13, img: '/gifts/chemo-comfort-bag-14.jpg', alt: 'chemo comfort bag'},
     // {id: 0, img: '/gifts/comfort-basket-01.jpg', alt: ''}
 ]
 
