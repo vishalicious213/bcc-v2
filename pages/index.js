@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Carousel from '../components/carousel'
 import Video from '../components/video'
+import ShopBanner from '../components/shopBanner'
 // import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
 
@@ -23,6 +24,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <ShopBanner />
+
         <article className='pink-container message'>
           <div id='ribbon'>
             <img src='/breast-cancer-ribbon.png' />
