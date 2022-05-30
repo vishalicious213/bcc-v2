@@ -8,9 +8,8 @@ const comfortBaskets = [
     {id: 0, img: '/gifts/comfort-basket-01.jpg', alt: 'comfort basket with animal'},
     {id: 1, img: '/gifts/comfort-basket-02.jpg', alt: 'comfort basket with dark tulle'},
     {id: 2, img: '/gifts/comfort-basket-03.jpg', alt: 'comfort basket with reusable shopping bag'},
-    {id: 3, img: '/gifts/comfort-basket-01.jpg', alt: 'comfort basket with animal'},
-    {id: 4, img: '/gifts/comfort-basket-02.jpg', alt: 'comfort basket with dark tulle'},
-    {id: 5, img: '/gifts/comfort-basket-03.jpg', alt: 'comfort basket with reusable shopping bag'},
+    {id: 3, img: '/gifts/comfort-basket-04.jpg', alt: 'comfort basket'},
+    {id: 4, img: '/gifts/comfort-basket-05.jpg', alt: 'comfort basket'},
     // {id: 0, img: '/gifts/comfort-basket-01.jpg', alt: ''}
 ]
 
