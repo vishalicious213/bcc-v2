@@ -10,7 +10,7 @@ export default function Carousel() {
         speed: 500,
         slidesToShow: 3.5,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         speed: 5000,
         autoplaySpeed: 0,
         cssEase: "linear",
@@ -59,10 +59,6 @@ export default function Carousel() {
             </Head>
 
             <Slider {...settings}>
-                <div className='text-container'>
-                    <p className='image-text'>The Breast Cancer Comfort Foundation recently paid our practice a visit to drop off some chemotherapy comfort bags. These curated collections of personal care items are designed to help and support patients who have recently undergone surgery for breast cancer.</p>
-                    <img src='/carousel-images/carousel-20.jpg' alt='Breast Cancer Comfort comfort basket' />
-                </div>  
                 {/* <div>
                     <img src='/carousel-images/carousel-01.jpg' alt='Breast Cancer Comfort event' />
                 </div> */}
@@ -120,10 +116,10 @@ export default function Carousel() {
                 <div>
                     <img src='/carousel-images/carousel-19.jpg' alt='Breast Cancer Comfort comfort basket with letter from Renae Eager' />
                 </div>
-                {/* <div className='text-container'>
+                <div className='text-container'>
                     <p className='image-text'>The Breast Cancer Comfort Foundation recently paid our practice a visit to drop off some chemotherapy comfort bags. These curated collections of personal care items are designed to help and support patients who have recently undergone surgery for breast cancer.</p>
                     <img src='/carousel-images/carousel-20.jpg' alt='Breast Cancer Comfort comfort basket' />
-                </div>                 */}
+                </div>
             </Slider>
 
             <style jsx>
