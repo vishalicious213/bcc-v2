@@ -141,8 +141,9 @@ export default function Carousel() {
                     padding: 1rem;
                     font-size: 1.75rem;
                     color: gainsboro;
-                    text-shadow: 1px 1px black;
+                    // text-shadow: 1px 1px black;
                     font-family: 'Covered By Your Grace', cursive;
+                    background-color: rgba(0, 0, 0, .3);
                 }
                 `}
             </style>
