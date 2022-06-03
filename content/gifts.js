@@ -9,21 +9,21 @@ const gifts = [
         desc: <>
             <p>Best used after surgery both as inpatient and at home</p>
             <p>Items include:</p>
-        <ul>
-            <li>Journal, to write down thoughts and feelings</li>
-            <li>Calendar to remember appointments, times, and names</li>
-            <li>Thank you, cards (8), for all the kind gestures offered to you from friends and family or hospital staff</li>
-            <li>Handmade heart with cold pact insert</li>
-            <li>Post-it for questions and thoughts</li>
-            <li>Hug card for your wallet just in case you need one</li>
-            <li>Pen</li>
-            <li>Three individually wrapped mints for dry throat</li>
-            <li>Lip balm for dry lips</li>
-            <li>Tissues on case you cry</li>
-            <li>Compact to see the beauty that everyone else sees</li>
-            <li>Thrive eye brightener</li>
-            <li>A small stuffed animal OR a reusable grocery bag</li>
-        </ul>
+            <ul>
+                <li>Journal, to write down thoughts and feelings</li>
+                <li>Calendar to remember appointments, times, and names</li>
+                <li>Thank you, cards (8), for all the kind gestures offered to you from friends and family or hospital staff</li>
+                <li>Handmade heart with cold pact insert</li>
+                <li>Post-it for questions and thoughts</li>
+                <li>Hug card for your wallet just in case you need one</li>
+                <li>Pen</li>
+                <li>Three individually wrapped mints for dry throat</li>
+                <li>Lip balm for dry lips</li>
+                <li>Tissues on case you cry</li>
+                <li>Compact to see the beauty that everyone else sees</li>
+                <li>Thrive eye brightener</li>
+                <li>A small stuffed animal OR a reusable grocery bag</li>
+            </ul>
         </>,
         img: '/gifts/comfort-basket-01.jpg',
         alt: 'comfort basket with animal',
@@ -38,7 +38,21 @@ const gifts = [
         name: 'Chemo comfort bag',
         price: 2700,
         short: 'Show your love and support with this handmade chemo comfort bag. This item is sure to make someone feel special. Pick from our available patterns - there is no better way to say I care for you than to send a comfort package.',
-        desc: 'Integer et sapien lobortis, eleifend quam ut, pellentesque quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin ullamcorper odio ac diam fringilla, ac vulputate elit dignissim. Pellentesque non metus nisl. Nam placerat libero vitae rhoncus facilisis. Praesent posuere, arcu rhoncus tristique ullamcorper, magna diam tincidunt nisi, sit amet porta erat tortor sit amet nisi. Suspendisse quis blandit ligula, nec molestie purus.',
+        desc: <>
+            <p>Best used at chemo treatment</p>
+            <p>Items include:</p>
+            <ul>
+                <li>Mandala or adult coloring book or word search</li>
+                <li>Colored pencils</li>
+                <li>Throw or small blanket</li>
+                <li>Water bottle</li>
+                <li>Three mints or ginger candies for nausea</li>
+                <li>Pen</li>
+                <li>Tissues</li>
+                <li>Handmade port protector or pillow for use with seatbelt</li>
+                <li>Handmade pocket heart hug</li>
+            </ul>            
+        </>,
         img: '/gifts/chemo-comfort-bag-11.jpg',
         alt: 'chemo comfort bag',
         weight: 16.0,
