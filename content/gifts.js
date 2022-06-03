@@ -66,7 +66,21 @@ const gifts = [
     //     name: 'Chemo comfort bag w/blanket',
     //     price: 2500,
     //     short: 'Nulla sodales sem in odio pretium, sit amet vestibulum neque vulputate. Vivamus vel quam justo. Nullam cursus convallis ligula, vitae dapibus neque vulputate eu. Integer rutrum tortor felis, sit amet fringilla tellus dictum vitae.',
-    //     desc: 'Nulla sodales sem in odio pretium, sit amet vestibulum neque vulputate. Vivamus vel quam justo. Nullam cursus convallis ligula, vitae dapibus neque vulputate eu. Integer rutrum tortor felis, sit amet fringilla tellus dictum vitae. Nam tempus lorem sapien, quis blandit nulla dignissim sit amet. Quisque ac suscipit ligula. Nam sollicitudin varius dui, vitae ullamcorper magna sagittis ut. Sed ac ultrices sapien. Pellentesque non orci massa. Proin rhoncus euismod metus vitae scelerisque. Proin non tempus ipsum, tincidunt lacinia urna.',
+    //     desc: <>
+    //         <p>Best used at chemo treatment</p>
+    //         <p>Items include:</p>
+    //         <ul>
+    //             <li>Mandala or adult coloring book or word search</li>
+    //             <li>Colored pencils</li>
+    //             <li>Throw or small blanket</li>
+    //             <li>Water bottle</li>
+    //             <li>Three mints or ginger candies for nausea</li>
+    //             <li>Pen</li>
+    //             <li>Tissues</li>
+    //             <li>Handmade port protector or pillow for use with seatbelt</li>
+    //             <li>Handmade pocket heart hug</li>
+    //         </ul>            
+    //     </>,
     //     img: '/gifts/chemo-bag-blanket-03.jpg',
     //     alt: 'chemo bag with blanket',
     //     weight: 32.0,
