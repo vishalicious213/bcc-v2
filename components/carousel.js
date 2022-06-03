@@ -62,8 +62,9 @@ export default function Carousel() {
                 <div>
                     <img src='/carousel-images/carousel-02.jpg' alt='Breast Cancer Comfort comfort basket' />
                 </div>
-                <div>
-                    <img src='/carousel-images/carousel-03.jpg' alt='Breast Cancer Comfort, high school students making baskets' />
+                <div className='text-container'>
+                    <p className='image-text'>Molloy University nursing students 2021</p>
+                    <img src='/carousel-images/carousel-03.jpg' alt='Breast Cancer Comfort, Molloy University nursing students 2021' />
                 </div>
                 <div>
                     <img src='/carousel-images/carousel-21.jpg' alt='Breast Cancer Comfort event' />
@@ -83,7 +84,8 @@ export default function Carousel() {
                 <div>
                     <img src='/carousel-images/carousel-10.jpg' alt='Breast Cancer Comfort, Debi Cavolo, Salt & Pepper, NY Mets' />
                 </div>
-                <div>
+                <div className='text-container'>
+                    <p className='image-text'>F45 Herricks fundraiser, support BCC while sweating, 2022</p>
                     <img src='/carousel-images/carousel-24.jpg' alt='Breast Cancer Comfort event' />
                 </div>
                 <div>
@@ -98,7 +100,8 @@ export default function Carousel() {
                 <div>
                     <img src='/carousel-images/carousel-19.jpg' alt='Breast Cancer Comfort comfort basket with letter from Renae Eager' />
                 </div>
-                <div>
+                <div className='text-container'>
+                    <p className='image-text'>We love our volunteers!</p>
                     <img src='/carousel-images/carousel-16.jpg' alt='Breast Cancer Comfort, high school girls making maskets' />
                 </div>
                 <div>
@@ -111,9 +114,11 @@ export default function Carousel() {
                 <div>
                     <img src='/carousel-images/carousel-22.jpg' alt='Breast Cancer Comfort event' />
                 </div>
-                <div>
+                <div className='text-container'>
+                    <p className='image-text'>Making Strides Against Breast Cancer,<br></br> Jones Beach 2021</p>
                     <img src='/carousel-images/carousel-23.jpg' alt='Breast Cancer Comfort event' />
                 </div>
+
                 {/* <div>
                     <img src='/carousel-images/carousel-01.jpg' alt='Breast Cancer Comfort event' />
                 </div> */}
@@ -139,7 +144,8 @@ export default function Carousel() {
 
             <style jsx>
                 {`
-                @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Roboto&display=swap');                
+                // @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Roboto&display=swap');                
+                @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shadows+Into+Light+Two&display=swap');
 
                 img {
                     width: 100%;
@@ -150,14 +156,16 @@ export default function Carousel() {
                 }
 
                 .image-text {
+                    width: 100%;
                     z-index: 2;
                     position: absolute;
                     bottom: 1rem;
                     padding: 1rem;
-                    font-size: 1.75rem;
+                    font-size: 1.5rem;
                     color: gainsboro;
                     // text-shadow: 1px 1px black;
-                    font-family: 'Covered By Your Grace', cursive;
+                    // font-family: 'Covered By Your Grace', cursive;
+                    font-family: 'Shadows Into Light Two', cursive;
                     background-color: rgba(0, 0, 0, .3);
                 }
                 `}
