@@ -17,9 +17,9 @@ const gifts = [
     },
     {
         id: 1,
-        name: 'Chemo comfort bag (pattern varies)',
+        name: 'Chemo comfort bag',
         price: 2700,
-        short: 'Integer et sapien lobortis, eleifend quam ut, pellentesque quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin ullamcorper odio ac diam fringilla, ac vulputate elit dignissim.',
+        short: 'Show your love and support with this handmade chemo comfort bag. This item is sure to make someone feel special. There is no better way to say I care for you than to send a comfort package.',
         desc: 'Integer et sapien lobortis, eleifend quam ut, pellentesque quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin ullamcorper odio ac diam fringilla, ac vulputate elit dignissim. Pellentesque non metus nisl. Nam placerat libero vitae rhoncus facilisis. Praesent posuere, arcu rhoncus tristique ullamcorper, magna diam tincidunt nisi, sit amet porta erat tortor sit amet nisi. Suspendisse quis blandit ligula, nec molestie purus.',
         img: '/gifts/chemo-comfort-bag-11.jpg',
         alt: 'chemo comfort bag',
