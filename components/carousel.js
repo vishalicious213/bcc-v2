@@ -66,6 +66,9 @@ export default function Carousel() {
                     <img src='/carousel-images/carousel-03.jpg' alt='Breast Cancer Comfort, high school students making baskets' />
                 </div>
                 <div>
+                    <img src='/carousel-images/carousel-21.jpg' alt='Breast Cancer Comfort event' />
+                </div>
+                <div>
                     <img src='/carousel-images/carousel-09.jpg' alt='Breast Cancer Comfort comfort baskets' />
                 </div>
                 <div>
@@ -81,10 +84,16 @@ export default function Carousel() {
                     <img src='/carousel-images/carousel-10.jpg' alt='Breast Cancer Comfort, Debi Cavolo, Salt & Pepper, NY Mets' />
                 </div>
                 <div>
+                    <img src='/carousel-images/carousel-24.jpg' alt='Breast Cancer Comfort event' />
+                </div>
+                <div>
                     <img src='/carousel-images/carousel-17.jpg' alt='Breast Cancer Comfort comfort basket' />
                 </div>
                 <div>
                     <img src='/carousel-images/carousel-12.jpg' alt='Breast Cancer Comfort, Debi Cavolo' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-25.jpg' alt='Breast Cancer Comfort event' />
                 </div>
                 <div>
                     <img src='/carousel-images/carousel-19.jpg' alt='Breast Cancer Comfort comfort basket with letter from Renae Eager' />
@@ -98,6 +107,12 @@ export default function Carousel() {
                 <div className='text-container'>
                     <p className='image-text'>The Breast Cancer Comfort Foundation recently paid our practice a visit to drop off some chemotherapy comfort bags. These curated collections of personal care items are designed to help and support patients who have recently undergone surgery for breast cancer.</p>
                     <img src='/carousel-images/carousel-20.jpg' alt='Breast Cancer Comfort comfort basket' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-22.jpg' alt='Breast Cancer Comfort event' />
+                </div>
+                <div>
+                    <img src='/carousel-images/carousel-23.jpg' alt='Breast Cancer Comfort event' />
                 </div>
                 {/* <div>
                     <img src='/carousel-images/carousel-01.jpg' alt='Breast Cancer Comfort event' />
