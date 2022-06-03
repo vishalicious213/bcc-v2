@@ -6,7 +6,25 @@ const gifts = [
         name: 'Comfort basket',
         price: 2700,
         short: 'It is hard to know what to send or to say to someone who is going through the hard battle of cancer. This gift basket is the perfect way to let them know that you are thinking of them. With a personalized message on the back of the card, it is sure to mean the world to anyone who receives it.',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed enim at mi aliquam egestas. Maecenas accumsan commodo turpis, consequat efficitur metus interdum eget. Donec fermentum massa massa. Donec viverra nisl id consectetur vestibulum. Maecenas ac dapibus justo, nec commodo quam. Praesent commodo mi ut rutrum bibendum. Donec eu ultricies urna. Cras scelerisque massa leo, sed pharetra ligula egestas quis. Etiam enim nisl, pulvinar vitae lacus sed, fringilla maximus arcu. Integer vitae lectus porttitor, facilisis leo eget, aliquet leo. Suspendisse malesuada ut mauris eu scelerisque. Ut vitae mauris id tellus hendrerit molestie vel vitae libero.',
+        desc: <>
+            <p>Best used after surgery both as inpatient and at home</p>
+            <p>Items include:</p>
+        <ul>
+            <li>Journal, to write down thoughts and feelings</li>
+            <li>Calendar to remember appointments, times, and names</li>
+            <li>Thank you, cards (8), for all the kind gestures offered to you from friends and family or hospital staff</li>
+            <li>Handmade heart with cold pact insert</li>
+            <li>Post-it for questions and thoughts</li>
+            <li>Hug card for your wallet just in case you need one</li>
+            <li>Pen</li>
+            <li>Three individually wrapped mints for dry throat</li>
+            <li>Lip balm for dry lips</li>
+            <li>Tissues on case you cry</li>
+            <li>Compact to see the beauty that everyone else sees</li>
+            <li>Thrive eye brightener</li>
+            <li>A small stuffed animal OR a reusable grocery bag</li>
+        </ul>
+        </>,
         img: '/gifts/comfort-basket-01.jpg',
         alt: 'comfort basket with animal',
         weight: 24.0,
