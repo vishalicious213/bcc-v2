@@ -39,18 +39,18 @@ const gifts = [
         price: 2700,
         short: 'Show your love and support with this handmade chemo comfort bag. This item is sure to make someone feel special. Pick from our available patterns - there is no better way to say I care for you than to send a comfort package.',
         desc: <>
-            <p>Best used at chemo treatment</p>
+            <p>Best used for recovery</p>
             <p>Items include:</p>
             <ul>
-                <li>Mandala or adult coloring book or word search</li>
-                <li>Colored pencils</li>
-                <li>Throw or small blanket</li>
-                <li>Water bottle</li>
-                <li>Three mints or ginger candies for nausea</li>
+                <li>Handmade cloth makeup bag</li>
+                <li>Pashmina</li>
+                <li>Word search</li>
                 <li>Pen</li>
                 <li>Tissues</li>
-                <li>Handmade port protector or pillow for use with seatbelt</li>
-                <li>Handmade pocket heart hug</li>
+                <li>Notepad</li>
+                <li>Three mints</li>
+                <li>Handmade change purse</li>
+                <li>Hug card</li>
             </ul>            
         </>,
         img: '/gifts/chemo-comfort-bag-11.jpg',
