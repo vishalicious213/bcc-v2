@@ -6,3 +6,7 @@ BCC is a cancer charity operating out of Long Island, NY. Their focus is providi
 
 - The main website is currently located at http://www.breastcancercomfort.org
 - The test deploy for this repository is at https://vish213-bcc-v2.netlify.app/
+
+---
+
+To run locally with Netlify serverless functions, install Netlify CLI and in the terminal, run "netlify dev".
