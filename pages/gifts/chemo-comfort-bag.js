@@ -5,6 +5,56 @@ import Link from 'next/link'
 
 const gift = gifts[1]
 
+const BagStyles = () => {
+    return (
+        <div>
+            <p>Available in the following styles:</p>
+            
+            <div className='selections'>
+                <div className='bag-style bag-1'>1</div>
+                <div className='bag-style bag-2'>2</div>
+                <div className='bag-style bag-3'>3</div>
+            </div>
+
+            <style jsx>
+                {`
+                .selections {
+                    display: flex;
+                    // outline: 1px solid orange;
+                    justify-content: space-around;
+                    min-width: 310px;
+                    max-width: 50%;
+                }
+
+                .bag-style {
+                    // outline: 1px solid red;
+                    height: 100px;
+                    width: 100px;
+                    color: black;
+                    font-size: 2rem;
+                }
+
+                .bag-style:hover {
+                    outline: 2px solid hotpink;
+                }
+
+                .bag-1 {
+                    background-color: pink;
+                }
+
+                .bag-2 {
+                    background-color: red;
+                }
+
+                .bag-3 {
+                    background-color: white;
+                }
+                `}
+            </style>
+        </div>
+    )
+}
+
 export default function ChemoComfortBag() {
     const { cart, addItemToCart, removeItemFromCart } = useCart()
     const item = cart.find(i => i.id === 1)
@@ -25,6 +75,7 @@ export default function ChemoComfortBag() {
 
 
             <div className='gift-txt'>
+                <BagStyles />
                 <p><span className='pricing-detail'><b>Donation:</b></span><span className='detail'> {`$${gift.price/100}.00`}</span></p>
             </div>            
 
