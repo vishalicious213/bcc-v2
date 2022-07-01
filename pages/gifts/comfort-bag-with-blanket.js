@@ -24,7 +24,7 @@ export default function ComfortBagWithBlanket() {
                     <GiftsCarousel pics='chemoBagWithBlanket' />
                 </section>
 
-                <p className='gift-txt gift-desc'>{gift.desc}</p>
+                <div className='gift-txt gift-desc'>{gift.desc}</div>
             </div>
 
 

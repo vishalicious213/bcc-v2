@@ -20,7 +20,7 @@ export default function ComfortBasket() {
                     <GiftsCarousel pics='comfortBaskets' />
                 </section>
 
-                <p className='gift-txt gift-desc'>{gift.desc}</p>
+                <div className='gift-txt gift-desc'>{gift.desc}</div>
             </div>
 
 
