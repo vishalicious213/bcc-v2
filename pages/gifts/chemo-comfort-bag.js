@@ -20,18 +20,19 @@ const BagStyles = () => {
                 {`
                 .selections {
                     display: flex;
-                    // outline: 1px solid orange;
                     justify-content: space-around;
                     min-width: 310px;
                     max-width: 50%;
                 }
 
                 .bag-style {
-                    // outline: 1px solid red;
                     height: 100px;
                     width: 100px;
                     color: black;
                     font-size: 2rem;
+                    font-weight: 600;
+                    text-align: center;
+                    line-height: 100px;
                 }
 
                 .bag-style:hover {
@@ -39,15 +40,18 @@ const BagStyles = () => {
                 }
 
                 .bag-1 {
-                    background-color: pink;
+                    background-image: url('/gifts/chemo-comfort-bag-12.jpg');
+                    background-position: center;
                 }
 
                 .bag-2 {
-                    background-color: red;
+                    background-image: url('/gifts/chemo-comfort-bag-13.jpg');
+                    background-position: center;
                 }
 
                 .bag-3 {
-                    background-color: white;
+                    background-image: url('/gifts/chemo-comfort-bag-14.jpg');
+                    background-position: center;
                 }
                 `}
             </style>
