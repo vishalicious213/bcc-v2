@@ -81,13 +81,13 @@ const gifts = [
                 <li>Hug card</li>
             </ul>            
         </>,
-        img: '/gifts/chemo-comfort-bag-14.jpg',
+        img: '/gifts/chemo-comfort-bag-15.jpg',
         alt: 'chemo comfort bag',
         weight: 16.0,
         length: null,
         width: null,
         height: null,
-        slug: 'chemo-comfort-bag',
+        slug: 'chemo-comfort-bag-2',
     },
     // {
     //     id: 2,

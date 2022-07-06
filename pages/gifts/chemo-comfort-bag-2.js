@@ -3,7 +3,7 @@ import useCart from '../../hooks/useCart'
 import GiftsCarousel from '../../components/gifts-carousel'
 import Link from 'next/link'
 
-const gift = gifts[1]
+const gift = gifts[2]
 
 const BagStyles = () => {
     return (
@@ -61,7 +61,7 @@ const BagStyles = () => {
 
 export default function ChemoComfortBag() {
     const { cart, addItemToCart, removeItemFromCart } = useCart()
-    const item = cart.find(i => i.id === 1)
+    const item = cart.find(i => i.id === 2)
 
     return (
         <div className='gift'>
@@ -71,7 +71,7 @@ export default function ChemoComfortBag() {
 
             <div className='top'>
                 <section className='carousel'>
-                    <GiftsCarousel pics='chemoComfortBags' />
+                    <GiftsCarousel pics='chemoComfortBags2' />
                 </section>
 
                 <div className='gift-txt gift-desc'>{gift.desc}</div>
