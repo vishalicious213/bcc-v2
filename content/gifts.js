@@ -35,7 +35,7 @@ const gifts = [
     },
     {
         id: 1,
-        name: 'Chemo comfort bag',
+        name: 'Chemo comfort bag 1',
         price: 2700,
         short: 'Show your love and support with this handmade chemo comfort bag. This item is sure to make someone feel special. Pick from our available patterns - there is no better way to say I care for you than to send a comfort package.',
         desc: <>
@@ -53,7 +53,35 @@ const gifts = [
                 <li>Hug card</li>
             </ul>            
         </>,
-        img: '/gifts/chemo-comfort-bag-11.jpg',
+        img: '/gifts/chemo-comfort-bag-12.jpg',
+        alt: 'chemo comfort bag',
+        weight: 16.0,
+        length: null,
+        width: null,
+        height: null,
+        slug: 'chemo-comfort-bag',
+    },
+    {
+        id: 2,
+        name: 'Chemo comfort bag 2',
+        price: 2700,
+        short: 'Show your love and support with this handmade chemo comfort bag. This item is sure to make someone feel special. Pick from our available patterns - there is no better way to say I care for you than to send a comfort package.',
+        desc: <>
+            <p>Best used for recovery</p>
+            <p>Items include:</p>
+            <ul>
+                <li>Handmade cloth makeup bag</li>
+                <li>Pashmina</li>
+                <li>Word search</li>
+                <li>Pen</li>
+                <li>Tissues</li>
+                <li>Notepad</li>
+                <li>Three mints</li>
+                <li>Handmade change purse</li>
+                <li>Hug card</li>
+            </ul>            
+        </>,
+        img: '/gifts/chemo-comfort-bag-14.jpg',
         alt: 'chemo comfort bag',
         weight: 16.0,
         length: null,
