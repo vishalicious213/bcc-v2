@@ -32,7 +32,7 @@ const chemoComfortBags = [
 ]
 
 const chemoComfortBags2 = [
-    {id: 11, img: '/gifts/chemo-comfort-bag-12.jpg', alt: 'chemo comfort bag'},
+    {id: 11, img: '/gifts/chemo-comfort-bag-15.jpg', alt: 'chemo comfort bag'},
     {id: 12, img: '/gifts/chemo-comfort-bag-13.jpg', alt: 'chemo comfort bag'},
     {id: 13, img: '/gifts/chemo-comfort-bag-16.jpg', alt: 'chemo comfort bag'},
     // {id: 0, img: '/gifts/comfort-basket-01.jpg', alt: ''}
@@ -50,7 +50,7 @@ export default function GiftsCarousel(props) {
     if (props.pics === 'comfortBaskets') {pics = comfortBaskets}
     if (props.pics === 'chemoComfortBags') {pics = chemoComfortBags}
     if (props.pics === 'chemoBagWithBlanket') {pics = chemoBagWithBlanket}
-    if (props.pics === 'chemoBagWithBlanket2') {pics = chemoBagWithBlanket2}
+    if (props.pics === 'chemoComfortBags2') {pics = chemoComfortBags2}
 
     const settings = {
         arrows: true,
