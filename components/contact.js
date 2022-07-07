@@ -107,7 +107,7 @@ export default function ContactForm() {
                 #review-container {
                     display: flex;
                     justify-content: center;
-                    width: 80%;
+                    width: 90%;
                     margin: .25rem auto 0;
                 }
                 
@@ -122,6 +122,10 @@ export default function ContactForm() {
                     }
 
                     #map {
+                        width: 80%;
+                    }
+
+                    #review-container {
                         width: 80%;
                     }
                 }
