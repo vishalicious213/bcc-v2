@@ -105,6 +105,7 @@ export default function ContactForm() {
 
                 .review {
                     font-size: 1.1rem;
+                    font-weight: 600;
                     color: gainsboro;
                     width: 80%;
                     margin: 1rem auto 0;
