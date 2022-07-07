@@ -105,15 +105,14 @@ export default function ContactForm() {
 
                 .review {
                     font-size: 1.1rem;
-                    color: #b01e65;
-                    // color: #ff99cc;
+                    color: gainsboro;
                     width: 80%;
                     margin: 1rem auto 0;
                     text-decoration: underline;
                 }
                 
                 .review a:hover {
-                    color: deeppink;
+                    color: white;
                 }
 
                 @media only screen and (min-width: 1024px) {
