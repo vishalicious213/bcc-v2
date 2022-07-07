@@ -33,19 +33,20 @@ export default function ContactForm() {
                     placeholder='message'
                     className='field'
                 />
-                <button id='contact-button' type='submit'>SEND MESSAGE</button>
+                <button className='contact-button' type='submit'>SEND MESSAGE</button>
             </form>
             
-            <div className='review'>
-            <a target='_blank' rel='noopener' href="https://g.page/r/CTs04vRM7N66EAI/review">
-                Review The Breast Cancer Comfort Foundation on Google
-            </a>
-
-            </div>
-
             <div id='map'>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.8108990738788!2d-73.53659328442512!3d40.74418634358251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c281a876179661%3A0xbadeec4cf4e2343b!2sBreast%20Cancer%20Comfort%20Foundation!5e0!3m2!1sen!2sus!4v1648242838531!5m2!1sen!2sus" width="100%" height="300" style={{border:0, borderRadius: "1rem", outline: "3px solid #b01e65"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
+
+            <a target='_blank' rel='noopener' href="https://g.page/r/CTs04vRM7N66EAI/review">
+                <div id='review-container'>
+                    <button id='review' className='contact-button' type='button'>
+                        Review us on Google
+                    </button>
+                </div>
+            </a>
 
             <style jsx>
                 {`
@@ -74,7 +75,7 @@ export default function ContactForm() {
                     border: 2px solid #b01e65;
                 }
 
-                #contact-button {
+                .contact-button {
                     color: gainsboro;
                     font-size: 1.1rem;
                     background-color: #292c2f;
@@ -84,7 +85,7 @@ export default function ContactForm() {
                     margin-top: 1rem;
                 }
 
-                #contact-button:hover {
+                .contact-button:hover {
                     color: white;
                     background-color: #b01e65;
                     transition: .25s
@@ -103,17 +104,16 @@ export default function ContactForm() {
                     border-radius: 1rem;
                 }
 
-                .review {
-                    font-size: 1.1rem;
-                    font-weight: 600;
-                    color: gainsboro;
+                #review-container {
+                    display: flex;
+                    justify-content: center;
                     width: 80%;
-                    margin: 1rem auto 0;
-                    text-decoration: underline;
+                    margin: .25rem auto 0;
                 }
                 
-                .review a:hover {
-                    color: white;
+                #review {
+                    width: 100%;
+                    text-transform: uppercase;
                 }
 
                 @media only screen and (min-width: 1024px) {
