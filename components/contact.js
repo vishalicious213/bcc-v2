@@ -86,7 +86,7 @@ export default function ContactForm() {
 
                 #contact-button:hover {
                     color: white;
-                    background: #b01e65;
+                    background-color: #b01e65;
                     transition: .25s
                 }
 
@@ -104,13 +104,15 @@ export default function ContactForm() {
                 }
 
                 .review {
+                    font-size: 1.1rem;
                     color: #b01e65;
+                    // color: #ff99cc;
                     width: 80%;
                     margin: 1rem auto 0;
                     text-decoration: underline;
                 }
-
-                .review:hover {
+                
+                .review a:hover {
                     color: deeppink;
                 }
 
