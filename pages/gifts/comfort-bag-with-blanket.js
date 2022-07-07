@@ -98,6 +98,7 @@ export default function ComfortBagWithBlanket() {
 
                 .buttons {
                     width: 90%;
+                    max-width: 375px;
                     // display: flex;
                     // flex-direction: column;
                     display: grid;

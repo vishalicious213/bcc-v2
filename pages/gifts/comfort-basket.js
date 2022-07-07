@@ -95,6 +95,7 @@ export default function ComfortBasket() {
 
                 .buttons {
                     width: 90%;
+                    max-width: 375px;
                     // display: flex;
                     // flex-direction: column;
                     display: grid;
