@@ -10,8 +10,7 @@ const gift = gifts[1]
 
 export default function ComfortBagWithBlanket() {
     const { cart, addItemToCart, removeItemFromCart } = useCart()
-    // const item = cart.find(i => i.id === 2)
-    const item = cart.find(i => i.id === 1)
+    const item = cart.find(i => i.id === 3)
 
     return (
         <div className='gift'>

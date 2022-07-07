@@ -90,7 +90,7 @@ const gifts = [
         slug: 'chemo-comfort-bag-2',
     },
     // {
-    //     id: 2,
+    //     id: 3,
     //     name: 'Chemo comfort bag w/blanket',
     //     price: 2500,
     //     short: 'Nulla sodales sem in odio pretium, sit amet vestibulum neque vulputate. Vivamus vel quam justo. Nullam cursus convallis ligula, vitae dapibus neque vulputate eu. Integer rutrum tortor felis, sit amet fringilla tellus dictum vitae.',
