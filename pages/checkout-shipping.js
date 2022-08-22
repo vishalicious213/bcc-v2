@@ -15,14 +15,17 @@ const CheckoutShipping = () => {
     
     // get shipping services info from easypost
     const processShipping = async () => {
-        // const url ='/.netlify/functions/shipping'
-        // const { data } = await axios.post(url, { cart: cart, shipTo: shipAddress })
+        const url ='/.netlify/functions/shipping'
+        const { data } = await axios.post(url, { cart: cart, shipTo: shipAddress })
+        console.log(data)
         // const getRates = data.carriers.rates
 
         // setRates(getRates)
-        console.log('TEST')
-        const testNetlify = await axios.post('/.netlify/functions/test')
-        console.log(testNetlify.data)
+
+        // TEST NETLIFY SERVERLESS FUNCTION
+        // console.log('TEST')
+        // const testNetlify = await axios.post('/.netlify/functions/test')
+        // console.log(testNetlify.data)
     }
 
     // send data to Context to globally calculate & update shipping costs
