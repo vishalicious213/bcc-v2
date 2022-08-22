@@ -22,7 +22,7 @@ const CheckoutShipping = () => {
         // setRates(getRates)
         console.log('TEST')
         const testNetlify = await axios.post('/.netlify/functions/test')
-        console.log(testNetlify)
+        console.log(testNetlify.data)
     }
 
     // send data to Context to globally calculate & update shipping costs
