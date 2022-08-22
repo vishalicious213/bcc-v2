@@ -98,6 +98,7 @@ exports.handler =  async function(event, context) {
         statusCode: 200,
         body: JSON.stringify({
             cartData,
+            success_message: 'cartData received'
         })
     }
     // let toAddressId = await getToAddress(cartData.shipTo)
