@@ -8,7 +8,7 @@ export default function ShopGifts(gifts) {
 
             <section className='gifts'>
                     {items.map(item =>
-                        <div key={item.id} className='gift'>
+                        <div key={item.id} className='gift' style={{backgroundImage: `url(${item.img})`}}>
                             <h3>{item.name}</h3>
                             <p className='pricing-detail'><b>Donation:</b> <span className='price'>${item.price/100}.00</span></p>
                             <p>{item.short}</p>
@@ -33,6 +33,19 @@ export default function ShopGifts(gifts) {
                     margin-bottom: 2rem;
                     margin-top: 2rem;
                     color: #f5d3e4;
+                }
+
+                .gift {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-bottom: 1px solid #b01e65;
+                    min-height: 75vh;
+                    margin-bottom: 2rem;
                 }
 
                 h3 {
