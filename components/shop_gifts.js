@@ -59,7 +59,6 @@ export default function ShopGifts(gifts) {
                     background: rgba(0, 0, 0, 0.5);
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
                 }
 
                 h3 {

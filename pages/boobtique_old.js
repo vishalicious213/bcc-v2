@@ -48,7 +48,7 @@ export default function Boobtique() {
             </div>
             <div className='gift-text-container'>
             <h2 className='h2'>Have a Comfort Basket delivered</h2>
-            <p>Demand for our <b>Comfort Baskets</b> have been increasing as our program is getting more popular. This makes us very proud of what we do. If you would like a basket we ask for a donation of $25 to help cover the costs of the baskets, delivery and keeping our program going.</p>
+            <p>Demand for our <b>Comfort Baskets</b> has been increasing as our program is getting more popular. This makes us very proud of what we do. If you would like a basket we ask for a donation of $25 to help cover the costs of the baskets, delivery and keeping our program going.</p>
             <p>Each basket is specially-created with items hand-selected to provide comfort to individuals undergoing breast cancer treatment. These items can include a journal, pen, unflavored lip balm, tissues, mints, hand sanitizer, pocket calendar, stuffed animal, thank you cards, and handmade heart with hot/cold pack. The style of the contents may vary.</p>
             </div>
           </section>
