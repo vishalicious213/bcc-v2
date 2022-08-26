@@ -115,6 +115,11 @@ export default function ShopGifts(gifts) {
                         grid-template-columns: 1fr 1fr;
                         margin-bottom: 3rem;
                     }
+
+                    .gift:hover {
+                        outline: 2px solid #b01e65;
+                        background-size: auto;
+                    }
                 }
 
                 @media only screen and (min-width: 1200px) {
