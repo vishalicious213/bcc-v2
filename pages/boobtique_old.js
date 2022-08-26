@@ -63,9 +63,7 @@ export default function Boobtique() {
             </div>
           </section>
 
-          {/* Hiding the shop until shipping is rebuilt. Going to display gifts and pricing/ordering info here temporarily. */}
-          {/* Copy of shop is archived in boobtique_old */}
-          {/* <Shop addItem={addItemToCart} removeItem={removeItemFromCart} gifts={gifts} cart={cart} /> */}
+          <Shop addItem={addItemToCart} removeItem={removeItemFromCart} gifts={gifts} cart={cart} />
           
           {/* <Shopify /> */}
           
