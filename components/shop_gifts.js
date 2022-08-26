@@ -49,6 +49,24 @@ export default function ShopGifts(gifts) {
                 .price {
                     color: white;
                 }
+
+                @media only screen and (min-width: 800px) {
+                    .gifts {
+                        display: grid;
+                        grid-gap: 2rem;
+                        grid-template-columns: 1fr 1fr;
+                        margin-bottom: 3rem;
+                    }
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    .gifts {
+                        display: grid;
+                        grid-gap: 2rem;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        margin-bottom: 3rem;
+                    }
+                }
                 `}
             </style>
         </div>
