@@ -1,6 +1,26 @@
+import axios from 'axios'
+import { loadStripe } from '@stripe/stripe-js'
+
 export default function ShopGifts(gifts) {
     let items=gifts.gifts
     // console.log(items)
+
+    // send data to Stripe to charge visitor's credit card
+    const processPayment = async () => {
+        console.log('connect to Stripe')
+        // const url ='/.netlify/functions/charge-card'
+
+        // get id and qty of products in cart (don't trust client-side prices!)
+        // const newCart = cart.map(({ id, qty }) => ({
+        //     id,
+        //     qty
+        // }))
+
+        // const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
+        // const { data } = await axios.post(url, { cart: newCart })
+
+        // await stripe.redirectToCheckout({ sessionId: data.id })
+    }
 
     return (
         <div id="gifts-main">
@@ -18,7 +38,7 @@ export default function ShopGifts(gifts) {
                                 </div>
 
                                 <div className='button'>
-                                    <button>Donate</button>
+                                    <button onClick={() => processPayment()}>Donate</button>
                                 </div>
                             </div>
                         </div>
