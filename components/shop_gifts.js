@@ -6,8 +6,10 @@ export default function ShopGifts(gifts) {
     // console.log(items)
 
     // send data to Stripe to charge visitor's credit card
-    const processPayment = async () => {
-        console.log('connect to Stripe')
+    const processPayment = async (name, price) => {
+        await console.log('connect to Stripe')
+        console.log('name:', name)
+        console.log('cost:', price)
         // const url ='/.netlify/functions/charge-card'
 
         // get id and qty of products in cart (don't trust client-side prices!)
@@ -38,7 +40,7 @@ export default function ShopGifts(gifts) {
                                 </div>
 
                                 <div className='button'>
-                                    <button onClick={() => processPayment()}>Donate</button>
+                                    <button onClick={() => processPayment(item.name, item.price)}>Donate</button>
                                 </div>
                             </div>
                         </div>
