@@ -10,10 +10,16 @@ export default function ShopGifts(gifts) {
                     {items.map(item =>
                         <div key={item.id} className='gift' style={{backgroundImage: `url(${item.img})`}}>
                             <div className="gift-txt">
-                                <h3>{item.name}</h3>
-                                <p className='pricing-detail'><b>Donation:</b> <span className='price'>${item.price/100}.00</span></p>
-                                <p>{item.short}</p>
-                                {/* <p>{item.desc}</p> */}
+                                <div className="gift-details">
+                                    <h3>{item.name}</h3>
+                                    <p className='pricing-detail'><b>Donation:</b> <span className='price'>${item.price/100}.00</span></p>
+                                    <p>{item.short}</p>
+                                    {/* <p>{item.desc}</p> */}
+                                </div>
+
+                                <div className='button'>
+                                    <button>Donate</button>
+                                </div>
                             </div>
                         </div>
                     )}
@@ -59,6 +65,11 @@ export default function ShopGifts(gifts) {
                     background: rgba(0, 0, 0, 0.5);
                     display: flex;
                     flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                .gift-details {
+                    
                 }
 
                 h3 {
@@ -74,6 +85,27 @@ export default function ShopGifts(gifts) {
 
                 .price {
                     color: white;
+                }
+
+                .button {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                button {
+                    color: gainsboro;
+                    background-color: #b01e65;
+                    border: none;
+                    font-size: 1.1rem;
+                    height: 2rem;
+                    width: 45%;
+                    padding: .5rem 0;
+                    border-radius: 1rem;
+                }
+
+                button:hover {
+                    color: white;
+                    background-color: deeppink;
                 }
 
                 @media only screen and (min-width: 800px) {
