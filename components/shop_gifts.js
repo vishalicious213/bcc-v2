@@ -1,15 +1,16 @@
 export default function ShopGifts(gifts) {
     let items=gifts.gifts
-    console.log(items)
+    // console.log(items)
 
     return (
         <div id="gifts-main">
-            <div>GIFT ITEMS</div>
+            <h2>Make a donation and send a comfort basket or bag to a loved one</h2>
+
             <section className='gifts'>
                     {items.map(item =>
                         <div key={item.id} className='gift'>
-                            <h2>{item.name}</h2>
-                            <p>Donation: ${item.price/100}.00</p>
+                            <h3>{item.name}</h3>
+                            <p className='pricing-detail'><b>Donation:</b> <span className='price'>${item.price/100}.00</span></p>
                             <p>{item.short}</p>
                             <p>{item.desc}</p>
                         </div>
@@ -19,7 +20,34 @@ export default function ShopGifts(gifts) {
             <style jsx>
                 {`
                 #gifts-main {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    color: white;
+                }
+
+                h2 {
+                    margin-bottom: 2rem;
+                    margin-top: 2rem;
+                    color: #f5d3e4;
+                }
+
+                h3 {
+                    font-size: 1.75rem;
+                    margin-bottom: 0;
+                    color: deeppink;
+                }  
+                
+                .pricing-detail {
                     color: gainsboro;
+                    color: #f5d3e4;
+                }
+
+                .price {
+                    color: white;
                 }
                 `}
             </style>
