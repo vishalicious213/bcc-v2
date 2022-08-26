@@ -1,8 +1,8 @@
 import Head from 'next/head'
-// import Shopify from '../components/shopify'
-import Shop from '../components/shop'
+// import Shop from '../components/shop'
 import useCart from '../hooks/useCart'
 import { gifts } from '../content/gifts'
+import ShopGifts from '../components/shop_gifts'
 import styles from '../styles/Home.module.css'
 
 export default function Boobtique() {
@@ -66,8 +66,8 @@ export default function Boobtique() {
           {/* Hiding the shop until shipping is rebuilt. Going to display gifts and pricing/ordering info here temporarily. */}
           {/* Copy of shop is archived in boobtique_old */}
           {/* <Shop addItem={addItemToCart} removeItem={removeItemFromCart} gifts={gifts} cart={cart} /> */}
-          
-          {/* <Shopify /> */}
+
+          <ShopGifts gifts={gifts} />
           
           {/* <div className='img-container-2'>
             <img src='/boobtique/boobtique-2.jpg' alt='' />
