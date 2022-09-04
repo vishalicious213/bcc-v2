@@ -1,6 +1,9 @@
 import axios from 'axios'
 import { loadStripe } from '@stripe/stripe-js'
 
+// this component will replace the shop component for now. it will show gifts, pricing and allow ordering.
+// it will connect to stripe and will have simplified shopping (shipping price is built-in).
+
 export default function ShopGifts(gifts) {
     let items=gifts.gifts
     // console.log(items)
