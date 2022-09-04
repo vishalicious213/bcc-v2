@@ -110,14 +110,14 @@ const CheckoutAddress = () => {
             </div>
 
             <div className='checkout-body'>
-                <Link href='/checkout-shipping'>
-                    <div className='pay-button'>
-                        <Link href='/checkout'>
-                            <button>Back</button>
-                        </Link>
-                        <button onClick={() => saveAddress()}>Choose Shipping</button>
-                    </div>
-                </Link>
+                <div className='pay-button'>
+                    <Link href='/checkout'>
+                        <button>Back</button>
+                    </Link>
+                    <Link href='/checkout-shipping'>
+                            <button onClick={() => saveAddress()}>Choose Shipping</button>
+                    </Link>
+                </div>
                 {/* <button onClick={() => console.log('Shipping Address', shipAddress)}>CHECK BUTTON CONTEXT</button> */}
             </div>
 
@@ -175,11 +175,11 @@ const CheckoutAddress = () => {
                 .checkout-body {
                     padding: 1rem;
                 }
-
+                
                 .pay-button {
                     display: flex;
                     justify-content: space-around;
-                    margin: 1rem 0;
+                    margin: 0 0 1rem 0;
                 }
 
                 button {
