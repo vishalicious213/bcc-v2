@@ -115,7 +115,7 @@ const CheckoutAddress = () => {
                         <button>Back</button>
                     </Link>
                     <Link href='/checkout-shipping'>
-                            <button onClick={() => saveAddress()}>Send Payment</button>
+                            <button onClick={() => saveAddress()}>Choose Shipping</button>
                     </Link>
                 </div>
                 {/* <button onClick={() => console.log('Shipping Address', shipAddress)}>CHECK BUTTON CONTEXT</button> */}
