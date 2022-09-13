@@ -93,7 +93,7 @@ export default function OrderForm() {
                     placeholder='message'
                     className='field'
                 />
-                <button className='contact-button' type='submit'>SUBMIT ORDER AND MAKE DONATION</button>
+                <button className='order-button' type='submit'>SUBMIT ORDER AND MAKE DONATION</button>
             </form>
 
             <style jsx>
@@ -153,7 +153,7 @@ export default function OrderForm() {
                     color: gainsboro;
                 }
 
-                .contact-button {
+                .order-button {
                     color: gainsboro;
                     font-size: 1.1rem;
                     background-color: #292c2f;
@@ -163,13 +163,13 @@ export default function OrderForm() {
                     margin-top: 1rem;
                 }
 
-                .contact-button:hover {
+                .order-button:hover {
                     color: white;
                     background-color: #b01e65;
                     transition: .25s
                 }
 
-                .field:focus, #contact-button:focus {
+                .field:focus, #order-button:focus {
                     outline: none;
                     border: 2px solid #b01e65;
                 }
