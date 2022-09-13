@@ -40,6 +40,33 @@ export default function OrderForm() {
                     placeholder="recipient's address"
                     className='field'
                 />
+
+                <div id='gift-selector'>
+                    <input
+                        id='basket'
+                        name='basket'
+                        type='checkbox'
+                        placeholder='basket'
+                    />
+                    <label for='basket'>Comfort Basket</label>
+
+                    <input
+                        id='chemo-1'
+                        name='chemo-1'
+                        type='checkbox'
+                        placeholder='chemo-1'
+                    />
+                    <label for='basket'>Chemo Comfort Bag (style 1)</label>
+
+                    <input
+                        id='chemo-2'
+                        name='chemo-2'
+                        type='checkbox'
+                        placeholder='chemo-2'
+                    />
+                    <label for='basket'>Chemo Comfort Bag (style 2)</label>
+                </div>
+
                 <textarea
                     id='message'
                     name='message'
