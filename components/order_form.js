@@ -5,46 +5,48 @@ export default function OrderForm() {
                 <input type='hidden' name='form-name' value='order-form' />
                 <h2 className='h2'>Send a comfort basket or chemo comfort bag</h2>
 
-                <div id='sender-info'>
-                    <input
-                        id='name'
-                        name='name'
-                        type='text'
-                        placeholder='your name'
-                        className='field'
-                    />
-                    <input
-                        id='email'
-                        name='email'
-                        type='email'
-                        placeholder='your email address'
-                        className='field'
-                    />
-                    <input
-                        id='phone'
-                        name='phone'
-                        type='text'
-                        placeholder='your phone number'
-                        className='field'
-                    />
-                </div>
+                <div id='contact-info'>
+                    <div id='sender-info'>
+                        <input
+                            id='name'
+                            name='name'
+                            type='text'
+                            placeholder='your name'
+                            className='field'
+                        />
+                        <input
+                            id='email'
+                            name='email'
+                            type='email'
+                            placeholder='your email address'
+                            className='field'
+                        />
+                        <input
+                            id='phone'
+                            name='phone'
+                            type='text'
+                            placeholder='your phone number'
+                            className='field'
+                        />
+                    </div>
 
-                <div id='recipient-info'>
-                    <input
-                        id='recipient'
-                        name='recipient'
-                        type='text'
-                        placeholder="recipient's name"
-                        className='field'
-                    />
-                    <textarea
-                        id='recipient_address'
-                        name='recipient_address'
-                        rows='4'
-                        cols='50'
-                        placeholder="recipient's address"
-                        className='field'
-                    />
+                    <div id='recipient-info'>
+                        <input
+                            id='recipient'
+                            name='recipient'
+                            type='text'
+                            placeholder="recipient's name"
+                            className='field'
+                        />
+                        <textarea
+                            id='recipient_address'
+                            name='recipient_address'
+                            rows='4'
+                            cols='50'
+                            placeholder="recipient's address"
+                            className='field'
+                        />
+                    </div>
                 </div>
 
                 <div id='gift-selector'>
@@ -179,6 +181,19 @@ export default function OrderForm() {
                 @media only screen and (min-width: 1024px) {
                     form {
                         width: 90%;
+                    }
+
+                    #contact-info {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    #sender-info, #recipient-info {
+                        width: 49%;
+                    }
+
+                    #recipient_address {
+                        height: 6.9rem;
                     }
                 }
                 `}
