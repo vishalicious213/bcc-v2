@@ -49,6 +49,7 @@ export default function OrderForm() {
                     </div>
                 </div>
 
+                <p id='gift-selector-instruction'>Choose at least one gift:</p>
                 <div id='gift-selector'>
                     <div className='gift'>
                         <input
@@ -142,6 +143,14 @@ export default function OrderForm() {
                 .gift-checkbox {
                     margin-right: .5rem;
                     margin-bottom: 1rem;
+                }
+
+                #name, #recipient {
+                    margin-top: 1rem;
+                }
+
+                #gift-selector-instruction {
+                    color: gainsboro;
                 }
 
                 .contact-button {
