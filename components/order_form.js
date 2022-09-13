@@ -1,7 +1,7 @@
 export default function OrderForm() {
     return (
         <div id='form-container'>
-            <form id='order-form' name='order-form' method='POST' data-netlify='true'>
+            <form id='order' name='order' method='POST' data-netlify='true'>
                 <input type='hidden' name='form-name' value='order-form' />
                 <h2 className='h2'>Send a comfort basket or chemo comfort bag</h2>
 
