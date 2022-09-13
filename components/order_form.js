@@ -59,7 +59,7 @@ export default function OrderForm() {
                             placeholder='basket'
                             className="gift-checkbox"
                         />
-                        <label for='basket'>Comfort Basket</label>
+                        <label htmlFor='basket'>Comfort Basket</label>
                     </div>
 
                     <div>
@@ -70,7 +70,7 @@ export default function OrderForm() {
                             placeholder='chemo-1'
                             className="gift-checkbox"
                         />
-                        <label for='chemo-1'>Chemo Comfort Bag (style 1)</label>
+                        <label htmlFor='chemo-1'>Chemo Comfort Bag (style 1)</label>
                     </div>
 
                     <div>
@@ -81,7 +81,7 @@ export default function OrderForm() {
                             placeholder='chemo-2'
                             className="gift-checkbox"
                         />
-                        <label for='chemo-2'>Chemo Comfort Bag (style 2)</label>
+                        <label htmlFor='chemo-2'>Chemo Comfort Bag (style 2)</label>
                     </div>
                 </div>
 
