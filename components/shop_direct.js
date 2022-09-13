@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { loadStripe } from '@stripe/stripe-js'
+import OrderForm from './order_form'
 
 // this component will replace the shop component and shop_gifts for now. it will show gifts and pricing and 
 // direct visitors to order via a form. The form will collect info about what's being ordered and where to
@@ -49,7 +50,9 @@ export default function ShopGifts(gifts) {
                             </div>
                         </div>
                     )}
-                </section>            
+                </section>
+
+                <OrderForm />
 
             <style jsx>
                 {`

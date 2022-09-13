@@ -3,7 +3,7 @@ export default function OrderForm() {
         <div id='form-container'>
             <form id='order-form' name='order-form' method='POST' data-netlify='true'>
                 <input type='hidden' name='form-name' value='order-form' />
-                <h2 className='h2'>Contact Us</h2>
+                <h2 className='h2'>Send a comfort basket or chemo comfort bag</h2>
                 <input
                     id='name'
                     name='name'
@@ -33,20 +33,22 @@ export default function OrderForm() {
                     placeholder='message'
                     className='field'
                 />
-                <button className='contact-button' type='submit'>SEND MESSAGE</button>
+                <button className='contact-button' type='submit'>SUBMIT ORDER AND DONATION</button>
             </form>
 
             <style jsx>
                 {`
                 #form-container {
+                    width: 100%;
                     border-top: 5px solid #b01e65;
+                    margin-bottom: 2rem;
                 }
-
+                
                 form {
                     color: white;
                     display: flex;
                     flex-direction: column;
-                    width: 90%;
+                    width: 100%;
                     margin: 1rem auto 0;
                 }
 
@@ -86,7 +88,7 @@ export default function OrderForm() {
 
                 @media only screen and (min-width: 1024px) {
                     form {
-                        width: 80%;
+                        width: 90%;
                     }
                 }
                 `}
