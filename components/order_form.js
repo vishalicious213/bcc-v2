@@ -42,29 +42,35 @@ export default function OrderForm() {
                 />
 
                 <div id='gift-selector'>
-                    <input
-                        id='basket'
-                        name='basket'
-                        type='checkbox'
-                        placeholder='basket'
-                    />
-                    <label for='basket'>Comfort Basket</label>
+                    <div className='gift'>
+                        <input
+                            id='basket'
+                            name='basket'
+                            type='checkbox'
+                            placeholder='basket'
+                        />
+                        <label for='basket'>Comfort Basket</label>
+                    </div>
 
-                    <input
-                        id='chemo-1'
-                        name='chemo-1'
-                        type='checkbox'
-                        placeholder='chemo-1'
-                    />
-                    <label for='basket'>Chemo Comfort Bag (style 1)</label>
+                    <div>
+                        <input
+                            id='chemo-1'
+                            name='chemo-1'
+                            type='checkbox'
+                            placeholder='chemo-1'
+                        />
+                        <label for='basket'>Chemo Comfort Bag (style 1)</label>
+                    </div>
 
-                    <input
-                        id='chemo-2'
-                        name='chemo-2'
-                        type='checkbox'
-                        placeholder='chemo-2'
-                    />
-                    <label for='basket'>Chemo Comfort Bag (style 2)</label>
+                    <div>
+                        <input
+                            id='chemo-2'
+                            name='chemo-2'
+                            type='checkbox'
+                            placeholder='chemo-2'
+                        />
+                        <label for='basket'>Chemo Comfort Bag (style 2)</label>
+                    </div>
                 </div>
 
                 <textarea
@@ -105,6 +111,11 @@ export default function OrderForm() {
 
                 .field:hover {
                     border: 2px solid #b01e65;
+                }
+
+                #gift-selector {
+                    display: flex;
+                    justify-content: space-around;
                 }
 
                 .contact-button {
