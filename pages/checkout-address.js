@@ -1,8 +1,11 @@
 import useCart from '../hooks/useCart'
 import Link from 'next/link'
+import axios from 'axios'
+import { loadStripe } from '@stripe/stripe-js'
 
 const CheckoutAddress = () => {
-    const { shipAddress, setShipAddress } = useCart()
+    const { cart, shipAddress, setShipAddress } = useCart()
+    console.log('1', cart)
 
     const handleChange = event => {
         setShipAddress({ ...shipAddress, [event.target.name]: event.target.value });
@@ -10,7 +13,32 @@ const CheckoutAddress = () => {
 
     const saveAddress = () => {
         // save shipping address to local storage
-        localStorage.setItem('shipTo', JSON.stringify(shipAddress))        
+        localStorage.setItem('shipTo', JSON.stringify(shipAddress))
+        processPayment()
+    }
+
+    // send data to easypost to generate shipping label and
+    // send data to Stripe to charge visitor's credit card
+    const processPayment = async () => {
+        const url ='/.netlify/functions/charge-card'
+        // const shipUrl = '/.netlify/functions/shipping-purchase'
+        // get id and qty of products in cart (don't trust client-side prices!)
+        // const newCart = cart.map(({ id, qty }) => ({
+        //     id,
+        //     qty
+        // }))
+
+        const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
+        // const { data } = await axios.post(url, { cart: newCart })
+        const { data } = await axios.post(url, cart)
+        console.log('2', cart)
+
+
+        // await axios.post(shipUrl, { labelId: shippingInfo.carrier_id, shipId: shippingInfo.shipment_id })
+        // .then((res) => console.log('shipping-purchage response', res.data))
+
+        // await stripe.redirectToCheckout({ sessionId: data.id })
+        console.log('3', cart)
     }
 
     return (
@@ -114,7 +142,8 @@ const CheckoutAddress = () => {
                     <Link href='/checkout'>
                         <button>Back</button>
                     </Link>
-                    <Link href='/checkout-shipping'>
+                    {/* <Link href='/checkout-shipping'> */}
+                    <Link href=''>
                             <button onClick={() => saveAddress()}>Send Payment</button>
                     </Link>
                 </div>
