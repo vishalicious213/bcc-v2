@@ -8,21 +8,21 @@ export default function OrderForm() {
                     id='name'
                     name='name'
                     type='text'
-                    placeholder='name'
+                    placeholder="recipient's name"
                     className='field'
                 />
                 <input
                     id='email'
                     name='email'
                     type='email'
-                    placeholder='email'
+                    placeholder='your email address'
                     className='field'
                 />
                 <input
                     id='phone'
                     name='phone'
                     type='text'
-                    placeholder='phone'
+                    placeholder='your phone number'
                     className='field'
                 />
                 <textarea
@@ -33,7 +33,7 @@ export default function OrderForm() {
                     placeholder='message'
                     className='field'
                 />
-                <button className='contact-button' type='submit'>SUBMIT ORDER AND DONATION</button>
+                <button className='contact-button' type='submit'>SUBMIT ORDER AND MAKE DONATION</button>
             </form>
 
             <style jsx>
