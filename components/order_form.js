@@ -118,14 +118,15 @@ export default function OrderForm() {
 
                 #gift-selector {
                     display: flex;
-                    justify-content: space-around;
-                    margin: .5rem 0 1rem 0;
+                    flex-direction: column;
+                    margin: .5rem 0 1rem 1rem;
                     color: gainsboro;
                     font-size: 1.1rem;
                 }
 
                 .gift-checkbox {
                     margin-right: .5rem;
+                    margin-bottom: 1rem;
                 }
 
                 .contact-button {
@@ -152,11 +153,16 @@ export default function OrderForm() {
                 @media only screen and (min-width: 800px) {
                     #gift-selector {
                         display: flex;
+                        flex-direction: row;
                         justify-content: space-around;
                         margin: .5rem 0 1rem 0;
                         color: gainsboro;
                         font-size: 1.1rem;
-                    }                    
+                    }
+
+                    .gift-checkbox {
+                        margin-bottom: 0;
+                    }
                 }
 
                 @media only screen and (min-width: 1024px) {
