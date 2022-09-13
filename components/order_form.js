@@ -6,7 +6,7 @@ export default function OrderForm() {
                 <h2 className='h2'>Send a comfort basket or chemo comfort bag</h2>
 
                 <div id='contact-info'>
-                    <div id='sender-info'>
+                    <div id='sender-info'>Your Contact Information:
                         <input
                             id='name'
                             name='name'
@@ -30,7 +30,7 @@ export default function OrderForm() {
                         />
                     </div>
 
-                    <div id='recipient-info'>
+                    <div id='recipient-info'>Recipient's Contact Information:
                         <input
                             id='recipient'
                             name='recipient'
@@ -114,6 +114,8 @@ export default function OrderForm() {
                 #sender-info, #recipient-info {
                     display: flex;
                     flex-direction: column;
+                    margin-top: 1rem;
+                    color: gainsboro;
                 }
 
                 .field {
