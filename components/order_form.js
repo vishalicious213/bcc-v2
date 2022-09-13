@@ -8,7 +8,7 @@ export default function OrderForm() {
                     id='name'
                     name='name'
                     type='text'
-                    placeholder="recipient's name"
+                    placeholder='your name'
                     className='field'
                 />
                 <input
@@ -23,6 +23,21 @@ export default function OrderForm() {
                     name='phone'
                     type='text'
                     placeholder='your phone number'
+                    className='field'
+                />
+                <input
+                    id='recipient'
+                    name='recipient'
+                    type='text'
+                    placeholder="recipient's name"
+                    className='field'
+                />
+                <textarea
+                    id='recipient_address'
+                    name='recipient_address'
+                    rows='4'
+                    cols='50'
+                    placeholder="recipient's address"
                     className='field'
                 />
                 <textarea
