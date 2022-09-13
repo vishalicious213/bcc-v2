@@ -48,6 +48,7 @@ export default function OrderForm() {
                             name='basket'
                             type='checkbox'
                             placeholder='basket'
+                            className="gift-checkbox"
                         />
                         <label for='basket'>Comfort Basket</label>
                     </div>
@@ -58,8 +59,9 @@ export default function OrderForm() {
                             name='chemo-1'
                             type='checkbox'
                             placeholder='chemo-1'
+                            className="gift-checkbox"
                         />
-                        <label for='basket'>Chemo Comfort Bag (style 1)</label>
+                        <label for='chemo-1'>Chemo Comfort Bag (style 1)</label>
                     </div>
 
                     <div>
@@ -68,8 +70,9 @@ export default function OrderForm() {
                             name='chemo-2'
                             type='checkbox'
                             placeholder='chemo-2'
+                            className="gift-checkbox"
                         />
-                        <label for='basket'>Chemo Comfort Bag (style 2)</label>
+                        <label for='chemo-2'>Chemo Comfort Bag (style 2)</label>
                     </div>
                 </div>
 
@@ -116,6 +119,13 @@ export default function OrderForm() {
                 #gift-selector {
                     display: flex;
                     justify-content: space-around;
+                    margin: .5rem 0 1rem 0;
+                    color: gainsboro;
+                    font-size: 1.1rem;
+                }
+
+                .gift-checkbox {
+                    margin-right: .5rem;
                 }
 
                 .contact-button {
@@ -137,6 +147,16 @@ export default function OrderForm() {
                 .field:focus, #contact-button:focus {
                     outline: none;
                     border: 2px solid #b01e65;
+                }
+
+                @media only screen and (min-width: 800px) {
+                    #gift-selector {
+                        display: flex;
+                        justify-content: space-around;
+                        margin: .5rem 0 1rem 0;
+                        color: gainsboro;
+                        font-size: 1.1rem;
+                    }                    
                 }
 
                 @media only screen and (min-width: 1024px) {
