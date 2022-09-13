@@ -4,42 +4,48 @@ export default function OrderForm() {
             <form id='order-form' name='order-form' method='POST' data-netlify='true'>
                 <input type='hidden' name='form-name' value='order-form' />
                 <h2 className='h2'>Send a comfort basket or chemo comfort bag</h2>
-                <input
-                    id='name'
-                    name='name'
-                    type='text'
-                    placeholder='your name'
-                    className='field'
-                />
-                <input
-                    id='email'
-                    name='email'
-                    type='email'
-                    placeholder='your email address'
-                    className='field'
-                />
-                <input
-                    id='phone'
-                    name='phone'
-                    type='text'
-                    placeholder='your phone number'
-                    className='field'
-                />
-                <input
-                    id='recipient'
-                    name='recipient'
-                    type='text'
-                    placeholder="recipient's name"
-                    className='field'
-                />
-                <textarea
-                    id='recipient_address'
-                    name='recipient_address'
-                    rows='4'
-                    cols='50'
-                    placeholder="recipient's address"
-                    className='field'
-                />
+
+                <div id='sender-info'>
+                    <input
+                        id='name'
+                        name='name'
+                        type='text'
+                        placeholder='your name'
+                        className='field'
+                    />
+                    <input
+                        id='email'
+                        name='email'
+                        type='email'
+                        placeholder='your email address'
+                        className='field'
+                    />
+                    <input
+                        id='phone'
+                        name='phone'
+                        type='text'
+                        placeholder='your phone number'
+                        className='field'
+                    />
+                </div>
+
+                <div id='recipient-info'>
+                    <input
+                        id='recipient'
+                        name='recipient'
+                        type='text'
+                        placeholder="recipient's name"
+                        className='field'
+                    />
+                    <textarea
+                        id='recipient_address'
+                        name='recipient_address'
+                        rows='4'
+                        cols='50'
+                        placeholder="recipient's address"
+                        className='field'
+                    />
+                </div>
 
                 <div id='gift-selector'>
                     <div className='gift'>
@@ -101,6 +107,11 @@ export default function OrderForm() {
                     flex-direction: column;
                     width: 100%;
                     margin: 1rem auto 0;
+                }
+
+                #sender-info, #recipient-info {
+                    display: flex;
+                    flex-direction: column;
                 }
 
                 .field {
