@@ -32,9 +32,9 @@ export default function Home() {
           </div>
           <div id='message-text'>
             <p className='no-space-below'><b>Breast Cancer Comfort Foundation</b></p>
-            <p className='no-space-above'><b>December 30, 2021</b></p>
-            <p>The Breast Cancer Comfort Foundation is proud to announce its most recent collaboration with <a className='link' target="_blank" rel="noopener" href='https://www.mskcc.org/'>Memoral Sloan Kettering</a> (MSK), New York City’s largest cancer treatment center. MSK has devoted more than 135 years to exceptional patient care, influential educational programs, and innovative research to discover more effective strategies to prevent, control, and ultimately cure cancer. <a className='link' target="_blank" rel="noopener" href='https://www.ccny.cuny.edu/csom'>CUNY School of Medicine</a> students who are members of the <a className='link' target="_blank" rel="noopener" href='https://www.amwa-doc.org/'>American Medical Women’s Association</a>, a professional advocacy and educational organization of women physicians and medical students, delivered around 20 bags and 5 baskets to breast cancer patients who are currently undergoing chemotherapy. The personal, hand-made comfort baskets are intended to offer confidence and hope to those experiencing or recovering from their difficult journey. We will continue to partner with MSK in the future and extend our outreach efforts.</p>
-            <p><a className='link' href='/news/2021-12-30'>See more...</a></p>
+            <p className='no-space-above'><b>September 27, 2022</b></p>
+            <p>Receiving a breast cancer diagnosis and treatment can bring a variety of feelings, including anxiety and depression. This can affect a person's physical health as well as psychological well-being. It can feel overwhelming to manage side effects and fatigue, all while navigating concerns about day-to-day life. Hence, an individual must take care of their mental health in order to support their treatment and help them feel better physically. Additionally, bettering your mental health when you have breast cancer could improve your outlook and enhance your overall quality of life. It is important to remember that you are more than your cancer!</p>
+            <p><a className='link' href='/news/2022-09-27'>See more...</a></p>
           </div>
         </article>
 
