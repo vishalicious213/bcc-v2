@@ -1,147 +1,215 @@
 import Link from 'next/link'
+// import useCart from '../hooks/useCart'
+// import fs from 'fs'
 
-export const products = [
-    {
-        id: 0,
-        name: 'Comfort basket',
-        price: 2500,
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed enim at mi aliquam egestas. Maecenas accumsan commodo turpis, consequat efficitur metus interdum eget. Donec fermentum massa massa. Donec viverra nisl id consectetur vestibulum. Maecenas ac dapibus justo, nec commodo quam. Praesent commodo mi ut rutrum bibendum. Donec eu ultricies urna. Cras scelerisque massa leo, sed pharetra ligula egestas quis. Etiam enim nisl, pulvinar vitae lacus sed, fringilla maximus arcu. Integer vitae lectus porttitor, facilisis leo eget, aliquet leo. Suspendisse malesuada ut mauris eu scelerisque. Ut vitae mauris id tellus hendrerit molestie vel vitae libero.',
-        img: '/breast-cancer-ribbon.png',
-        alt: '',
-        quantity: 10,
-        slug: 'comfort-basket',
-    },
-    {
-        id: 1,
-        name: 'Chemo comfort bag (pattern varies)',
-        price: 2500,
-        desc: 'Integer et sapien lobortis, eleifend quam ut, pellentesque quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin ullamcorper odio ac diam fringilla, ac vulputate elit dignissim. Pellentesque non metus nisl. Nam placerat libero vitae rhoncus facilisis. Praesent posuere, arcu rhoncus tristique ullamcorper, magna diam tincidunt nisi, sit amet porta erat tortor sit amet nisi. Suspendisse quis blandit ligula, nec molestie purus.',
-        img: '/breast-cancer-ribbon.png',
-        alt: '',
-        quantity: 10,
-        slug: 'chemo-comfort-bag',
-    },
-    {
-        id: 2,
-        name: 'Chemo comfort bag w/blanket',
-        price: 2500,
-        desc: 'Nulla sodales sem in odio pretium, sit amet vestibulum neque vulputate. Vivamus vel quam justo. Nullam cursus convallis ligula, vitae dapibus neque vulputate eu. Integer rutrum tortor felis, sit amet fringilla tellus dictum vitae. Nam tempus lorem sapien, quis blandit nulla dignissim sit amet. Quisque ac suscipit ligula. Nam sollicitudin varius dui, vitae ullamcorper magna sagittis ut. Sed ac ultrices sapien. Pellentesque non orci massa. Proin rhoncus euismod metus vitae scelerisque. Proin non tempus ipsum, tincidunt lacinia urna.',
-        img: '/breast-cancer-ribbon.png',
-        alt: '',
-        quantity: 10,
-        slug: 'comfort-bag-with-blanket',
-    },
-]
+const Shop = (props) => {
+    // const { cart, addItemToCart } = useCart()
+    // console.log('cart:', cart)
+    // console.log('props:', props)
+    // console.log('shop cart', props.cart)
 
-const Shop = () => {
+    const handleClick = (e) => {
+        e.stopPropagation()
+        console.log(props.gifts)
+        // console.log(props.gifts[giftid])
+        // props.add(props.gift.id)
+    }
+
     return (
-        <>
         <div id="shop">
-        <h2>Make a donation and send a comfort basket or bag to a loved one</h2>
+            <h2>Make a donation and send a comfort basket or bag to a loved one</h2>
 
-        {products.map (product => {
-            return (
-                <div key={product.id} className='product'>
-                    <div className='product-img'>
-                        <img className='img' src={product.img} alt={product.alt} />
-                    </div>
-                    <div className='product-txt'>
-                        <Link href={`/gifts/${product.slug}`}>
-                            <a><h3>{product.name}</h3></a>
-                        </Link>
-                        <div className='pricing'>
-                            <p><span className='pricing-detail'><b>Price: </b></span>{`$${product.price/100}.00`}</p>
-                            <p><span className='pricing-detail'><b>Quantity available:</b></span> {product.quantity}</p>
+            <div className='gifts'>
+                {props.gifts.map (gift => {
+                    const item = props.cart.find(i => i.id === gift.id)
+                    return (
+                        <div key={gift.id} className='gift' style={{backgroundImage: `url(${gift.img})`}}>
+                            <Link href={`/gifts/${gift.slug}`}>
+                                <div className='top-overlay'></div>
+                            </Link>
+                            <div className='gift-txt'>
+                                <div>
+                                    <Link href={`/gifts/${gift.slug}`}>
+                                        <a><h3>{gift.name}</h3></a>
+                                    </Link>
+                                    <div className='pricing'>
+                                        <p><span className='pricing-detail'><b>Donation: </b></span>{`$${gift.price/100}.00`}</p>
+                                    </div>
+                                    <p className='desc'>{gift.short}</p>
+                                </div>
+                                <div className='buttons'>
+                                    <button onClick={() => props.addItem(gift)}>Add to cart</button>
+                                    {item ? (
+                                        <button onClick={() => props.removeItem(gift.id)}>Remove</button>
+                                    ) : (
+                                        <></>
+                                    )}
+                                </div>
+                                {/* <button onClick={handleClick}>Add to cart</button> */}
+                            </div>
                         </div>
-                        <p className='desc'>{product.desc}</p>
-                    </div>
-                </div>
-            )
-        })}
+                    )
+                })}
+            </div>
 
-        <style jsx>
-            {`
-            #shop {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 90%;
-                margin-left: auto;
-                margin-right: auto;
-                color: white;
-            }
-
-            h2 {
-                margin-bottom: 2rem;
-                margin-top: 2rem;
-                color: #f5d3e4;
-            }
-
-            .product {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-bottom: 3rem;
-                padding-bottom: 2rem;
-                border-bottom: 1px solid #b01e65;
-            }
-
-            .product-img {
-                width: 50%;
-            }
-
-            .img {
-                width: 100%;
-            }
-
-            h3 {
-                font-size: 2rem;
-                margin-bottom: 0;
-                color: #b01e65;
-            }
-
-            .product-txt {
-                width: 100%;
-                padding-left: 2rem;
-                margin-bottom: 0;
-                margin-top: 0;
-            }
-
-            .desc {
-                color: gainsboro;
-            }
-
-            .pricing {
-                display: flex;
-                justify-content: space-between;
-                padding-right: 2rem;
-            }
-
-            .pricing-detail {
-                color: gainsboro;
-                color: #f5d3e4;
-            }
-
-            @media only screen and (min-width: 1024px) {
-                .product {
-                    flex-direction: row;
+            <style jsx>
+                {`
+                #shop {
+                    display: flex;
+                    flex-direction: column;
                     align-items: center;
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    color: white;
                 }
 
-                .product-img {
-                    width: 20%;
+                h2 {
+                    margin-bottom: 2rem;
+                    margin-top: 2rem;
+                    color: #f5d3e4;
                 }
 
-                .product-txt {
-                    width: 80%;
+                .gift {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-bottom: 1px solid #b01e65;
+                    min-height: 75vh;
+                    margin-bottom: 2rem;
                 }
-            }
-            `}
-        </style>
+
+                .gifts .gift:last-child {
+                    border-bottom: none;
+                }
+
+                h3 {
+                    font-size: 1.75rem;
+                    margin-bottom: 0;
+                    color: deeppink;
+                }
+
+                .top-overlay {
+                    min-height: 45vh;
+                    width: 100%;
+                    cursor: pointer;
+                }
+
+                .gift-txt {
+                    width: 100%;
+                    min-height: 50%;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                    padding-bottom: 2rem;
+                    background: rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                .desc {
+                    color: gainsboro;
+                }
+
+                .pricing {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-right: 2rem;
+                }
+
+                .pricing-detail {
+                    color: gainsboro;
+                    color: #f5d3e4;
+                }
+
+                .buttons {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                button {
+                    color: gainsboro;
+                    background-color: #b01e65;
+                    border: none;
+                    font-size: 1.1rem;
+                    height: 2rem;
+                    width: 45%;
+                    padding: .5rem 0;
+                    border-radius: 1rem;
+                }
+
+                button:hover {
+                    color: white;
+                    background-color: deeppink;
+                }
+
+                @media only screen and (min-width: 800px) {
+                    .gifts {
+                        display: grid;
+                        grid-gap: 2rem;
+                        grid-template-columns: 1fr 1fr;
+                        margin-bottom: 3rem;
+                    }
+
+                    .gift {
+                        background-color: #292c2f;
+                        margin-bottom: 0;
+                    }
+
+                    .gift:hover {
+                        outline: 2px solid #b01e65;
+                        background-size: auto;
+                    }
+
+                    .top-overlay {
+                        min-height: 50%;
+                    }
+
+                    h3 {
+                        margin-top: 1rem;
+                    }
+
+                    .pricing {
+                        flex-direction: column;
+                        margin-top: .5rem;
+                    }
+
+                    .pricing p {
+                        margin-bottom: 0;
+                    }
+
+                    .pricing p:last-child {
+                        margin-top: 0;
+                    }
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    .gifts {
+                        display: grid;
+                        grid-gap: 2rem;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        margin-bottom: 3rem;
+                    }
+                }
+                `}
+            </style>
         </div>
-        </>
     )
 }
+
+// export const getStaticProps = async () => {
+//     const directory = `${process.cwd()}/content` // returns local directory or Netlify directory
+//     const filenames = fs.readdirSync(directory)
+//     console.log(filenames)
+//     return {
+//         props: {
+
+//         }
+//     }
+// }
 
 export default Shop

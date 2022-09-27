@@ -1,9 +1,15 @@
 import Head from 'next/head'
-// import Shopify from '../components/shopify'
-import Shop from '../components/shop'
+// import Shop from '../components/shop'
+import useCart from '../hooks/useCart'
+import { gifts } from '../content/gifts'
+// import ShopGifts from '../components/shop_gifts'
+import ShopGifts from '../components/shop_direct'
 import styles from '../styles/Home.module.css'
 
 export default function Boobtique() {
+  const { cart, addItemToCart, removeItemFromCart } = useCart()
+  // console.log('boobtique cart:', cart)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,7 +22,10 @@ export default function Boobtique() {
 
       <main className={styles.main}>
           <div className='img-container'>
-            <img src='/boobtique/boobtique.jpg' alt='' />
+            {/* <img src='/boobtique/boobtique.jpg' alt='' /> */}
+            <img src='/gifts/chemo-comfort-bag-10.jpg' alt='' />
+            <img className='middle-pic' src='/boobtique/boobtique-4.jpg' alt='' />
+            <img src='/gifts/chemo-comfort-bag-11.jpg' alt='' />
           </div>
 
           <section className='pink-container gift-container'>
@@ -25,14 +34,14 @@ export default function Boobtique() {
             </div>
             <div className='gift-text-container'>
                 <h2 className='h2'>Welcome to our Shop!</h2>
-                <p className='no-space-above'>We are getting ready to open our doors to the public. If you know someone who is undergoing treatment for breast cancer and you don’t know what to give, then let us help you.</p>
-                <p>Handmade hearts, comfort bags, and custom gift baskets will be available soon. Select any one of our specialty items and we will ship to you, or anyone you choose, within 48 hours.</p>
+                <p className='no-space-above'>Our doors are now open to the public! If you know someone who is undergoing treatment for breast cancer and you don’t know what to give, then let us help you.</p>
+                <p>Handmade hearts, comfort bags, and custom gift baskets are now available for a small donation. Select any one of our specialty items and we will ship to you, or anyone you choose, within 48 hours.</p>
             </div>
           </section>
 
-          <div className='button-container'>
+          {/* <div className='button-container'>
             <button className='button'>VISIT OUR STORE</button>
-          </div>
+          </div> */}
 
           <section className='grey-container gift-container'>
             <div className='gift-img-container-top'>
@@ -40,7 +49,7 @@ export default function Boobtique() {
             </div>
             <div className='gift-text-container'>
             <h2 className='h2'>Have a Comfort Basket delivered</h2>
-            <p>Demand for our <b>Comfort Baskets</b> have been increasing as our program is getting more popular. This makes us very proud of what we do. If you would like a basket we ask for a donation of $25 to help cover the costs of the baskets, delivery and keeping our program going.</p>
+            <p>Demand for our <b>Comfort Baskets</b> has been increasing as our program is getting more popular. This makes us very proud of what we do. If you would like a basket we ask for a donation of $27 to help cover the costs of the baskets, delivery and keeping our program going.</p>
             <p>Each basket is specially-created with items hand-selected to provide comfort to individuals undergoing breast cancer treatment. These items can include a journal, pen, unflavored lip balm, tissues, mints, hand sanitizer, pocket calendar, stuffed animal, thank you cards, and handmade heart with hot/cold pack. The style of the contents may vary.</p>
             </div>
           </section>
@@ -51,13 +60,16 @@ export default function Boobtique() {
             </div>
             <div className='gift-text-container'>
                 <h2 className='h2'>Chemotherapy</h2>
-                <p className='no-space-above'><b>Chemo Comfort Bags</b> can include a puzzle or coloring book, pen, unflavored lip balm, tissues, mints,  pocket calendar, thank you cards, and blanket. </p>
+                <p className='no-space-above' id='shop-jump'><b>Chemo Comfort Bags</b> can include a puzzle or coloring book, pen, unflavored lip balm, tissues, mints,  pocket calendar, thank you cards, and blanket. </p>
             </div>
           </section>
 
-          {/* <Shop /> */}
-          
-          {/* <Shopify /> */}
+          {/* Hiding the shop until shipping is rebuilt. Going to display gifts and pricing/ordering info here temporarily. */}
+          {/* Copy of shop is archived in boobtique_old */}
+          {/* <Shop addItem={addItemToCart} removeItem={removeItemFromCart} gifts={gifts} cart={cart} /> */}
+
+          {/* WORK ON THIS SHORTER ONE BEFORE CONTINUING THE ONE ABOVE */}
+          {/* <ShopGifts gifts={gifts} /> */}
           
           {/* <div className='img-container-2'>
             <img src='/boobtique/boobtique-2.jpg' alt='' />
@@ -66,6 +78,19 @@ export default function Boobtique() {
 
       <style jsx>
         {`
+        .img-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .img-container img {
+          width: 33.3%;
+        }
+
+        .middle-pic {
+          // border-radius: 50%;
+        }
+
         .button-container {
             display: flex;
             justify-content: center;

@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons"
 
 export default function Nav() {
     function myFunction() {
@@ -10,57 +12,99 @@ export default function Nav() {
         }
     }
 
+    const handleClick = () => {
+        // console.log('open cart')
+        const shoppingCart = document.getElementById('cart')
+        shoppingCart.style.display = "block"
+    }
+
     return (
         <div id='menu-container'>
             <div id='logo-container'>
                 <Link href='/'>
-                    <img src='/logo.png' alt='logo' />
+                    <img src='/logo-wide-2.png' alt='logo' />
                 </Link>
             </div>
 
             {/* Navbar for 768+ */}
             <nav id='menu'>
-                <Link href='/'><a>Home</a></Link>
+                {/* <Link href='/'>
+                    <a>Home</a>
+                </Link> */}
                 <div className='hover-menu'>
-                    <Link href='/about'><a className='a'>About Us &#9662;</a></Link>
+                    <Link href='/about'>
+                        <a className='a'>About Us &#9662;</a>
+                    </Link>
                     <div className='dropdown'>
-                        <Link href='/team'><a className='a center-link'>Our Team</a></Link>
+                        <Link href='/team'>
+                            <a className='a center-link'>Our Team</a>
+                        </Link>
+                        <Link href='/volunteer'>
+                            <a className='a center-link'>Volunteer</a>
+                        </Link>
                     </div>
                 </div>
-                <Link href='/boobtique'><a>Shop</a></Link>
+                <Link href='/boobtique'>
+                    <a>Shop</a>
+                </Link>
                 <div className='hover-menu'>
-                    <Link href='/donate'><a className='a'>Donate &#9662;</a></Link>
+                    <Link href='/donate'>
+                        <a className='a'>Donate &#9662;</a>
+                    </Link>
                     <div className='dropdown'>
-                        <Link href='/memory'><a className='a center-link'>In Memory Of</a></Link>
-                        <Link href='/supporters'><a className='a center-link'>Supporters</a></Link>
+                        <Link href='/memory'>
+                            <a className='a center-link'>In Memory Of</a>
+                        </Link>
+                        <Link href='/supporters'>
+                            <a className='a center-link'>Supporters</a>
+                        </Link>
+                        <Link href='/share'>
+                            <a className='a center-link'>Share Your Story</a>
+                        </Link>
                     </div>
                 </div>
-                <div className='hover-menu'>
-                    <Link href='/volunteer'><a className='a'>Volunteer &#9662;</a></Link>
+                {/* <div className='hover-menu'>
+                    <Link href='/volunteer'>
+                        <a className='a'>Volunteer &#9662;</a>
+                    </Link>
                     <div className='dropdown'>
-                        <Link href='/share'><a className='a center-link'>Share Your Story</a></Link>
+                        <Link href='/share'>
+                            <a className='a center-link'>Share Your Story</a>
+                        </Link>
                     </div>
-                </div>
-                <Link href='/news'><a>News</a></Link>
+                </div> */}
+                <Link href='/news'>
+                    <a>News</a>
+                </Link>
+                {/* TEMPORARILY REMOVED SHOPPING CART BUTTON FROM WIDE VIEW HERE */}
+                {/* <a className='shopping-cart' onClick={handleClick}>
+                    <FontAwesomeIcon icon={faCartShopping} style={{ fontsize: "1.5rem"}} />
+                </a> */}
             </nav>
 
             {/* Hamburger menu for < 768 */}
             <div id='burger-container'>
                 <nav id='burger'>
-                    <a href='/'>Home</a>
                     <a className='redline' href='/about'>About Us &#9662;</a>
                     <a href='/team'>Our Team</a>
+                    <a href='/volunteer'>Volunteer</a>
                     <a className='redline' href='/boobtique'>Shop</a>
                     <a className='redline' href='/donate'>Donate &#9662;</a>
                     <a href='/memory'>In Memory Of</a>
                     <a href='/supporters'>Supporters</a>
-                    <a className='redline' href='/volunteer'>Volunteer &#9662;</a>
                     <a href='/share'>Share Your Story</a>
                     <a className='redline' href='/news'>News</a>
                 </nav>
             </div>
 
-            <button onClick={myFunction}>☰</button>
+            <div id='mobile-buttons'>
+                {/* TEMPORARILY REMOVED SHOPPING CART BUTTON FROM MOBILE VIEW HERE */}
+                {/* <a className='shopping-cart' id='burger-cart' onClick={handleClick}>
+                    <FontAwesomeIcon icon={faCartShopping} style={{ fontsize: "1.5rem"}} />
+                </a> */}
+
+                <button onClick={myFunction}>☰</button>
+            </div>
 
             <style jsx>
             {`
@@ -69,15 +113,29 @@ export default function Nav() {
                     justify-content: space-between;
                     padding: .5rem;
                     background: #292c2f;
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    height: 3.5rem;
+                    z-index: 1;
                 }
 
                 #logo-container {
-                    width: 25%;
+                    width: 70%;
+                    max-width: 300px;
+                    display: flex;
+                    align-items: center;
                     cursor: pointer;
                 }
 
                 #logo-container img {
                     width: 100%;
+                }
+
+                #mobile-buttons {
+                    display: flex;
+                    align-items: center;
                 }
 
                 button {
@@ -115,7 +173,7 @@ export default function Nav() {
                     text-align: center;
                 }
 
-                #burger a:hover {
+                #burger a:hover, #burger-cart:hover {
                     color: black;
                     background: gainsboro;
                 }
@@ -128,10 +186,24 @@ export default function Nav() {
                     display: none;
                 }
 
+                #burger-cart {
+                    color: gainsboro;
+                    padding: .5rem;
+                    margin-right: 1rem;
+                }
+
+                .shopping-cart {
+                    width: 2rem;
+                }
+
+                .shopping-cart:hover {
+                    cursor: pointer;
+                }
+
                 /* 768 PX */
 
                 @media only screen and (min-width: 768px) {
-                    button, #burger {
+                    button, #burger, #burger-cart, #mobile-buttons {
                         display: none;
                     }
 
@@ -142,8 +214,8 @@ export default function Nav() {
                     }
     
                     a {
-                        font-size: .9rem;
-                        width: 6rem;
+                        font-size: .8rem;
+                        width: 4.5rem;
                         padding: .5rem;
                         text-align: center;
                         border: 1px solid #292c2f;
@@ -180,6 +252,11 @@ export default function Nav() {
     
                     .hover-menu:hover .dropdown {
                         display: block;
+                    }
+
+                    #logo-container {
+                        width: 40%;
+                        max-width: 400px;
                     }
                 }
             `}
