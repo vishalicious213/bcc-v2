@@ -2,6 +2,7 @@ import styles from '../styles/Home.module.css'
 
 const team = [
     {id: '01', name: 'Alaha Nasari', title: 'Volunteer', pic: 'alaha-thumb.jpg', url: '/volunteer/alaha-nasari'},
+    {id: '02', name: 'Zahel Nasari', title: 'Volunteer', pic: 'zahel-thumb.jpg', url: '/volunteer/zahel-nasari'},
     // {id: '', name: '', title: '', pic: '', linkedIn: '', url: ''},
 ]
 
