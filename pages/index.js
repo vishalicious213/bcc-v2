@@ -27,7 +27,10 @@ export default function Home() {
         <ShopBanner />
 
         <article className='pink-container message'>
-          <div id='ribbon'>
+          <div className='poster'>
+            <img src='/news/2022-10-01.gif' alt='' />
+          </div>
+          {/* <div id='ribbon'>
             <img src='/breast-cancer-ribbon.png' />
           </div>
           <div id='message-text'>
@@ -35,7 +38,7 @@ export default function Home() {
             <p className='no-space-above'><b>September 27, 2022</b></p>
             <p>Receiving a breast cancer diagnosis and treatment can bring a variety of feelings, including anxiety and depression. This can affect a person's physical health as well as psychological well-being. It can feel overwhelming to manage side effects and fatigue, all while navigating concerns about day-to-day life. Hence, an individual must take care of their mental health in order to support their treatment and help them feel better physically. Additionally, bettering your mental health when you have breast cancer could improve your outlook and enhance your overall quality of life. It is important to remember that you are more than your cancer!</p>
             <p><a className='link' href='/news/2022-09-27'>See more...</a></p>
-          </div>
+          </div> */}
         </article>
 
         {/* <div className='button-container'>
@@ -110,6 +113,17 @@ export default function Home() {
           padding: 1rem 0 2rem 0;
           // height: 22rem;
           position: relative;
+        }
+
+        .poster {
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          height: 90vh;
+        }
+
+        .poster img {
+          border-radius: 1rem;
         }
 
         @media only screen and (min-width: 768px) {
