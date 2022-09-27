@@ -13,13 +13,13 @@ export default function Teammate() {
 
         <main className={styles.main}>
             <div className='invisible'>
-                <h1 className='invisible-text'>Alaha Nasari</h1>
+                <h1 className='invisible-text'>Zahel Nasari</h1>
                 <h2 className='invisible-text'>Volunteer</h2>
             </div>
 
             <section className='bio'>
                 <div className='bio-img-container'>
-                    <img className='bio-img' src='/volunteer/alaha-profile.jpg' alt='Alaha Nasari' />
+                    <img className='bio-img' src='/volunteer/zahel-profile.jpg' alt='Zahel Nasari' />
                 </div>
 
                 <div className='bio-text'>
