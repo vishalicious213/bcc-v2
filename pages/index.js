@@ -30,7 +30,7 @@ export default function Home() {
           {/* remove this temp div after breast cancer awareness month */}
           <div className='temp'>
             <p className='no-space-below'><b>Breast Cancer Comfort Foundation</b></p>
-            <p className='no-space-above'><b>September 27, 2022</b></p>
+            <p className='no-space-above'><b>October 1, 2022</b></p>
             <div className='poster'>
               <img src='/news/2022-10-01.gif' alt='' />
             </div>
