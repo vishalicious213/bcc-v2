@@ -76,9 +76,10 @@ export default function Nav() {
                 <Link href='/news'>
                     <a>News</a>
                 </Link>
-                <a className='shopping-cart' onClick={handleClick}>
+                {/* TEMPORARILY REMOVED SHOPPING CART BUTTON FROM WIDE VIEW HERE */}
+                {/* <a className='shopping-cart' onClick={handleClick}>
                     <FontAwesomeIcon icon={faCartShopping} style={{ fontsize: "1.5rem"}} />
-                </a>
+                </a> */}
             </nav>
 
             {/* Hamburger menu for < 768 */}
@@ -97,9 +98,10 @@ export default function Nav() {
             </div>
 
             <div id='mobile-buttons'>
-                <a className='shopping-cart' id='burger-cart' onClick={handleClick}>
+                {/* TEMPORARILY REMOVED SHOPPING CART BUTTON FROM MOBILE VIEW HERE */}
+                {/* <a className='shopping-cart' id='burger-cart' onClick={handleClick}>
                     <FontAwesomeIcon icon={faCartShopping} style={{ fontsize: "1.5rem"}} />
-                </a>
+                </a> */}
 
                 <button onClick={myFunction}>☰</button>
             </div>
