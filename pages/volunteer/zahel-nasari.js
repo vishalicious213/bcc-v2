@@ -23,7 +23,7 @@ export default function Teammate() {
                 </div>
 
                 <div className='bio-text'>
-                    <p>Helping others is part of my innate nature and of the fabric of who I am. I was brought up with this value at the forefront of living, and it has been a rewarding part of my life ever since. Hence, I am grateful to be a volunteer for the Breast Cancer Comfort Foundation. I assist in writing and publishing articles on the website to help promote our cause and update our community. I also fundraise and collect donations for BCCF. Through my leadership position in my school’s Helping Hands Club, I have planned service projects to raise funds for our comfort baskets. I look forward to seeing what the future holds for our organization.</p>
+                    <p>Helping others is part of my innate nature and of the fabric of who I am. I was brought up with this value at the forefront of living, and it has been a rewarding part of my life ever since. Hence, I am grateful to be a volunteer for the Breast Cancer Comfort Foundation. I assist in writing and publishing articles on the website to help promote our cause and update our community. I also fundraise and collect donations for BCCF. Through my leadership position in my school's Helping Hands Club, I have planned service projects to raise funds for our comfort baskets. I look forward to seeing what the future holds for our organization.</p>
 
                     {/* <h3>SKILLS</h3> */}
                     {/* <h3>LINKS</h3> */}
