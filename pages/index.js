@@ -128,11 +128,12 @@ export default function Home() {
           margin: auto;
           display: flex;
           justify-content: center;
-          height: 90vh;
+          // height: 60vh;
         }
 
         .poster img {
           border-radius: 1rem;
+          width: 100%;
         }
 
         @media only screen and (min-width: 768px) {
