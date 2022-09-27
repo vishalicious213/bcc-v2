@@ -16,15 +16,11 @@ export default function Post() {
 
         <main className={`${styles.main} main-container`}>
             <div className='post'>
-                <h2 className='no-space-below'>9th Annual Pink Cans 4 Cancer Fundraising Event</h2>
-                <p className='no-space-above'>by <span>Ann Guarascio</span> | Nov 12, 2021</p>
-                <p>BREAST CANCER COMFORT FOUNDATION INC Treasurer Ann Guarascio and Volunteer Sara Guarascio attended the 9th Annual Pink Cans 4 Cancer fundraising event on November 8 at Bar Grazie Cantina, Massapequa NY. We welcome the opportunity to forge relationships with like regional organizations.</p>
-                <p>#cans4cancerNY #togetherwemakeadifference #recycling4acure</p>
-                <p><a className='link' target="_blank" rel="noopener" href='https://recycling4acure.org/'>Pink Cans 4 Cancer</a> is a Garden City NY non-profit organization, and movement of hope & sustainability to help people with cancer while saving the planet!</p>
-                <p>Check out our FaceBook page <a className='link' target="_blank" rel="noopener" href='https://www.facebook.com/breastcancercomfort/'>Breast Cancer Comfort</a> and the FaceBook page for <a className='link' target="_blank" rel="noopener" href='https://www.facebook.com/Cans4CancerNY'>Pink Cans 4 Cancer</a> to find out how you can #makeadifference</p>
+                <h2 className='no-space-below'>October is Breast Cancer Awareness Month!</h2>
+                <p className='no-space-above'>by <span>Debi Cavolo</span> | Oct 1, 2022</p>
 
                 <div className='img-container'>
-                    <img src='/news/2021-11-12.jpg' alt='' />
+                    <img src='/news/2022-10-01.gif' alt='' />
                 </div>
             </div>
 
