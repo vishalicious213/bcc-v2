@@ -27,8 +27,13 @@ export default function Home() {
         <ShopBanner />
 
         <article className='pink-container message'>
-          <div className='poster'>
-            <img src='/news/2022-10-01.gif' alt='' />
+          {/* remove this temp div after breast cancer awareness month */}
+          <div className='temp'>
+            <p className='no-space-below'><b>Breast Cancer Comfort Foundation</b></p>
+            <p className='no-space-above'><b>September 27, 2022</b></p>
+            <div className='poster'>
+              <img src='/news/2022-10-01.gif' alt='' />
+            </div>
           </div>
           {/* <div id='ribbon'>
             <img src='/breast-cancer-ribbon.png' />
@@ -113,6 +118,10 @@ export default function Home() {
           padding: 1rem 0 2rem 0;
           // height: 22rem;
           position: relative;
+        }
+
+        .temp {
+          margin: auto;
         }
 
         .poster {
