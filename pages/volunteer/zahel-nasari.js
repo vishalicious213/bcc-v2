@@ -23,7 +23,7 @@ export default function Teammate() {
                 </div>
 
                 <div className='bio-text'>
-                    <p>I have performed service work for the Breast Cancer Comfort Foundation for the past five years. From leading a mental health initiative during the pandemic to assembling baskets for patients undergoing recovery, I have been closely involved with the team at BCCF. I have also played a prominent role in publishing articles for the website and local newspaper to promote our initiatives. As a current college sophomore, I am looking forward to continuing my work with the organization through involvement in outreach and fundraising events.</p>
+                    <p>Helping others is part of my innate nature and of the fabric of who I am. I was brought up with this value at the forefront of living, and it has been a rewarding part of my life ever since. Hence, I am grateful to be a volunteer for the Breast Cancer Comfort Foundation. I assist in writing and publishing articles on the website to help promote our cause and update our community. I also fundraise and collect donations for BCCF. Through my leadership position in my school’s Helping Hands Club, I have planned service projects to raise funds for our comfort baskets. I look forward to seeing what the future holds for our organization.</p>
 
                     {/* <h3>SKILLS</h3> */}
                     {/* <h3>LINKS</h3> */}
