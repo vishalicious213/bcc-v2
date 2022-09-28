@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { loadStripe } from '@stripe/stripe-js'
 import OrderForm from './order_form'
+import ShopDirectButtons from './shop_direct_buttons'
 import { useState } from 'react'
 
 // this component will replace the shop component and shop_gifts for now. it will show gifts and pricing and 
@@ -54,15 +55,19 @@ export default function ShopGifts(gifts) {
                                     {/* <p>{item.desc}</p> */}
                                 </div>
 
-                                <div className='buttons'>
+                                <div className='itemButtons'>
+                                    <ShopDirectButtons />
+                                </div>
+
+                                {/* <div className='buttons'>
                                     <button className='itemButton' onClick={() => addOne()}>+</button>
                                     <span className='itemQuantity'>{quantity}</span>
                                     <button className='itemButton' onClick={() => removeOne()}>-</button>                                    
-                                </div>
+                                </div> */}
 
-                                <div className='button'>
-                                    {/* <button onClick={() => processPayment(item.name, item.price)}>Donate</button> */}
-                                </div>
+                                {/* <div className='button'>
+                                    <button onClick={() => processPayment(item.name, item.price)}>Donate</button>
+                                </div> */}
                             </div>
                         </div>
                     )}
@@ -132,43 +137,48 @@ export default function ShopGifts(gifts) {
                     color: white;
                 }
 
-                .buttons {
-                    display: flex;
-                    justify-content: space-around;
-                }
-
-                .itemQuantity {
-                    color: gainsboro;
-                    background-color: rgba(0, 0, 0, 0.2);
-                    font-size: 1.1rem;
-                    width: 5rem;
-                    padding: .5rem 0;
-                    text-align: center;
-                }
-
-                .itemButton {
-                    width: 5rem;
-                }
-
-                .button {
+                .itemButtons {
                     display: flex;
                     justify-content: center;
                 }
 
-                button {
-                    color: gainsboro;
-                    background-color: #b01e65;
-                    border: none;
-                    font-size: 1.1rem;
-                    height: 2rem;
-                    width: 45%;
-                    padding: .5rem 0;
-                    border-radius: 1rem;
-                }
+                // .buttons {
+                //     display: flex;
+                //     justify-content: space-around;
+                // }
+
+                // .itemQuantity {
+                //     color: gainsboro;
+                //     background-color: rgba(0, 0, 0, 0.2);
+                //     font-size: 1.1rem;
+                //     width: 5rem;
+                //     padding: .5rem 0;
+                //     text-align: center;
+                // }
+
+                // .itemButton {
+                //     width: 5rem;
+                // }
+
+                // .button {
+                //     display: flex;
+                //     justify-content: center;
+                // }
+
+                // button {
+                //     color: gainsboro;
+                //     background-color: #b01e65;
+                //     border: none;
+                //     font-size: 1.1rem;
+                //     height: 2rem;
+                //     width: 45%;
+                //     padding: .5rem 0;
+                //     border-radius: 1rem;
+                // }
 
                 button:hover {
-                    color: white;
-                    background-color: deeppink;
+                    // color: white;
+                    // background-color: deeppink;
                 }
 
                 @media only screen and (min-width: 800px) {

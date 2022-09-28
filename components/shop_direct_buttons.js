@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function shopDirectButtons() {
+export default function ShopDirectButtons() {
     const [quantity, setQuantity] = useState(0)
 
     const addOne = () => {
@@ -22,6 +22,7 @@ export default function shopDirectButtons() {
                 .buttons {
                     display: flex;
                     justify-content: space-around;
+                    width: 18rem;
                 }
 
                 .itemQuantity {
