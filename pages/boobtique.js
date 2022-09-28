@@ -69,7 +69,7 @@ export default function Boobtique() {
           {/* <Shop addItem={addItemToCart} removeItem={removeItemFromCart} gifts={gifts} cart={cart} /> */}
 
           {/* WORK ON THIS SHORTER ONE BEFORE CONTINUING THE ONE ABOVE */}
-          {/* <ShopGifts gifts={gifts} /> */}
+          <ShopGifts gifts={gifts} />
           
           {/* <div className='img-container-2'>
             <img src='/boobtique/boobtique-2.jpg' alt='' />

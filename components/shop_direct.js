@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { loadStripe } from '@stripe/stripe-js'
 import OrderForm from './order_form'
+import { useState } from 'react'
 
 // this component will replace the shop component and shop_gifts for now. it will show gifts and pricing and 
 // direct visitors to order via a form. The form will collect info about what's being ordered and where to
@@ -8,6 +9,7 @@ import OrderForm from './order_form'
 
 export default function ShopGifts(gifts) {
     let items=gifts.gifts
+    const [quantity, setQuantity] = useState(0)
     // console.log(items)
 
     // send data to Stripe to charge visitor's credit card
@@ -29,6 +31,14 @@ export default function ShopGifts(gifts) {
         // await stripe.redirectToCheckout({ sessionId: data.id })
     }
 
+    const addOne = () => {
+        setQuantity(quantity + 1)
+    }
+
+    const removeOne = () => {
+        setQuantity(quantity - 1)
+    }
+
     return (
         <div id="gifts-main">
             <h2>Make a donation and send a comfort basket or bag to a loved one</h2>
@@ -45,7 +55,10 @@ export default function ShopGifts(gifts) {
                                 </div>
 
                                 <div className='button'>
-                                    <button onClick={() => processPayment(item.name, item.price)}>Donate</button>
+                                    {/* <button onClick={() => processPayment(item.name, item.price)}>Donate</button> */}
+                                    <span onClick={() => addOne()}>+</span>
+                                    <span>{quantity}</span>
+                                    <span onClick={() => removeOne()}>-</span>
                                 </div>
                             </div>
                         </div>
