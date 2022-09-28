@@ -1,14 +1,16 @@
 import { useState } from 'react'
 
-export default function ShopDirectButtons() {
+export default function ShopDirectButtons(props) {
     const [quantity, setQuantity] = useState(0)
 
     const addOne = () => {
         setQuantity(quantity + 1)
+        // console.log(props.id)
     }
 
     const removeOne = () => {
         setQuantity(quantity - 1)
+        // console.log(props.price)
     }
 
     return (

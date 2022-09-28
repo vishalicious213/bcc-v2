@@ -56,7 +56,7 @@ export default function ShopGifts(gifts) {
                                 </div>
 
                                 <div className='itemButtons'>
-                                    <ShopDirectButtons />
+                                    <ShopDirectButtons id={item.id} price={item.price} />
                                 </div>
 
                                 {/* <div className='buttons'>
