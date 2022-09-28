@@ -54,11 +54,14 @@ export default function ShopGifts(gifts) {
                                     {/* <p>{item.desc}</p> */}
                                 </div>
 
+                                <div className='buttons'>
+                                    <button className='itemButton' onClick={() => addOne()}>+</button>
+                                    <span className='itemQuantity'>{quantity}</span>
+                                    <button className='itemButton' onClick={() => removeOne()}>-</button>                                    
+                                </div>
+
                                 <div className='button'>
                                     {/* <button onClick={() => processPayment(item.name, item.price)}>Donate</button> */}
-                                    <span onClick={() => addOne()}>+</span>
-                                    <span>{quantity}</span>
-                                    <span onClick={() => removeOne()}>-</span>
                                 </div>
                             </div>
                         </div>
@@ -127,6 +130,24 @@ export default function ShopGifts(gifts) {
 
                 .price {
                     color: white;
+                }
+
+                .buttons {
+                    display: flex;
+                    justify-content: space-around;
+                }
+
+                .itemQuantity {
+                    color: gainsboro;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    font-size: 1.1rem;
+                    width: 5rem;
+                    padding: .5rem 0;
+                    text-align: center;
+                }
+
+                .itemButton {
+                    width: 5rem;
                 }
 
                 .button {
