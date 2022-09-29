@@ -1,7 +1,20 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const useShopDirectCart = () => {
+    const getInitialShopDirectCart = () => JSON.parse(localStorage.getItem('shopDirectCart'))
     const [shopDirectCart, setShopDirectCart] = useState([])
+
+    useEffect(() => {
+        const initialShopDirectCart = getInitialShopDirectCart()
+        if (initialShopDirectCart) {
+            setShopDirectCart(initialShopDirectCart)
+        }
+    }, [])
+
+    useEffect(() => {
+        // write to localStorage
+        localStorage.setItem('shopDirectCart', JSON.stringify(shopDirectCart))
+    }, [shopDirectCart])
 
     const addItemToShopDirectCart = (id, qty = 1) => {
         const item = shopDirectCart.find(i => i.id === id)
