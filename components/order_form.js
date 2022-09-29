@@ -55,16 +55,19 @@ export default function OrderForm() {
 
                 <p id='gift-selector-instruction'>Selected gift(s):</p>
                 <div id='gift-selector'>
-                    <div className='gift'>{shopDirectCart[0] ? shopDirectCart[0].qty : 0}
-                        <span className='itemQuantity'> Comfort Basket(s)</span>
+                    <div className='gift'>
+                        <div className='gift-quantity'>{shopDirectCart[0] ? shopDirectCart[0].qty : 0}</div>
+                        <div className='gift-name'> Comfort Basket(s)</div>
                     </div>
 
-                    <div className='gift'>{shopDirectCart[1] ? shopDirectCart[1].qty : 0}
-                        <span className='itemQuantity'> Chemo Comfort Bag(s) (style 1)</span>
+                    <div className='gift'>
+                        <div className='gift-quantity'>{shopDirectCart[1] ? shopDirectCart[1].qty : 0}</div>
+                        <div className='gift-name'> Chemo Comfort Bag(s) (style 1)</div>
                     </div>
 
-                    <div className='gift'>{shopDirectCart[2] ? shopDirectCart[2].qty : 0}
-                        <span className='itemQuantity'> Chemo Comfort Bag(s) (style 2)</span>
+                    <div className='gift'>
+                        <div className='gift-quantity'>{shopDirectCart[2] ? shopDirectCart[2].qty : 0}</div>
+                        <span className='gift-name'> Chemo Comfort Bag(s) (style 2)</span>
                     </div>
                 </div>
 
@@ -123,9 +126,22 @@ export default function OrderForm() {
                     font-size: 1.1rem;
                 }
 
-                .gift-checkbox {
+                .gift {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .gift-quantity {
                     margin-right: .5rem;
                     margin-bottom: 1rem;
+                    color: pink;
+                    font-size: 1.5rem;
+                }
+
+                .gift-name {
+                    color: gainsboro;
+                    font-size: 1.1rem;
                 }
 
                 #name, #recipient {
@@ -167,7 +183,7 @@ export default function OrderForm() {
                         font-size: 1.1rem;
                     }
 
-                    .gift-checkbox {
+                    .gift-quantity {
                         margin-bottom: 0;
                     }
                 }
