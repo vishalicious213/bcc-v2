@@ -2,7 +2,7 @@ import { useState } from 'react'
 import useShopDirectCart from '../hooks/useShopDirectCart'
 
 export default function ShopDirectButtons(props) {
-    const { shopDirectCart } = useShopDirectCart()
+    const { shopDirectCart, addItemToShopDirectCart } = useShopDirectCart()
     const [quantity, setQuantity] = useState(0)
 
     const addOne = () => {
@@ -19,8 +19,10 @@ export default function ShopDirectButtons(props) {
 
     return (
         <div className='buttons'>
-            <button className='itemButton' onClick={() => addOne()}>+</button>
-            <span className='itemQuantity'>{quantity}</span>
+            {/* <button className='itemButton' onClick={() => addOne()}>+</button> */}
+            <button className='itemButton' onClick={() => addItemToShopDirectCart(props.id)}>+</button>
+            {/* <span className='itemQuantity'>{quantity}</span> */}
+            <span className='itemQuantity'>{shopDirectCart.qty}</span>
             <button className='itemButton' onClick={() => removeOne()}>-</button>   
 
             <style jsx>
