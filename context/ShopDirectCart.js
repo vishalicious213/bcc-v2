@@ -1,7 +1,7 @@
 import { createContext } from "react"
 import { Context } from "./Cart"
 
-const ShopDirectCartContext = createContext()
+export const ShopDirectCartContext = createContext()
 
 const ShopDirectCart = ({children}) => {
     const exposed = {
