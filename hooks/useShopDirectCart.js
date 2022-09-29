@@ -1,46 +1,6 @@
-import { useState, useEffect } from "react"
+import { useContext } from "react"
+import { ShopDirectCartContext } from "../context/ShopDirectCart"
 
-const useShopDirectCart = () => {
-    const getInitialShopDirectCart = () => JSON.parse(localStorage.getItem('shopDirectCart'))
-    const [shopDirectCart, setShopDirectCart] = useState([])
-
-    useEffect(() => {
-        const initialShopDirectCart = getInitialShopDirectCart()
-        if (initialShopDirectCart) {
-            setShopDirectCart(initialShopDirectCart)
-        }
-    }, [])
-
-    useEffect(() => {
-        // write to localStorage
-        localStorage.setItem('shopDirectCart', JSON.stringify(shopDirectCart))
-    }, [shopDirectCart])
-
-    const addItemToShopDirectCart = (id, qty = 1) => {
-        const item = shopDirectCart.find(i => i.id === id)
-        
-        if (item) {
-            item.qty += qty
-            setShopDirectCart([...shopDirectCart])
-        } else {
-            setShopDirectCart([...shopDirectCart, { id, qty }])
-        }
-
-        console.log('hook', shopDirectCart)
-    }
-
-    const removeItemFromShopDirectCart = (id) => {
-        const newShopDirectCart = shopDirectCart.filter(item => {
-            return item.id != id
-        })
-        setShopDirectCart(newShopDirectCart)
-    }
-
-    return {
-        shopDirectCart,
-        addItemToShopDirectCart,
-        removeItemFromShopDirectCart,
-    }
-}
+const useShopDirectCart = () => useContext(ShopDirectCartContext)
 
 export default useShopDirectCart

@@ -1,12 +1,9 @@
 import { useState } from 'react'
 import useShopDirectCart from '../hooks/useShopDirectCart'
-import { useContext } from 'react'
-import { ShopDirectCartContext } from '../context/ShopDirectCart'
 
 export default function ShopDirectButtons(props) {
     const { shopDirectCart, addItemToShopDirectCart } = useShopDirectCart()
     const [quantity, setQuantity] = useState(0)
-    const { test } = useContext(ShopDirectCartContext)
 
     const addOne = () => {
         setQuantity(quantity + 1)
@@ -19,7 +16,6 @@ export default function ShopDirectButtons(props) {
     }
 
     console.log('shopDirectCart', shopDirectCart)
-    console.log(test)
 
     return (
         <div className='buttons'>
