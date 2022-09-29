@@ -5,11 +5,6 @@ export default function ShopDirectButtons(props) {
     const { shopDirectCart, addItemToShopDirectCart } = useShopDirectCart()
     const [quantity, setQuantity] = useState(0)
 
-    const addOne = () => {
-        setQuantity(quantity + 1)
-        // console.log(props.id)
-    }
-
     const removeOne = () => {
         setQuantity(quantity - 1)
         // console.log(props.price)
@@ -19,7 +14,6 @@ export default function ShopDirectButtons(props) {
 
     return (
         <div className='buttons'>
-            {/* <button className='itemButton' onClick={() => addOne()}>+</button> */}
             <button className='itemButton' onClick={() => addItemToShopDirectCart(props.id)}>+</button>
             {/* <span className='itemQuantity'>{quantity}</span> */}
             <span className='itemQuantity'>{shopDirectCart[props.id] ? shopDirectCart[props.id].qty : 0}</span>

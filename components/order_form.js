@@ -49,7 +49,7 @@ export default function OrderForm() {
                     </div>
                 </div>
 
-                <p id='gift-selector-instruction'>Choose at least one gift:</p>
+                <p id='gift-selector-instruction'>Selected gift(s):</p>
                 <div id='gift-selector'>
                     <div className='gift'>
                         <input
