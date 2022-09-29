@@ -25,6 +25,8 @@ const useShopDirectCart = () => {
         } else {
             setShopDirectCart([...shopDirectCart, { id, qty }])
         }
+
+        console.log('hook', shopDirectCart)
     }
 
     const removeItemFromShopDirectCart = (id) => {
