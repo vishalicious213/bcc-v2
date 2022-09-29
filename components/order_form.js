@@ -1,4 +1,8 @@
+import useShopDirectCart from '../hooks/useShopDirectCart'
+
 export default function OrderForm() {
+    const { shopDirectCart } = useShopDirectCart()
+
     return (
         <div id='form-container'>
             <form id='order-form' name='order-form' method='POST' data-netlify='true'>
@@ -51,37 +55,16 @@ export default function OrderForm() {
 
                 <p id='gift-selector-instruction'>Selected gift(s):</p>
                 <div id='gift-selector'>
-                    <div className='gift'>
-                        <input
-                            id='basket'
-                            name='basket'
-                            type='checkbox'
-                            placeholder='basket'
-                            className="gift-checkbox"
-                        />
-                        <label htmlFor='basket'>Comfort Basket</label>
+                    <div className='gift'>{shopDirectCart[0] ? shopDirectCart[0].qty : 0}
+                        <span className='itemQuantity'> Comfort Basket(s)</span>
                     </div>
 
-                    <div>
-                        <input
-                            id='chemo-1'
-                            name='chemo-1'
-                            type='checkbox'
-                            placeholder='chemo-1'
-                            className="gift-checkbox"
-                        />
-                        <label htmlFor='chemo-1'>Chemo Comfort Bag (style 1)</label>
+                    <div className='gift'>{shopDirectCart[1] ? shopDirectCart[1].qty : 0}
+                        <span className='itemQuantity'> Chemo Comfort Bag(s) (style 1)</span>
                     </div>
 
-                    <div>
-                        <input
-                            id='chemo-2'
-                            name='chemo-2'
-                            type='checkbox'
-                            placeholder='chemo-2'
-                            className="gift-checkbox"
-                        />
-                        <label htmlFor='chemo-2'>Chemo Comfort Bag (style 2)</label>
+                    <div className='gift'>{shopDirectCart[2] ? shopDirectCart[2].qty : 0}
+                        <span className='itemQuantity'> Chemo Comfort Bag(s) (style 2)</span>
                     </div>
                 </div>
 
