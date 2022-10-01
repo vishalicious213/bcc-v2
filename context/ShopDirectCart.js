@@ -33,10 +33,17 @@ const ShopDirectCart = ({children}) => {
     }
 
     const removeItemFromShopDirectCart = (id) => {
-        const newShopDirectCart = shopDirectCart.filter(item => {
-            return item.id != id
-        })
-        setShopDirectCart(newShopDirectCart)
+        const item = shopDirectCart.find(i => i.id === id)
+
+        // if item is not in cart, it can't be removed, so return
+        if (!item) {
+            return
+        }
+
+        // const newShopDirectCart = shopDirectCart.filter(item => {
+        //     return item.id != id
+        // })
+        // setShopDirectCart(newShopDirectCart)
     }
 
     const exposed = {
