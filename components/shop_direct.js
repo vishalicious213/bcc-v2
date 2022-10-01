@@ -124,11 +124,6 @@ export default function ShopGifts(gifts) {
                     justify-content: center;
                 }
 
-                button:hover {
-                    // color: white;
-                    // background-color: deeppink;
-                }
-
                 @media only screen and (min-width: 800px) {
                     .gifts {
                         display: grid;
