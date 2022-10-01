@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import useShopDirectCart from '../hooks/useShopDirectCart'
 
 export default function ShopDirectButtons(props) {
