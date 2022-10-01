@@ -129,6 +129,9 @@ export default function OrderForm() {
                 .gift {
                     display: flex;
                     align-items: center;
+                    border: 1px solid #292c2f;
+                    padding: .5rem;
+                    margin-bottom: .5rem;
                 }
 
                 .gift-quantity {
@@ -136,6 +139,11 @@ export default function OrderForm() {
                     margin-right: 1rem;
                     color: pink;
                     font-size: 1.5rem;
+                    width: 3rem;
+                    text-align: center;
+                    background-color: rgba(100, 100, 100, 0.2);
+                    outline: 1px solid #292c2f;
+                    border-radius: 1rem;
                 }
 
                 .gift-name {
@@ -184,18 +192,13 @@ export default function OrderForm() {
                         flex-direction: column;
                         width: 30%;
                         max-width: 210px;
-                        border: 1px solid #292c2f;
-                        padding: .5rem;
                         text-align: center;
+                        margin-bottom: 0;
                     }                    
 
                     .gift-quantity {
                         margin-right: 0;
                         width: 5rem;
-                        text-align: center;
-                        background-color: rgba(100, 100, 100, 0.2);
-                        outline: 1px solid #292c2f;
-                        border-radius: 1rem;
                     }
                 }
 
