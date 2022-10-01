@@ -128,13 +128,12 @@ export default function OrderForm() {
 
                 .gift {
                     display: flex;
-                    flex-direction: column;
                     align-items: center;
                 }
 
                 .gift-quantity {
-                    margin-right: .5rem;
-                    margin-bottom: 1rem;
+                    margin-bottom: .5rem;
+                    margin-right: 1rem;
                     color: pink;
                     font-size: 1.5rem;
                 }
@@ -175,16 +174,28 @@ export default function OrderForm() {
 
                 @media only screen and (min-width: 800px) {
                     #gift-selector {
-                        display: flex;
                         flex-direction: row;
                         justify-content: space-around;
                         margin: .5rem 0 1rem 0;
-                        color: gainsboro;
                         font-size: 1.1rem;
                     }
 
+                    .gift {
+                        flex-direction: column;
+                        width: 30%;
+                        max-width: 210px;
+                        border: 1px solid #292c2f;
+                        padding: .5rem;
+                        text-align: center;
+                    }                    
+
                     .gift-quantity {
-                        margin-bottom: 0;
+                        margin-right: 0;
+                        width: 5rem;
+                        text-align: center;
+                        background-color: rgba(100, 100, 100, 0.2);
+                        outline: 1px solid #292c2f;
+                        border-radius: 1rem;
                     }
                 }
 
