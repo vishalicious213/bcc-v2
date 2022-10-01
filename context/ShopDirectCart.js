@@ -37,21 +37,32 @@ const ShopDirectCart = ({children}) => {
 
         // if item is not in cart, it can't be removed, so return
         if (!item) {
+            console.log('not in cart', id)
             return
         }
 
         // if item is in cart, remove 1 of that item from qty
         if (item) {
+            console.log('removing', item.id)
             item.qty -= 1
-            if (item.qty < 1) {item.qty = 0}
+            if (item.qty < 1) {
+                console.log('setting to zero', item.id)
+                item.qty = 0
+            }
+            console.log('saving cart')
             setShopDirectCart([...shopDirectCart])
         }
 
-
-        // const newShopDirectCart = shopDirectCart.filter(item => {
-        //     return item.id != id
-        // })
-        // setShopDirectCart(newShopDirectCart)
+        // if less that 1 of item, completely remove it from cart (so no 0-count of item)
+        console.log('HERE')
+        if (item.qty === 0) {
+            console.log('removing zero-item from cart', item.id)
+            const newShopDirectCart = shopDirectCart.filter(item => {
+                item.id != id
+            })
+            console.log('new cart', newShopDirectCart)
+            setShopDirectCart(newShopDirectCart)
+        }
     }
 
     const exposed = {
