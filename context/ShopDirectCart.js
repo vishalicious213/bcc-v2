@@ -40,6 +40,14 @@ const ShopDirectCart = ({children}) => {
             return
         }
 
+        // if item is in cart, remove 1 of that item from qty
+        if (item) {
+            item.qty -= 1
+            if (item.qty < 1) {item.qty = 0}
+            setShopDirectCart([...shopDirectCart])
+        }
+
+
         // const newShopDirectCart = shopDirectCart.filter(item => {
         //     return item.id != id
         // })
