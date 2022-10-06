@@ -4,13 +4,15 @@ export default function ShopDirectButtons(props) {
     const { shopDirectCart, addItemToShopDirectCart, removeItemFromShopDirectCart } = useShopDirectCart()
 
     // console.log('shopDirectCart', shopDirectCart)
-    console.log(props, 'render', shopDirectCart[props.id])
+    // console.log('props', props)
+    console.log('name', props.name)
+    // console.log('cart[props.id]', shopDirectCart[props.id])
 
     return (
         <div className='buttons'>
-            <button className='itemButton' onClick={() => addItemToShopDirectCart(props.id)}>+</button>
+            <button className='itemButton' onClick={() => addItemToShopDirectCart(props.id, 1, props.name)}>+</button>
             <span className='itemQuantity'>{shopDirectCart[props.id] ? shopDirectCart[props.id].qty : "-"}</span>
-            <button className='itemButton' onClick={() => removeItemFromShopDirectCart(props.id)}>-</button>
+            <button className='itemButton' onClick={() => removeItemFromShopDirectCart(props.id, props.name)}>-</button>
 
             <style jsx>
                 {`

@@ -19,34 +19,40 @@ const ShopDirectCart = ({children}) => {
         localStorage.setItem('shopDirectCart', JSON.stringify(shopDirectCart))
     }, [shopDirectCart])
 
-    const addItemToShopDirectCart = (id, qty = 1) => {
-        const item = shopDirectCart.find(i => i.id === id)
+    const addItemToShopDirectCart = (id, qty = 1, name) => {
+        // const item = shopDirectCart.find(i => i.id === id)
+        const item = shopDirectCart.find(i => i.name === name)
+        console.log('add props.name', name)
+        console.log('add item.name', item.name)
         
         if (item) {
             item.qty += qty
             setShopDirectCart([...shopDirectCart])
         } else {
-            setShopDirectCart([...shopDirectCart, { id, qty }])
+            setShopDirectCart([...shopDirectCart, { id, qty, name }])
         }
 
         console.log('hook', shopDirectCart)
     }
 
-    const removeItemFromShopDirectCart = (id) => {
-        const item = shopDirectCart.find(i => i.id === id)
+    const removeItemFromShopDirectCart = (id, name) => {
+        // const item = shopDirectCart.find(i => i.id === id)
+        const item = shopDirectCart.find(i => i.name === name)
+        console.log('remove props.name', name)
+        console.log('remove item.name', item.name)
 
         // if item is not in cart, it can't be removed, so return
         if (!item) {
-            console.log('not in cart', id)
+            console.log('not in cart', id, name)
             return
         }
 
         // if item is in cart, remove 1 of that item from qty
         if (item) {
-            console.log('removing', item.id)
+            console.log('removing', item.id, name)
             item.qty -= 1
             if (item.qty < 1) {
-                console.log('setting to zero', item.id)
+                console.log('setting to zero', item.id, name)
                 item.qty = 0
             }
             console.log('saving cart')
@@ -56,9 +62,10 @@ const ShopDirectCart = ({children}) => {
         // if less that 1 of item, completely remove it from cart (so no 0-count of item)
         console.log('HERE')
         if (item.qty === 0) {
-            console.log('removing zero-item from cart', item.id)
+            console.log('removing zero-item from cart', item.id, name)
             const newShopDirectCart = shopDirectCart.filter(item => {
-                item.id != id
+                // item.id != id
+                item.name != name
             })
             console.log('new cart', newShopDirectCart)
             setShopDirectCart(newShopDirectCart)
