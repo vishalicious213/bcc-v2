@@ -20,10 +20,10 @@ const ShopDirectCart = ({children}) => {
     }, [shopDirectCart])
 
     const addItemToShopDirectCart = (id, qty = 1, name) => {
-        // const item = shopDirectCart.find(i => i.id === id)
-        const item = shopDirectCart.find(i => i.name === name)
+        const item = shopDirectCart.find(i => i.id === id)
+        // const item = shopDirectCart.find(i => i.name === name)
         console.log('add props.name', name)
-        console.log('add item.name', item.name)
+        // console.log('add item.name', item.name)
         
         if (item) {
             item.qty += qty
@@ -36,8 +36,8 @@ const ShopDirectCart = ({children}) => {
     }
 
     const removeItemFromShopDirectCart = (id, name) => {
-        // const item = shopDirectCart.find(i => i.id === id)
-        const item = shopDirectCart.find(i => i.name === name)
+        const item = shopDirectCart.find(i => i.id === id)
+        // const item = shopDirectCart.find(i => i.name === name)
         console.log('remove props.name', name)
         console.log('remove item.name', item.name)
 

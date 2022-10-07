@@ -3,7 +3,14 @@ import useShopDirectCart from '../hooks/useShopDirectCart'
 export default function ShopDirectButtons(props) {
     const { shopDirectCart, addItemToShopDirectCart, removeItemFromShopDirectCart } = useShopDirectCart()
 
-    // console.log('shopDirectCart', shopDirectCart)
+    // function findByName(items) {
+    //     return items.name === props.name
+    // }
+    
+    // const item = shopDirectCart.find(findByName)
+    // console.log('GIFT', item)
+
+    console.log('shopDirectCart', shopDirectCart)
     // console.log('props', props)
     console.log('name', props.name)
     // console.log('cart[props.id]', shopDirectCart[props.id])
