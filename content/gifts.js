@@ -2,7 +2,7 @@
 
 const gifts = [
     {
-        id: 0,
+        id: 10,
         name: 'Comfort basket',
         price: 2700,
         short: 'It is hard to know what to send or to say to someone who is going through the hard battle of cancer. This gift basket is the perfect way to let them know that you are thinking of them. With a personalized message on the back of the card, it is sure to mean the world to anyone who receives it.',
@@ -34,7 +34,7 @@ const gifts = [
         slug: 'comfort-basket',
     },
     {
-        id: 1,
+        id: 11,
         name: 'Chemo comfort bag 1',
         price: 2700,
         short: 'Show your love and support with this handmade chemo comfort bag. This item is sure to make someone feel special. Pick from our available patterns - there is no better way to say I care for you than to send a comfort package.',
@@ -62,7 +62,7 @@ const gifts = [
         slug: 'chemo-comfort-bag',
     },
     {
-        id: 2,
+        id: 12,
         name: 'Chemo comfort bag 2',
         price: 2700,
         short: 'Show your love and support with this handmade chemo comfort bag. This item is sure to make someone feel special. Pick from our available patterns - there is no better way to say I care for you than to send a comfort package.',

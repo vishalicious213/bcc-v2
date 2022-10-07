@@ -3,22 +3,26 @@ import useShopDirectCart from '../hooks/useShopDirectCart'
 export default function ShopDirectButtons(props) {
     const { shopDirectCart, addItemToShopDirectCart, removeItemFromShopDirectCart } = useShopDirectCart()
 
-    // function findByName(items) {
-    //     return items.name === props.name
-    // }
+    let selectedItems = shopDirectCart
+
+    function findByName(items) {
+        return items.name === props.name
+    }
     
-    // const item = shopDirectCart.find(findByName)
-    // console.log('GIFT', item)
+    const item = selectedItems.find(findByName)
+    console.log('GIFT', item)
 
     console.log('shopDirectCart', shopDirectCart)
-    // console.log('props', props)
-    console.log('name', props.name)
-    // console.log('cart[props.id]', shopDirectCart[props.id])
+    console.log('selectedItems', selectedItems)
+    console.log('props', props)
+    // console.log('name', props.name)
+    console.log('cart[props.id]', shopDirectCart[props.id])
 
     return (
         <div className='buttons'>
             <button className='itemButton' onClick={() => addItemToShopDirectCart(props.id, 1, props.name)}>+</button>
-            <span className='itemQuantity'>{shopDirectCart[props.id] ? shopDirectCart[props.id].qty : "-"}</span>
+            {/* <span className='itemQuantity'>{shopDirectCart[props.id] ? shopDirectCart[props.id].qty : "-"}</span> */}
+            <span className='itemQuantity'>{item ? item.qty : "-"}</span>
             <button className='itemButton' onClick={() => removeItemFromShopDirectCart(props.id, props.name)}>-</button>
 
             <style jsx>
