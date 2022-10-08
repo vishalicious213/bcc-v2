@@ -10,7 +10,7 @@ export default function ShopDirectButtons(props) {
     }
     
     const item = selectedItems.find(findByName)
-    console.log('GIFT', item)
+    // console.log('GIFT', item)
 
     // console.log('shopDirectCart', shopDirectCart)
     // console.log('selectedItems', selectedItems)

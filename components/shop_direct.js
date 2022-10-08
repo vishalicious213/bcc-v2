@@ -55,7 +55,7 @@ export default function ShopGifts(gifts) {
                     )}
                 </section>
 
-                <OrderForm />
+                <OrderForm items={items} />
 
             <style jsx>
                 {`

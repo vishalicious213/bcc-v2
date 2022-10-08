@@ -1,7 +1,17 @@
 import useShopDirectCart from '../hooks/useShopDirectCart'
 
-export default function OrderForm() {
+export default function OrderForm(props) {
     const { shopDirectCart } = useShopDirectCart()
+
+    // console.log('order form props', props.items)
+    // console.log('order form cart', shopDirectCart)
+
+    let selectedItems = shopDirectCart
+
+    const basket = selectedItems.find(item => item.name === 'Comfort basket')
+    const bag1 = selectedItems.find(item => item.name === 'Chemo comfort bag 1')
+    const bag2 = selectedItems.find(item => item.name === 'Chemo comfort bag 2')
+    // console.log(basket, bag1, bag2)
 
     return (
         <div id='form-container'>
@@ -56,17 +66,20 @@ export default function OrderForm() {
                 <p id='gift-selector-instruction'>Selected gift(s):</p>
                 <div id='gift-selector'>
                     <div className='gift'>
-                        <div className='gift-quantity'>{shopDirectCart[0] ? shopDirectCart[0].qty : 0}</div>
+                        {/* <div className='gift-quantity'>{shopDirectCart[0] ? shopDirectCart[0].qty : 0}</div> */}
+                        <div className='gift-quantity'>{basket ? basket.qty : 0}</div>
                         <div className='gift-name'> Comfort Basket(s)</div>
                     </div>
 
                     <div className='gift'>
-                        <div className='gift-quantity'>{shopDirectCart[1] ? shopDirectCart[1].qty : 0}</div>
+                        {/* <div className='gift-quantity'>{shopDirectCart[1] ? shopDirectCart[1].qty : 0}</div> */}
+                        <div className='gift-quantity'>{bag1 ? bag1.qty : 0}</div>
                         <div className='gift-name'> Chemo Comfort Bag(s) (style 1)</div>
                     </div>
 
                     <div className='gift'>
-                        <div className='gift-quantity'>{shopDirectCart[2] ? shopDirectCart[2].qty : 0}</div>
+                        {/* <div className='gift-quantity'>{shopDirectCart[2] ? shopDirectCart[2].qty : 0}</div> */}
+                        <div className='gift-quantity'>{bag2 ? bag2.qty : 0}</div>
                         <span className='gift-name'> Chemo Comfort Bag(s) (style 2)</span>
                     </div>
                 </div>
