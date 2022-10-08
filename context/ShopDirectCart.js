@@ -65,6 +65,21 @@ const ShopDirectCart = ({children}) => {
             console.log('cart', shopDirectCart)
         }
 
+        if (item.qty < 0) {
+            item.qty = 0
+            console.log('set negative item quantity to 0')
+        }
+
+        if (item.qty === 0) {
+            console.log('item quantity is 0')
+            const newCart = shopDirectCart.filter(cartItem => {
+                return cartItem.id != item.id
+            })
+            console.log('newCart', newCart)
+            setShopDirectCart(newCart)
+            console.log('cart after removing 0 item', shopDirectCart)
+        }
+
         // if less that 1 of item, completely remove it from cart (so no 0-count of item)
         // console.log('HERE')
         // if (item.qty === 0) {
