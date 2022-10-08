@@ -12,11 +12,11 @@ export default function ShopDirectButtons(props) {
     const item = selectedItems.find(findByName)
     console.log('GIFT', item)
 
-    console.log('shopDirectCart', shopDirectCart)
-    console.log('selectedItems', selectedItems)
-    console.log('props', props)
+    // console.log('shopDirectCart', shopDirectCart)
+    // console.log('selectedItems', selectedItems)
+    // console.log('props', props)
     // console.log('name', props.name)
-    console.log('cart[props.id]', shopDirectCart[props.id])
+    // console.log('cart[props.id]', shopDirectCart[props.id])
 
     return (
         <div className='buttons'>

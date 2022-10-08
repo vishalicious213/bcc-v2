@@ -37,6 +37,11 @@ const ShopDirectCart = ({children}) => {
 
     const removeItemFromShopDirectCart = (id, name) => {
         const item = shopDirectCart.find(i => i.id === id)
+        if (item) {
+            console.log('item', item)
+        } else {
+            console.log('item does not exist')
+        }
         // const item = shopDirectCart.find(i => i.name === name)
         // console.log('remove props.name', name)
         // console.log('remove item.name', item.name)
@@ -51,25 +56,27 @@ const ShopDirectCart = ({children}) => {
         if (item) {
             console.log('removing', item.id, name)
             item.qty -= 1
-            if (item.qty < 1) {
-                console.log('setting to zero', item.id, name)
-                item.qty = 0
-            }
+            // if (item.qty < 1) {
+            //     console.log('setting to zero', item.id, name)
+            //     item.qty = 0
+            // }
             console.log('saving cart')
             setShopDirectCart([...shopDirectCart])
+            console.log('cart', shopDirectCart)
         }
 
         // if less that 1 of item, completely remove it from cart (so no 0-count of item)
-        console.log('HERE')
-        if (item.qty === 0) {
-            console.log('removing zero-item from cart', item.id, name)
-            const newShopDirectCart = shopDirectCart.filter(item => {
-                // item.id != id
-                item.name != name
-            })
-            console.log('new cart', newShopDirectCart)
-            setShopDirectCart(newShopDirectCart)
-        }
+        // console.log('HERE')
+        // if (item.qty === 0) {
+        //     console.log('removing zero-item from cart', item.id, name)
+        //     const newShopDirectCart = shopDirectCart.filter(item => {
+        //         // item.id != id
+        //         item.name != name
+        //     })
+        //     console.log('new cart', newShopDirectCart)
+        //     setShopDirectCart(newShopDirectCart)
+        //     console.log('updated shopDirectCart', shopDirectCart)
+        // }
     }
 
     const exposed = {
