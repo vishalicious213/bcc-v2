@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react"
-import { Context } from "./Cart"
+// import { Context } from "./Cart"
 
 export const ShopDirectCartContext = createContext()
 
@@ -22,7 +22,7 @@ const ShopDirectCart = ({children}) => {
     const addItemToShopDirectCart = (id, qty = 1, name) => {
         const item = shopDirectCart.find(i => i.id === id)
         // const item = shopDirectCart.find(i => i.name === name)
-        console.log('add props.name', id, name)
+        // console.log('add props.name', id, name)
         // console.log('add item.name', item.name)
         
         if (item) {
@@ -32,52 +32,54 @@ const ShopDirectCart = ({children}) => {
             setShopDirectCart([...shopDirectCart, { id, qty, name }])
         }
 
-        console.log('hook', shopDirectCart)
+        // console.log('hook', shopDirectCart)
     }
 
     const removeItemFromShopDirectCart = (id, name) => {
         const item = shopDirectCart.find(i => i.id === id)
-        if (item) {
-            console.log('item', item)
-        } else {
-            console.log('item does not exist')
-        }
+
+        // if (item) {
+        //     console.log('item', item)
+        // } else {
+        //     console.log('item does not exist')
+        // }
+
         // const item = shopDirectCart.find(i => i.name === name)
         // console.log('remove props.name', name)
         // console.log('remove item.name', item.name)
 
         // if item is not in cart, it can't be removed, so return
         if (!item) {
-            console.log('not in cart', id, name)
+            // console.log('not in cart', id, name)
             return
         }
 
         // if item is in cart, remove 1 of that item from qty
         if (item) {
-            console.log('removing', item.id, name)
+            // console.log('removing', item.id, name)
             item.qty -= 1
             // if (item.qty < 1) {
             //     console.log('setting to zero', item.id, name)
             //     item.qty = 0
             // }
-            console.log('saving cart')
+            // console.log('saving cart')
             setShopDirectCart([...shopDirectCart])
-            console.log('cart', shopDirectCart)
+            // console.log('cart', shopDirectCart)
         }
 
         if (item.qty < 0) {
             item.qty = 0
-            console.log('set negative item quantity to 0')
+            // console.log('set negative item quantity to 0')
         }
 
         if (item.qty === 0) {
-            console.log('item quantity is 0')
+            // console.log('item quantity is 0')
             const newCart = shopDirectCart.filter(cartItem => {
                 return cartItem.id != item.id
             })
-            console.log('newCart', newCart)
+            // console.log('newCart', newCart)
             setShopDirectCart(newCart)
-            console.log('cart after removing 0 item', shopDirectCart)
+            // console.log('cart after removing 0 item', shopDirectCart)
         }
 
         // if less that 1 of item, completely remove it from cart (so no 0-count of item)
