@@ -1,4 +1,5 @@
 import useShopDirectCart from '../hooks/useShopDirectCart'
+import axios from 'axios'
 
 export default function OrderForm(props) {
     const { shopDirectCart } = useShopDirectCart()
@@ -12,6 +13,12 @@ export default function OrderForm(props) {
     const bag1 = selectedItems.find(item => item.name === 'Chemo comfort bag 1')
     const bag2 = selectedItems.find(item => item.name === 'Chemo comfort bag 2')
     // console.log(basket, bag1, bag2)
+
+    const processPayment = async () => {
+        const url = '/.netlify/functions/shop-direct-charge-card'
+        const { data } = await axios.post(url, { cart })
+        console.log('Process payment via Stripe')
+    }
 
     return (
         <div id='form-container'>
@@ -92,7 +99,13 @@ export default function OrderForm(props) {
                     placeholder='message'
                     className='field'
                 />
-                <button className='order-button' type='submit'>SUBMIT ORDER AND MAKE DONATION</button>
+                <button 
+                    className='order-button' 
+                    type='submit'
+                    onClick={processPayment}
+                >
+                    SUBMIT ORDER AND MAKE DONATION
+                </button>
             </form>
 
             <style jsx>
