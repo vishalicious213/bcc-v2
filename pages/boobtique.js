@@ -1,13 +1,13 @@
 import Head from 'next/head'
 // import Shop from '../components/shop'
-import useCart from '../hooks/useCart'
+// import useCart from '../hooks/useCart'
 import { gifts } from '../content/gifts'
 // import ShopGifts from '../components/shop_gifts'
 import ShopGifts from '../components/shop_direct'
 import styles from '../styles/Home.module.css'
 
 export default function Boobtique() {
-  const { cart, addItemToCart, removeItemFromCart } = useCart()
+  // const { cart, addItemToCart, removeItemFromCart } = useCart()
   // console.log('boobtique cart:', cart)
 
   return (

@@ -1,4 +1,5 @@
 exports.handler = async (event, context) => {
+    console.log(event.body)
     // talking to Stripe
     // charging the card
     return {
