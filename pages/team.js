@@ -22,7 +22,7 @@ export default function Team() {
 
         <main className={styles.main}>
             <div className='img-container'>
-                <img src='/about/team.jpg' alt='' />
+                <img src='/about/team-v2.jpg' alt='' />
             </div>
 
             <section className='pink-container gift-container'>
