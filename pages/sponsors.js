@@ -34,7 +34,7 @@ export default function Support() {
   return (
     <div className={styles.container}>
         <Head>
-            <title>Supporters | Breast Cancer Comfort Foundation</title>
+            <title>Sponsors | Breast Cancer Comfort Foundation</title>
             <link rel="icon" href="/cropped-BCCF-basket-logo-white-5001-32x32.png" sizes="32x32" />
             <link rel="icon" href="/cropped-BCCF-basket-logo-white-5001-192x192.png" sizes="192x192" />
             <link rel="apple-touch-icon-precomposed" href="/cropped-BCCF-basket-logo-white-5001-180x180.png" />
@@ -46,7 +46,7 @@ export default function Support() {
             </div>
 
             <section className='pink-container'>
-                <h2 className='no-space-below'>Thank you to our supporters!</h2>
+                <h2 className='no-space-below'>Thank you to our sponsors!</h2>
 
                 <p>We are lucky to have you as donors and appreciate you for investing in our organization. Because of you, we can continue our mission to deliver Comfort Baskets and Chemo Comfort Bags to those who have recently undergone breast cancer surgery and remind them that they are not alone or unloved.</p>
             </section>
