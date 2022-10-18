@@ -16,7 +16,12 @@ export default function OrderForm(props) {
 
     const processPayment = async () => {
         const url = '/.netlify/functions/shop-direct-charge-card'
-        const { data } = await axios.post(url, { cart })
+        const newCart = selectedItems.map(({ id, qty }) => ({
+            id,
+            qty,
+        }))
+
+        const { data } = await axios.post(url, { newCart })
         console.log('Process payment via Stripe')
     }
 

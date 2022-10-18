@@ -3,8 +3,8 @@ import styles from '../styles/Home.module.css'
 
 const team = [
     {id: '01', name: 'Debi Cavolo', title: 'CEO & Founder', pic: 'debi-li.jpg', linkedIn: 'https://www.linkedin.com/in/debi-cavolo-671a78132/', url: '/team/debi-cavolo'},
-    {id: '02', name: 'Ann Guarascio', title: 'Board Treasurer, Non-Profit Accounting Specialist', pic: 'ann-li.jpg', linkedIn: 'https://www.linkedin.com/in/ann-guarascio-3463719/', url: '/team/ann-guarascio'},
-    {id: '03', name: 'Nicole Link', title: 'Director of Events & Fundraising', pic: 'nicole-li.jpg', linkedIn: 'https://www.linkedin.com/in/nicole-link/', url: '/team/nicole-link'},
+    // {id: '02', name: 'Ann Guarascio', title: 'Board Treasurer, Non-Profit Accounting Specialist', pic: 'ann-li.jpg', linkedIn: 'https://www.linkedin.com/in/ann-guarascio-3463719/', url: '/team/ann-guarascio'},
+    // {id: '03', name: 'Nicole Link', title: 'Director of Events & Fundraising', pic: 'nicole-li.jpg', linkedIn: 'https://www.linkedin.com/in/nicole-link/', url: '/team/nicole-link'},
     {id: '04', name: 'Alicia Cosentino', title: 'Administrative Assistant', pic: 'alicia-thumb.jpeg', linkedIn: '', url: '/team/alicia-cosentino'},
     {id: '05', name: 'Vish Singh', title: 'Web Developer', pic: 'vish.jpg', linkedIn: 'https://www.linkedin.com/in/vish213/', url: '/team/vish-singh'},
     // {id: '', name: '', title: '', pic: '', linkedIn: '', url: ''},
