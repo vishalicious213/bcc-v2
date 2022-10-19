@@ -1,9 +1,10 @@
 import Head from 'next/head'
 // import Shop from '../components/shop'
 // import useCart from '../hooks/useCart'
-import { gifts } from '../content/gifts'
 // import ShopGifts from '../components/shop_gifts'
-import ShopGifts from '../components/shop_direct'
+
+// import ShopGifts from '../components/shop_direct'
+// import { gifts } from '../content/gifts'
 import styles from '../styles/Home.module.css'
 
 export default function Boobtique() {
@@ -68,7 +69,7 @@ export default function Boobtique() {
           {/* <Shop addItem={addItemToCart} removeItem={removeItemFromCart} gifts={gifts} cart={cart} /> */}
 
           {/* Revised, one-page version of shop */}
-          <ShopGifts gifts={gifts} />
+          {/* <ShopGifts gifts={gifts} /> */}
           
           {/* <div className='img-container-2'>
             <img src='/boobtique/boobtique-2.jpg' alt='' />
