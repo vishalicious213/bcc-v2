@@ -8,10 +8,12 @@ import DonateBanner from '../components/donateBanner'
 config.autoAddCss = false // don't add css automatically (we imported above)
 import CartProvider from '../context/Cart'
 import ShoppingCart from '../components/shoppingCart'
+import ShopDirectCartProvider from '../context/ShopDirectCart'
 
 function MyApp({ Component, pageProps }) {
   return (
     <CartProvider>
+    <ShopDirectCartProvider>
       <Nav />
       <div style={{height: '3.5rem'}}></div>
       <ShoppingCart />
@@ -19,6 +21,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <ContactForm />
       <Footer />
+    </ShopDirectCartProvider>
     </CartProvider>
   )
 }

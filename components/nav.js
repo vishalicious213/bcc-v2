@@ -55,8 +55,8 @@ export default function Nav() {
                         <Link href='/memory'>
                             <a className='a center-link'>In Memory Of</a>
                         </Link>
-                        <Link href='/supporters'>
-                            <a className='a center-link'>Supporters</a>
+                        <Link href='/sponsors'>
+                            <a className='a center-link'>Sponsors</a>
                         </Link>
                         <Link href='/share'>
                             <a className='a center-link'>Share Your Story</a>
@@ -91,7 +91,7 @@ export default function Nav() {
                     <a className='redline' href='/boobtique'>Shop</a>
                     <a className='redline' href='/donate'>Donate &#9662;</a>
                     <a href='/memory'>In Memory Of</a>
-                    <a href='/supporters'>Supporters</a>
+                    <a href='/sponsors'>Sponsors</a>
                     <a href='/share'>Share Your Story</a>
                     <a className='redline' href='/news'>News</a>
                 </nav>

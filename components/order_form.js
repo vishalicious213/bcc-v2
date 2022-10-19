@@ -1,4 +1,30 @@
-export default function OrderForm() {
+import useShopDirectCart from '../hooks/useShopDirectCart'
+import axios from 'axios'
+
+export default function OrderForm(props) {
+    const { shopDirectCart } = useShopDirectCart()
+
+    // console.log('order form props', props.items)
+    // console.log('order form cart', shopDirectCart)
+
+    let selectedItems = shopDirectCart
+
+    const basket = selectedItems.find(item => item.name === 'Comfort basket')
+    const bag1 = selectedItems.find(item => item.name === 'Chemo comfort bag 1')
+    const bag2 = selectedItems.find(item => item.name === 'Chemo comfort bag 2')
+    // console.log(basket, bag1, bag2)
+
+    const processPayment = async () => {
+        const url = '/.netlify/functions/shop-direct-charge-card'
+        const newCart = selectedItems.map(({ id, qty }) => ({
+            id,
+            qty,
+        }))
+
+        const { data } = await axios.post(url, { newCart })
+        console.log('Process payment via Stripe')
+    }
+
     return (
         <div id='form-container'>
             <form id='order-form' name='order-form' method='POST' data-netlify='true'>
@@ -49,39 +75,24 @@ export default function OrderForm() {
                     </div>
                 </div>
 
-                <p id='gift-selector-instruction'>Choose at least one gift:</p>
+                <p id='gift-selector-instruction'>Selected gift(s):</p>
                 <div id='gift-selector'>
                     <div className='gift'>
-                        <input
-                            id='basket'
-                            name='basket'
-                            type='checkbox'
-                            placeholder='basket'
-                            className="gift-checkbox"
-                        />
-                        <label htmlFor='basket'>Comfort Basket</label>
+                        {/* <div className='gift-quantity'>{shopDirectCart[0] ? shopDirectCart[0].qty : 0}</div> */}
+                        <div className='gift-quantity'>{basket ? basket.qty : 0}</div>
+                        <div className='gift-name'> Comfort Basket(s)</div>
                     </div>
 
-                    <div>
-                        <input
-                            id='chemo-1'
-                            name='chemo-1'
-                            type='checkbox'
-                            placeholder='chemo-1'
-                            className="gift-checkbox"
-                        />
-                        <label htmlFor='chemo-1'>Chemo Comfort Bag (style 1)</label>
+                    <div className='gift'>
+                        {/* <div className='gift-quantity'>{shopDirectCart[1] ? shopDirectCart[1].qty : 0}</div> */}
+                        <div className='gift-quantity'>{bag1 ? bag1.qty : 0}</div>
+                        <div className='gift-name'> Chemo Comfort Bag(s) (style 1)</div>
                     </div>
 
-                    <div>
-                        <input
-                            id='chemo-2'
-                            name='chemo-2'
-                            type='checkbox'
-                            placeholder='chemo-2'
-                            className="gift-checkbox"
-                        />
-                        <label htmlFor='chemo-2'>Chemo Comfort Bag (style 2)</label>
+                    <div className='gift'>
+                        {/* <div className='gift-quantity'>{shopDirectCart[2] ? shopDirectCart[2].qty : 0}</div> */}
+                        <div className='gift-quantity'>{bag2 ? bag2.qty : 0}</div>
+                        <span className='gift-name'> Chemo Comfort Bag(s) (style 2)</span>
                     </div>
                 </div>
 
@@ -93,7 +104,13 @@ export default function OrderForm() {
                     placeholder='message'
                     className='field'
                 />
-                <button className='order-button' type='submit'>SUBMIT ORDER AND MAKE DONATION</button>
+                <button 
+                    className='order-button' 
+                    type='submit'
+                    onClick={processPayment}
+                >
+                    SUBMIT ORDER AND MAKE DONATION
+                </button>
             </form>
 
             <style jsx>
@@ -140,9 +157,29 @@ export default function OrderForm() {
                     font-size: 1.1rem;
                 }
 
-                .gift-checkbox {
-                    margin-right: .5rem;
-                    margin-bottom: 1rem;
+                .gift {
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid #292c2f;
+                    padding: .5rem;
+                    margin-bottom: .5rem;
+                }
+
+                .gift-quantity {
+                    margin-bottom: .5rem;
+                    margin-right: 1rem;
+                    color: pink;
+                    font-size: 1.5rem;
+                    width: 3rem;
+                    text-align: center;
+                    background-color: rgba(100, 100, 100, 0.2);
+                    outline: 1px solid #292c2f;
+                    border-radius: 1rem;
+                }
+
+                .gift-name {
+                    color: gainsboro;
+                    font-size: 1.1rem;
                 }
 
                 #name, #recipient {
@@ -176,16 +213,22 @@ export default function OrderForm() {
 
                 @media only screen and (min-width: 800px) {
                     #gift-selector {
-                        display: flex;
                         flex-direction: row;
                         justify-content: space-around;
                         margin: .5rem 0 1rem 0;
-                        color: gainsboro;
-                        font-size: 1.1rem;
                     }
 
-                    .gift-checkbox {
+                    .gift {
+                        flex-direction: column;
+                        width: 30%;
+                        max-width: 210px;
+                        text-align: center;
                         margin-bottom: 0;
+                    }                    
+
+                    .gift-quantity {
+                        margin-right: 0;
+                        width: 5rem;
                     }
                 }
 

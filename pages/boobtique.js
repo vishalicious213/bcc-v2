@@ -1,13 +1,14 @@
 import Head from 'next/head'
 // import Shop from '../components/shop'
-import useCart from '../hooks/useCart'
-import { gifts } from '../content/gifts'
+// import useCart from '../hooks/useCart'
 // import ShopGifts from '../components/shop_gifts'
-import ShopGifts from '../components/shop_direct'
+
+// import ShopGifts from '../components/shop_direct'
+// import { gifts } from '../content/gifts'
 import styles from '../styles/Home.module.css'
 
 export default function Boobtique() {
-  const { cart, addItemToCart, removeItemFromCart } = useCart()
+  // const { cart, addItemToCart, removeItemFromCart } = useCart()
   // console.log('boobtique cart:', cart)
 
   return (
@@ -64,11 +65,10 @@ export default function Boobtique() {
             </div>
           </section>
 
-          {/* Hiding the shop until shipping is rebuilt. Going to display gifts and pricing/ordering info here temporarily. */}
-          {/* Copy of shop is archived in boobtique_old */}
+          {/* Previous incarnation of shop. Code is archived in boobtique_old */}
           {/* <Shop addItem={addItemToCart} removeItem={removeItemFromCart} gifts={gifts} cart={cart} /> */}
 
-          {/* WORK ON THIS SHORTER ONE BEFORE CONTINUING THE ONE ABOVE */}
+          {/* Revised, one-page version of shop */}
           {/* <ShopGifts gifts={gifts} /> */}
           
           {/* <div className='img-container-2'>

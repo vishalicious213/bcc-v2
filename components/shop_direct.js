@@ -1,6 +1,8 @@
 import axios from 'axios'
 import { loadStripe } from '@stripe/stripe-js'
 import OrderForm from './order_form'
+import ShopDirectButtons from './shop_direct_buttons'
+import { useState } from 'react'
 
 // this component will replace the shop component and shop_gifts for now. it will show gifts and pricing and 
 // direct visitors to order via a form. The form will collect info about what's being ordered and where to
@@ -8,6 +10,7 @@ import OrderForm from './order_form'
 
 export default function ShopGifts(gifts) {
     let items=gifts.gifts
+    const [quantity, setQuantity] = useState(0)
     // console.log(items)
 
     // send data to Stripe to charge visitor's credit card
@@ -44,15 +47,15 @@ export default function ShopGifts(gifts) {
                                     {/* <p>{item.desc}</p> */}
                                 </div>
 
-                                <div className='button'>
-                                    <button onClick={() => processPayment(item.name, item.price)}>Donate</button>
+                                <div className='itemButtons'>
+                                    <ShopDirectButtons id={item.id} name={item.name} price={item.price} />
                                 </div>
                             </div>
                         </div>
                     )}
                 </section>
 
-                <OrderForm />
+                <OrderForm items={items} />
 
             <style jsx>
                 {`
@@ -116,25 +119,9 @@ export default function ShopGifts(gifts) {
                     color: white;
                 }
 
-                .button {
+                .itemButtons {
                     display: flex;
                     justify-content: center;
-                }
-
-                button {
-                    color: gainsboro;
-                    background-color: #b01e65;
-                    border: none;
-                    font-size: 1.1rem;
-                    height: 2rem;
-                    width: 45%;
-                    padding: .5rem 0;
-                    border-radius: 1rem;
-                }
-
-                button:hover {
-                    color: white;
-                    background-color: deeppink;
                 }
 
                 @media only screen and (min-width: 800px) {
